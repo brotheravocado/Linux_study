@@ -1,0 +1,60 @@
+CUI(Windows cmd, Linux terminal 등)을 통해 FTP를 이용할 때 사용하는 명령어입니다.
+
+local은 현재 사용중인 컴퓨터, remote는 FTP 서버를 의미합니다.
+
+
+
+
+[명령어]: 설명 (사용예)
+
+ascii: 전송모드를 ASCII모드로 설정합니다. Text 기반의 파일에 사용합니다. (ascii 또는 as)
+
+bin: 전송모드를 BINARY모드로 설정합니다. Binary 기반의 파일에 사용합니다. (bin 또는 bi 또는 binary)
+
+bell: 명령어 완료시에 벨소리를 나게 합니다. (bell)
+
+bye: ftp접속을 종료하고 빠져나갑니다. (bye)
+
+cd: remote시스템의 디렉토리를 변경합니다. (cd 디렉토리명)
+
+close: ftp 접속을 종료합니다. (close)
+
+delete: remote 시스템의 파일을 삭제합니다. (delete index.old)
+
+dir: remote 시스템의 디렉토리 내용을 디스플레이 합니다. (dir)
+
+disconnect: ftp 접속을 종료합니다. (disconnect)
+
+get: 지정된 파일 하나를 가져옵니다. (get index.html)
+
+hash: 파일전송 도중에 "#"표시를 하여 전송중임을 나타냅니다. (hash)
+
+help: ftp 명령어 도움말을 볼 수 있습니다. (help 또는 help 명령어)
+
+lcd: local 시스템의 디렉토리를 변경합니다. (lcd 디렉토리명)
+
+ls: remote시스템의 디렉토리 내용을 디스플레이 합니다. (ls 또는 ls -l)
+
+mdelete: 여러개의 파일을 한꺼번에 지울 때 사용합니다. (mdelete *.old)
+
+mget: 여러개의 파일을 한꺼번에 가져오려할 때 사용합니다. (mget *.gz)
+
+mput: 여러개의 파일을 remote 시스템에 업로드합니다. (mput *.html)
+
+open: ftp접속을 시도합니다. (open 192.168.0.5)
+
+prompt: 파일전송시에 확인과정을 거친다. 명령 수행 시 마다 on/off가 토글됩니다. (prompt)
+
+put: 하나의 파일을 remote 시스템에 업로드합니다. (put index.html)
+
+pwd: remote 시스템의 현재 작업 디렉토리를 표시합니다. (pwd)
+
+quit: ftp 접속을 종료하고 빠져나갑니다. (quit)
+
+rename: remote 시스템의 파일명을 바꿉니다. (remote 현재파일명 바꿀파일명)
+
+rmdir: remote시스템의 디렉토리을 삭제합니다. (rmdir 디렉토리명)
+
+status: 현재 연결된 ftp 세션모드에 대한 설정을 보여줍니다. (status)
+
+type: 전송 모드를 설정합니다. ascii나 bin을 그냥 사용해도 됩니다. (type 또는 type ascii 또는 type binary)

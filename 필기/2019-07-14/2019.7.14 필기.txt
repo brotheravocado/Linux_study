@@ -1,0 +1,58 @@
+윈도우 단축키 d -display
+윈도우에서는 폴더생성시 소문자대문자 구분없음
+그러나 리눅스는 있음
+log -흔적
+install.log.syslog 리눅스는 확장자가 없고 주석
+윈도우는 역슬래시로 
+리눅스
+[접속계정@컴퓨터이름~현재홈디렉토리]#(관리자계정) - prompt구조
+cd ..은 상위 디렉토리
+윈도우는 항상 프롬트구조에서 설명을 해주지만 리눅스는 X -> pwd
+리눅스는 계정이 다 따로 있지만 윈도우는 계정이 다 같이 있음
+윈도우 net user -> 계정 뭐있는지 net user (administerator) -비활성화
+ls -l
+안전모드 -윈도우 F8, -리눅스(싱글모드)
+runlevel 
+tab하면 자동완성
+ctrl c 작동중지
+한줄씩 엔터, 한페이지씩 스페이스
+싱글유저부트 authentication -인증
+
+서버의 필수조건
+1. 귀를 열어야한다 - 클라이언트의 요청을 듣기위해서
+2. 서비스는 설치 되어 있어야하고 항상 24시간 On
+3. 해당 서비스마다 따로 있는 실행파일을 실행시켜야한다
+
+서비스가 달라지면 port가 달라짐
+ex) ssh -> 22 telet -23
+putty port TCP 22 목적지가 다르면 port 다 다름 (서비스,실행파일)
+SSH(security shell) (default) port 22 원격 -보안통신
+
+서비스를 시작 = 실행파일 = 데몬을 시작 = 포트 관리자
+= 해당 고유 포트를 연다
+데몬 = 포트관리자
+service sshd(데몬) start -> 포트 염
+service sshd stop -> 포트 닫음
+netstat -lntup 
+-> ip 3계층 - 구분자 /  4계층에는 port
+서버는 항상 데몬을 열어야함
+막는거 방화벽
+
+데몬 -> 서비스제공하기위해서
+runlevel은 7개 있음 
+->N 5 바로 N에서 5로 1번은 안전모드
+안전모드 
+전환하는 명령어 init
+single user mode runlevel 1 S (single user mode에서는 표기 안됨)
+port 개수 = service 개수 
+데몬마다 runlevel 개수가 다름
+정상모드 갓다가 안전모드가면 포트열려있음
+boot부터 안전모드가면 포트 하나도 안열려있어
+interface = eth0
+68번은 자동으로 ip받는것
+l 누르고 tab - 명령어
+옵션 - man ls
+띄어쓰기하면 새로운 옵션을 뜻함 ex) ls -l -a = ls-la = ls-al 조합이 가능함
+.의 의미(이중적인 의미)
+1 숨겨진것
+2 상위 (홀로쓰여질때)

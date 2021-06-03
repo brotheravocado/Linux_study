@@ -1,0 +1,67 @@
+파일 속성변경 = Windows 잠금 
+
+chattr +i it  변경불가설정
+chattr -i it  설정해제
+---------------------------------------------------------------------------------------------------
+***** umask는 symbolic으로 빠진다***
+777	rwx rwx rwx
+333	-wx -wx -wx
+444	r-- r-- r-- 444
+
+666	rw- rw- rw-
+333	-wx -wx -wx
+333	r-- r-- r-- 444
+---------------------------------------------------------------------------------------------------
+확인 getfacl 디렉토리명
+
+설정 setfacl -m u:suzi:rx,u:kgitbank:x /acl
+
+환경 => mkdir /acl 
+	chmod 000 /acl
+	suzi계정과 kgitbank계정이 접속할수 있도록할것
+
+# getfacl /acl
+getfacl: Removing leading '/' from absolute path names
+# file: acl
+# owner: root
+# group: root
+user::---
+group::---
+other::---
+
+# setfacl -m u:suzi:rx,u:kgitbank:x /acl
+# ls -ld /acl
+d---r-x---+ 2 root root 4096 2015-05-24 19:26 /acl
+# getfacl /acl
+getfacl: Removing leading '/' from absolute path names
+# file: acl
+# owner: root
+# group: root
+user::---
+user:suzi:r-x
+user:kgitbank:--x
+group::---
+mask::r-x
+other::---
+
+setfacl -b test2		전부 삭제
+
+setfacl -m u:계정명:권한 	해당폴더 수정    ※수정할때 주의사항  추가의 개념이 아니라 대체개념이다 
+							u:kgitbank:r 줬을때  --x ->  r--
+							u:kgitbank:rx 주셔야만 결과가 r_x
+	-M		 	해당파일 수정
+setfacl -x u:계정명		해당폴더 삭제
+	-X			해당파일 삭제
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1275 @@
+login as: root
+root@192.168.1.140's password:
+Last login: Sun Jul 28 10:37:09 2019 from 192.168.1.1
+[root@yunji ~]# clear
+[root@yunji ~]# cat -n /etc/passwd | tail
+    25  haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+    26  ntp:x:38:38::/etc/ntp:/sbin/nologin
+    27  apache:x:48:48:Apache:/var/www:/sbin/nologin
+    28  saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+    29  postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+    30  gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+    31  pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+    32  sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+    33  tcpdump:x:72:72::/:/sbin/nologin
+    34  kgitbank:x:501:501:kgitbank:/home/kgitbank:/bin/bash
+[root@yunji ~]# cat -n /etc/shadow | tail
+    25  haldaemon:!!:18090::::::
+    26  ntp:!!:18090::::::
+    27  apache:!!:18090::::::
+    28  saslauth:!!:18090::::::
+    29  postfix:!!:18090::::::
+    30  gdm:!!:18090::::::
+    31  pulse:!!:18090::::::
+    32  sshd:!!:18090::::::
+    33  tcpdump:!!:18090::::::
+    34  kgitbank:$6$JQT68pSvG0EZJ8WD$9mJWGAVylAzeNvPcfuKHTTUh2gPWwlbcTgBcp2CI5Lk                     UMa1qX9H5Nr4eOQGLV57H/vGekh/UpdLULOknw.e/s1:18090:0:99999:7:::
+[root@yunji ~]# cat -n /etc/group
+     1  root:x:0:
+     2  bin:x:1:bin,daemon
+     3  daemon:x:2:bin,daemon
+     4  sys:x:3:bin,adm
+     5  adm:x:4:adm,daemon
+     6  tty:x:5:
+     7  disk:x:6:
+     8  lp:x:7:daemon
+     9  mem:x:8:
+    10  kmem:x:9:
+    11  wheel:x:10:
+    12  mail:x:12:mail,postfix
+    13  uucp:x:14:
+    14  man:x:15:
+    15  games:x:20:
+    16  gopher:x:30:
+    17  video:x:39:
+    18  dip:x:40:
+    19  ftp:x:50:
+    20  lock:x:54:
+    21  audio:x:63:
+    22  nobody:x:99:
+    23  users:x:100:
+    24  dbus:x:81:
+    25  usbmuxd:x:113:
+    26  rpc:x:32:
+    27  utmp:x:22:
+    28  utempter:x:35:
+    29  rtkit:x:499:
+    30  avahi-autoipd:x:170:
+    31  desktop_admin_r:x:498:
+    32  desktop_user_r:x:497:
+    33  floppy:x:19:
+    34  vcsa:x:69:
+    35  abrt:x:173:
+    36  cdrom:x:11:
+    37  tape:x:33:
+    38  dialout:x:18:
+    39  wbpriv:x:88:
+    40  rpcuser:x:29:
+    41  nfsnobody:x:65534:
+    42  haldaemon:x:68:haldaemon
+    43  ntp:x:38:
+    44  apache:x:48:
+    45  saslauth:x:76:
+    46  postdrop:x:90:
+    47  postfix:x:89:
+    48  gdm:x:42:
+    49  pulse:x:496:
+    50  pulse-access:x:495:
+    51  fuse:x:494:
+    52  sshd:x:74:
+    53  slocate:x:21:
+    54  stapusr:x:156:
+    55  stapsys:x:157:
+    56  stapdev:x:158:
+    57  tcpdump:x:72:
+    58  kgitbank:x:501:
+[root@yunji ~]# ls -l /home
+합계 2
+drwxr-xr-x. 2 root root 1024 2019-07-28 10:23 kgitbank
+[root@yunji ~]# ls -l /var/spool/ma
+ls: cannot access /var/spool/ma: 그런 파일이나 디렉터리가 없습니다
+[root@yunji ~]# ls -l /var/spool/mail/
+합계 56
+-rw-rw----. 1 kgitbank mail     0 2019-07-13 12:30 kgitbank
+-rw-------. 1 root     mail 57327 2019-07-28 10:26 root
+-rw-rw----. 1 rpc      mail     0 2019-07-13 12:09 rpc
+-rw-rw----. 1      500 mail     0 2019-07-13 12:22 yunji
+[root@yunji ~]# rm -rf /var/spool/mail/yunji
+[root@yunji ~]# ls -l /var/spool/mail/
+합계 56
+-rw-rw----. 1 kgitbank mail     0 2019-07-13 12:30 kgitbank
+-rw-------. 1 root     mail 57327 2019-07-28 10:26 root
+-rw-rw----. 1 rpc      mail     0 2019-07-13 12:09 rpc
+[root@yunji ~]# ls -l */etc/skel
+ls: cannot access */etc/skel: 그런 파일이나 디렉터리가 없습니다
+[root@yunji ~]# vi /etc/skel
+[root@yunji ~]# clear
+[root@yunji ~]# vi /etc/skel
+[root@yunji ~]# cat -n /etc/skel
+cat: /etc/skel: 디렉터리입니다
+[root@yunji ~]# ls -al /etc/skel
+합계 40
+drwxr-xr-x.   4 root root  4096 2019-07-13 12:11 .
+drwxr-xr-x. 119 root root 12288 2019-08-03 09:02 ..
+-rw-r--r--.   1 root root    18 2016-05-11 08:21 .bash_logout
+-rw-r--r--.   1 root root   176 2016-05-11 08:21 .bash_profile
+-rw-r--r--.   1 root root   124 2016-05-11 08:21 .bashrc
+drwxr-xr-x.   2 root root  4096 2010-11-12 10:04 .gnome2
+-rw-r--r--.   1 root root   171 2016-05-11 08:36 .kshrc
+drwxr-xr-x.   4 root root  4096 2019-07-13 12:08 .mozilla
+[root@yunji ~]# clear
+[root@yunji ~]# userad -c testuser -s /bin/ksh user1
+-bash: userad: command not found
+[root@yunji ~]# useradd -c testuser -s /bin/ksh user1
+[root@yunji ~]# passwd user1
+user1 사용자의 비밀 번호 변경 중
+새  암호:
+잘못된 암호: 너무 짧습니다
+잘못된 암호: 앞뒤 어느쪽에서 읽어도 같은 문맥임
+새  암호 재입력:
+passwd: 모든 인증 토큰이 성공적으로 업데이트 되었습니다.
+[root@yunji ~]# cp -r /etc/skel /etc/skel2
+[root@yunji ~]# cd /etc/skel2
+[root@yunji skel2]# touch kgitbank
+[root@yunji skel2]# clear
+[root@yunji skel2]# cd ~
+[root@yunji ~]# useradd -mk /etc/skel2 user2
+[root@yunji ~]# mkdir /etc/skel3
+[root@yunji ~]# useradd -mk /etc/skel3 user3
+[root@yunji ~]# mkdir /etc/skel4
+[root@yunji ~]# cp -r /etc/skel4
+cp: missing destination file operand after `/etc/skel4'
+더 많은 정보를 보려면 `cp --help' 하십시오.
+[root@yunji ~]# cp -r /etc/skel /etc/skel4
+[root@yunji ~]# mkdir /etc/skel4/public_html
+[root@yunji ~]# useradd -mk /etc/skel4 user4
+[root@yunji ~]# vi /etc/passwd
+[root@yunji ~]# vi /etc/skel
+[root@yunji ~]# mkdir -p /local_host/home
+[root@yunji ~]# vi /etc/default/useradd
+[root@yunji ~]# vi /etc/default/useradd
+[root@yunji ~]# tail /etc/group
+slocate:x:21:
+stapusr:x:156:
+stapsys:x:157:
+stapdev:x:158:
+tcpdump:x:72:
+kgitbank:x:501:
+user1:x:502:
+user2:x:503:
+user3:x:504:
+user4:x:505:
+[root@yunji ~]# groupadd g1
+[root@yunji ~]# ls -ld /etc/skel*
+drwxr-xr-x. 4 root root 4096 2019-07-13 12:11 /etc/skel
+drwxr-xr-x. 4 root root 4096 2019-08-03 09:07 /etc/skel2
+drwxr-xr-x. 2 root root 4096 2019-08-03 09:08 /etc/skel3
+drwxr-xr-x. 4 root root 4096 2019-08-03 09:16 /etc/skel4
+[root@yunji ~]# cp -r /etc/skel /etc/skel5
+[root@yunji ~]# cd /etc/skel5
+[root@yunji skel5]# ls -al
+합계 40
+drwxr-xr-x.   4 root root  4096 2019-08-03 09:20 .
+drwxr-xr-x. 123 root root 12288 2019-08-03 09:20 ..
+-rw-r--r--.   1 root root    18 2019-08-03 09:20 .bash_logout
+-rw-r--r--.   1 root root   176 2019-08-03 09:20 .bash_profile
+-rw-r--r--.   1 root root   124 2019-08-03 09:20 .bashrc
+drwxr-xr-x.   2 root root  4096 2019-08-03 09:20 .gnome2
+-rw-r--r--.   1 root root   171 2019-08-03 09:20 .kshrc
+drwxr-xr-x.   4 root root  4096 2019-08-03 09:20 .mozilla
+[root@yunji skel5]# mkdir public_html && cat > public_html/index.html
+mgr.kgtibank.co.kr
+^X^C
+[root@yunji skel5]# cd ~
+[root@yunji ~]# useradd -u 700 -g g1 -c 윤지천재 -d /local_host/home/user7 -s /b                     in/ksh -mk /etc/skel5
+Usage: useradd [options] LOGIN
+       useradd -D
+       useradd -D [options]
+
+Options:
+  -b, --base-dir BASE_DIR       base directory for the home directory of the
+                                new account
+  -c, --comment COMMENT         GECOS field of the new account
+  -d, --home-dir HOME_DIR       home directory of the new account
+  -D, --defaults                print or change default useradd configuration
+  -e, --expiredate EXPIRE_DATE  expiration date of the new account
+  -f, --inactive INACTIVE       password inactivity period of the new account
+  -g, --gid GROUP               name or ID of the primary group of the new
+                                account
+  -G, --groups GROUPS           list of supplementary groups of the new
+                                account
+  -h, --help                    display this help message and exit
+  -k, --skel SKEL_DIR           use this alternative skeleton directory
+  -K, --key KEY=VALUE           override /etc/login.defs defaults
+  -l, --no-log-init             do not add the user to the lastlog and
+                                faillog databases
+  -m, --create-home             create the user's home directory
+  -M, --no-create-home          do not create the user's home directory
+  -N, --no-user-group           do not create a group with the same name as
+                                the user
+  -o, --non-unique              allow to create users with duplicate
+                                (non-unique) UID
+  -p, --password PASSWORD       encrypted password of the new account
+  -r, --system                  create a system account
+  -R, --root CHROOT_DIR         directory to chroot into
+  -s, --shell SHELL             login shell of the new account
+  -u, --uid UID                 user ID of the new account
+  -U, --user-group              create a group with the same name as the user
+  -Z, --selinux-user SEUSER     use a specific SEUSER for the SELinux user mappi                     ng
+
+[root@yunji ~]# useradd -u 700 -g g1 -c 윤지천재 -d /local_host/home/user7 -s /b                     in/ksh -mk /etc/skel5 user7
+[root@yunji ~]# grep user7 /etc/passwd && ls -ld ~user7
+user7:x:700:506:윤지천재:/local_host/home/user7:/bin/ksh
+drwx------. 5 user7 g1 4096 2019-08-03 09:22 /local_host/home/user7
+[root@yunji ~]# cat -n ~user7/public_html/index.html
+     1  mgr.kgtibank.co.kr
+[root@yunji ~]# passwd user7
+user7 사용자의 비밀 번호 변경 중
+새  암호:
+잘못된 암호: 너무 짧습니다
+잘못된 암호: 앞뒤 어느쪽에서 읽어도 같은 문맥임
+새  암호 재입력:
+passwd: 모든 인증 토큰이 성공적으로 업데이트 되었습니다.
+[root@yunji ~]# cat -n /etc/passwd
+     1  root:x:0:0:root:/root:/bin/bash
+     2  bin:x:1:1:bin:/bin:/sbin/nologin
+     3  daemon:x:2:2:daemon:/sbin:/sbin/nologin
+     4  adm:x:3:4:adm:/var/adm:/sbin/nologin
+     5  lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+     6  sync:x:5:0:sync:/sbin:/bin/sync
+     7  shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+     8  halt:x:7:0:halt:/sbin:/sbin/halt
+     9  mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+    10  uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
+    11  operator:x:11:0:operator:/root:/sbin/nologin
+    12  games:x:12:100:games:/usr/games:/sbin/nologin
+    13  gopher:x:13:30:gopher:/var/gopher:/sbin/nologin
+    14  ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+    15  nobody:x:99:99:Nobody:/:/sbin/nologin
+    16  dbus:x:81:81:System message bus:/:/sbin/nologin
+    17  usbmuxd:x:113:113:usbmuxd user:/:/sbin/nologin
+    18  rpc:x:32:32:Rpcbind Daemon:/var/cache/rpcbind:/sbin/nologin
+    19  rtkit:x:499:499:RealtimeKit:/proc:/sbin/nologin
+    20  avahi-autoipd:x:170:170:Avahi IPv4LL Stack:/var/lib/avahi-autoipd:/sbin/                     nologin
+    21  vcsa:x:69:69:virtual console memory owner:/dev:/sbin/nologin
+    22  abrt:x:173:173::/etc/abrt:/sbin/nologin
+    23  rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+    24  nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+    25  haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+    26  ntp:x:38:38::/etc/ntp:/sbin/nologin
+    27  apache:x:48:48:Apache:/var/www:/sbin/nologin
+    28  saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+    29  postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+    30  gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+    31  pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+    32  sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+    33  tcpdump:x:72:72::/:/sbin/nologin
+    34  kgitbank:x:501:501:kgitbank:/home/kgitbank:/bin/bash
+    35  user1:x:502:502:testuser:/home/user1:/bin/ksh
+    36  user2:x:503:503::/home/user2:/bin/bash
+    37  user3:x:504:504::/home/user3:/bin/bash
+    38  user4:x:505:505::/home/user4:/bin/bash
+    39  user7:x:700:506:윤지천재:/local_host/home/user7:/bin/ksh
+[root@yunji ~]# clear
+[root@yunji ~]# grep user7 /etc/passwd && ls -ld ~user7
+user7:x:700:506:윤지천재:/local_host/home/user7:/bin/ksh
+drwx------. 5 user7 g1 4096 2019-08-03 09:23 /local_host/home/user7
+[root@yunji ~]# ls -ld /home
+drwxr-xr-x. 7 root root 1024 2019-08-03 09:16 /home
+[root@yunji ~]# ls -l /home
+합계 10
+drwxr-xr-x. 2 root  root  1024 2019-07-28 10:23 kgitbank
+drwx------. 4 user1 user1 1024 2019-08-03 09:06 user1
+drwx------. 4 user2 user2 1024 2019-08-03 09:08 user2
+drwx------. 2 user3 user3 1024 2019-08-03 09:14 user3
+drwx------. 4 user4 user4 1024 2019-08-03 09:16 user4
+[root@yunji ~]# usermod -md /home/user7 user7
+[root@yunji ~]# ls -l /home
+합계 12
+drwxr-xr-x. 2 root  root  1024 2019-07-28 10:23 kgitbank
+drwx------. 4 user1 user1 1024 2019-08-03 09:06 user1
+drwx------. 4 user2 user2 1024 2019-08-03 09:08 user2
+drwx------. 2 user3 user3 1024 2019-08-03 09:14 user3
+drwx------. 4 user4 user4 1024 2019-08-03 09:16 user4
+drwx------. 5 user7 g1    1024 2019-08-03 09:23 user7
+[root@yunji ~]# clear
+[root@yunji ~]# cat -n /etc/passwd
+     1  root:x:0:0:root:/root:/bin/bash
+     2  bin:x:1:1:bin:/bin:/sbin/nologin
+     3  daemon:x:2:2:daemon:/sbin:/sbin/nologin
+     4  adm:x:3:4:adm:/var/adm:/sbin/nologin
+     5  lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+     6  sync:x:5:0:sync:/sbin:/bin/sync
+     7  shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+     8  halt:x:7:0:halt:/sbin:/sbin/halt
+     9  mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+    10  uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
+    11  operator:x:11:0:operator:/root:/sbin/nologin
+    12  games:x:12:100:games:/usr/games:/sbin/nologin
+    13  gopher:x:13:30:gopher:/var/gopher:/sbin/nologin
+    14  ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+    15  nobody:x:99:99:Nobody:/:/sbin/nologin
+    16  dbus:x:81:81:System message bus:/:/sbin/nologin
+    17  usbmuxd:x:113:113:usbmuxd user:/:/sbin/nologin
+    18  rpc:x:32:32:Rpcbind Daemon:/var/cache/rpcbind:/sbin/nologin
+    19  rtkit:x:499:499:RealtimeKit:/proc:/sbin/nologin
+    20  avahi-autoipd:x:170:170:Avahi IPv4LL Stack:/var/lib/avahi-autoipd:/sbin/                     nologin
+    21  vcsa:x:69:69:virtual console memory owner:/dev:/sbin/nologin
+    22  abrt:x:173:173::/etc/abrt:/sbin/nologin
+    23  rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+    24  nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+    25  haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+    26  ntp:x:38:38::/etc/ntp:/sbin/nologin
+    27  apache:x:48:48:Apache:/var/www:/sbin/nologin
+    28  saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+    29  postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+    30  gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+    31  pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+    32  sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+    33  tcpdump:x:72:72::/:/sbin/nologin
+    34  kgitbank:x:501:501:kgitbank:/home/kgitbank:/bin/bash
+    35  user1:x:502:502:testuser:/home/user1:/bin/ksh
+    36  user2:x:503:503::/home/user2:/bin/bash
+    37  user3:x:504:504::/home/user3:/bin/bash
+    38  user4:x:505:505::/home/user4:/bin/bash
+    39  user7:x:700:506:윤지천재:/home/user7:/bin/ksh
+[root@yunji ~]# clear
+[root@yunji ~]# grep user7 /etc/passwd && ls -ld ~user7
+user7:x:700:506:윤지천재:/home/user7:/bin/ksh
+drwx------. 5 user7 g1 1024 2019-08-03 09:23 /home/user7
+[root@yunji ~]# grep user7 /etc/sh
+shadow   shadow-  shells
+[root@yunji ~]# grep user7 /etc/shadow
+user7:$6$Lek8SYau$O8.UgIGYzI8Y4fWi6/Z3eRYYawuN9UsisegDOLlP6AyRPDfZhQZjE8XYCdHX1I                     G/2E9pNtevmGuOE2HsicR53/:18111:0:99999:7:::
+[root@yunji ~]# id user7
+uid=700(user7) gid=506(g1) groups=506(g1)
+[root@yunji ~]# clear
+[root@yunji ~]# userdel user7
+[root@yunji ~]# grep user7 /etc/passwd /etc/shadow /etc/group
+[root@yunji ~]# ls -l /home
+합계 12
+drwxr-xr-x. 2 root  root  1024 2019-07-28 10:23 kgitbank
+drwx------. 4 user1 user1 1024 2019-08-03 09:06 user1
+drwx------. 4 user2 user2 1024 2019-08-03 09:08 user2
+drwx------. 2 user3 user3 1024 2019-08-03 09:14 user3
+drwx------. 4 user4 user4 1024 2019-08-03 09:16 user4
+drwx------. 5   700 g1    1024 2019-08-03 09:23 user7
+[root@yunji ~]# clear
+[root@yunji ~]# ls -l /var/spool/mail/
+합계 56
+-rw-rw----. 1 kgitbank mail     0 2019-07-13 12:30 kgitbank
+-rw-------. 1 root     mail 57327 2019-07-28 10:26 root
+-rw-rw----. 1 rpc      mail     0 2019-07-13 12:09 rpc
+[root@yunji ~]# rm -rf /home/user7
+[root@yunji ~]# ls -ld /home/user7 /var/spool/mail/user7
+ls: cannot access /home/user7: 그런 파일이나 디렉터리가 없습니다
+ls: cannot access /var/spool/mail/user7: 그런 파일이나 디렉터리가 없습니다
+[root@yunji ~]# clear
+[root@yunji ~]# ls -l /etc/passwd
+-rw-r--r--. 1 root root 1792 2019-08-03 09:28 /etc/passwd
+[root@yunji ~]# cat -n /etc/passwd
+     1  root:x:0:0:root:/root:/bin/bash
+     2  bin:x:1:1:bin:/bin:/sbin/nologin
+     3  daemon:x:2:2:daemon:/sbin:/sbin/nologin
+     4  adm:x:3:4:adm:/var/adm:/sbin/nologin
+     5  lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+     6  sync:x:5:0:sync:/sbin:/bin/sync
+     7  shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+     8  halt:x:7:0:halt:/sbin:/sbin/halt
+     9  mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+    10  uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
+    11  operator:x:11:0:operator:/root:/sbin/nologin
+    12  games:x:12:100:games:/usr/games:/sbin/nologin
+    13  gopher:x:13:30:gopher:/var/gopher:/sbin/nologin
+    14  ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+    15  nobody:x:99:99:Nobody:/:/sbin/nologin
+    16  dbus:x:81:81:System message bus:/:/sbin/nologin
+    17  usbmuxd:x:113:113:usbmuxd user:/:/sbin/nologin
+    18  rpc:x:32:32:Rpcbind Daemon:/var/cache/rpcbind:/sbin/nologin
+    19  rtkit:x:499:499:RealtimeKit:/proc:/sbin/nologin
+    20  avahi-autoipd:x:170:170:Avahi IPv4LL Stack:/var/lib/avahi-autoipd:/sbin/                     nologin
+    21  vcsa:x:69:69:virtual console memory owner:/dev:/sbin/nologin
+    22  abrt:x:173:173::/etc/abrt:/sbin/nologin
+    23  rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+    24  nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+    25  haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+    26  ntp:x:38:38::/etc/ntp:/sbin/nologin
+    27  apache:x:48:48:Apache:/var/www:/sbin/nologin
+    28  saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+    29  postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+    30  gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+    31  pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+    32  sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+    33  tcpdump:x:72:72::/:/sbin/nologin
+    34  kgitbank:x:501:501:kgitbank:/home/kgitbank:/bin/bash
+    35  user1:x:502:502:testuser:/home/user1:/bin/ksh
+    36  user2:x:503:503::/home/user2:/bin/bash
+    37  user3:x:504:504::/home/user3:/bin/bash
+    38  user4:x:505:505::/home/user4:/bin/bash
+[root@yunji ~]# userdel -r user1
+userdel: user1 mail spool (/var/spool/mail/user1) not found
+[root@yunji ~]# userdel user1
+userdel: 'user1' 사용자가 없습니다
+[root@yunji ~]# userdel -r user2
+userdel: user2 mail spool (/var/spool/mail/user2) not found
+[root@yunji ~]# userdel -r user3
+userdel: user3 mail spool (/var/spool/mail/user3) not found
+[root@yunji ~]# userdel -r user4
+userdel: user4 mail spool (/var/spool/mail/user4) not found
+[root@yunji ~]# ls -l /home
+합계 2
+drwxr-xr-x. 2 root root 1024 2019-07-28 10:23 kgitbank
+[root@yunji ~]# ls -l /var/spool/mail/
+합계 56
+-rw-rw----. 1 kgitbank mail     0 2019-07-13 12:30 kgitbank
+-rw-------. 1 root     mail 57327 2019-07-28 10:26 root
+-rw-rw----. 1 rpc      mail     0 2019-07-13 12:09 rpc
+[root@yunji ~]# ls -ld /etc/skel*
+drwxr-xr-x. 4 root root 4096 2019-07-13 12:11 /etc/skel
+drwxr-xr-x. 4 root root 4096 2019-08-03 09:07 /etc/skel2
+drwxr-xr-x. 2 root root 4096 2019-08-03 09:08 /etc/skel3
+drwxr-xr-x. 4 root root 4096 2019-08-03 09:16 /etc/skel4
+drwxr-xr-x. 5 root root 4096 2019-08-03 09:21 /etc/skel5
+[root@yunji ~]# rm -rf /etc/skel?
+[root@yunji ~]# ls -ld /etc/skel
+drwxr-xr-x. 4 root root 4096 2019-07-13 12:11 /etc/skel
+[root@yunji ~]# rm -rf /local_host/
+[root@yunji ~]# ls -ld /export /local_host
+ls: cannot access /local_host: 그런 파일이나 디렉터리가 없습니다
+drwxr-xr-x. 3 root root 4096 2019-07-28 13:29 /export
+[root@yunji ~]# rm -rf /export
+[root@yunji ~]# ls -ld /export /local_host
+ls: cannot access /export: 그런 파일이나 디렉터리가 없습니다
+ls: cannot access /local_host: 그런 파일이나 디렉터리가 없습니다
+[root@yunji ~]# clear
+[root@yunji ~]# pwd
+/root
+[root@yunji ~]# touch 1
+[root@yunji ~]# ls -l ?
+-rw-r--r--. 1 root root 0 2019-08-03 09:56 1
+[root@yunji ~]# cat > 2
+aaa
+^C
+[root@yunji ~]# ls -l ?
+-rw-r--r--. 1 root root 0 2019-08-03 09:56 1
+-rw-r--r--. 1 root root 4 2019-08-03 09:57 2
+[root@yunji ~]# vi 3
+[root@yunji ~]# ls -l ?
+-rw-r--r--. 1 root root 0 2019-08-03 09:56 1
+-rw-r--r--. 1 root root 4 2019-08-03 09:57 2
+-rw-r--r--. 1 root root 4 2019-08-03 09:57 3
+[root@yunji ~]# clear
+[root@yunji ~]# ls -l ?
+-rw-r--r--. 1 root root 0 2019-08-03 09:56 1
+-rw-r--r--. 1 root root 4 2019-08-03 09:57 2
+-rw-r--r--. 1 root root 4 2019-08-03 09:57 3
+[root@yunji ~]# ls -ld /
+dr-xr-xr-x. 39 root root 4096 2019-08-03 09:32 /
+[root@yunji ~]# ls -ld /root
+dr-xr-x---. 27 root root 4096 2019-08-03 09:57 /root
+[root@yunji ~]# ls -ld /home
+drwxr-xr-x. 3 root root 1024 2019-08-03 09:31 /home
+[root@yunji ~]# ls -l /root?
+ls: cannot access /root?: 그런 파일이나 디렉터리가 없습니다
+[root@yunji ~]# ls -l /root ?
+-rw-r--r--.  1 root root    0 2019-08-03 09:56 1
+-rw-r--r--.  1 root root    4 2019-08-03 09:57 2
+-rw-r--r--.  1 root root    4 2019-08-03 09:57 3
+
+/root:
+합계 112
+-rw-r--r--. 1 root root     0 2019-08-03 09:56 1
+-rw-r--r--. 1 root root     4 2019-08-03 09:57 2
+-rw-r--r--. 1 root root     4 2019-08-03 09:57 3
+-rw-------. 1 root root  1561 2019-07-13 12:13 anaconda-ks.cfg
+-rw-r--r--. 1 root root 46676 2019-07-13 12:13 install.log
+-rw-r--r--. 1 root root 10033 2019-07-13 12:11 install.log.syslog
+drwxr-xr-x. 2 root root  4096 2019-07-20 09:31 yunji
+drwxr-xr-x. 2 root root  4096 2019-07-13 12:35 공개
+drwxr-xr-x. 2 root root  4096 2019-07-13 12:35 다운로드
+drwxr-xr-x. 2 root root  4096 2019-07-13 12:35 문서
+drwxr-xr-x. 2 root root  4096 2019-07-14 11:02 바탕화면
+drwxr-xr-x. 2 root root  4096 2019-07-13 12:35 비디오
+drwxr-xr-x. 2 root root  4096 2019-07-13 12:35 사진
+drwxr-xr-x. 2 root root  4096 2019-07-13 12:35 음악
+drwxr-xr-x. 2 root root  4096 2019-07-13 12:35 템플릿
+[root@yunji ~]# ls -ld /home/kgitbank/
+drwxr-xr-x. 2 root root 1024 2019-07-28 10:23 /home/kgitbank/
+[root@yunji ~]# whoami
+root
+[root@yunji ~]# cd /home/kgitbank
+[root@yunji kgitbank]# clear
+[root@yunji kgitbank]# ls -l /home/kgitbank
+합계 0
+[root@yunji kgitbank]# tail -5 /etc/passwd
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+kgitbank:x:501:501:kgitbank:/home/kgitbank:/bin/bash
+[root@yunji kgitbank]# vi /etc/default/useradd
+[root@yunji kgitbank]# userdel -r kgitbank
+userdel: user kgitbank is currently used by process 3404
+[root@yunji kgitbank]# userdel -r kgitbank
+userdel: /home/kgitbank은(는) kgitbank의 소유가 아닙니다, 제거하지 않습니다
+[root@yunji kgitbank]# tail -5 /etc/passwd
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+[root@yunji kgitbank]# ls -l /home/
+합계 2
+drwxr-xr-x. 2 root root 1024 2019-07-28 10:23 kgitbank
+[root@yunji kgitbank]# rm -rf /home/kgitbank
+[root@yunji kgitbank]# ls -l /var/spool/mail/
+합계 56
+-rw-------. 1 root mail 57327 2019-07-28 10:26 root
+-rw-rw----. 1 rpc  mail     0 2019-07-13 12:09 rpc
+[root@yunji kgitbank]# useradd kgitbank
+[root@yunji kgitbank]# passwd kgitbank
+kgitbank 사용자의 비밀 번호 변경 중
+새  암호:
+잘못된 암호: 너무 짧습니다
+잘못된 암호: 앞뒤 어느쪽에서 읽어도 같은 문맥임
+새  암호 재입력:
+passwd: 모든 인증 토큰이 성공적으로 업데이트 되었습니다.
+[root@yunji kgitbank]# ls -l ~kgitbank/test/
+합계 1
+-rw-rw-r--. 1 kgitbank kgitbank 0 2019-08-03 10:44 2
+[root@yunji kgitbank]# cd ..
+[root@yunji home]# pwd
+/home
+[root@yunji home]# cd ~
+[root@yunji ~]# cd /home/kgitbank
+[root@yunji kgitbank]# rm -rf ~kgitbank/*
+[root@yunji kgitbank]# ls -l ~kgitbank/*
+ls: cannot access /home/kgitbank/*: 그런 파일이나 디렉터리가 없습니다
+[root@yunji kgitbank]# ls -l kgitbank
+ls: cannot access kgitbank: 그런 파일이나 디렉터리가 없습니다
+[root@yunji kgitbank]# cd
+[root@yunji ~]# umask
+0022
+[root@yunji ~]# pw
+-bash: pw: command not found
+[root@yunji ~]# pwd
+/root
+[root@yunji ~]# clear
+[root@yunji ~]# whoami
+root
+[root@yunji ~]# cd ~kgitbank/
+[root@yunji kgitbank]# pwd
+/home/kgitbank
+[root@yunji kgitbank]# mkdir test
+[root@yunji kgitbank]# ls -ld test
+drwxr-xr-x. 2 root root 1024 2019-08-03 10:48 test
+[root@yunji kgitbank]# umask
+0022
+[root@yunji kgitbank]# root
+-bash: root: command not found
+[root@yunji kgitbank]# whoami
+root
+[root@yunji kgitbank]# ksh
+# exit
+[root@yunji kgitbank]# clear
+[root@yunji kgitbank]# pwd
+/home/kgitbank
+[root@yunji kgitbank]# whoami
+root
+[root@yunji kgitbank]# umask
+0022
+[root@yunji kgitbank]# ls -l
+합계 4
+drwxr-xr-x. 2 root     root     1024 2019-08-03 10:48 test
+drwxrwxr-x. 2 kgitbank kgitbank 1024 2019-08-03 10:51 test1
+[root@yunji kgitbank]# vi /etc/profile
+[root@yunji kgitbank]# vi /etc/bashrc
+[root@yunji kgitbank]# ls -l /bin
+합계 9368
+-rwxr-xr-x. 1 root root     123 2016-03-24 02:03 alsaunmute
+-rwxr-xr-x. 1 root root   27776 2016-05-11 17:59 arch
+lrwxrwxrwx. 1 root root       4 2019-07-13 12:08 awk -> gawk
+-rwxr-xr-x. 1 root root   26264 2016-05-11 17:59 basename
+-rwxr-xr-x. 1 root root  941880 2016-05-11 08:21 bash
+-rwxr-xr-x. 1 root root   48568 2016-05-11 17:59 cat
+-rwxr-xr-x. 1 root root   55472 2016-05-11 17:59 chgrp
+-rwxr-xr-x. 1 root root   52472 2016-05-11 17:59 chmod
+-rwxr-xr-x. 1 root root   57464 2016-05-11 17:59 chown
+-rwxr-xr-x. 1 root root  122896 2016-05-11 17:59 cp
+-rwxr-xr-x. 1 root root  135808 2014-09-04 20:07 cpio
+lrwxrwxrwx. 1 root root       4 2019-07-13 12:11 csh -> tcsh
+-rwxr-xr-x. 1 root root   45536 2016-05-11 17:59 cut
+-rwxr-xr-x. 1 root root  109672 2012-10-17 16:48 dash
+-rwxr-xr-x. 1 root root   59392 2016-05-11 17:59 date
+-rwxr-xr-x. 1 root root   12600 2015-04-22 19:52 dbus-cleanup-sockets
+-rwxr-xr-x. 1 root root  339080 2015-04-22 19:52 dbus-daemon
+-rwxr-xr-x. 1 root root   18560 2015-04-22 19:52 dbus-monitor
+-rwxr-xr-x. 1 root root   22456 2015-04-22 19:52 dbus-send
+-rwxr-xr-x. 1 root root   11008 2015-04-22 19:52 dbus-uuidgen
+-rwxr-xr-x. 1 root root   55256 2016-05-11 17:59 dd
+-rwxr-xr-x. 1 root root   94224 2016-05-11 17:59 df
+-rwxr-xr-x. 1 root root    9944 2016-05-11 07:58 dmesg
+lrwxrwxrwx. 1 root root       8 2019-07-13 12:08 dnsdomainname -> hostname
+lrwxrwxrwx. 1 root root       8 2019-07-13 12:08 domainname -> hostname
+-rwxr-xr-x. 1 root root   81120 2010-11-12 05:45 dumpkeys
+-rwxr-xr-x. 1 root root   28176 2016-05-11 17:59 echo
+-rwxr-xr-x. 2 root root   53400 2010-11-11 15:28 ed
+lrwxrwxrwx. 1 root root       4 2019-07-13 12:08 egrep -> grep
+-rwxr-xr-x. 1 root root   26368 2016-05-11 17:59 env
+lrwxrwxrwx. 1 root root       2 2019-07-13 12:08 ex -> vi
+-rwxr-xr-x. 1 root root   25120 2016-05-11 17:59 false
+lrwxrwxrwx. 1 root root       4 2019-07-13 12:08 fgrep -> grep
+-rwxr-xr-x. 1 root root  239000 2016-03-01 21:25 find
+-rwxr-xr-x. 1 root root   41896 2016-05-11 07:58 findmnt
+-rwsr-x---. 1 root fuse   32368 2016-05-11 16:38 fusermount
+-rwxr-xr-x. 1 root root  382752 2015-11-10 18:31 gawk
+-rwxr-xr-x. 1 root root   33488 2014-06-02 17:00 gettext
+-rwxr-xr-x. 1 root root  167744 2015-11-10 18:52 grep
+lrwxrwxrwx. 1 root root       3 2019-07-13 12:08 gtar -> tar
+-rwxr-xr-x. 1 root root      61 2014-03-18 05:00 gunzip
+-rwxr-xr-x. 1 root root   68704 2014-03-18 05:00 gzip
+-rwxr-xr-x. 1 root root   17872 2012-05-10 17:17 hostname
+-rwxr-xr-x. 1 root root   15320 2016-05-12 04:34 ipcalc
+lrwxrwxrwx. 1 root root      41 2019-07-13 12:09 iptables-xml -> /etc/alternativ                     es/bin-iptables-xml.x86_64
+lrwxrwxrwx. 1 root root      20 2019-07-13 12:09 iptables-xml-1.4.7 -> /sbin/ipt                     ables-multi
+-rwxr-xr-x. 1 root root   11296 2010-11-12 05:45 kbd_mode
+-rwxr-xr-x. 1 root root   25560 2014-10-15 20:08 keyctl
+-rwxr-xr-x. 1 root root   15240 2016-05-11 07:58 kill
+lrwxrwxrwx. 1 root root      21 2019-07-13 12:11 ksh -> /etc/alternatives/ksh
+-rwxr-xr-x. 1 root root 1507840 2016-05-11 08:36 ksh93
+-rwxr-xr-x. 1 root root   26256 2016-05-11 17:59 link
+-rwxr-xr-x. 1 root root   49504 2016-05-11 17:59 ln
+-rwxr-xr-x. 1 root root  112208 2010-11-12 05:45 loadkeys
+-rwxr-xr-x. 1 root root   15048 2016-05-11 07:58 logger
+-rwxr-xr-x. 1 root root   31552 2016-05-11 07:58 login
+-rwxr-xr-x. 1 root root  117048 2016-05-11 17:59 ls
+-rwxr-xr-x. 1 root root   62656 2016-05-11 07:58 lsblk
+lrwxrwxrwx. 1 root root      22 2019-07-13 12:09 mail -> /etc/alternatives/mail
+-rwxr-xr-x. 1 root root  390744 2014-12-17 03:57 mailx
+-rwxr-xr-x. 1 root root   50056 2016-05-11 17:59 mkdir
+-rwxr-xr-x. 1 root root   33144 2016-05-11 17:59 mknod
+-rwxr-xr-x. 1 root root   38048 2016-05-11 17:59 mktemp
+-rwxr-xr-x. 1 root root   41216 2016-05-11 07:58 more
+-rwsr-xr-x. 1 root root   77336 2016-05-11 07:58 mount
+-rwxr-xr-x. 1 root root    9848 2015-07-24 07:21 mountpoint
+-rwxr-xr-x. 1 root root  113392 2016-05-11 17:59 mv
+-rwxr-xr-x. 1 root root  178896 2010-11-12 16:18 nano
+-rwxr-xr-x. 1 root root  128216 2012-05-10 17:17 netstat
+-rwxr-xr-x. 1 root root   28784 2016-05-11 17:59 nice
+lrwxrwxrwx. 1 root root       8 2019-07-13 12:08 nisdomainname -> hostname
+-rwsr-xr-x. 1 root root   38264 2016-05-11 03:32 ping
+-rwsr-xr-x. 1 root root   36488 2016-05-11 03:32 ping6
+-rwxr-xr-x. 1 root root   36808 2014-08-12 02:59 plymouth
+-rwxr-xr-x. 1 root root   89504 2016-05-11 08:23 ps
+-rwxr-xr-x. 1 root root   31656 2016-05-11 17:59 pwd
+-rwxr-xr-x. 1 root root   11576 2016-05-11 07:58 raw
+-rwxr-xr-x. 1 root root   40056 2016-05-11 17:59 readlink
+-rwxr-xr-x. 2 root root   53400 2010-11-11 15:28 red
+-rwxr-xr-x. 1 root root     576 2008-04-17 02:50 redhat_lsb_init
+-rwxr-xr-x. 1 root root   57440 2016-05-11 17:59 rm
+-rwxr-xr-x. 1 root root   40480 2016-05-11 17:59 rmdir
+lrwxrwxrwx. 1 root root       4 2019-07-13 12:11 rnano -> nano
+-rwxr-xr-x. 1 root root   30648 2016-05-11 08:49 rpm
+lrwxrwxrwx. 1 root root       2 2019-07-13 12:08 rvi -> vi
+lrwxrwxrwx. 1 root root       2 2019-07-13 12:08 rview -> vi
+-rwxr-xr-x. 1 root root   72248 2012-06-22 22:41 sed
+-rwxr-xr-x. 1 root root   42384 2010-11-12 05:45 setfont
+-rwxr-xr-x. 1 root root   23672 2010-08-23 08:06 setserial
+lrwxrwxrwx. 1 root root       4 2019-07-13 12:08 sh -> bash
+-rwxr-xr-x. 1 root root   27848 2016-05-11 17:59 sleep
+-rwxr-xr-x. 1 root root   98872 2016-05-11 17:59 sort
+-rwxr-xr-x. 1 root root   65032 2016-05-11 17:59 stty
+-rwsr-xr-x. 1 root root   34904 2016-05-11 17:59 su
+-rwxr-xr-x. 1 root root   25432 2016-05-11 17:59 sync
+-rwxr-xr-x. 1 root root  395496 2016-05-11 03:33 tar
+-rwxr-xr-x. 1 root root   14880 2016-05-11 07:58 taskset
+-rwxr-xr-x. 1 root root  388064 2016-05-11 09:30 tcsh
+-rwxr-xr-x. 1 root root   52560 2016-05-11 17:59 touch
+-rwxr-xr-x. 1 root root   11440 2016-05-11 03:32 tracepath
+-rwxr-xr-x. 1 root root   12304 2016-05-11 03:32 tracepath6
+-rwxr-xr-x. 1 root root   57480 2010-11-12 00:30 traceroute
+lrwxrwxrwx. 1 root root      10 2019-07-13 12:12 traceroute6 -> traceroute
+-rwxr-xr-x. 1 root root   25120 2016-05-11 17:59 true
+-rwxr-xr-x. 1 root root   15008 2016-05-11 16:38 ulockmgr_server
+-rwsr-xr-x. 1 root root   53472 2016-05-11 07:58 umount
+-rwxr-xr-x. 1 root root   27776 2016-05-11 17:59 uname
+-rwxr-xr-x. 1 root root    2555 2010-11-12 05:45 unicode_start
+-rwxr-xr-x. 1 root root     363 2010-11-12 05:45 unicode_stop
+-rwxr-xr-x. 1 root root   25760 2016-05-11 17:59 unlink
+-rwxr-xr-x. 1 root root   10256 2016-05-12 04:34 usleep
+-rwxr-xr-x. 1 root root  913080 2015-07-24 11:23 vi
+lrwxrwxrwx. 1 root root       2 2019-07-13 12:08 view -> vi
+lrwxrwxrwx. 1 root root       8 2019-07-13 12:08 ypdomainname -> hostname
+-rwxr-xr-x. 1 root root      62 2014-03-18 05:00 zcat
+[root@yunji kgitbank]# clear
+[root@yunji kgitbank]# whoami
+root
+[root@yunji kgitbank]# vi 1
+[root@yunji kgitbank]# ls -l ?
+-rw-r--r--. 1 root root 16 2019-08-03 11:01 1
+[root@yunji kgitbank]# 1
+-bash: 1: command not found
+[root@yunji kgitbank]# chmod 755 1
+[root@yunji kgitbank]# ls -l 1
+-rwxr-xr-x. 1 root root 16 2019-08-03 11:01 1
+[root@yunji kgitbank]# mv 1 /bin
+[root@yunji kgitbank]# ls -l /bin/?
+-rwxr-xr-x. 1 root root 16 2019-08-03 11:01 /bin/1
+[root@yunji kgitbank]# 1
+mkdir: `/kgitbank' 디렉토리를 만들 수 없습니다: 파일이 있습니다
+[root@yunji kgitbank]# ls -ld /kgitbank/
+drwxr-xr-x. 3 root root 4096 2019-07-21 11:57 /kgitbank/
+[root@yunji kgitbank]# rm -rf /kgitbank/
+[root@yunji kgitbank]# ls -ld /kgitbank
+ls: cannot access /kgitbank: 그런 파일이나 디렉터리가 없습니다
+[root@yunji kgitbank]# 1
+[root@yunji kgitbank]# ls -ld /kgitbank
+drwxr-xr-x. 2 root root 4096 2019-08-03 11:04 /kgitbank
+[root@yunji kgitbank]# whoami
+root
+[root@yunji kgitbank]# rm -rf ~kgitbank/*
+[root@yunji kgitbank]# ls -l ~kgitbank/
+합계 0
+[root@yunji kgitbank]# whoami
+root
+[root@yunji kgitbank]# find /-name *.sh
+find: `/-name': 그런 파일이나 디렉터리가 없습니다
+find: `*.sh': 그런 파일이나 디렉터리가 없습니다
+[root@yunji kgitbank]# find / -name *.sh
+/etc/kde/env/imsettings-kde.sh
+/etc/profile.d/qt.sh
+/etc/profile.d/cvs.sh
+/etc/profile.d/colorls.sh
+/etc/profile.d/udisks-bash-completion.sh
+/etc/profile.d/vim.sh
+/etc/profile.d/which2.sh
+/etc/profile.d/less.sh
+/etc/profile.d/glib2.sh
+/etc/profile.d/gnome-ssh-askpass.sh
+/etc/profile.d/lang.sh
+/etc/dhcp/dhclient.d/ntp.sh
+/etc/dhcp/dhclient.d/nis.sh
+/etc/vsftpd/vsftpd_conf_migrate.sh
+/etc/X11/xinit/xinitrc.d/localuser.sh
+/etc/X11/xinit/xinitrc.d/00-start-message-bus.sh
+/etc/X11/xinit/xinitrc.d/50-xinput.sh
+/etc/X11/xinit/xinitrc.d/xdg-user-dirs.sh
+/etc/acpi/actions/power.sh
+/etc/bash_completion.d/gvfs-bash-completion.sh
+/etc/bash_completion.d/gdbus-bash-completion.sh
+/lib/udev/fw_unit_symlinks.sh
+/lib/udev/keyboard-force-release.sh
+/lib/udev/firmware.sh
+/lib/udev/mpath-iosched.sh
+/lib/udev/wdaemon_is_uinput.sh
+/usr/share/groff/1.18.1.4/groffer/groffer2.sh
+/usr/share/groff/1.18.1.4/groffer/version.sh
+/usr/share/keyutils/request-key-debug.sh
+/usr/share/gnome/shutdown/libcanberra-logout-sound.sh
+/usr/share/PackageKit/pk-upgrade-distro.sh
+/usr/share/PackageKit/helpers/test_spawn/search-name.sh
+/usr/share/vim/vim74/macros/less.sh
+/usr/share/doc/sane-backends-1.0.21/plustek/MakeModule.sh
+/usr/share/doc/oddjob-0.30/sample/usr/lib64/oddjob/oddjob-sample.sh
+/usr/share/dracut/modules.d/50plymouth/plymouth-pretrigger.sh
+/usr/share/dracut/modules.d/50plymouth/plymouth-emergency.sh
+/usr/share/dracut/modules.d/50plymouth/plymouth-newroot.sh
+/usr/share/dracut/modules.d/90crypt/parse-crypt.sh
+/usr/share/dracut/modules.d/90crypt/crypt-cleanup.sh
+/usr/share/dracut/modules.d/90crypt/cryptroot-ask.sh
+/usr/share/dracut/modules.d/90crypt/crypt-lib.sh
+/usr/share/dracut/modules.d/90dmraid/dmraid.sh
+/usr/share/dracut/modules.d/90dmraid/parse-dm.sh
+/usr/share/dracut/modules.d/98syslog/parse-syslog-opts.sh
+/usr/share/dracut/modules.d/98syslog/rsyslogd-start.sh
+/usr/share/dracut/modules.d/98syslog/rsyslogd-stop.sh
+/usr/share/dracut/modules.d/98syslog/syslog-genrules.sh
+/usr/share/dracut/modules.d/98syslog/syslog-cleanup.sh
+/usr/share/dracut/modules.d/95resume/parse-resume.sh
+/usr/share/dracut/modules.d/95resume/resume.sh
+/usr/share/dracut/modules.d/95resume/resume-genrules.sh
+/usr/share/dracut/modules.d/90dmsquash-live/dmsquash-liveiso-genrules.sh
+/usr/share/dracut/modules.d/90dmsquash-live/parse-dmsquash-live.sh
+/usr/share/dracut/modules.d/95zfcp/zfcpconf.sh
+/usr/share/dracut/modules.d/95zfcp/parse-zfcp.sh
+/usr/share/dracut/modules.d/90dm/dm-pre-udev.sh
+/usr/share/dracut/modules.d/90kernel-modules/parse-kernel.sh
+/usr/share/dracut/modules.d/90multipath/multipathd.sh
+/usr/share/dracut/modules.d/90multipath/multipathd-stop.sh
+/usr/share/dracut/modules.d/60xen/xen-pre-udev.sh
+/usr/share/dracut/modules.d/10redhat-i18n/parse-i18n.sh
+/usr/share/dracut/modules.d/90lvm/lvm_scan.sh
+/usr/share/dracut/modules.d/90lvm/parse-lvm.sh
+/usr/share/dracut/modules.d/95znet/parse-ccw.sh
+/usr/share/dracut/modules.d/97biosdevname/parse-biosdevname.sh
+/usr/share/dracut/modules.d/95fstab-sys/mount-sys.sh
+/usr/share/dracut/modules.d/95uswsusp/resume-uswsusp.sh
+/usr/share/dracut/modules.d/95uswsusp/parse-uswsusp.sh
+/usr/share/dracut/modules.d/95dasd/parse-dasd.sh
+/usr/share/dracut/modules.d/95dasd_mod/parse-dasd-mod.sh
+/usr/share/dracut/modules.d/10rdma/rdma.sh
+/usr/share/dracut/modules.d/99base/parse-hostname.sh
+/usr/share/dracut/modules.d/99base/dracut-lib.sh
+/usr/share/dracut/modules.d/99base/selinux-loadpolicy.sh
+/usr/share/dracut/modules.d/99base/parse-blacklist.sh
+/usr/share/dracut/modules.d/99base/parse-root-opts.sh
+/usr/share/dracut/modules.d/96insmodpost/parse-insmodpost.sh
+/usr/share/dracut/modules.d/96insmodpost/insmodpost.sh
+/usr/share/dracut/modules.d/90mdraid/mdraid-cleanup.sh
+/usr/share/dracut/modules.d/90mdraid/mdcontainer_start.sh
+/usr/share/dracut/modules.d/90mdraid/mdmon-pre-udev.sh
+/usr/share/dracut/modules.d/90mdraid/mdraid_start.sh
+/usr/share/dracut/modules.d/90mdraid/md-noimsm.sh
+/usr/share/dracut/modules.d/90mdraid/md_finished.sh
+/usr/share/dracut/modules.d/90mdraid/parse-md.sh
+/usr/share/dracut/modules.d/90mdraid/mdadm_auto.sh
+/usr/share/dracut/modules.d/10rpmversion/version.sh
+/usr/share/dracut/modules.d/95rootfs-block/rootfallback.sh
+/usr/share/dracut/modules.d/95rootfs-block/mount-root.sh
+/usr/share/dracut/modules.d/95rootfs-block/parse-block.sh
+/usr/share/dracut/modules.d/95rootfs-block/block-genrules.sh
+/usr/libexec/xinputinfo.sh
+/usr/libexec/man-cmp.sh
+/usr/libexec/gedit-2/gedit-bugreport.sh
+/usr/libexec/oddjob/sanity.sh
+/usr/libexec/file-roller/isoinfo.sh
+/usr/libexec/openldap/create-certdb.sh
+/usr/libexec/mlx4-setup.sh
+/usr/libexec/cheese/cheese-bugreport.sh
+/usr/bin/pv.sh
+/usr/bin/pm-utils-bugreport-info.sh
+/usr/bin/unix-lpr.sh
+/usr/bin/amuFormat.sh
+/usr/bin/setup-nsssysinit.sh
+/usr/bin/lprsetup.sh
+/usr/bin/lesspipe.sh
+/usr/bin/packagekit-bugreport.sh
+/usr/bin/gnome-power-bugreport.sh
+/usr/bin/gettext.sh
+/usr/bin/alsa-info.sh
+/usr/lib64/xulrunner/run-mozilla.sh
+/usr/lib64/nspluginwrapper/npviewer.sh
+/usr/lib64/libreoffice/ure/bin/startup.sh
+/usr/lib64/firefox/run-mozilla.sh
+/usr/lib/anaconda-runtime/splashtolss.sh
+/usr/lib/rpm/rpm2cpio.sh
+[root@yunji kgitbank]# pwd
+/home/kgitbank
+[root@yunji kgitbank]# whoami
+root
+[root@yunji kgitbank]# rm -rf *
+[root@yunji kgitbank]# ls -l
+합계 0
+[root@yunji kgitbank]# mkdir test
+[root@yunji kgitbank]# umak
+-bash: umak: command not found
+[root@yunji kgitbank]# umask
+0022
+[root@yunji kgitbank]# ls -l
+합계 2
+drwxr-xr-x. 2 root root 1024 2019-08-03 11:40 test
+[root@yunji kgitbank]# cat -n /etc/passwd
+     1  root:x:0:0:root:/root:/bin/bash
+     2  bin:x:1:1:bin:/bin:/sbin/nologin
+     3  daemon:x:2:2:daemon:/sbin:/sbin/nologin
+     4  adm:x:3:4:adm:/var/adm:/sbin/nologin
+     5  lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+     6  sync:x:5:0:sync:/sbin:/bin/sync
+     7  shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+     8  halt:x:7:0:halt:/sbin:/sbin/halt
+     9  mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+    10  uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
+    11  operator:x:11:0:operator:/root:/sbin/nologin
+    12  games:x:12:100:games:/usr/games:/sbin/nologin
+    13  gopher:x:13:30:gopher:/var/gopher:/sbin/nologin
+    14  ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+    15  nobody:x:99:99:Nobody:/:/sbin/nologin
+    16  dbus:x:81:81:System message bus:/:/sbin/nologin
+    17  usbmuxd:x:113:113:usbmuxd user:/:/sbin/nologin
+    18  rpc:x:32:32:Rpcbind Daemon:/var/cache/rpcbind:/sbin/nologin
+    19  rtkit:x:499:499:RealtimeKit:/proc:/sbin/nologin
+    20  avahi-autoipd:x:170:170:Avahi IPv4LL Stack:/var/lib/avahi-autoipd:/sbin/                     nologin
+    21  vcsa:x:69:69:virtual console memory owner:/dev:/sbin/nologin
+    22  abrt:x:173:173::/etc/abrt:/sbin/nologin
+    23  rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+    24  nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+    25  haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+    26  ntp:x:38:38::/etc/ntp:/sbin/nologin
+    27  apache:x:48:48:Apache:/var/www:/sbin/nologin
+    28  saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+    29  postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+    30  gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+    31  pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+    32  sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+    33  tcpdump:x:72:72::/:/sbin/nologin
+    34  kgitbank:x:500:500::/home/kgitbank:/bin/bash
+[root@yunji kgitbank]# useradd iu
+[root@yunji kgitbank]# passwd iu
+iu 사용자의 비밀 번호 변경 중
+새  암호:
+잘못된 암호: 너무 짧습니다
+잘못된 암호: 앞뒤 어느쪽에서 읽어도 같은 문맥임
+새  암호 재입력:
+passwd: 모든 인증 토큰이 성공적으로 업데이트 되었습니다.
+[root@yunji kgitbank]# cat -n /etc/passwd
+     1  root:x:0:0:root:/root:/bin/bash
+     2  bin:x:1:1:bin:/bin:/sbin/nologin
+     3  daemon:x:2:2:daemon:/sbin:/sbin/nologin
+     4  adm:x:3:4:adm:/var/adm:/sbin/nologin
+     5  lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+     6  sync:x:5:0:sync:/sbin:/bin/sync
+     7  shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+     8  halt:x:7:0:halt:/sbin:/sbin/halt
+     9  mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+    10  uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
+    11  operator:x:11:0:operator:/root:/sbin/nologin
+    12  games:x:12:100:games:/usr/games:/sbin/nologin
+    13  gopher:x:13:30:gopher:/var/gopher:/sbin/nologin
+    14  ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+    15  nobody:x:99:99:Nobody:/:/sbin/nologin
+    16  dbus:x:81:81:System message bus:/:/sbin/nologin
+    17  usbmuxd:x:113:113:usbmuxd user:/:/sbin/nologin
+    18  rpc:x:32:32:Rpcbind Daemon:/var/cache/rpcbind:/sbin/nologin
+    19  rtkit:x:499:499:RealtimeKit:/proc:/sbin/nologin
+    20  avahi-autoipd:x:170:170:Avahi IPv4LL Stack:/var/lib/avahi-autoipd:/sbin/                     nologin
+    21  vcsa:x:69:69:virtual console memory owner:/dev:/sbin/nologin
+    22  abrt:x:173:173::/etc/abrt:/sbin/nologin
+    23  rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+    24  nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+    25  haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+    26  ntp:x:38:38::/etc/ntp:/sbin/nologin
+    27  apache:x:48:48:Apache:/var/www:/sbin/nologin
+    28  saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+    29  postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+    30  gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+    31  pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+    32  sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+    33  tcpdump:x:72:72::/:/sbin/nologin
+    34  kgitbank:x:500:500::/home/kgitbank:/bin/bash
+    35  iu:x:501:501::/home/iu:/bin/bash
+[root@yunji kgitbank]# ls -l
+합계 2
+drwxr-xr-x. 2 root root 1024 2019-08-03 11:40 test
+[root@yunji kgitbank]# chown iu test
+[root@yunji kgitbank]# ll
+합계 2
+drwxr-xr-x. 2 iu root 1024 2019-08-03 11:40 test
+[root@yunji kgitbank]# chown :kgitbank test
+[root@yunji kgitbank]# ll
+합계 2
+drwxr-xr-x. 2 iu kgitbank 1024 2019-08-03 11:40 test
+[root@yunji kgitbank]# chown root: test
+[root@yunji kgitbank]# ll
+합계 2
+drwxr-xr-x. 2 root root 1024 2019-08-03 11:40 test
+[root@yunji kgitbank]# chown iu:kgitbank test
+[root@yunji kgitbank]# ll
+합계 2
+drwxr-xr-x. 2 iu kgitbank 1024 2019-08-03 11:40 test
+[root@yunji kgitbank]# chgrp root test
+[root@yunji kgitbank]# ll
+합계 2
+drwxr-xr-x. 2 iu root 1024 2019-08-03 11:40 test
+[root@yunji kgitbank]# clear
+[root@yunji kgitbank]# ll
+합계 2
+drwxr-xr-x. 2 iu root 1024 2019-08-03 11:40 test
+[root@yunji kgitbank]# whoami
+root
+[root@yunji kgitbank]# pwd
+/home/kgitbank
+[root@yunji kgitbank]# cd ~
+[root@yunji ~]# pwd
+/root
+[root@yunji ~]# ls -l ?
+-rw-r--r--. 1 root root 0 2019-08-03 09:56 1
+-rw-r--r--. 1 root root 4 2019-08-03 09:57 2
+-rw-r--r--. 1 root root 4 2019-08-03 09:57 3
+[root@yunji ~]# mv 1 a
+[root@yunji ~]# ls -l
+합계 112
+-rw-r--r--. 1 root root     4 2019-08-03 09:57 2
+-rw-r--r--. 1 root root     4 2019-08-03 09:57 3
+-rw-r--r--. 1 root root     0 2019-08-03 09:56 a
+-rw-------. 1 root root  1561 2019-07-13 12:13 anaconda-ks.cfg
+-rw-r--r--. 1 root root 46676 2019-07-13 12:13 install.log
+-rw-r--r--. 1 root root 10033 2019-07-13 12:11 install.log.syslog
+drwxr-xr-x. 2 root root  4096 2019-07-20 09:31 yunji
+drwxr-xr-x. 2 root root  4096 2019-07-13 12:35 공개
+drwxr-xr-x. 2 root root  4096 2019-07-13 12:35 다운로드
+drwxr-xr-x. 2 root root  4096 2019-07-13 12:35 문서
+drwxr-xr-x. 2 root root  4096 2019-07-14 11:02 바탕화면
+drwxr-xr-x. 2 root root  4096 2019-07-13 12:35 비디오
+drwxr-xr-x. 2 root root  4096 2019-07-13 12:35 사진
+drwxr-xr-x. 2 root root  4096 2019-07-13 12:35 음악
+drwxr-xr-x. 2 root root  4096 2019-07-13 12:35 템플릿
+[root@yunji ~]# ls -l ?
+-rw-r--r--. 1 root root 4 2019-08-03 09:57 2
+-rw-r--r--. 1 root root 4 2019-08-03 09:57 3
+-rw-r--r--. 1 root root 0 2019-08-03 09:56 a
+[root@yunji ~]# mv 2 b
+[root@yunji ~]# mv 3 c
+[root@yunji ~]# ls -l ?
+-rw-r--r--. 1 root root 0 2019-08-03 09:56 a
+-rw-r--r--. 1 root root 4 2019-08-03 09:57 b
+-rw-r--r--. 1 root root 4 2019-08-03 09:57 c
+[root@yunji ~]# chattr +i a
+[root@yunji ~]# ls -l ?
+-rw-r--r--. 1 root root 0 2019-08-03 09:56 a
+-rw-r--r--. 1 root root 4 2019-08-03 09:57 b
+-rw-r--r--. 1 root root 4 2019-08-03 09:57 c
+[root@yunji ~]# mv a 1
+mv: cannot move `a' to `1': 명령을 허용하지 않음
+[root@yunji ~]# rm -f a
+rm: cannot remove `a': 명령을 허용하지 않음
+[root@yunji ~]# ls -l ?
+-rw-r--r--. 1 root root 0 2019-08-03 09:56 a
+-rw-r--r--. 1 root root 4 2019-08-03 09:57 b
+-rw-r--r--. 1 root root 4 2019-08-03 09:57 c
+[root@yunji ~]# chattr -i a
+[root@yunji ~]# ls -l ?
+-rw-r--r--. 1 root root 0 2019-08-03 09:56 a
+-rw-r--r--. 1 root root 4 2019-08-03 09:57 b
+-rw-r--r--. 1 root root 4 2019-08-03 09:57 c
+[root@yunji ~]# mv a 1
+[root@yunji ~]# ls - l?
+ls: cannot access -: 그런 파일이나 디렉터리가 없습니다
+ls: cannot access l?: 그런 파일이나 디렉터리가 없습니다
+[root@yunji ~]# ls -l ?
+-rw-r--r--. 1 root root 0 2019-08-03 09:56 1
+-rw-r--r--. 1 root root 4 2019-08-03 09:57 b
+-rw-r--r--. 1 root root 4 2019-08-03 09:57 c
+[root@yunji ~]# rm -f 1
+[root@yunji ~]# ls -l ?
+-rw-r--r--. 1 root root 4 2019-08-03 09:57 b
+-rw-r--r--. 1 root root 4 2019-08-03 09:57 c
+[root@yunji ~]# [wd
+-bash: [wd: command not found
+[root@yunji ~]# pwd
+/root
+[root@yunji ~]# whoami
+root
+[root@yunji ~]# rm -f ?
+[root@yunji ~]# ls -l ?
+ls: cannot access ?: 그런 파일이나 디렉터리가 없습니다
+[root@yunji ~]# mkdir /acl
+[root@yunji ~]# ls -ld /acl
+drwxr-xr-x. 2 root root 4096 2019-08-03 11:50 /acl
+[root@yunji ~]# umask
+0022
+[root@yunji ~]# ls -ld /acl
+drwxr-xr-x. 2 root root 4096 2019-08-03 11:50 /acl
+[root@yunji ~]# getfacl /acl
+getfacl: Removing leading '/' from absolute path names
+# file: acl
+# owner: root
+# group: root
+user::rwx
+group::r-x
+other::r-x
+
+[root@yunji ~]# setfacl -m u:kgitbank:rmw /acl
+setfacl: Option -m: 부적절한 인수 near character 13
+[root@yunji ~]# setfacl -m u:kgitbank:rww /acl
+setfacl: Option -m: 부적절한 인수 near character 14
+[root@yunji ~]# setfacl -m u:kgitbank:rwx /acl
+[root@yunji ~]# ls -ld /acl
+drwxrwxr-x+ 2 root root 4096 2019-08-03 11:50 /acl
+[root@yunji ~]# whoami
+root
+[root@yunji ~]# pwd
+/root
+[root@yunji ~]# serfacl -m u:iu:rwx /acl
+-bash: serfacl: command not found
+[root@yunji ~]# setfacl -m u:iu:rwx /acl
+[root@yunji ~]# getfacl /acl
+getfacl: Removing leading '/' from absolute path names
+# file: acl
+# owner: root
+# group: root
+user::rwx
+user:kgitbank:rwx
+user:iu:rwx
+group::r-x
+mask::rwx
+other::r-x
+
+[root@yunji ~]# setfacl -x u:iu /acl
+[root@yunji ~]# getfacl /acl
+getfacl: Removing leading '/' from absolute path names
+# file: acl
+# owner: root
+# group: root
+user::rwx
+user:kgitbank:rwx
+group::r-x
+mask::rwx
+other::r-x
+
+[root@yunji ~]# setfacl -b /acl
+[root@yunji ~]# getfacl /acl/
+getfacl: Removing leading '/' from absolute path names
+# file: acl/
+# owner: root
+# group: root
+user::rwx
+group::r-x
+other::r-x
+
+[root@yunji ~]# ls -ld /acl
+drwxr-xr-x. 2 root root 4096 2019-08-03 11:55 /acl
+[root@yunji ~]# clear
+[root@yunji ~]# umask
+0022
+[root@yunji ~]# cat -n /etc/group |grep wheel
+    11  wheel:x:10:
+[root@yunji ~]# ls -l /bin/su
+-rwsr-xr-x. 1 root root 34904 2016-05-11 17:59 /bin/su
+[root@yunji ~]# umask
+0022
+[root@yunji ~]# whoami
+root
+[root@yunji ~]# su kgitbank
+[kgitbank@yunji root]$ whoami
+kgitbank
+[kgitbank@yunji root]$ exit
+exit
+[root@yunji ~]# whoami
+root
+[root@yunji ~]# vi /etc/shadow
+[root@yunji ~]# ls -l /etc/shadow
+----------. 1 root root 1148 2019-08-03 11:41 /etc/shadow
+[root@yunji ~]# su kgitbank
+[kgitbank@yunji root]$ vi /etc/shadow
+[kgitbank@yunji root]$ cd ~
+[kgitbank@yunji ~]$ clear
+[kgitbank@yunji ~]$ pwd
+/home/kgitbank
+[kgitbank@yunji ~]$ exit
+exit
+[root@yunji ~]# whoami
+root
+[root@yunji ~]# whoami
+root
+[root@yunji ~]# pwd
+/root
+[root@yunji ~]# ls -l /bin/s
+ls: cannot access /bin/s: 그런 파일이나 디렉터리가 없습니다
+[root@yunji ~]# ls -l /bin/su
+-rwsr-xr-x. 1 root root 34904 2016-05-11 17:59 /bin/su
+[root@yunji ~]# chmod 4754 /bin/su
+[root@yunji ~]# ls -l /bin/su
+-rwsr-xr--. 1 root root 34904 2016-05-11 17:59 /bin/su
+[root@yunji ~]# cd ~
+[root@yunji ~]# grep root /etc/group
+root:x:0:
+[root@yunji ~]# chown :iu /bin/su
+[root@yunji ~]# ls -l /bin/su
+-rwxr-xr--. 1 root iu 34904 2016-05-11 17:59 /bin/su
+[root@yunji ~]# chmod 4750 /bin/su
+[root@yunji ~]# usermod -G iu kgitbank
+[root@yunji ~]# id kgitbank
+uid=500(kgitbank) gid=500(kgitbank) groups=500(kgitbank),501(iu)
+[root@yunji ~]# netstat -lntup
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address               Foreign Address             Stat                     e       PID/Program name
+tcp        0      0 0.0.0.0:56063               0.0.0.0:*                   LIST                     EN      1442/rpc.statd
+tcp        0      0 0.0.0.0:111                 0.0.0.0:*                   LIST                     EN      1385/rpcbind
+tcp        0      0 0.0.0.0:22                  0.0.0.0:*                   LIST                     EN      1743/sshd
+tcp        0      0 127.0.0.1:631               0.0.0.0:*                   LIST                     EN      1482/cupsd
+tcp        0      0 127.0.0.1:25                0.0.0.0:*                   LIST                     EN      1840/master
+tcp        0      0 :::57679                    :::*                        LIST                     EN      1442/rpc.statd
+tcp        0      0 :::111                      :::*                        LIST                     EN      1385/rpcbind
+tcp        0      0 :::22                       :::*                        LIST                     EN      1743/sshd
+tcp        0      0 ::1:631                     :::*                        LIST                     EN      1482/cupsd
+tcp        0      0 ::1:25                      :::*                        LIST                     EN      1840/master
+udp        0      0 0.0.0.0:111                 0.0.0.0:*                                                    1385/rpcbind
+udp        0      0 0.0.0.0:631                 0.0.0.0:*                                                    1482/cupsd
+udp        0      0 0.0.0.0:48895               0.0.0.0:*                                                    1442/rpc.statd
+udp        0      0 127.0.0.1:778               0.0.0.0:*                                                    1442/rpc.statd
+udp        0      0 0.0.0.0:68                  0.0.0.0:*                                                    2548/dhclient
+udp        0      0 0.0.0.0:712                 0.0.0.0:*                                                    1385/rpcbind
+udp        0      0 :::111                      :::*                                                         1385/rpcbind
+udp        0      0 :::47753                    :::*                                                         1442/rpc.statd
+udp        0      0 :::712                      :::*                                                         1385/rpcbind
+[root@yunji ~]# netstat -lntup |grep ftp
+[root@yunji ~]# /etc/rc.d/init.d/vsftpd start
+vsftpd에 대한 vsftpd을 시작 중:                            [  OK  ]
+[root@yunji ~]# netstat -lntup |grep ftp
+tcp        0      0 0.0.0.0:21                  0.0.0.0:*                   LIST                     EN      4607/vsftpd
+[root@yunji ~]# system-config-firewall
+[root@yunji ~]# vi /etc/selinux/config
+[root@yunji ~]# sestat
+-bash: sestat: command not found
+[root@yunji ~]# sestatus
+SELinux status:                 enabled
+SELinuxfs mount:                /selinux
+Current mode:                   enforcing
+Mode from config file:          disabled
+Policy version:                 24
+Policy from config file:        targeted
+[root@yunji ~]# reboot
+
+Broadcast message from root@yunji
+        (/dev/pts/0) at 12:52 ...
+
+The system is going down for reboot NOW!
+[root@yunji ~]#
+login as: root
+root@192.168.1.140's password:
+Last login: Sat Aug  3 09:03:15 2019 from 192.168.1.1
+[root@yunji ~]# /etc/rc.d/init.d/vsftpd restart
+vsftpd 종료 중:                                            [실패]
+vsftpd에 대한 vsftpd을 시작 중:                            [  OK  ]
+[root@yunji ~]# /etc/rc.d/init.d/vsftpd restart
+vsftpd 종료 중:                                            [  OK  ]
+vsftpd에 대한 vsftpd을 시작 중:                            [  OK  ]
+[root@yunji ~]# netstat -lntup |grep ftp
+tcp        0      0 0.0.0.0:21                  0.0.0.0:*                   LISTEN      2601/vsftpd  
+[root@yunji ~]# ls -ld ~kgitbank/
+drwx------. 5 kgitbank kgitbank 1024 2019-08-03 12:39 /home/kgitbank/
+[root@yunji ~]# vi ~kgitbank/index.html
+[root@yunji ~]# cat -n ~kgitbank/index.html
+     1  optimus prime
+[root@yunji ~]# ls -l ~kgitbank/
+합계 4
+-rw-r--r--  1 root     root       14 2019-08-03 13:22 index.html
+drwxr-xr-x. 2 iu       root     1024 2019-08-03 11:40 test
+-rw-r--r--  1 kgitbank kgitbank   14 2019-08-03 13:26 test.html
+[root@yunji ~]# rm -rf ~kgitbank/*
+[root@yunji ~]# ls -l ~kgitbank/
+합계 0
+[root@yunji ~]# mkdir ~kgitbank/html
+[root@yunji ~]# touch ~kgitbank/html/test
+[root@yunji ~]# clear
+[root@yunji ~]# pwd
+/root
+[root@yunji ~]# whoami
+root
+[root@yunji ~]# ls -l
+합계 104
+-rw-------. 1 root root  1561 2019-07-13 12:13 anaconda-ks.cfg
+-rw-r--r--. 1 root root 46676 2019-07-13 12:13 install.log
+-rw-r--r--. 1 root root 10033 2019-07-13 12:11 install.log.syslog
+drwxr-xr-x. 2 root root  4096 2019-07-20 09:31 yunji
+drwxr-xr-x. 2 root root  4096 2019-07-13 12:35 공개
+drwxr-xr-x. 2 root root  4096 2019-07-13 12:35 다운로드
+drwxr-xr-x. 2 root root  4096 2019-07-13 12:35 문서
+drwxr-xr-x. 2 root root  4096 2019-07-14 11:02 바탕화면
+drwxr-xr-x. 2 root root  4096 2019-07-13 12:35 비디오
+drwxr-xr-x. 2 root root  4096 2019-07-13 12:35 사진
+drwxr-xr-x. 2 root root  4096 2019-07-13 12:35 음악
+drwxr-xr-x. 2 root root  4096 2019-07-13 12:35 템플릿
+[root@yunji ~]# ls -ld /
+dr-xr-xr-x. 40 root root 4096 2019-08-03 12:52 /
+[root@yunji ~]# ls -ld /home
+drwxr-xr-x. 4 root root 1024 2019-08-03 11:41 /home
+[root@yunji ~]# ls -ld /home/kgitbank/
+drwx------. 5 kgitbank kgitbank 1024 2019-08-03 13:27 /home/kgitbank/
+[root@yunji ~]# ls -ld /home/kgitbank/html
+drwxr-xr-x 2 root root 1024 2019-08-03 13:27 /home/kgitbank/html
+[root@yunji ~]# ls -ld /home/kgitbank/html/test
+-rw-r--r-- 1 root root 0 2019-08-03 13:27 /home/kgitbank/html/test
+[root@yunji ~]# clear
+[root@yunji ~]# chmod 742 ~kgitbank/html
+[root@yunji ~]#

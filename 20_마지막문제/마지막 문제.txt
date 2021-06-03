@@ -1,0 +1,24 @@
+SCSI 1G
+
+P	P	L		device=/dev/sdb5
+200	200	etc		m.p=/export/sdb  (부팅시 자동마운트 vi /etc/fstab)
+
+/export/sdb/home/main(계정)/public_html/index.html<== 자동생성(/etc/skel 내용 포함)
+		/iu(계정) <== 계정이동
+		/ftpuser(계정)/pub/1.gz  <== 자동생성(/etc/skel내용 포함)
+				   2.bz2
+				   3.tar.gz
+
+1. index.html 문서 파일 안에 애국가 1절 내용을 입력하세요
+2. main 계정 홈디렉토리는 	main 계정이 모든 권한을 가지고
+   			GID(linux그룹)는 읽기 권한을
+			다른사람들은 접근만 가능하도록 설정
+3. iu는 계정이동후 정상접속이 가능하도록 설정해주세요
+4. ftpuser홈디렉토리에서 	ftpuser계정은 모든 권한을
+			ftpuser그룹은 다운로드 권한을
+			다른 사용자는 사용할 수 없도록 설정
+5. suzi 계정은 ftpuser의 그룹으로 /export/sdb/home/ftpuser/pub에 접속 할 수 있도록
+   설정해주세요 (shell 활성화 시킬것)
+	
+6 mysql은 rpm 으로 패키지 설치 하시고
+  php는 yum 으로 설치하세요

@@ -1,0 +1,1889 @@
+login as: root
+root@192.168.1.140's password:
+Last login: Sun Aug  4 13:18:03 2019 from 192.168.1.1
+[root@yunji ~]# cd Packages/
+-bash: cd: Packages/: 그런 파일이나 디렉터리가 없습니다
+[root@yunji ~]# cd Packages/
+-bash: cd: Packages/: 그런 파일이나 디렉터리가 없습니다
+[root@yunji ~]# find / -name Packages
+/cdrom/Packages
+/media/CentOS_6.8_Final/Packages
+/var/lib/rpm/Packages
+[root@yunji ~]# ^C
+[root@yunji ~]# cd cdrom
+-bash: cd: cdrom: 그런 파일이나 디렉터리가 없습니다
+[root@yunji ~]# cd /cdrom/Packages/
+[root@yunji Packages]# rpm -qa
+evolution-2.32.3-36.el6.x86_64
+m17n-db-assamese-1.5.5-1.1.el6.noarch
+paps-0.6.8-13.el6.3.x86_64
+libreport-cli-2.0.9-32.el6.centos.x86_64
+xkeyboard-config-2.16-1.el6.noarch
+hal-info-20090716-5.el6.noarch
+m17n-db-hindi-1.5.5-1.1.el6.noarch
+ntsysv-1.3.49.5-1.el6.x86_64
+glib-networking-2.28.6.1-2.2.el6.x86_64
+autocorr-en-4.3.7.2-2.el6.noarch
+xorg-x11-drv-evdev-2.9.2-1.el6.x86_64
+m17n-db-sinhala-1.5.5-1.1.el6.noarch
+pinfo-0.6.9-12.el6.x86_64
+libmusicbrainz3-3.0.2-7.el6.x86_64
+thai-scalable-fonts-common-0.4.12-2.1.el6.noarch
+gnome-panel-2.30.2-16.el6.x86_64
+time-1.7-38.el6.x86_64
+crash-gcore-command-1.0-5.el6.x86_64
+libXrender-0.9.8-2.1.el6.x86_64
+mythes-en-3.0-6.el6.noarch
+xorg-x11-drv-sisusb-0.9.6-11.el6.x86_64
+libnih-1.0.1-7.el6.x86_64
+lsof-4.82-5.el6.x86_64
+libXfixes-5.0.1-2.1.el6.x86_64
+bash-4.1.2-40.el6.x86_64
+xorg-x11-drv-penmount-1.5.0-6.el6.x86_64
+google-crosextra-caladea-fonts-1.002-0.3.20130214.el6.1.noarch
+scl-utils-20120927-27.el6_6.x86_64
+libXcomposite-0.4.3-4.el6.x86_64
+libICE-1.0.6-1.el6.x86_64
+xorg-x11-drv-i740-1.3.4-12.el6.x86_64
+dash-0.5.5.1-4.el6.x86_64
+khmeros-base-fonts-5.0-9.el6.noarch
+libsoup-2.34.3-5.el6.x86_64
+libpng-1.2.49-2.el6_7.x86_64
+xorg-x11-drv-cirrus-1.5.3-1.el6.x86_64
+perl-Test-Simple-0.92-141.el6_7.1.x86_64
+paktype-naqsh-fonts-2.0-8.el6.noarch
+at-spi-1.28.1-2.el6.centos.x86_64
+libuuid-2.17.2-12.24.el6.x86_64
+foomatic-db-4.0-7.20091126.el6.noarch
+coreutils-8.4-43.el6.x86_64
+lohit-oriya-fonts-2.4.3-6.el6.noarch
+gtkmm24-2.18.2-1.el6.x86_64
+grep-2.20-3.el6_7.1.x86_64
+setuptool-1.19.9-4.el6.x86_64
+redhat-logos-60.0.14-12.el6.centos.noarch
+traceroute-2.0.14-2.el6.x86_64
+evolution-data-server-2.32.3-23.el6.x86_64
+glib2-2.28.8-5.el6.x86_64
+sane-backends-libs-gphoto2-1.0.21-3.el6.x86_64
+xdg-utils-1.0.2-17.20091016cvs.el6.noarch
+b43-fwcutter-012-2.2.el6.x86_64
+PackageKit-gtk-module-0.5.8-26.el6.x86_64
+augeas-libs-1.0.0-10.el6.x86_64
+system-config-date-docs-1.0.11-1.el6.noarch
+sgml-common-0.6.3-33.el6.noarch
+ql2400-firmware-7.03.00-1.el6_5.noarch
+libspectre-0.2.4-2.el6.x86_64
+sqlite-3.6.20-1.el6_7.2.x86_64
+gnome-terminal-2.31.3-11.el6_6.x86_64
+bind-utils-9.8.2-0.47.rc1.el6.x86_64
+zd1211-firmware-1.4-4.el6.noarch
+pygtk2-2.16.0-3.el6.x86_64
+libgcrypt-1.4.5-11.el6_4.x86_64
+cronie-anacron-1.4.4-15.el6_7.1.x86_64
+urw-fonts-2.4-11.el6.noarch
+ipw2200-firmware-3.1-4.el6.noarch
+giflib-4.1.6-3.1.el6.x86_64
+libusb1-1.0.9-0.7.rc1.el6.x86_64
+plymouth-gdm-hooks-0.8.3-27.el6.centos.1.x86_64
+mailx-12.4-8.el6_6.x86_64
+gnome-python2-gnomekeyring-2.28.0-5.el6.x86_64
+enchant-1.5.0-5.el6.x86_64
+system-config-firewall-tui-1.2.27-7.2.el6_6.noarch
+xmlrpc-c-client-1.16.24-1210.1840.el6.x86_64
+gnome-media-2.29.91-6.el6.x86_64
+procps-3.2.8-36.el6.x86_64
+kernel-firmware-2.6.32-642.el6.noarch
+apr-util-ldap-1.3.9-3.el6_0.1.x86_64
+gnome-mag-0.15.9-2.el6.x86_64
+elfutils-libs-0.164-2.el6.x86_64
+gvfs-fuse-1.4.3-26.el6.x86_64
+libhangul-0.0.10-1.el6.x86_64
+gnome-themes-2.28.1-7.el6.noarch
+libical-0.43-6.el6.x86_64
+totem-nautilus-2.28.6-4.el6.x86_64
+paps-libs-0.6.8-13.el6.3.x86_64
+gnome-desktop-2.28.2-11.el6.centos.x86_64
+perl-5.10.1-141.el6_7.1.x86_64
+cjkuni-uming-fonts-0.2.20080216.1-36.el6.noarch
+c2050-0.3b-3.1.el6.x86_64
+kasumi-2.5-1.1.el6.x86_64
+libgtop2-2.28.0-7.el6.x86_64
+firstboot-1.110.15-4.el6.x86_64
+libvpx-1.3.0-5.el6_5.x86_64
+libdmx-1.1.3-3.el6.x86_64
+SDL-1.2.14-7.el6_7.1.x86_64
+gnome-applets-2.28.0-7.el6.centos.x86_64
+libsemanage-2.0.43-5.1.el6.x86_64
+libopenraw-gnome-0.0.5-4.1.el6.x86_64
+file-5.04-30.el6.x86_64
+nautilus-sendto-2.28.2-4.el6.x86_64
+GConf2-2.28.0-6.el6.x86_64
+im-chooser-1.3.1-3.el6.x86_64
+libplist-1.2-1.el6.x86_64
+gvfs-gphoto2-1.4.3-26.el6.x86_64
+rtkit-0.5-2.el6_4.x86_64
+iptables-1.4.7-16.el6.x86_64
+libselinux-utils-2.0.94-7.el6.x86_64
+seahorse-2.28.1-4.el6.x86_64
+slang-2.2.1-1.el6.x86_64
+mesa-libGL-11.0.7-4.el6.x86_64
+e2fsprogs-1.41.12-22.el6.x86_64
+samba-client-3.6.23-33.el6.x86_64
+pygobject2-2.20.0-5.el6.x86_64
+qt-x11-4.6.2-28.el6_5.x86_64
+cdparanoia-libs-10.2-5.1.el6.x86_64
+libreoffice-calc-4.3.7.2-2.el6.x86_64
+libuser-python-0.56.13-8.el6_7.x86_64
+mdadm-3.3.4-1.el6.x86_64
+fuse-libs-2.8.3-5.el6.x86_64
+iwl5150-firmware-8.24.2.2-1.el6.noarch
+python-ldap-2.3.10-1.el6.x86_64
+nfs-utils-lib-1.1.5-11.el6.x86_64
+libieee1284-0.2.11-9.el6.x86_64
+quota-3.17-23.el6.x86_64
+python-markupsafe-0.9.2-4.el6.x86_64
+metacity-2.28.0-23.el6.x86_64
+libavc1394-0.5.3-9.1.el6.x86_64
+xinetd-2.3.14-40.el6.x86_64
+python-krbV-1.0.90-3.el6.x86_64
+system-config-users-1.2.106-8.el6.noarch
+xcb-util-0.4.0-2.2.el6.x86_64
+ibus-chewing-1.3.5.20100714-4.el6.x86_64
+pyxdg-0.18-1.el6.noarch
+kexec-tools-2.0.0-300.el6.x86_64
+eggdbus-0.6-3.el6.x86_64
+gnote-0.6.3-3.el6.x86_64
+libproxy-0.3.0-10.el6.x86_64
+udisks-1.0.1-9.el6.x86_64
+m17n-contrib-bengali-1.1.10-4.el6_1.1.noarch
+libreport-compat-2.0.9-32.el6.centos.x86_64
+m17n-db-1.5.5-1.1.el6.noarch
+cryptsetup-luks-libs-1.2.0-11.el6.x86_64
+yum-utils-1.1.30-37.el6.noarch
+m17n-contrib-kannada-1.1.10-4.el6_1.1.noarch
+abrt-2.0.8-40.el6.centos.x86_64
+dejavu-fonts-common-2.33-1.el6.noarch
+system-setup-keyboard-0.7-4.el6.x86_64
+tcpdump-4.0.0-9.20090921gitdf3cb4.2.el6.x86_64
+m17n-contrib-malayalam-1.1.10-4.el6_1.1.noarch
+c-ares-1.10.0-3.el6.x86_64
+tzdata-java-2016c-1.el6.noarch
+gnome-session-2.28.0-22.el6.x86_64
+pam_passwdqc-1.0.5-8.el6.x86_64
+db4-utils-4.7.25-20.el6_7.x86_64
+smp_utils-0.94-4.el6.x86_64
+dmz-cursor-themes-0.4-4.el6.noarch
+xorg-x11-drv-trident-1.3.6-11.el6.x86_64
+ledmon-0.79-1.el6.x86_64
+taglib-1.6.1-1.1.el6.x86_64
+startup-notification-0.10-2.1.el6.x86_64
+ncurses-base-5.7-4.20090207.el6.x86_64
+xorg-x11-drv-rendition-4.2.6-1.el6.x86_64
+m17n-contrib-urdu-1.1.10-4.el6_1.1.noarch
+dejavu-serif-fonts-2.33-1.el6.noarch
+ibus-libs-1.3.4-9.el6.x86_64
+dbus-libs-1.2.24-8.el6_6.x86_64
+xorg-x11-drv-mga-1.6.3-9.el6.x86_64
+lohit-bengali-fonts-2.4.3-6.el6.noarch
+psutils-1.17-34.el6.x86_64
+cairomm-1.8.0-2.1.el6.x86_64
+popt-1.13-7.el6.x86_64
+xorg-x11-drv-fbdev-0.4.3-17.el6.x86_64
+tibetan-machine-uni-fonts-1.901-5.el6.noarch
+perl-ExtUtils-MakeMaker-6.55-141.el6_7.1.x86_64
+unique-1.1.4-2.el6.x86_64
+libudev-147-2.73.el6.x86_64
+authconfig-gtk-6.1.12-23.el6.x86_64
+un-core-dotum-fonts-1.0.2-0.15.080608.el6.noarch
+gzip-1.3.12-22.el6.x86_64
+gssdp-0.7.1-1.el6.x86_64
+bzip2-libs-1.0.5-7.el6_0.x86_64
+libreoffice-pdfimport-4.3.7.2-2.el6.x86_64
+un-core-gungseo-fonts-1.0.2-0.15.080608.el6.noarch
+hicolor-icon-theme-0.11-1.1.el6.noarch
+gupnp-igd-0.1.3-3.1.el6.x86_64
+pkgconfig-0.23-9.1.el6.x86_64
+wireless-tools-29-6.el6.x86_64
+zip-3.0-1.el6_7.1.x86_64
+libarchive-2.8.3-4.el6_2.x86_64
+polkit-gnome-0.96-4.el6.x86_64
+chkconfig-1.3.49.5-1.el6.x86_64
+ntpdate-4.2.6p5-10.el6.centos.x86_64
+crash-trace-command-1.0-5.el6.x86_64
+logrotate-3.7.8-26.el6_7.x86_64
+PackageKit-yum-0.5.8-26.el6.x86_64
+libogg-1.1.4-2.1.el6.x86_64
+rp-pppoe-3.10-16.el6.x86_64
+ivtv-firmware-20080701-20.2.noarch
+qt-sqlite-4.6.2-28.el6_5.x86_64
+libXmu-1.1.1-2.el6.x86_64
+libexif-0.6.21-5.el6_3.x86_64
+cyrus-sasl-2.1.23-15.el6_6.2.x86_64
+iwl3945-firmware-15.32.2.9-4.el6.noarch
+cyrus-sasl-md5-2.1.23-15.el6_6.2.x86_64
+gnome-python2-gconf-2.28.0-3.el6.x86_64
+libref_array-0.1.4-11.el6.x86_64
+redhat-lsb-compat-4.0-7.el6.centos.x86_64
+words-3.0-17.el6.noarch
+cvs-1.11.23-16.el6.x86_64
+libxkbfile-1.0.6-1.1.el6.x86_64
+xz-libs-4.999.9-0.5.beta.20091007git.el6.x86_64
+ipa-python-3.0.0-50.el6.centos.1.x86_64
+rpm-4.8.0-55.el6.x86_64
+python-slip-gtk-0.2.20-1.el6_2.noarch
+libcap-ng-0.6.4-3.el6_0.1.x86_64
+cjkuni-fonts-common-0.2.20080216.1-36.el6.noarch
+ptlib-2.6.5-5.el6.x86_64
+PackageKit-device-rebind-0.5.8-26.el6.x86_64
+lcms-libs-1.19-1.el6.x86_64
+gnome-bluetooth-2.28.6-8.el6.x86_64
+ethtool-3.5-6.el6.x86_64
+webkitgtk-1.4.3-9.el6_6.x86_64
+bzip2-1.0.5-7.el6_0.x86_64
+centos-indexhtml-6-2.el6.centos.noarch
+lpsolve-5.5.0.15-2.el6.x86_64
+libgnome-2.28.0-11.el6.x86_64
+perl-Pod-Escapes-1.04-141.el6_7.1.x86_64
+irqbalance-1.0.7-8.el6.x86_64
+lx-20030328-5.1.el6.x86_64
+gnome-python2-applet-2.28.0-5.el6.x86_64
+libtirpc-0.2.1-11.el6.x86_64
+sysstat-9.0.4-31.el6.x86_64
+libisofs-0.6.32-1.el6.x86_64
+plymouth-plugin-label-0.8.3-27.el6.centos.1.x86_64
+jasper-libs-1.900.1-16.el6_6.3.x86_64
+compiz-gnome-0.8.2-24.el6.x86_64
+libdv-1.0.0-8.1.el6.x86_64
+libwnck-2.28.0-3.el6.x86_64
+liboil-0.3.16-4.1.el6.x86_64
+gnome-packagekit-2.28.3-9.el6.x86_64
+ConsoleKit-libs-0.4.1-6.el6.x86_64
+fprintd-pam-0.1-22.git04fd09cfa.el6.x86_64
+xz-4.999.9-0.5.beta.20091007git.el6.x86_64
+gvfs-smb-1.4.3-26.el6.x86_64
+libutempter-1.1.5-4.1.el6.x86_64
+ibus-table-1.2.0.20100111-5.el6.noarch
+libbonobo-2.24.2-5.el6.x86_64
+gok-2.28.1-5.el6.x86_64
+MAKEDEV-3.24-6.el6.x86_64
+iputils-20071127-21.el6.x86_64
+openobex-1.4-7.el6.x86_64
+system-config-printer-udev-1.1.16-25.el6.x86_64
+libtdb-1.3.8-1.el6_7.x86_64
+usermode-1.102-3.el6.x86_64
+boost-system-1.41.0-28.el6.x86_64
+ibus-qt-1.3.0-2.el6.x86_64
+rpm-python-4.8.0-55.el6.x86_64
+device-mapper-1.02.117-7.el6.x86_64
+lzo-2.03-3.1.el6_5.1.x86_64
+libreoffice-langpack-ko-4.3.7.2-2.el6.x86_64
+python-dmidecode-3.10.13-3.el6_4.x86_64
+samba-common-3.6.23-33.el6.x86_64
+libpcap-1.4.0-4.20130826git2dbcaa1.el6.x86_64
+aic94xx-firmware-30-2.el6.noarch
+python-lxml-2.2.3-1.1.el6.x86_64
+sssd-krb5-common-1.13.3-22.el6.x86_64
+boost-filesystem-1.41.0-28.el6.x86_64
+cpuspeed-1.5-22.el6.x86_64
+pytalloc-2.1.5-1.el6_7.x86_64
+gucharmap-2.28.2-2.el6.x86_64
+gdbm-devel-1.8.0-39.el6.x86_64
+ibus-sayura-1.2.99.20100209-3.el6.x86_64
+python-iniparse-0.3.1-2.1.el6.noarch
+sssd-ad-1.13.3-22.el6.x86_64
+hunspell-ko-0.3.3-1.el6.noarch
+vino-2.28.1-9.el6_4.x86_64
+python-slip-dbus-0.2.20-1.el6_2.noarch
+dmraid-1.0.0.rc16-11.el6.x86_64
+meanwhile-1.1.0-3.el6.x86_64
+java-1.6.0-openjdk-1.6.0.38-1.13.10.4.el6.x86_64
+libreport-2.0.9-32.el6.centos.x86_64
+m17n-db-punjabi-1.5.5-1.1.el6.noarch
+fontpackages-filesystem-1.41-1.1.el6.noarch
+nautilus-2.28.4-25.el6.x86_64
+libreport-plugin-logger-2.0.9-32.el6.centos.x86_64
+m17n-db-oriya-1.5.5-1.1.el6.noarch
+liberation-fonts-common-1.05.1.20090721-5.el6.noarch
+abrt-python-2.0.8-40.el6.centos.x86_64
+m17n-db-telugu-1.5.5-1.1.el6.noarch
+iso-codes-3.16-2.el6.noarch
+abrt-addon-python-2.0.8-40.el6.centos.x86_64
+m17n-db-tamil-1.5.5-1.1.el6.noarch
+paktype-fonts-common-2.0-8.el6.noarch
+libnl3-3.2.21-8.el6.x86_64
+m17n-db-gujarati-1.5.5-1.1.el6.noarch
+mailcap-2.1.31-2.el6.noarch
+pakchois-0.4-3.2.el6.x86_64
+cyrus-sasl-plain-2.1.23-15.el6_6.2.x86_64
+khmeros-fonts-common-5.0-9.el6.noarch
+net-snmp-libs-5.5-57.el6.x86_64
+libopenraw-0.0.5-4.1.el6.x86_64
+kernel-headers-2.6.32-642.el6.x86_64
+gdk-pixbuf2-2.24.1-6.el6_7.x86_64
+libgomp-4.4.7-17.el6.x86_64
+libreport-filesystem-2.0.9-32.el6.centos.x86_64
+libXrandr-1.4.2-1.el6.x86_64
+db4-cxx-4.7.25-20.el6_7.x86_64
+comps-extras-17.8-1.el6.noarch
+pulseaudio-libs-0.9.21-24.el6.x86_64
+abyssinica-fonts-1.0-5.1.el6.noarch
+glibc-2.12-1.192.el6.x86_64
+libXt-1.1.4-6.1.el6.x86_64
+dejavu-sans-mono-fonts-2.33-1.el6.noarch
+libcap-2.16-5.5.el6.x86_64
+libXv-1.0.9-2.1.el6.x86_64
+dejavu-sans-fonts-2.33-1.el6.noarch
+libxml2-2.7.6-21.el6.x86_64
+ghostscript-8.70-21.el6.x86_64
+pnm2ppa-1.04-19.el6.x86_64
+nspr-4.11.0-1.el6.x86_64
+gtk2-2.24.23-8.el6.x86_64
+glibc-headers-2.12-1.192.el6.x86_64
+libjpeg-turbo-1.2.1-3.el6_5.x86_64
+libcanberra-gtk2-0.22-3.el6.x86_64
+perl-ExtUtils-ParseXS-2.2003.0-141.el6_7.1.x86_64
+audit-libs-2.4.5-3.el6.x86_64
+gnome-icon-theme-2.28.0-8.el6.noarch
+groff-1.18.1.4-21.el6.x86_64
+libacl-2.2.49-6.el6.x86_64
+libgweather-2.28.0-5.el6.x86_64
+cracklib-2.8.16-4.el6.x86_64
+tcp_wrappers-libs-7.6-58.el6.x86_64
+gnome-bluetooth-libs-2.28.6-8.el6.x86_64
+fontconfig-2.8.0-5.el6.x86_64
+m17n-contrib-1.1.10-4.el6_1.1.noarch
+libXxf86misc-1.0.3-4.el6.x86_64
+module-init-tools-3.9-25.el6.x86_64
+libart_lgpl-2.3.20-5.1.el6.x86_64
+brasero-libs-2.30.3-3.el6.x86_64
+openssl-1.0.1e-48.el6.x86_64
+libselinux-2.0.94-7.el6.x86_64
+gnome-keyring-pam-2.28.2-8.el6_3.x86_64
+libsamplerate-0.1.7-2.1.el6.x86_64
+atk-1.30.0-1.el6.x86_64
+gtksourceview2-2.8.2-4.el6.x86_64
+libssh2-1.4.2-2.el6_7.1.x86_64
+desktop-file-utils-0.15-9.el6.x86_64
+PackageKit-yum-plugin-0.5.8-26.el6.x86_64
+sound-theme-freedesktop-0.7-3.el6.noarch
+json-c-0.11-12.el6.x86_64
+libgxim-0.3.3-3.1.el6.x86_64
+dvd+rw-tools-7.1-7.el6.x86_64
+krb5-libs-1.10.3-57.el6.x86_64
+libXvMC-1.0.8-2.1.el6.x86_64
+wget-1.12-8.el6.x86_64
+speex-1.2-0.12.rc1.1.el6.x86_64
+festival-speechtools-libs-1.2.96-18.el6.x86_64
+fipscheck-lib-1.2.0-7.el6.x86_64
+xmlrpc-c-1.16.24-1210.1840.el6.x86_64
+gnome-python2-2.28.0-3.el6.x86_64
+alsa-utils-1.1.0-8.el6.x86_64
+libdhash-0.4.3-11.el6.x86_64
+gnome-python2-desktop-2.28.0-5.el6.x86_64
+pam_krb5-2.3.11-9.el6.x86_64
+libtiff-3.9.4-10.el6_5.x86_64
+libreoffice-ure-4.3.7.2-2.el6.x86_64
+nss-3.21.0-8.el6.x86_64
+libasyncns-0.8-1.1.el6.x86_64
+xorg-x11-xkb-utils-7.7-12.el6.x86_64
+libcurl-7.19.7-52.el6.x86_64
+which-2.19-6.el6.x86_64
+gstreamer-python-0.10.16-1.1.el6.x86_64
+openldap-2.4.40-12.el6.x86_64
+libnl-1.1.4-2.el6.x86_64
+festival-1.96-18.el6.x86_64
+passwd-0.77-7.el6.x86_64
+cups-libs-1.4.2-74.el6.x86_64
+xorg-x11-xauth-1.0.9-1.el6.x86_64
+man-1.6f-32.el6.x86_64
+file-libs-5.04-30.el6.x86_64
+farsight2-0.0.16-1.1.el6.x86_64
+icedax-1.1.9-12.el6.x86_64
+bluez-libs-4.66-1.el6.x86_64
+iok-1.3.13-3.el6.x86_64
+hesiod-3.1.0-19.el6.x86_64
+libtheora-1.1.0-2.el6.x86_64
+GConf2-gtk-2.28.0-6.el6.x86_64
+mingetty-1.08-5.el6.x86_64
+pciutils-libs-3.1.10-4.el6.x86_64
+system-gnome-theme-60.0.2-1.el6.noarch
+libevent-1.4.13-4.el6.x86_64
+gdbm-1.8.0-39.el6.x86_64
+libgnomeui-2.24.1-4.el6.x86_64
+pbm2l7k-990321-8.el6.x86_64
+perl-Module-Pluggable-3.90-141.el6_7.1.x86_64
+gnome-python2-libegg-2.25.3-20.el6.x86_64
+cjet-0.8.9-9.1.el6.x86_64
+apr-util-1.3.9-3.el6_0.1.x86_64
+libpanelappletmm-2.26.0-3.el6.x86_64
+libxshmfence-1.2-1.el6.x86_64
+keyutils-1.4-5.el6.x86_64
+xulrunner-17.0.10-1.el6.centos.x86_64
+libburn-0.7.0-2.el6.x86_64
+exempi-2.1.0-5.el6.x86_64
+qt3-3.3.8b-30.el6.x86_64
+gsm-1.0.13-4.el6.x86_64
+e2fsprogs-libs-1.41.12-22.el6.x86_64
+libXres-1.0.7-2.1.el6.x86_64
+libdiscid-0.2.2-4.1.el6.x86_64
+sg3_utils-libs-1.28-12.el6.x86_64
+notify-python-0.1.1-10.el6.x86_64
+dbus-1.2.24-8.el6_6.x86_64
+plymouth-graphics-libs-0.8.3-27.el6.centos.1.x86_64
+fprintd-0.1-22.git04fd09cfa.el6.x86_64
+polkit-0.96-11.el6.x86_64
+hunspell-en-0.20090216-7.1.el6.noarch
+xdg-user-dirs-0.12-4.el6.x86_64
+gconfmm26-2.28.0-1.el6.x86_64
+libwacom-0.16-2.el6.x86_64
+ibus-1.3.4-9.el6.x86_64
+libimobiledevice-0.9.7-4.el6.x86_64
+ORBit2-2.14.17-5.el6.x86_64
+centos-release-6-8.el6.centos.12.3.x86_64
+polkit-desktop-policy-0.96-11.el6.noarch
+vim-minimal-7.4.629-5.el6.x86_64
+libdrm-2.4.65-2.el6.x86_64
+libmcpp-2.7.2-4.1.el6.x86_64
+tar-1.23-14.el6.x86_64
+initscripts-9.03.53-1.el6.centos.x86_64
+libffi-3.0.5-3.2.el6.x86_64
+m4-1.4.13-5.el6.x86_64
+mesa-dri-drivers-11.0.7-4.el6.x86_64
+dbus-python-0.83.0-6.1.el6.x86_64
+snappy-1.1.0-1.el6.x86_64
+cups-1.4.2-74.el6.x86_64
+gnome-menus-2.28.0-4.el6.x86_64
+libXfont-1.5.1-2.el6.x86_64
+device-mapper-libs-1.02.117-7.el6.x86_64
+sos-3.2-40.el6.centos.noarch
+libaio-0.3.107-10.el6.x86_64
+device-mapper-event-1.02.117-7.el6.x86_64
+libselinux-python-2.0.94-7.el6.x86_64
+pth-2.0.7-9.3.el6.x86_64
+dracut-004-409.el6.noarch
+system-config-keyboard-base-1.3.1-6.el6.x86_64
+anthy-9100h-10.1.el6.x86_64
+libsmbclient-3.6.23-33.el6.x86_64
+pygpgme-0.1-18.20090824bzr68.el6.x86_64
+mtdev-1.1.5-1.el6.x86_64
+sssd-common-1.13.3-22.el6.x86_64
+pyOpenSSL-0.13.1-2.el6.x86_64
+cdparanoia-10.2-5.1.el6.x86_64
+rarian-compat-0.8.1-5.1.el6.x86_64
+python-paramiko-1.7.5-2.1.el6.noarch
+xz-lzma-compat-4.999.9-0.5.beta.20091007git.el6.x86_64
+mesa-libEGL-11.0.7-4.el6.x86_64
+samba4-libs-4.2.10-6.el6_7.x86_64
+perl-CGI-3.51-141.el6_7.1.x86_64
+system-config-services-docs-1.1.8-1.el6.noarch
+pyxf86config-0.3.37-7.1.el6.x86_64
+elfutils-0.164-2.el6.x86_64
+sssd-ipa-1.13.3-22.el6.x86_64
+yum-plugin-fastestmirror-1.1.30-37.el6.noarch
+iw-4.1-1.el6.x86_64
+sssd-proxy-1.13.3-22.el6.x86_64
+python-beaker-1.3.1-7.el6.noarch
+grubby-7.0.15-7.el6.x86_64
+dmraid-events-1.0.0.rc16-11.el6.x86_64
+gettext-0.17-18.el6.x86_64
+dbus-c++-0.5.0-0.10.20090203git13281b3.1.el6.x86_64
+python-meh-0.12.1-3.el6.noarch
+libreport-python-2.0.9-32.el6.centos.x86_64
+gnome-doc-utils-stylesheets-0.18.1-1.el6.noarch
+gtk2-immodule-xim-2.24.23-8.el6.x86_64
+yum-plugin-security-1.1.30-37.el6.noarch
+cryptsetup-luks-1.2.0-11.el6.x86_64
+grub-0.97-94.el6_7.1.x86_64
+DeviceKit-power-014-3.el6.x86_64
+systemtap-runtime-2.9-4.el6.x86_64
+xorg-x11-drv-void-1.4.1-1.el6.x86_64
+sudo-1.8.6p3-24.el6.x86_64
+xorg-x11-drv-wacom-0.32.0-1.el6.x86_64
+xorg-x11-fonts-misc-7.2-11.el6.noarch
+desktop-effects-0.8.4-7.el6.x86_64
+audit-2.4.5-3.el6.x86_64
+xorg-x11-drv-voodoo-1.2.5-11.el6.x86_64
+xorg-x11-fonts-ISO8859-1-100dpi-7.2-11.el6.noarch
+xorg-x11-drv-tdfx-1.4.6-1.el6.x86_64
+efibootmgr-0.5.4-13.el6.x86_64
+xorg-x11-drv-siliconmotion-1.7.8-1.el6.x86_64
+m17n-contrib-marathi-1.1.10-4.el6_1.1.noarch
+xorg-x11-drv-r128-6.10.0-1.el6.x86_64
+attr-2.4.44-7.el6.x86_64
+xorg-x11-drv-nv-2.1.20-6.el6.x86_64
+lohit-assamese-fonts-2.4.3-5.el6.noarch
+xorg-x11-drv-mach64-6.9.4-10.el6.x86_64
+jomolhari-fonts-0.003-8.1.el6.noarch
+xorg-x11-drv-hyperpen-1.4.1-6.el6.x86_64
+kurdit-unikurd-web-fonts-20020502-6.el6.noarch
+xorg-x11-drv-elographics-1.4.1-4.el6.x86_64
+smc-meera-fonts-04.2-11.el6.noarch
+xorg-x11-drv-apm-1.2.5-11.el6.x86_64
+lohit-punjabi-fonts-2.4.4-2.el6.noarch
+abrt-gui-2.0.8-40.el6.centos.x86_64
+lohit-telugu-fonts-2.4.5-6.el6.noarch
+ptouch-driver-1.3-2.1.el6.x86_64
+un-core-graphic-fonts-1.0.2-0.15.080608.el6.noarch
+glx-utils-11.0.7-4.el6.x86_64
+un-core-pilgi-fonts-1.0.2-0.15.080608.el6.noarch
+abrt-tui-2.0.8-40.el6.centos.x86_64
+vconfig-1.9-8.1.el6.x86_64
+python-iwlib-0.1-1.2.el6.x86_64
+bridge-utils-1.2-10.el6.x86_64
+sane-backends-libs-1.0.21-3.el6.x86_64
+trace-cmd-2.2.4-3.el6.x86_64
+ntp-4.2.6p5-10.el6.centos.x86_64
+scenery-backgrounds-6.0.0-1.el6.noarch
+yp-tools-2.9-12.el6.x86_64
+ql2100-firmware-1.19.38-3.1.el6.noarch
+dnsmasq-2.48-17.el6.x86_64
+ql2500-firmware-7.03.00-1.el6_5.noarch
+certmonger-0.77.5-2.el6.x86_64
+rt61pci-firmware-1.2-7.el6.noarch
+postfix-2.6.6-6.el6_7.1.x86_64
+ipw2100-firmware-1.3-11.el6.noarch
+redhat-lsb-core-4.0-7.el6.centos.x86_64
+man-pages-3.22-20.el6.noarch
+redhat-lsb-4.0-7.el6.centos.x86_64
+pulseaudio-gdm-hooks-0.9.21-24.el6.x86_64
+iptables-ipv6-1.4.7-16.el6.x86_64
+redhat-bookmarks-6-1.el6.centos.noarch
+mobile-broadband-provider-info-1.20100122-4.el6.noarch
+pulseaudio-0.9.21-24.el6.x86_64
+autofs-5.0.5-122.el6.x86_64
+xorg-x11-drv-nouveau-1.0.12-1.el6.x86_64
+firefox-45.0.1-1.el6.centos.x86_64
+alsa-plugins-pulseaudio-1.1.0-1.el6.x86_64
+pcmciautils-015-4.2.el6.x86_64
+system-config-firewall-1.2.27-7.2.el6_6.noarch
+gnome-user-share-2.28.2-3.el6.x86_64
+system-config-network-tui-1.6.0.el6.3-4.el6.noarch
+printer-filters-1.1-4.1.el6.noarch
+orca-2.28.2-1.el6.x86_64
+gnome-disk-utility-2.30.1-3.el6.x86_64
+brasero-nautilus-2.30.3-3.el6.x86_64
+gvfs-archive-1.4.3-26.el6.x86_64
+system-config-kdump-2.0.5-18.el6.noarch
+gnome-system-monitor-2.28.0-11.el6.x86_64
+gthumb-2.10.11-8.el6.x86_64
+system-config-printer-1.1.16-25.el6.x86_64
+rdma-6.8_4.1-1.el6.noarch
+gutenprint-cups-5.2.5-2.el6.x86_64
+libreoffice-writer-4.3.7.2-2.el6.x86_64
+biosdevname-0.7.1-3.el6.x86_64
+iwl6050-firmware-41.28.5.1-2.el6.noarch
+iwl6000-firmware-9.221.4.1-1.el6.noarch
+rng-tools-5-2.el6_7.x86_64
+smartmontools-5.43-1.el6.x86_64
+prelink-0.4.6-3.1.el6_4.x86_64
+ibus-pinyin-1.3.8-1.el6.x86_64
+ibus-rawcode-1.3.0.20100421-2.el6.x86_64
+xorg-x11-utils-7.5-14.el6.x86_64
+cheese-2.28.1-8.el6.x86_64
+evince-dvi-2.28.2-19.el6.x86_64
+gvfs-1.4.3-26.el6.x86_64
+libgcc-4.4.7-17.el6.x86_64
+m17n-contrib-punjabi-1.1.10-4.el6_1.1.noarch
+libreport-plugin-mailx-2.0.9-32.el6.centos.x86_64
+setup-2.8.14-20.el6_4.1.noarch
+m17n-contrib-oriya-1.1.10-4.el6_1.1.noarch
+libreport-plugin-ureport-2.0.9-32.el6.centos.x86_64
+xml-common-0.6.3-33.el6.noarch
+m17n-contrib-telugu-1.1.10-4.el6_1.1.noarch
+abrt-addon-ccpp-2.0.8-40.el6.centos.x86_64
+control-center-filesystem-2.28.1-40.el6.x86_64
+m17n-contrib-tamil-1.1.10-4.el6_1.1.noarch
+pax-3.4-10.1.el6.x86_64
+tzdata-2016c-1.el6.noarch
+m17n-contrib-gujarati-1.1.10-4.el6_1.1.noarch
+libini_config-1.1.0-11.el6.x86_64
+basesystem-10.0-4.el6.noarch
+unzip-6.0-4.el6.x86_64
+lm_sensors-libs-3.1.1-17.el6.x86_64
+vlgothic-fonts-common-20091202-2.el6.noarch
+ed-1.1-3.3.el6.x86_64
+libX11-1.6.3-2.el6.x86_64
+libwacom-data-0.16-2.el6.noarch
+mtools-4.0.12-1.el6.x86_64
+cairo-1.8.8-6.el6_6.x86_64
+autocorr-ko-4.3.7.2-2.el6.noarch
+db4-devel-4.7.25-20.el6_7.x86_64
+libXtst-1.2.2-2.1.el6.x86_64
+nss-softokn-freebl-3.14.3-23.el6_7.x86_64
+google-crosextra-carlito-fonts-1.103-0.1.20130920.el6.1.noarch
+libXinerama-1.1.3-2.1.el6.x86_64
+libattr-2.4.44-7.el6.x86_64
+liberation-serif-fonts-1.05.1.20090721-5.el6.noarch
+libXdamage-1.1.3-4.el6.x86_64
+zlib-1.2.3-29.el6.x86_64
+kpathsea-2007-60.el6_7.x86_64
+dbus-x11-1.2.24-8.el6_6.x86_64
+libcom_err-1.41.12-22.el6.x86_64
+vim-common-7.4.629-5.el6.x86_64
+pango-1.28.1-11.el6.x86_64
+nss-util-3.21.0-2.el6.x86_64
+glibc-devel-2.12-1.192.el6.x86_64
+gstreamer-plugins-base-0.10.29-2.el6.x86_64
+libtalloc-2.1.5-1.el6_7.x86_64
+perl-devel-5.10.1-141.el6_7.1.x86_64
+libgnomecanvas-2.26.0-4.el6.x86_64
+gawk-3.1.7-10.el6_7.3.x86_64
+less-436-13.el6.x86_64
+gstreamer-plugins-good-0.10.23-3.el6.x86_64
+libSM-1.2.1-2.el6.x86_64
+cracklib-dicts-2.8.16-4.el6.x86_64
+gupnp-0.13.2-1.el6.x86_64
+avahi-libs-0.6.25-15.el6.x86_64
+alsa-lib-1.1.0-4.el6.x86_64
+libXScrnSaver-1.2.2-2.el6.x86_64
+libusb-0.1.12-23.el6.x86_64
+hwdata-0.233-16.1.el6.noarch
+brasero-2.30.3-3.el6.x86_64
+libsepol-2.0.41-4.el6.x86_64
+qt-4.6.2-28.el6_5.x86_64
+libreport-gtk-2.0.9-32.el6.centos.x86_64
+shared-mime-info-0.70-6.el6.x86_64
+poppler-0.12.4-10.el6.x86_64
+gdm-libs-2.30.4-64.el6.x86_64
+sed-4.2.1-10.el6.x86_64
+pciutils-3.1.10-4.el6.x86_64
+PackageKit-glib-0.5.8-26.el6.x86_64
+elfutils-libelf-0.164-2.el6.x86_64
+jpackage-utils-1.7.5-3.16.el6.noarch
+gtkspell-2.0.16-1.el6.x86_64
+keyutils-libs-1.4-5.el6.x86_64
+docbook-dtds-1.0-51.el6.noarch
+evince-libs-2.28.2-19.el6.x86_64
+libsigc++20-2.2.4.2-1.el6.x86_64
+bind-libs-9.8.2-0.47.rc1.el6.x86_64
+pulseaudio-libs-glib2-0.9.21-24.el6.x86_64
+libblkid-2.17.2-12.24.el6.x86_64
+fipscheck-1.2.0-7.el6.x86_64
+pygtk2-libglade-2.16.0-3.el6.x86_64
+libxslt-1.1.26-2.el6_3.1.x86_64
+xorg-x11-fonts-Type1-7.2-11.el6.noarch
+gnome-python2-canvas-2.28.0-3.el6.x86_64
+libbasicobjects-0.1.1-11.el6.x86_64
+krb5-workstation-1.10.3-57.el6.x86_64
+java-1.7.0-openjdk-1.7.0.99-2.6.5.1.el6.x86_64
+libtool-ltdl-2.2.6-15.5.el6.x86_64
+nss-sysinit-3.21.0-8.el6.x86_64
+libgnomekbd-2.28.2-2.el6.x86_64
+findutils-4.4.2-9.el6.x86_64
+curl-7.19.7-52.el6.x86_64
+gnome-python2-extras-2.25.3-20.el6.x86_64
+libicu-4.2.1-14.el6.x86_64
+satyr-0.16-2.el6.x86_64
+festvox-slt-arctic-hts-0.20061229-18.el6.noarch
+gnutls-2.8.5-19.el6_7.x86_64
+gnupg2-2.0.14-8.el6.x86_64
+gnome-media-libs-2.29.91-6.el6.x86_64
+psmisc-22.6-19.el6_5.x86_64
+opal-3.6.6-4.el6.x86_64
+libnice-0.0.9-3.el6.x86_64
+libxcb-1.11-2.el6.x86_64
+wodim-1.1.9-12.el6.x86_64
+gstreamer-plugins-bad-free-0.10.19-3.el6_5.x86_64
+libgssglue-0.1-11.el6.x86_64
+libchewing-0.3.2-27.el6.x86_64
+gutenprint-5.2.5-2.el6.x86_64
+cpio-2.10-12.el6_5.x86_64
+numactl-2.0.9-2.el6.x86_64
+system-icon-theme-6.0.0-2.el6.noarch
+plymouth-core-libs-0.8.3-27.el6.centos.1.x86_64
+libthai-0.1.12-3.el6.x86_64
+gnome-panel-libs-2.30.2-16.el6.x86_64
+perl-version-0.77-141.el6_7.1.x86_64
+pbm2l2030-1.4-5.1.el6.x86_64
+gnome-python2-bonobo-2.28.0-3.el6.x86_64
+libv4l-0.6.3-2.el6.x86_64
+c2070-0.99-7.el6.x86_64
+libgail-gnome-1.20.1-4.1.el6.centos.x86_64
+cyrus-sasl-gssapi-2.1.23-15.el6_6.2.x86_64
+libepoxy-1.2-3.el6.x86_64
+pinentry-gtk-0.7.6-8.el6.x86_64
+libatasmart-0.17-4.el6_2.x86_64
+sgpio-1.2.0.10-5.el6.x86_64
+plymouth-theme-rings-0.8.3-27.el6.centos.1.noarch
+diffutils-2.8.1-28.el6.x86_64
+libvisual-0.4.0-10.el6.x86_64
+libXxf86dga-1.1.4-2.1.el6.x86_64
+sysvinit-tools-2.87-6.dsf.el6.x86_64
+ustr-1.0.4-9.1.el6.x86_64
+libnotify-0.5.0-1.el6.x86_64
+openjpeg-libs-1.3-11.el6.x86_64
+hal-libs-0.5.14-14.el6.x86_64
+libfprint-0.1.0-19.pre2.el6.x86_64
+p11-kit-0.18.5-2.el6_5.2.x86_64
+ConsoleKit-0.4.1-6.el6.x86_64
+xorg-x11-xinit-1.0.9-14.el6.x86_64
+bc-1.06.95-1.el6.x86_64
+usbmuxd-1.0.2-1.el6.x86_64
+ibus-gtk-1.3.4-9.el6.x86_64
+libIDL-0.8.13-2.1.el6.x86_64
+libgsf-1.14.15-5.el6.x86_64
+kbd-misc-1.15-11.el6.noarch
+libao-0.8.8-7.1.el6.x86_64
+lockdev-1.0.1-18.el6.x86_64
+iproute-2.6.32-54.el6.x86_64
+checkpolicy-2.0.22-1.el6.x86_64
+mcpp-2.7.2-4.1.el6.x86_64
+util-linux-ng-2.17.2-12.24.el6.x86_64
+make-3.81-23.el6.x86_64
+python-2.6.6-64.el6.x86_64
+mesa-dri1-drivers-7.11-8.el6.x86_64
+gmp-4.3.1-10.el6.x86_64
+libldb-1.1.25-2.el6_7.x86_64
+libreoffice-core-4.3.7.2-2.el6.x86_64
+libfontenc-1.1.2-3.el6.x86_64
+libxml2-python-2.7.6-21.el6.x86_64
+phonon-backend-gstreamer-4.6.2-28.el6_5.x86_64
+libedit-2.11-4.20080712cvs.1.el6.x86_64
+python-ethtool-0.6-5.el6.x86_64
+openssh-5.3p1-117.el6.x86_64
+libXdmcp-1.1.1-3.el6.x86_64
+python-slip-0.2.20-1.el6_2.noarch
+kbd-1.15-11.el6.x86_64
+dmidecode-2.12-7.el6.x86_64
+gdb-7.2-90.el6.x86_64
+samba-winbind-3.6.23-33.el6.x86_64
+hyphen-en-2.4-5.1.el6.noarch
+python-nss-0.16.0-1.el6.x86_64
+nfs-utils-1.2.3-70.el6.x86_64
+device-mapper-persistent-data-0.6.2-0.1.rc7.el6.x86_64
+python-libipa_hbac-1.13.3-22.el6.x86_64
+rarian-0.8.1-5.1.el6.x86_64
+cdrdao-1.2.3-4.el6.x86_64
+python-pycurl-7.19.0-9.el6.x86_64
+mesa-libgbm-11.0.7-4.el6.x86_64
+libiec61883-1.2.0-4.el6.x86_64
+openchange-1.0-7.el6_7.x86_64
+yelp-2.28.1-17.el6_3.x86_64
+libshout-2.2.2-5.1.el6.x86_64
+gamin-python-0.1.10-9.el6.x86_64
+system-config-users-docs-1.0.8-2.el6.noarch
+tmpwatch-2.9.16-6.el6.x86_64
+yum-3.2.29-73.el6.centos.noarch
+sssd-krb5-1.13.3-22.el6.x86_64
+gstreamer-0.10.29-1.el6.x86_64
+python-mako-0.3.4-1.el6.noarch
+dracut-kernel-004-409.el6.noarch
+portreserve-0.0.4-11.el6.x86_64
+libproxy-bin-0.3.0-10.el6.x86_64
+openssh-clients-5.3p1-117.el6.x86_64
+patch-2.6-6.el6.x86_64
+libreport-plugin-rhtsupport-2.0.9-32.el6.centos.x86_64
+gnome-disk-utility-libs-2.30.1-3.el6.x86_64
+totem-mozplugin-2.28.6-4.el6.x86_64
+gvfs-obexftp-1.4.3-26.el6.x86_64
+xvattr-1.3-18.el6.x86_64
+pm-utils-1.2.5-11.el6.x86_64
+blktrace-1.0.1-7.el6.x86_64
+libmtp-1.0.1-2.el6.x86_64
+mlocate-0.22.2-6.el6.x86_64
+xorg-x11-drv-vesa-2.3.4-1.el6.x86_64
+man-pages-overrides-6.8.2-1.el6.noarch
+gnome-settings-daemon-2.28.2-35.el6.x86_64
+usbutils-003-6.el6.x86_64
+gnome-session-xsession-2.28.0-22.el6.x86_64
+tcsh-6.17-35.el6.x86_64
+xorg-x11-drv-vmmouse-13.1.0-1.el6.x86_64
+xorg-x11-fonts-100dpi-7.2-11.el6.noarch
+xorg-x11-drv-synaptics-1.8.3-1.el6.x86_64
+enscript-1.6.4-15.el6.x86_64
+xorg-x11-drv-savage-2.3.7-3.el6.x86_64
+m17n-contrib-maithili-1.1.10-4.el6_1.1.noarch
+xorg-x11-drv-qxl-0.1.1-19.el6.x86_64
+nano-2.0.9-7.el6.x86_64
+xorg-x11-drv-mutouch-1.3.0-6.el6.x86_64
+strace-4.8-10.el6.x86_64
+xorg-x11-drv-keyboard-1.8.1-1.el6.x86_64
+thai-scalable-waree-fonts-0.4.12-2.1.el6.noarch
+xorg-x11-drv-glint-1.2.8-11.el6.x86_64
+paktype-tehreer-fonts-2.0-8.el6.noarch
+xorg-x11-drv-dummy-0.3.6-16.el6.x86_64
+vlgothic-fonts-20091202-2.el6.noarch
+xorg-x11-drv-aiptek-1.4.1-6.el6.x86_64
+sil-padauk-fonts-2.6.1-1.el6.noarch
+foomatic-db-ppds-4.0-7.20091126.el6.noarch
+stix-fonts-0.9-13.1.el6.noarch
+libreoffice-graphicfilter-4.3.7.2-2.el6.x86_64
+wdaemon-0.17-5.el6.x86_64
+compiz-0.8.2-24.el6.x86_64
+un-core-batang-fonts-1.0.2-0.15.080608.el6.noarch
+media-player-info-6-1.el6.noarch
+setserial-2.17-25.el6.x86_64
+hplip-common-3.14.6-3.el6.x86_64
+rdate-1.4-16.el6.x86_64
+hplip-libs-3.14.6-3.el6.x86_64
+latrace-0.5.9-2.el6.x86_64
+system-config-date-1.9.60-2.el6.centos.noarch
+man-pages-ko-20050219-17.el6.noarch
+ypbind-1.20.4-33.el6.x86_64
+iwl5000-firmware-8.83.5.1_1-1.el6_1.1.noarch
+vte-0.25.1-9.el6.x86_64
+xorg-x11-drv-ati-firmware-7.6.1-2.el6.noarch
+oddjob-0.30-6.el6.x86_64
+iwl4965-firmware-228.61.2.24-2.1.el6.noarch
+crontabs-1.10-33.el6.noarch
+rt73usb-firmware-1.8-7.el6.noarch
+redhat-lsb-printing-4.0-7.el6.centos.x86_64
+rootfiles-8.1-6.1.el6.noarch
+plymouth-utils-0.8.3-27.el6.centos.1.x86_64
+mesa-libxatracker-11.0.7-4.el6.x86_64
+system-config-firewall-base-1.2.27-7.2.el6_6.noarch
+dhcp-common-4.1.1-51.P1.el6.centos.x86_64
+NetworkManager-0.8.1-107.el6.x86_64
+pulseaudio-module-bluetooth-0.9.21-24.el6.x86_64
+fuse-2.8.3-5.el6.x86_64
+xorg-x11-drv-intel-2.99.917-0.4.20151111.el6.x86_64
+xorg-x11-drivers-7.3-13.4.el6.x86_64
+pulseaudio-module-x11-0.9.21-24.el6.x86_64
+NetworkManager-gnome-0.8.1-107.el6.x86_64
+gdm-user-switch-applet-2.30.4-64.el6.x86_64
+nautilus-open-terminal-0.17-4.el6.x86_64
+rhythmbox-0.12.8-1.el6.x86_64
+abrt-desktop-2.0.8-40.el6.centos.x86_64
+wacomexpresskeys-0.4.2-3.el6.x86_64
+evince-2.28.2-19.el6.x86_64
+evolution-help-2.32.3-36.el6.noarch
+gvfs-afc-1.4.3-26.el6.x86_64
+gedit-2.28.4-4.el6.x86_64
+gnome-utils-2.28.1-10.el6.x86_64
+sound-juicer-2.28.1-6.el6.x86_64
+gnome-vfs2-smb-2.24.2-8.el6.x86_64
+openssh-server-5.3p1-117.el6.x86_64
+libreoffice-impress-4.3.7.2-2.el6.x86_64
+libreoffice-math-4.3.7.2-2.el6.x86_64
+bfa-firmware-3.2.23.0-2.el6.noarch
+b43-openfwwf-5.2-10.el6.noarch
+iwl1000-firmware-39.31.5.1-1.el6.noarch
+readahead-1.5.6-2.el6.x86_64
+spice-vdagent-0.14.0-11.el6.x86_64
+virt-what-1.11-1.2.el6.x86_64
+ibus-m17n-1.3.0-2.el6.x86_64
+ibus-anthy-1.2.1-3.el6.x86_64
+plymouth-system-theme-0.8.3-27.el6.centos.1.noarch
+mousetweaks-2.28.2-1.el6.x86_64
+PackageKit-gstreamer-plugin-0.5.8-26.el6.x86_64
+abrt-libs-2.0.8-40.el6.centos.x86_64
+un-core-fonts-common-1.0.2-0.15.080608.el6.noarch
+gnome-disk-utility-ui-libs-2.30.1-3.el6.x86_64
+m17n-db-kannada-1.5.5-1.1.el6.noarch
+cas-0.15-1.el6.1.noarch
+abrt-addon-kerneloops-2.0.8-40.el6.centos.x86_64
+mozilla-filesystem-1.9-5.1.el6.x86_64
+libgpod-0.7.2-6.el6.x86_64
+m17n-db-malayalam-1.5.5-1.1.el6.noarch
+vim-enhanced-7.4.629-5.el6.x86_64
+libpath_utils-0.2.1-11.el6.x86_64
+foomatic-db-filesystem-4.0-7.20091126.el6.noarch
+control-center-2.28.1-40.el6.x86_64
+tcp_wrappers-7.6-58.el6.x86_64
+psacct-6.3.2-63.el6_3.3.x86_64
+libX11-common-1.6.3-2.el6.noarch
+vim-filesystem-7.4.629-5.el6.x86_64
+xorg-x11-drv-v4l-0.2.0-37.el6.x86_64
+ttmkfdir-3.0.9-32.1.el6.x86_64
+valgrind-3.8.1-8.el6.x86_64
+libXi-1.7.4-1.el6.x86_64
+glibc-common-2.12-1.192.el6.x86_64
+xorg-x11-drv-s3virge-1.10.7-1.el6.x86_64
+wqy-zenhei-fonts-0.9.45-3.el6.noarch
+rsync-3.0.6-12.el6.x86_64
+libXcursor-1.1.14-2.1.el6.x86_64
+freetype-2.3.11-17.el6.x86_64
+xorg-x11-drv-mouse-1.9.1-1.el6.x86_64
+lksctp-tools-1.0.10-7.el6.x86_64
+lklug-fonts-0.6-4.20090803cvs.el6.noarch
+libXft-2.3.2-1.el6.x86_64
+info-4.13a-8.el6.x86_64
+xorg-x11-drv-fpit-1.4.0-7.el6.x86_64
+perl-Test-Harness-3.17-141.el6_7.1.x86_64
+lohit-devanagari-fonts-2.4.3-7.el6.noarch
+libglade2-2.6.4-3.1.el6.x86_64
+libtevent-0.9.26-2.el6_7.x86_64
+xorg-x11-drv-acecad-1.5.0-8.el6.x86_64
+coreutils-libs-8.4-43.el6.x86_64
+lohit-tamil-fonts-2.4.5-5.el6.noarch
+totem-pl-parser-2.28.3-1.el6.x86_64
+cyrus-sasl-lib-2.1.23-15.el6_6.2.x86_64
+libreoffice-draw-4.3.7.2-2.el6.x86_64
+libsndfile-1.0.20-5.el6.x86_64
+un-core-dinaru-fonts-1.0.2-0.15.080608.el6.noarch
+gtkhtml3-3.32.2-2.el6.x86_64
+libtar-1.2.11-17.el6_4.1.x86_64
+crda-3.13_2015.10.22-3.el6.x86_64
+libpciaccess-0.13.4-1.el6.x86_64
+rfkill-0.3-4.el6.x86_64
+poppler-glib-0.12.4-10.el6.x86_64
+dbus-glib-0.86-6.el6.x86_64
+at-3.1.10-48.el6.x86_64
+ppp-2.4.5-10.el6.x86_64
+m17n-db-thai-1.5.5-1.1.el6.noarch
+PackageKit-0.5.8-26.el6.x86_64
+avahi-glib-0.6.25-15.el6.x86_64
+wpa_supplicant-0.7.3-8.el6.x86_64
+poppler-utils-0.12.4-10.el6.x86_64
+libertas-usb8388-firmware-5.110.22.p23-3.1.el6.noarch
+xorg-x11-server-utils-7.7-14.el6.x86_64
+libvorbis-1.2.3-4.el6_2.1.x86_64
+oddjob-mkhomedir-0.30-6.el6.x86_64
+httpd-tools-2.2.15-53.el6.centos.x86_64
+ql2200-firmware-2.02.08-3.1.el6.noarch
+gnome-python2-gnomevfs-2.28.0-3.el6.x86_64
+libcollection-0.6.2-11.el6.x86_64
+redhat-lsb-graphics-4.0-7.el6.centos.x86_64
+sssd-client-1.13.3-22.el6.x86_64
+libxklavier-4.0-9.el6.x86_64
+glibmm24-2.22.1-1.el6.x86_64
+xorg-x11-drv-vmware-13.1.0-2.el6.x86_64
+rpm-libs-4.8.0-55.el6.x86_64
+festival-lib-1.96-18.el6.x86_64
+libtasn1-2.3-6.el6_5.x86_64
+dhclient-4.1.1-51.P1.el6.centos.x86_64
+gpgme-1.1.8-3.el6.x86_64
+pygtksourceview-2.8.0-1.el6.x86_64
+libXau-1.0.6-4.el6.x86_64
+bluez-4.66-1.el6.x86_64
+dosfstools-3.0.9-4.el6.x86_64
+pywebkitgtk-1.1.6-4.el6.x86_64
+apr-1.3.9-5.el6_2.x86_64
+xorg-x11-drv-ati-7.6.1-2.el6.x86_64
+pcsc-lite-libs-1.5.2-15.el6.x86_64
+libbonoboui-2.24.2-3.el6.x86_64
+perl-libs-5.10.1-141.el6_7.1.x86_64
+pulseaudio-module-gconf-0.9.21-24.el6.x86_64
+min12xxw-0.0.9-5.1.el6.x86_64
+at-spi-python-1.28.1-2.el6.centos.x86_64
+lua-5.1.4-4.1.el6.x86_64
+gdm-plugin-fingerprint-2.30.4-64.el6.x86_64
+libdaemon-0.14-1.el6.x86_64
+plymouth-plugin-two-step-0.8.3-27.el6.centos.1.x86_64
+binutils-2.20.51.0.2-5.44.el6.x86_64
+abrt-cli-2.0.8-40.el6.centos.x86_64
+wavpack-4.60-1.1.el6.x86_64
+notification-daemon-0.5.0-1.el6.x86_64
+libraw1394-2.0.4-1.el6.x86_64
+gnome-power-manager-2.28.3-7.el6_4.x86_64
+NetworkManager-glib-0.8.1-107.el6.x86_64
+ConsoleKit-x11-0.4.1-6.el6.x86_64
+nss-softokn-3.14.3-23.el6_7.x86_64
+evolution-mapi-0.32.2-12.el6.x86_64
+rpcbind-0.2.0-12.el6.x86_64
+busybox-1.15.1-21.el6_6.x86_64
+libipa_hbac-1.13.3-22.el6.x86_64
+eog-2.28.2-4.el6.x86_64
+libgphoto2-2.4.7-4.el6.x86_64
+plymouth-0.8.3-27.el6.centos.1.x86_64
+acl-2.2.49-6.el6.x86_64
+ekiga-3.2.6-4.el6.x86_64
+python-libs-2.6.6-64.el6.x86_64
+mesa-libGLU-11.0.7-4.el6.x86_64
+mesa-private-llvm-3.6.2-1.el6.x86_64
+openssh-askpass-5.3p1-117.el6.x86_64
+authconfig-6.1.12-23.el6.x86_64
+device-mapper-event-libs-1.02.117-7.el6.x86_64
+crash-7.1.0-6.el6.x86_64
+libreoffice-langpack-en-4.3.7.2-2.el6.x86_64
+pyorbit-2.24.0-5.el6.x86_64
+samba-winbind-clients-3.6.23-33.el6.x86_64
+hyphen-2.4-5.1.el6.x86_64
+iwl6000g2a-firmware-17.168.5.3-1.el6.noarch
+python-kerberos-1.1-7.el6.x86_64
+sssd-common-pac-1.13.3-22.el6.x86_64
+obexd-0.19-2.el6.x86_64
+microcode_ctl-1.17-21.el6.x86_64
+python-urlgrabber-3.9.1-11.el6.noarch
+gnome-user-docs-2.28.0-4.el6.noarch
+mod_dnssd-0.6-2.el6.x86_64
+ibus-table-additional-1.2.0.20100111-5.el6.noarch
+cracklib-python-2.8.16-4.el6.x86_64
+sssd-ldap-1.13.3-22.el6.x86_64
+gstreamer-tools-0.10.29-1.el6.x86_64
+xdg-user-dirs-gtk-0.8-7.el6.x86_64
+python-decorator-3.0.1-3.1.el6.noarch
+lvm2-libs-2.02.143-7.el6.x86_64
+libcroco-0.6.2-5.el6.x86_64
+pidgin-2.7.9-27.el6.x86_64
+libreport-plugin-reportuploader-2.0.9-32.el6.centos.x86_64
+nautilus-extensions-2.28.4-25.el6.x86_64
+nspluginwrapper-1.4.4-1.el6_3.x86_64
+m17n-contrib-assamese-1.1.10-4.el6_1.1.noarch
+libreport-plugin-kerneloops-2.0.9-32.el6.centos.x86_64
+filesystem-2.4.30-3.el6.x86_64
+hal-0.5.14-14.el6.x86_64
+cups-pk-helper-0.0.4-13.el6.x86_64
+m17n-contrib-hindi-1.1.10-4.el6_1.1.noarch
+libreport-newt-2.0.9-32.el6.centos.x86_64
+mesa-dri-filesystem-11.0.7-4.el6.x86_64
+xorg-x11-server-Xorg-1.17.4-9.el6.centos.x86_64
+adcli-0.8.1-1.el6.x86_64
+m17n-contrib-sinhala-1.1.10-4.el6_1.1.noarch
+neon-0.29.3-3.el6_4.x86_64
+smc-fonts-common-04.2-11.el6.noarch
+xorg-x11-drv-xgi-1.6.1-1.el6.x86_64
+ksh-20120801-33.el6.x86_64
+libcdio-0.81-3.1.el6.x86_64
+libXext-1.3.3-1.el6.x86_64
+poppler-data-0.4.0-1.el6.noarch
+xorg-x11-drv-sis-0.10.8-1.el6.x86_64
+ltrace-0.5-28.45svn.el6.x86_64
+upstart-0.6.5-16.el6.x86_64
+libcanberra-0.22-3.el6.x86_64
+ncurses-libs-5.7-4.20090207.el6.x86_64
+xorg-x11-drv-openchrome-0.3.3-7.el6.x86_64
+nfs4-acl-tools-0.3.3-8.el6.x86_64
+liberation-mono-fonts-1.05.1.20090721-5.el6.noarch
+libXxf86vm-1.1.3-2.1.el6.x86_64
+libstdc++-4.4.7-17.el6.x86_64
+xorg-x11-drv-i128-1.3.6-11.el6.x86_64
+lohit-kannada-fonts-2.4.5-6.el6.noarch
+libreoffice-opensymbol-fonts-4.3.7.2-2.el6.noarch
+gnome-keyring-2.28.2-8.el6_3.x86_64
+expat-2.0.1-11.el6_2.x86_64
+xorg-x11-drv-ast-1.1.5-1.el6.x86_64
+lohit-gujarati-fonts-2.4.4-4.el6.noarch
+ncurses-5.7-4.20090207.el6.x86_64
+librsvg2-2.26.0-14.el6.x86_64
+db4-4.7.25-20.el6_7.x86_64
+foomatic-4.0.4-5.el6_7.x86_64
+madan-fonts-2.000-3.el6.noarch
+pam-1.1.1-22.el6.x86_64
+pangomm-2.26.0-1.el6.x86_64
+pcre-7.8-7.el6.x86_64
+system-config-keyboard-1.3.1-6.el6.x86_64
+mtr-0.75-5.el6.x86_64
+ca-certificates-2015.2.6-65.0.1.el6_7.noarch
+libgdata-0.6.4-2.el6.x86_64
+gamin-0.1.10-9.el6.x86_64
+sane-backends-1.0.21-3.el6.x86_64
+eject-2.1.5-17.el6.x86_64
+plymouth-scripts-0.8.3-27.el6.centos.1.x86_64
+avahi-ui-0.6.25-15.el6.x86_64
+libgudev1-147-2.73.el6.x86_64
+rsyslog-5.8.10-10.el6_6.x86_64
+gnome-backgrounds-2.28.0-2.el6.noarch
+genisoimage-1.1.9-12.el6.x86_64
+imsettings-libs-0.108.0-3.6.el6.x86_64
+readline-6.0-4.el6.x86_64
+httpd-2.2.15-53.el6.centos.x86_64
+atmel-firmware-1.3-7.el6.noarch
+mysql-libs-5.1.73-7.el6.x86_64
+pycairo-1.8.6-2.1.el6.x86_64
+libgpg-error-1.7-4.el6.x86_64
+cronie-1.4.4-15.el6_7.1.x86_64
+ql23xx-firmware-3.03.27-3.1.el6.noarch
+ghostscript-fonts-5.50-23.2.el6.noarch
+obex-data-server-0.4.3-4.el6.x86_64
+libidn-1.18-2.el6.x86_64
+gdm-2.30.4-64.el6.x86_64
+nss-tools-3.21.0-8.el6.x86_64
+xorg-x11-server-common-1.17.4-9.el6.centos.x86_64
+hunspell-1.2.8-16.el6.x86_64
+selinux-policy-3.7.19-292.el6.noarch
+libuser-0.56.13-8.el6_7.x86_64
+gnome-speech-0.4.25-3.1.el6.x86_64
+redhat-menus-14.0.0-3.el6.noarch
+kernel-2.6.32-642.el6.x86_64
+vorbis-tools-1.2.0-7.el6.x86_64
+libpurple-2.7.9-27.el6.x86_64
+libsss_idmap-1.13.3-22.el6.x86_64
+totem-2.28.6-4.el6.x86_64
+m17n-lib-1.5.5-2.el6_1.1.x86_64
+gtk2-engines-2.18.4-5.el6.centos.x86_64
+pixman-0.32.8-1.el6.x86_64
+ipa-client-3.0.0-50.el6.centos.1.x86_64
+hdparm-9.43-4.el6.x86_64
+gnome-python2-gnome-2.28.0-3.el6.x86_64
+perl-Pod-Simple-3.13-141.el6_7.1.x86_64
+selinux-policy-targeted-3.7.19-292.el6.noarch
+gpm-libs-1.20.6-12.el6.x86_64
+gnome-utils-libs-2.28.1-10.el6.x86_64
+flac-1.2.1-7.el6_6.x86_64
+hpijs-3.14.6-3.el6.x86_64
+libmpcdec-1.2.6-6.1.el6.x86_64
+pulseaudio-utils-0.9.21-24.el6.x86_64
+liberation-sans-fonts-1.05.1.20090721-5.el6.noarch
+control-center-extra-2.28.1-40.el6.x86_64
+shadow-utils-4.1.5.1-5.el6.x86_64
+gnome-python2-libwnck-2.28.0-5.el6.x86_64
+libmng-1.0.10-4.1.el6.x86_64
+file-roller-2.28.2-7.el6.x86_64
+gnome-vfs2-2.24.2-8.el6.x86_64
+imsettings-0.108.0-3.6.el6.x86_64
+pinentry-0.7.6-8.el6.x86_64
+lvm2-2.02.143-7.el6.x86_64
+avahi-autoipd-0.6.25-15.el6.x86_64
+policycoreutils-2.0.83-29.el6.x86_64
+net-tools-1.60-110.el6_2.x86_64
+gcalctool-5.28.2-3.el6.x86_64
+newt-0.52.11-3.el6.x86_64
+udev-147-2.73.el6.x86_64
+libss-1.41.12-22.el6.x86_64
+cifs-utils-4.8.1-20.el6.x86_64
+newt-python-0.52.11-3.el6.x86_64
+usermode-gtk-1.102-3.el6.x86_64
+xorg-x11-font-utils-7.2-11.el6.x86_64
+libreoffice-xsltfilter-4.3.7.2-2.el6.x86_64
+python-argparse-1.2.1-2.1.el6.noarch
+kpartx-0.4.9-93.el6.x86_64
+libiptcdata-1.0.4-2.1.el6.x86_64
+iwl100-firmware-39.31.5.1-1.el6.noarch
+yum-metadata-parser-1.1.2-16.el6.x86_64
+system-config-printer-libs-1.1.16-25.el6.x86_64
+libevdev-1.4.5-2.el6.x86_64
+acpid-1.0.10-3.el6.x86_64
+python-crypto-2.0.1-22.el6.x86_64
+zenity-2.28.0-1.el6.x86_64
+p11-kit-trust-0.18.5-2.el6_5.2.x86_64
+vsftpd-2.2.2-21.el6.x86_64
+python-sssdconfig-1.13.3-22.el6.noarch
+system-config-services-0.99.45-1.el6.3.noarch
+compat-xcb-util-0.4.0-2.2.el6.x86_64
+ibus-hangul-1.3.0.20100329-6.el6.x86_64
+python-netaddr-0.7.5-4.el6.noarch
+sssd-1.13.3-22.el6.x86_64
+ModemManager-0.4.0-5.git20100628.el6.x86_64
+gnome-screensaver-2.28.3-28.el6.x86_64
+libproxy-python-0.3.0-10.el6.x86_64
+parted-2.1-29.el6.x86_64
+m17n-db-bengali-1.5.5-1.1.el6.noarch
+[root@yunji Packages]# rpm -qa |grep sshd
+[root@yunji Packages]# rpm -qa |grep ssh
+libssh2-1.4.2-2.el6_7.1.x86_64
+openssh-5.3p1-117.el6.x86_64
+openssh-clients-5.3p1-117.el6.x86_64
+openssh-server-5.3p1-117.el6.x86_64
+openssh-askpass-5.3p1-117.el6.x86_64
+[root@yunji Packages]# rpm -ql openssh
+/etc/ssh
+/etc/ssh/moduli
+/usr/bin/ssh-keygen
+/usr/libexec/openssh
+/usr/libexec/openssh/ssh-keysign
+/usr/share/doc/openssh-5.3p1
+/usr/share/doc/openssh-5.3p1/CREDITS
+/usr/share/doc/openssh-5.3p1/ChangeLog
+/usr/share/doc/openssh-5.3p1/INSTALL
+/usr/share/doc/openssh-5.3p1/LICENCE
+/usr/share/doc/openssh-5.3p1/OVERVIEW
+/usr/share/doc/openssh-5.3p1/PROTOCOL
+/usr/share/doc/openssh-5.3p1/PROTOCOL.agent
+/usr/share/doc/openssh-5.3p1/PROTOCOL.certkeys
+/usr/share/doc/openssh-5.3p1/README
+/usr/share/doc/openssh-5.3p1/README.dns
+/usr/share/doc/openssh-5.3p1/README.nss
+/usr/share/doc/openssh-5.3p1/README.platform
+/usr/share/doc/openssh-5.3p1/README.privsep
+/usr/share/doc/openssh-5.3p1/README.smartcard
+/usr/share/doc/openssh-5.3p1/README.tun
+/usr/share/doc/openssh-5.3p1/TODO
+/usr/share/doc/openssh-5.3p1/WARNING.RNG
+/usr/share/man/man1/ssh-keygen.1.gz
+/usr/share/man/man8/ssh-keysign.8.gz
+[root@yunji Packages]# rpm -ql openssh
+/etc/ssh
+/etc/ssh/moduli
+/usr/bin/ssh-keygen
+/usr/libexec/openssh
+/usr/libexec/openssh/ssh-keysign
+/usr/share/doc/openssh-5.3p1
+/usr/share/doc/openssh-5.3p1/CREDITS
+/usr/share/doc/openssh-5.3p1/ChangeLog
+/usr/share/doc/openssh-5.3p1/INSTALL
+/usr/share/doc/openssh-5.3p1/LICENCE
+/usr/share/doc/openssh-5.3p1/OVERVIEW
+/usr/share/doc/openssh-5.3p1/PROTOCOL
+/usr/share/doc/openssh-5.3p1/PROTOCOL.agent
+/usr/share/doc/openssh-5.3p1/PROTOCOL.certkeys
+/usr/share/doc/openssh-5.3p1/README
+/usr/share/doc/openssh-5.3p1/README.dns
+/usr/share/doc/openssh-5.3p1/README.nss
+/usr/share/doc/openssh-5.3p1/README.platform
+/usr/share/doc/openssh-5.3p1/README.privsep
+/usr/share/doc/openssh-5.3p1/README.smartcard
+/usr/share/doc/openssh-5.3p1/README.tun
+/usr/share/doc/openssh-5.3p1/TODO
+/usr/share/doc/openssh-5.3p1/WARNING.RNG
+/usr/share/man/man1/ssh-keygen.1.gz
+/usr/share/man/man8/ssh-keysign.8.gz
+[root@yunji Packages]# rpm -ql openssh
+/etc/ssh
+/etc/ssh/moduli
+/usr/bin/ssh-keygen
+/usr/libexec/openssh
+/usr/libexec/openssh/ssh-keysign
+/usr/share/doc/openssh-5.3p1
+/usr/share/doc/openssh-5.3p1/CREDITS
+/usr/share/doc/openssh-5.3p1/ChangeLog
+/usr/share/doc/openssh-5.3p1/INSTALL
+/usr/share/doc/openssh-5.3p1/LICENCE
+/usr/share/doc/openssh-5.3p1/OVERVIEW
+/usr/share/doc/openssh-5.3p1/PROTOCOL
+/usr/share/doc/openssh-5.3p1/PROTOCOL.agent
+/usr/share/doc/openssh-5.3p1/PROTOCOL.certkeys
+/usr/share/doc/openssh-5.3p1/README
+/usr/share/doc/openssh-5.3p1/README.dns
+/usr/share/doc/openssh-5.3p1/README.nss
+/usr/share/doc/openssh-5.3p1/README.platform
+/usr/share/doc/openssh-5.3p1/README.privsep
+/usr/share/doc/openssh-5.3p1/README.smartcard
+/usr/share/doc/openssh-5.3p1/README.tun
+/usr/share/doc/openssh-5.3p1/TODO
+/usr/share/doc/openssh-5.3p1/WARNING.RNG
+/usr/share/man/man1/ssh-keygen.1.gz
+/usr/share/man/man8/ssh-keysign.8.gz
+[root@yunji Packages]# rpm -ql openssh
+/etc/ssh
+/etc/ssh/moduli
+/usr/bin/ssh-keygen
+/usr/libexec/openssh
+/usr/libexec/openssh/ssh-keysign
+/usr/share/doc/openssh-5.3p1
+/usr/share/doc/openssh-5.3p1/CREDITS
+/usr/share/doc/openssh-5.3p1/ChangeLog
+/usr/share/doc/openssh-5.3p1/INSTALL
+/usr/share/doc/openssh-5.3p1/LICENCE
+/usr/share/doc/openssh-5.3p1/OVERVIEW
+/usr/share/doc/openssh-5.3p1/PROTOCOL
+/usr/share/doc/openssh-5.3p1/PROTOCOL.agent
+/usr/share/doc/openssh-5.3p1/PROTOCOL.certkeys
+/usr/share/doc/openssh-5.3p1/README
+/usr/share/doc/openssh-5.3p1/README.dns
+/usr/share/doc/openssh-5.3p1/README.nss
+/usr/share/doc/openssh-5.3p1/README.platform
+/usr/share/doc/openssh-5.3p1/README.privsep
+/usr/share/doc/openssh-5.3p1/README.smartcard
+/usr/share/doc/openssh-5.3p1/README.tun
+/usr/share/doc/openssh-5.3p1/TODO
+/usr/share/doc/openssh-5.3p1/WARNING.RNG
+/usr/share/man/man1/ssh-keygen.1.gz
+/usr/share/man/man8/ssh-keysign.8.gz
+[root@yunji Packages]# ls -ld /etc/ssh
+drwxr-xr-x. 2 root root 4096 2019-07-13 12:21 /etc/ssh
+[root@yunji Packages]# rpm -qf /etc/ssh
+openssh-5.3p1-117.el6.x86_64
+[root@yunji Packages]# rpm -qa |grep openssh
+openssh-5.3p1-117.el6.x86_64
+openssh-clients-5.3p1-117.el6.x86_64
+openssh-server-5.3p1-117.el6.x86_64
+openssh-askpass-5.3p1-117.el6.x86_64
+[root@yunji Packages]# rpm -ivh mysql-
+오류: mysql-(을)를 여는데 실패함: 그런 파일이나 디렉터리가 없습니다
+[root@yunji Packages]# rpm -ivh mysql-
+mysql-5.1.73-7.el6.x86_64.rpm
+mysql-bench-5.1.73-7.el6.x86_64.rpm
+mysql-connector-java-5.1.17-6.el6.noarch.rpm
+mysql-connector-odbc-5.1.5r1144-7.el6.x86_64.rpm
+mysql-devel-5.1.73-7.el6.x86_64.rpm
+mysql-libs-5.1.73-7.el6.x86_64.rpm
+mysql-server-5.1.73-7.el6.x86_64.rpm
+mysql-test-5.1.73-7.el6.x86_64.rpm
+[root@yunji Packages]# rpm -ivh mysql-5.1.73-7.el6.x86_64.rpm
+경고: mysql-5.1.73-7.el6.x86_64.rpm: Header V3 RSA/SHA1 Signature, key ID c105b9               de: NOKEY
+준비 중...               ########################################### [100%]
+   1:mysql                  ########################################### [100%]
+[root@yunji Packages]# rpm -qa |grep mysql
+mysql-5.1.73-7.el6.x86_64
+mysql-libs-5.1.73-7.el6.x86_64
+[root@yunji Packages]# rpm -ivh mysql-bench-5.1.73-7.el6.x86_64.rpm
+경고: mysql-bench-5.1.73-7.el6.x86_64.rpm: Header V3 RSA/SHA1 Signature, key ID                c105b9de: NOKEY
+오류: Failed dependencies:
+        perl(DBI) is needed by mysql-bench-5.1.73-7.el6.x86_64
+[root@yunji Packages]# rpm -ivh perl-DBI
+perl-DBI-1.609-4.el6.x86_64.rpm
+perl-DBIx-Simple-1.32-3.el6.noarch.rpm
+[root@yunji Packages]# rpm -ivh perl-DBI-1.609-4.el6.x86_64.rpm
+경고: perl-DBI-1.609-4.el6.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID c1               05b9de: NOKEY
+준비 중...               ########################################### [100%]
+   1:perl-DBI               ########################################### [100%]
+[root@yunji Packages]# rpm -ivh mysql-bench-5.1.73-7.el6.x86_64.rpm
+경고: mysql-bench-5.1.73-7.el6.x86_64.rpm: Header V3 RSA/SHA1 Signature, key ID                c105b9de: NOKEY
+준비 중...               ########################################### [100%]
+   1:mysql-bench            ########################################### [100%]
+[root@yunji Packages]# rpm -qa |grep mysql
+mysql-bench-5.1.73-7.el6.x86_64
+mysql-5.1.73-7.el6.x86_64
+mysql-libs-5.1.73-7.el6.x86_64
+[root@yunji Packages]# rpm -qa |grep mysql -wc
+3
+[root@yunji Packages]# rpm -qa mysql-
+mysql-5.1.73-7.el6.x86_64.rpm
+mysql-bench-5.1.73-7.el6.x86_64.rpm
+mysql-connector-java-5.1.17-6.el6.noarch.rpm
+mysql-connector-odbc-5.1.5r1144-7.el6.x86_64.rpm
+mysql-devel-5.1.73-7.el6.x86_64.rpm
+mysql-libs-5.1.73-7.el6.x86_64.rpm
+mysql-server-5.1.73-7.el6.x86_64.rpm
+mysql-test-5.1.73-7.el6.x86_64.rpm
+[root@yunji Packages]# rpm -qa mysql-connector-java-5.1.17-6.el6.noarch.rpm
+[root@yunji Packages]# rpm -ivh mysql-connector-java-5.1.17-6.el6.noarch.rpm
+경고: mysql-connector-java-5.1.17-6.el6.noarch.rpm: Header V3 RSA/SHA1 Signature               , key ID c105b9de: NOKEY
+오류: Failed dependencies:
+        jta >= 1.0 is needed by mysql-connector-java-1:5.1.17-6.el6.noarch
+        slf4j is needed by mysql-connector-java-1:5.1.17-6.el6.noarch
+[root@yunji Packages]# rpm -ivh slf4j-1.5.8-8.el6.noarch.rpm
+경고: slf4j-1.5.8-8.el6.noarch.rpm: Header V3 RSA/SHA1 Signature, key ID c105b9d               e: NOKEY
+준비 중...               ########################################### [100%]
+   1:slf4j                  ########################################### [100%]
+[root@yunji Packages]# rpm -ivh mysql-connector-java-5.1.17-6.el6.noarch.rpm
+경고: mysql-connector-java-5.1.17-6.el6.noarch.rpm: Header V3 RSA/SHA1 Signature               , key ID c105b9de: NOKEY
+오류: Failed dependencies:
+        jta >= 1.0 is needed by mysql-connector-java-1:5.1.17-6.el6.noarch
+[root@yunji Packages]# rpm -ivh mysql-connector-java-5.1.17-6.el6.noarch.rpm --nodeps          경고: mysql-connector-java-5.1.17-6.el6.noarch.rpm: Header V3 RSA/SHA1 Signature, key ID c105b9de: NOKEY
+준비 중...               ########################################### [100%]
+   1:mysql-connector-java   ########################################### [100%]
+[root@yunji Packages]# rpm -qa |grep mysql
+mysql-connector-java-5.1.17-6.el6.noarch
+mysql-bench-5.1.73-7.el6.x86_64
+mysql-5.1.73-7.el6.x86_64
+mysql-libs-5.1.73-7.el6.x86_64
+[root@yunji Packages]# rpm -qa |grep mysql -wc
+4
+[root@yunji Packages]# rpm -ivh mysql-
+mysql-5.1.73-7.el6.x86_64.rpm
+mysql-bench-5.1.73-7.el6.x86_64.rpm
+mysql-connector-java-5.1.17-6.el6.noarch.rpm
+mysql-connector-odbc-5.1.5r1144-7.el6.x86_64.rpm
+mysql-devel-5.1.73-7.el6.x86_64.rpm
+mysql-libs-5.1.73-7.el6.x86_64.rpm
+mysql-server-5.1.73-7.el6.x86_64.rpm
+mysql-test-5.1.73-7.el6.x86_64.rpm
+[root@yunji Packages]# rpm -ivh mysql-connector-odbc-5.1.5r1144-7.el6.x86_64.rpm
+경고: mysql-connector-odbc-5.1.5r1144-7.el6.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID c105b9de: NOKEY
+오류: Failed dependencies:
+        libodbcinst.so.2()(64bit) is needed by mysql-connector-odbc-5.1.5r1144-7.el6.x86_64
+        unixODBC is needed by mysql-connector-odbc-5.1.5r1144-7.el6.x86_64
+[root@yunji Packages]# rpm -ivh unixODBC-
+unixODBC-2.2.14-14.el6.x86_64.rpm        unixODBC-devel-2.2.14-14.el6.x86_64.rpm
+[root@yunji Packages]# rpm -ivh unixODBC-
+unixODBC-2.2.14-14.el6.x86_64.rpm        unixODBC-devel-2.2.14-14.el6.x86_64.rpm
+[root@yunji Packages]# rpm -ivh unixODBC-2.2.14-14.el6.x86_64.rpm
+경고: unixODBC-2.2.14-14.el6.x86_64.rpm: Header V3 RSA/SHA1 Signature, key ID c105b9de: NOKEY
+준비 중...               ########################################### [100%]
+   1:unixODBC               ########################################### [100%]
+[root@yunji Packages]# rpm -ivh mysql-connector-odbc-5.1.5r1144-7.el6.x86_64.rpm
+경고: mysql-connector-odbc-5.1.5r1144-7.el6.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID c105b9de: NOKEY
+준비 중...               ########################################### [100%]
+   1:mysql-connector-odbc   ########################################### [100%]
+[root@yunji Packages]# rpm -qa |grep mysql
+mysql-connector-java-5.1.17-6.el6.noarch
+mysql-bench-5.1.73-7.el6.x86_64
+mysql-connector-odbc-5.1.5r1144-7.el6.x86_64
+mysql-5.1.73-7.el6.x86_64
+mysql-libs-5.1.73-7.el6.x86_64
+[root@yunji Packages]# rpm -qa |grep mysql wc
+grep: wc: 그런 파일이나 디렉터리가 없습니다
+[root@yunji Packages]# rpm -qa |grep mysql -wc
+5
+[root@yunji Packages]# clear
+[root@yunji Packages]# yum install mysql*
+Loaded plugins: fastestmirror, refresh-packagekit, security
+Setting up Install Process
+Examining mysql-5.1.73-7.el6.x86_64.rpm: mysql-5.1.73-7.el6.x86_64
+mysql-5.1.73-7.el6.x86_64.rpm: does not update installed package.
+Examining mysql-bench-5.1.73-7.el6.x86_64.rpm: mysql-bench-5.1.73-7.el6.x86_64
+mysql-bench-5.1.73-7.el6.x86_64.rpm: does not update installed package.
+Examining mysql-connector-java-5.1.17-6.el6.noarch.rpm: 1:mysql-connector-java-5.1.17-6.el6.noarch
+mysql-connector-java-5.1.17-6.el6.noarch.rpm: does not update installed package.
+Examining mysql-connector-odbc-5.1.5r1144-7.el6.x86_64.rpm: mysql-connector-odbc-5.1.5r1144-7.el6.x86_64
+mysql-connector-odbc-5.1.5r1144-7.el6.x86_64.rpm: does not update installed package.
+Examining mysql-devel-5.1.73-7.el6.x86_64.rpm: mysql-devel-5.1.73-7.el6.x86_64
+Marking mysql-devel-5.1.73-7.el6.x86_64.rpm to be installed
+Loading mirror speeds from cached hostfile
+ * base: ftp.kaist.ac.kr
+ * extras: ftp.kaist.ac.kr
+ * updates: ftp.kaist.ac.kr
+Examining mysql-libs-5.1.73-7.el6.x86_64.rpm: mysql-libs-5.1.73-7.el6.x86_64
+mysql-libs-5.1.73-7.el6.x86_64.rpm: does not update installed package.
+Examining mysql-server-5.1.73-7.el6.x86_64.rpm: mysql-server-5.1.73-7.el6.x86_64
+Marking mysql-server-5.1.73-7.el6.x86_64.rpm to be installed
+Examining mysql-test-5.1.73-7.el6.x86_64.rpm: mysql-test-5.1.73-7.el6.x86_64
+Marking mysql-test-5.1.73-7.el6.x86_64.rpm to be installed
+Resolving Dependencies
+--> Running transaction check
+---> Package mysql-devel.x86_64 0:5.1.73-7.el6 will be installed
+--> Processing Dependency: openssl-devel for package: mysql-devel-5.1.73-7.el6.x86_64
+---> Package mysql-server.x86_64 0:5.1.73-7.el6 will be installed
+--> Processing Dependency: perl-DBD-MySQL for package: mysql-server-5.1.73-7.el6.x86_64
+---> Package mysql-test.x86_64 0:5.1.73-7.el6 will be installed
+--> Processing Dependency: perl(Time::HiRes) for package: mysql-test-5.1.73-7.el6.x86_64
+--> Running transaction check
+---> Package openssl-devel.x86_64 0:1.0.1e-57.el6 will be installed
+--> Processing Dependency: openssl = 1.0.1e-57.el6 for package: openssl-devel-1.0.1e-57.el6.x86_64
+--> Processing Dependency: zlib-devel for package: openssl-devel-1.0.1e-57.el6.x86_64
+--> Processing Dependency: krb5-devel for package: openssl-devel-1.0.1e-57.el6.x86_64
+---> Package perl-DBD-MySQL.x86_64 0:4.013-3.el6 will be installed
+---> Package perl-Time-HiRes.x86_64 4:1.9721-144.el6 will be installed
+--> Processing Dependency: perl = 4:5.10.1-144.el6 for package: 4:perl-Time-HiRes-1.9721-144.el6.x86_64
+--> Running transaction check
+---> Package krb5-devel.x86_64 0:1.10.3-65.el6 will be installed
+--> Processing Dependency: libkadm5(x86-64) = 1.10.3-65.el6 for package: krb5-devel-1.10.3-65.el6.x86_64
+--> Processing Dependency: krb5-libs = 1.10.3-65.el6 for package: krb5-devel-1.10.3-65.el6.x86_64
+--> Processing Dependency: libselinux-devel for package: krb5-devel-1.10.3-65.el6.x86_64
+--> Processing Dependency: libcom_err-devel for package: krb5-devel-1.10.3-65.el6.x86_64
+--> Processing Dependency: keyutils-libs-devel for package: krb5-devel-1.10.3-65.el6.x86_64
+---> Package openssl.x86_64 0:1.0.1e-48.el6 will be updated
+---> Package openssl.x86_64 0:1.0.1e-57.el6 will be an update
+---> Package perl.x86_64 4:5.10.1-141.el6_7.1 will be updated
+--> Processing Dependency: perl = 4:5.10.1-141.el6_7.1 for package: 1:perl-Module-Pluggable-3.90-141.el6_7.1.x86_64
+--> Processing Dependency: perl = 4:5.10.1-141.el6_7.1 for package: 1:perl-ExtUtils-ParseXS-2.2003.0-141.el6_7.1.x86_64
+--> Processing Dependency: perl = 4:5.10.1-141.el6_7.1 for package: perl-CGI-3.51-141.el6_7.1.x86_64
+--> Processing Dependency: perl = 4:5.10.1-141.el6_7.1 for package: 3:perl-version-0.77-141.el6_7.1.x86_64
+--> Processing Dependency: perl = 4:5.10.1-141.el6_7.1 for package: perl-Test-Simple-0.92-141.el6_7.1.x86_64
+--> Processing Dependency: perl = 4:5.10.1-141.el6_7.1 for package: 4:perl-devel-5.10.1-141.el6_7.1.x86_64
+--> Processing Dependency: perl = 4:5.10.1-141.el6_7.1 for package: 4:perl-libs-5.10.1-141.el6_7.1.x86_64
+--> Processing Dependency: perl = 4:5.10.1-141.el6_7.1 for package: perl-Test-Harness-3.17-141.el6_7.1.x86_64
+--> Processing Dependency: perl = 4:5.10.1-141.el6_7.1 for package: 1:perl-Pod-Escapes-1.04-141.el6_7.1.x86_64
+--> Processing Dependency: perl = 4:5.10.1-141.el6_7.1 for package: perl-ExtUtils-MakeMaker-6.55-141.el6_7.1.x86_64
+--> Processing Dependency: perl = 4:5.10.1-141.el6_7.1 for package: 1:perl-Pod-Simple-3.13-141.el6_7.1.x86_64
+---> Package perl.x86_64 4:5.10.1-144.el6 will be an update
+---> Package zlib-devel.x86_64 0:1.2.3-29.el6 will be installed
+--> Running transaction check
+---> Package keyutils-libs-devel.x86_64 0:1.4-5.el6 will be installed
+---> Package krb5-libs.x86_64 0:1.10.3-57.el6 will be updated
+--> Processing Dependency: krb5-libs = 1.10.3-57.el6 for package: krb5-workstation-1.10.3-57.el6.x86_64
+---> Package krb5-libs.x86_64 0:1.10.3-65.el6 will be an update
+---> Package libcom_err-devel.x86_64 0:1.41.12-24.el6 will be installed
+--> Processing Dependency: libcom_err = 1.41.12-24.el6 for package: libcom_err-devel-1.41.12-24.el6.x86_64
+---> Package libkadm5.x86_64 0:1.10.3-65.el6 will be installed
+---> Package libselinux-devel.x86_64 0:2.0.94-7.el6 will be installed
+--> Processing Dependency: libsepol-devel >= 2.0.32-1 for package: libselinux-devel-2.0.94-7.el6.x86_64
+--> Processing Dependency: pkgconfig(libsepol) for package: libselinux-devel-2.0.94-7.el6.x86_64
+---> Package perl-CGI.x86_64 0:3.51-141.el6_7.1 will be updated
+---> Package perl-CGI.x86_64 0:3.51-144.el6 will be an update
+---> Package perl-ExtUtils-MakeMaker.x86_64 0:6.55-141.el6_7.1 will be updated
+---> Package perl-ExtUtils-MakeMaker.x86_64 0:6.55-144.el6 will be an update
+---> Package perl-ExtUtils-ParseXS.x86_64 1:2.2003.0-141.el6_7.1 will be updated
+---> Package perl-ExtUtils-ParseXS.x86_64 1:2.2003.0-144.el6 will be an update
+---> Package perl-Module-Pluggable.x86_64 1:3.90-141.el6_7.1 will be updated
+---> Package perl-Module-Pluggable.x86_64 1:3.90-144.el6 will be an update
+---> Package perl-Pod-Escapes.x86_64 1:1.04-141.el6_7.1 will be updated
+---> Package perl-Pod-Escapes.x86_64 1:1.04-144.el6 will be an update
+---> Package perl-Pod-Simple.x86_64 1:3.13-141.el6_7.1 will be updated
+---> Package perl-Pod-Simple.x86_64 1:3.13-144.el6 will be an update
+---> Package perl-Test-Harness.x86_64 0:3.17-141.el6_7.1 will be updated
+---> Package perl-Test-Harness.x86_64 0:3.17-144.el6 will be an update
+---> Package perl-Test-Simple.x86_64 0:0.92-141.el6_7.1 will be updated
+---> Package perl-Test-Simple.x86_64 0:0.92-144.el6 will be an update
+---> Package perl-devel.x86_64 4:5.10.1-141.el6_7.1 will be updated
+---> Package perl-devel.x86_64 4:5.10.1-144.el6 will be an update
+---> Package perl-libs.x86_64 4:5.10.1-141.el6_7.1 will be updated
+---> Package perl-libs.x86_64 4:5.10.1-144.el6 will be an update
+---> Package perl-version.x86_64 3:0.77-141.el6_7.1 will be updated
+---> Package perl-version.x86_64 3:0.77-144.el6 will be an update
+--> Running transaction check
+---> Package krb5-workstation.x86_64 0:1.10.3-57.el6 will be updated
+---> Package krb5-workstation.x86_64 0:1.10.3-65.el6 will be an update
+---> Package libcom_err.x86_64 0:1.41.12-22.el6 will be updated
+--> Processing Dependency: libcom_err = 1.41.12-22.el6 for package: libss-1.41.12-22.el6.x86_64
+--> Processing Dependency: libcom_err = 1.41.12-22.el6 for package: e2fsprogs-libs-1.41.12-22.el6.x86_64
+--> Processing Dependency: libcom_err = 1.41.12-22.el6 for package: e2fsprogs-1.41.12-22.el6.x86_64
+---> Package libcom_err.x86_64 0:1.41.12-24.el6 will be an update
+---> Package libsepol-devel.x86_64 0:2.0.41-4.el6 will be installed
+--> Running transaction check
+---> Package e2fsprogs.x86_64 0:1.41.12-22.el6 will be updated
+---> Package e2fsprogs.x86_64 0:1.41.12-24.el6 will be an update
+---> Package e2fsprogs-libs.x86_64 0:1.41.12-22.el6 will be updated
+---> Package e2fsprogs-libs.x86_64 0:1.41.12-24.el6 will be an update
+---> Package libss.x86_64 0:1.41.12-22.el6 will be updated
+---> Package libss.x86_64 0:1.41.12-24.el6 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+===============================================================================================
+ Package                  Arch    Version             Repository                          Size
+===============================================================================================
+Installing:
+ mysql-devel              x86_64  5.1.73-7.el6        /mysql-devel-5.1.73-7.el6.x86_64   388 k
+ mysql-server             x86_64  5.1.73-7.el6        /mysql-server-5.1.73-7.el6.x86_64   25 M
+ mysql-test               x86_64  5.1.73-7.el6        /mysql-test-5.1.73-7.el6.x86_64     99 M
+Installing for dependencies:
+ keyutils-libs-devel      x86_64  1.4-5.el6           base                                29 k
+ krb5-devel               x86_64  1.10.3-65.el6       base                               504 k
+ libcom_err-devel         x86_64  1.41.12-24.el6      base                                33 k
+ libkadm5                 x86_64  1.10.3-65.el6       base                               143 k
+ libselinux-devel         x86_64  2.0.94-7.el6        base                               137 k
+ libsepol-devel           x86_64  2.0.41-4.el6        base                                64 k
+ openssl-devel            x86_64  1.0.1e-57.el6       base                               1.2 M
+ perl-DBD-MySQL           x86_64  4.013-3.el6         base                               134 k
+ perl-Time-HiRes          x86_64  4:1.9721-144.el6    base                                49 k
+ zlib-devel               x86_64  1.2.3-29.el6        base                                44 k
+Updating for dependencies:
+ e2fsprogs                x86_64  1.41.12-24.el6      base                               554 k
+ e2fsprogs-libs           x86_64  1.41.12-24.el6      base                               121 k
+ krb5-libs                x86_64  1.10.3-65.el6       base                               675 k
+ krb5-workstation         x86_64  1.10.3-65.el6       base                               814 k
+ libcom_err               x86_64  1.41.12-24.el6      base                                38 k
+ libss                    x86_64  1.41.12-24.el6      base                                42 k
+ openssl                  x86_64  1.0.1e-57.el6       base                               1.5 M
+ perl                     x86_64  4:5.10.1-144.el6    base                                10 M
+ perl-CGI                 x86_64  3.51-144.el6        base                               210 k
+ perl-ExtUtils-MakeMaker  x86_64  6.55-144.el6        base                               294 k
+ perl-ExtUtils-ParseXS    x86_64  1:2.2003.0-144.el6  base                                46 k
+ perl-Module-Pluggable    x86_64  1:3.90-144.el6      base                                41 k
+ perl-Pod-Escapes         x86_64  1:1.04-144.el6      base                                33 k
+ perl-Pod-Simple          x86_64  1:3.13-144.el6      base                               213 k
+ perl-Test-Harness        x86_64  3.17-144.el6        base                               232 k
+ perl-Test-Simple         x86_64  0.92-144.el6        base                               113 k
+ perl-devel               x86_64  4:5.10.1-144.el6    base                               424 k
+ perl-libs                x86_64  4:5.10.1-144.el6    base                               579 k
+ perl-version             x86_64  3:0.77-144.el6      base                                52 k
+
+Transaction Summary
+===============================================================================================
+Install      13 Package(s)
+Upgrade      19 Package(s)
+
+Total size: 142 M
+Total download size: 18 M
+Is this ok [y/N]: ^CExiting on user Command
+Your transaction was saved, rerun it with:
+ yum load-transaction /tmp/yum_save_tx-2019-08-04-13-44PTFvBz.yumtx
+[root@yunji Packages]# yum install mysql* -y
+Loaded plugins: fastestmirror, refresh-packagekit, security
+Setting up Install Process
+Examining mysql-5.1.73-7.el6.x86_64.rpm: mysql-5.1.73-7.el6.x86_64
+mysql-5.1.73-7.el6.x86_64.rpm: does not update installed package.
+Examining mysql-bench-5.1.73-7.el6.x86_64.rpm: mysql-bench-5.1.73-7.el6.x86_64
+mysql-bench-5.1.73-7.el6.x86_64.rpm: does not update installed package.
+Examining mysql-connector-java-5.1.17-6.el6.noarch.rpm: 1:mysql-connector-java-5.1.17-6.el6.noarch
+mysql-connector-java-5.1.17-6.el6.noarch.rpm: does not update installed package.
+Examining mysql-connector-odbc-5.1.5r1144-7.el6.x86_64.rpm: mysql-connector-odbc-5.1.5r1144-7.el6.x86_64
+mysql-connector-odbc-5.1.5r1144-7.el6.x86_64.rpm: does not update installed package.
+Examining mysql-devel-5.1.73-7.el6.x86_64.rpm: mysql-devel-5.1.73-7.el6.x86_64
+Marking mysql-devel-5.1.73-7.el6.x86_64.rpm to be installed
+Loading mirror speeds from cached hostfile
+ * base: ftp.kaist.ac.kr
+ * extras: ftp.kaist.ac.kr
+ * updates: ftp.kaist.ac.kr
+Examining mysql-libs-5.1.73-7.el6.x86_64.rpm: mysql-libs-5.1.73-7.el6.x86_64
+mysql-libs-5.1.73-7.el6.x86_64.rpm: does not update installed package.
+Examining mysql-server-5.1.73-7.el6.x86_64.rpm: mysql-server-5.1.73-7.el6.x86_64
+Marking mysql-server-5.1.73-7.el6.x86_64.rpm to be installed
+Examining mysql-test-5.1.73-7.el6.x86_64.rpm: mysql-test-5.1.73-7.el6.x86_64
+Marking mysql-test-5.1.73-7.el6.x86_64.rpm to be installed
+Resolving Dependencies
+--> Running transaction check
+---> Package mysql-devel.x86_64 0:5.1.73-7.el6 will be installed
+--> Processing Dependency: openssl-devel for package: mysql-devel-5.1.73-7.el6.x86_64
+---> Package mysql-server.x86_64 0:5.1.73-7.el6 will be installed
+--> Processing Dependency: perl-DBD-MySQL for package: mysql-server-5.1.73-7.el6.x86_64
+---> Package mysql-test.x86_64 0:5.1.73-7.el6 will be installed
+--> Processing Dependency: perl(Time::HiRes) for package: mysql-test-5.1.73-7.el6.x86_64
+--> Running transaction check
+---> Package openssl-devel.x86_64 0:1.0.1e-57.el6 will be installed
+--> Processing Dependency: openssl = 1.0.1e-57.el6 for package: openssl-devel-1.0.1e-57.el6.x86_64
+--> Processing Dependency: zlib-devel for package: openssl-devel-1.0.1e-57.el6.x86_64
+--> Processing Dependency: krb5-devel for package: openssl-devel-1.0.1e-57.el6.x86_64
+---> Package perl-DBD-MySQL.x86_64 0:4.013-3.el6 will be installed
+---> Package perl-Time-HiRes.x86_64 4:1.9721-144.el6 will be installed
+--> Processing Dependency: perl = 4:5.10.1-144.el6 for package: 4:perl-Time-HiRes-1.9721-144.el6.x86_64
+--> Running transaction check
+---> Package krb5-devel.x86_64 0:1.10.3-65.el6 will be installed
+--> Processing Dependency: libkadm5(x86-64) = 1.10.3-65.el6 for package: krb5-devel-1.10.3-65.el6.x86_64
+--> Processing Dependency: krb5-libs = 1.10.3-65.el6 for package: krb5-devel-1.10.3-65.el6.x86_64
+--> Processing Dependency: libselinux-devel for package: krb5-devel-1.10.3-65.el6.x86_64
+--> Processing Dependency: libcom_err-devel for package: krb5-devel-1.10.3-65.el6.x86_64
+--> Processing Dependency: keyutils-libs-devel for package: krb5-devel-1.10.3-65.el6.x86_64
+---> Package openssl.x86_64 0:1.0.1e-48.el6 will be updated
+---> Package openssl.x86_64 0:1.0.1e-57.el6 will be an update
+---> Package perl.x86_64 4:5.10.1-141.el6_7.1 will be updated
+--> Processing Dependency: perl = 4:5.10.1-141.el6_7.1 for package: 1:perl-Module-Pluggable-3.90-141.el6_7.1.x86_64
+--> Processing Dependency: perl = 4:5.10.1-141.el6_7.1 for package: 1:perl-ExtUtils-ParseXS-2.2003.0-141.el6_7.1.x86_64
+--> Processing Dependency: perl = 4:5.10.1-141.el6_7.1 for package: perl-CGI-3.51-141.el6_7.1.x86_64
+--> Processing Dependency: perl = 4:5.10.1-141.el6_7.1 for package: 3:perl-version-0.77-141.el6_7.1.x86_64
+--> Processing Dependency: perl = 4:5.10.1-141.el6_7.1 for package: perl-Test-Simple-0.92-141.el6_7.1.x86_64
+--> Processing Dependency: perl = 4:5.10.1-141.el6_7.1 for package: 4:perl-devel-5.10.1-141.el6_7.1.x86_64
+--> Processing Dependency: perl = 4:5.10.1-141.el6_7.1 for package: 4:perl-libs-5.10.1-141.el6_7.1.x86_64
+--> Processing Dependency: perl = 4:5.10.1-141.el6_7.1 for package: perl-Test-Harness-3.17-141.el6_7.1.x86_64
+--> Processing Dependency: perl = 4:5.10.1-141.el6_7.1 for package: 1:perl-Pod-Escapes-1.04-141.el6_7.1.x86_64
+--> Processing Dependency: perl = 4:5.10.1-141.el6_7.1 for package: perl-ExtUtils-MakeMaker-6.55-141.el6_7.1.x86_64
+--> Processing Dependency: perl = 4:5.10.1-141.el6_7.1 for package: 1:perl-Pod-Simple-3.13-141.el6_7.1.x86_64
+---> Package perl.x86_64 4:5.10.1-144.el6 will be an update
+---> Package zlib-devel.x86_64 0:1.2.3-29.el6 will be installed
+--> Running transaction check
+---> Package keyutils-libs-devel.x86_64 0:1.4-5.el6 will be installed
+---> Package krb5-libs.x86_64 0:1.10.3-57.el6 will be updated
+--> Processing Dependency: krb5-libs = 1.10.3-57.el6 for package: krb5-workstation-1.10.3-57.el6.x86_64
+---> Package krb5-libs.x86_64 0:1.10.3-65.el6 will be an update
+---> Package libcom_err-devel.x86_64 0:1.41.12-24.el6 will be installed
+--> Processing Dependency: libcom_err = 1.41.12-24.el6 for package: libcom_err-devel-1.41.12-24.el6.x86_64
+---> Package libkadm5.x86_64 0:1.10.3-65.el6 will be installed
+---> Package libselinux-devel.x86_64 0:2.0.94-7.el6 will be installed
+--> Processing Dependency: libsepol-devel >= 2.0.32-1 for package: libselinux-devel-2.0.94-7.el6.x86_64
+--> Processing Dependency: pkgconfig(libsepol) for package: libselinux-devel-2.0.94-7.el6.x86_64
+---> Package perl-CGI.x86_64 0:3.51-141.el6_7.1 will be updated
+---> Package perl-CGI.x86_64 0:3.51-144.el6 will be an update
+---> Package perl-ExtUtils-MakeMaker.x86_64 0:6.55-141.el6_7.1 will be updated
+---> Package perl-ExtUtils-MakeMaker.x86_64 0:6.55-144.el6 will be an update
+---> Package perl-ExtUtils-ParseXS.x86_64 1:2.2003.0-141.el6_7.1 will be updated
+---> Package perl-ExtUtils-ParseXS.x86_64 1:2.2003.0-144.el6 will be an update
+---> Package perl-Module-Pluggable.x86_64 1:3.90-141.el6_7.1 will be updated
+---> Package perl-Module-Pluggable.x86_64 1:3.90-144.el6 will be an update
+---> Package perl-Pod-Escapes.x86_64 1:1.04-141.el6_7.1 will be updated
+---> Package perl-Pod-Escapes.x86_64 1:1.04-144.el6 will be an update
+---> Package perl-Pod-Simple.x86_64 1:3.13-141.el6_7.1 will be updated
+---> Package perl-Pod-Simple.x86_64 1:3.13-144.el6 will be an update
+---> Package perl-Test-Harness.x86_64 0:3.17-141.el6_7.1 will be updated
+---> Package perl-Test-Harness.x86_64 0:3.17-144.el6 will be an update
+---> Package perl-Test-Simple.x86_64 0:0.92-141.el6_7.1 will be updated
+---> Package perl-Test-Simple.x86_64 0:0.92-144.el6 will be an update
+---> Package perl-devel.x86_64 4:5.10.1-141.el6_7.1 will be updated
+---> Package perl-devel.x86_64 4:5.10.1-144.el6 will be an update
+---> Package perl-libs.x86_64 4:5.10.1-141.el6_7.1 will be updated
+---> Package perl-libs.x86_64 4:5.10.1-144.el6 will be an update
+---> Package perl-version.x86_64 3:0.77-141.el6_7.1 will be updated
+---> Package perl-version.x86_64 3:0.77-144.el6 will be an update
+--> Running transaction check
+---> Package krb5-workstation.x86_64 0:1.10.3-57.el6 will be updated
+---> Package krb5-workstation.x86_64 0:1.10.3-65.el6 will be an update
+---> Package libcom_err.x86_64 0:1.41.12-22.el6 will be updated
+--> Processing Dependency: libcom_err = 1.41.12-22.el6 for package: libss-1.41.12-22.el6.x86_64
+--> Processing Dependency: libcom_err = 1.41.12-22.el6 for package: e2fsprogs-libs-1.41.12-22.el6.x86_64
+--> Processing Dependency: libcom_err = 1.41.12-22.el6 for package: e2fsprogs-1.41.12-22.el6.x86_64
+---> Package libcom_err.x86_64 0:1.41.12-24.el6 will be an update
+---> Package libsepol-devel.x86_64 0:2.0.41-4.el6 will be installed
+--> Running transaction check
+---> Package e2fsprogs.x86_64 0:1.41.12-22.el6 will be updated
+---> Package e2fsprogs.x86_64 0:1.41.12-24.el6 will be an update
+---> Package e2fsprogs-libs.x86_64 0:1.41.12-22.el6 will be updated
+---> Package e2fsprogs-libs.x86_64 0:1.41.12-24.el6 will be an update
+---> Package libss.x86_64 0:1.41.12-22.el6 will be updated
+---> Package libss.x86_64 0:1.41.12-24.el6 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+===============================================================================================
+ Package                  Arch    Version             Repository                          Size
+===============================================================================================
+Installing:
+ mysql-devel              x86_64  5.1.73-7.el6        /mysql-devel-5.1.73-7.el6.x86_64   388 k
+ mysql-server             x86_64  5.1.73-7.el6        /mysql-server-5.1.73-7.el6.x86_64   25 M
+ mysql-test               x86_64  5.1.73-7.el6        /mysql-test-5.1.73-7.el6.x86_64     99 M
+Installing for dependencies:
+ keyutils-libs-devel      x86_64  1.4-5.el6           base                                29 k
+ krb5-devel               x86_64  1.10.3-65.el6       base                               504 k
+ libcom_err-devel         x86_64  1.41.12-24.el6      base                                33 k
+ libkadm5                 x86_64  1.10.3-65.el6       base                               143 k
+ libselinux-devel         x86_64  2.0.94-7.el6        base                               137 k
+ libsepol-devel           x86_64  2.0.41-4.el6        base                                64 k
+ openssl-devel            x86_64  1.0.1e-57.el6       base                               1.2 M
+ perl-DBD-MySQL           x86_64  4.013-3.el6         base                               134 k
+ perl-Time-HiRes          x86_64  4:1.9721-144.el6    base                                49 k
+ zlib-devel               x86_64  1.2.3-29.el6        base                                44 k
+Updating for dependencies:
+ e2fsprogs                x86_64  1.41.12-24.el6      base                               554 k
+ e2fsprogs-libs           x86_64  1.41.12-24.el6      base                               121 k
+ krb5-libs                x86_64  1.10.3-65.el6       base                               675 k
+ krb5-workstation         x86_64  1.10.3-65.el6       base                               814 k
+ libcom_err               x86_64  1.41.12-24.el6      base                                38 k
+ libss                    x86_64  1.41.12-24.el6      base                                42 k
+ openssl                  x86_64  1.0.1e-57.el6       base                               1.5 M
+ perl                     x86_64  4:5.10.1-144.el6    base                                10 M
+ perl-CGI                 x86_64  3.51-144.el6        base                               210 k
+ perl-ExtUtils-MakeMaker  x86_64  6.55-144.el6        base                               294 k
+ perl-ExtUtils-ParseXS    x86_64  1:2.2003.0-144.el6  base                                46 k
+ perl-Module-Pluggable    x86_64  1:3.90-144.el6      base                                41 k
+ perl-Pod-Escapes         x86_64  1:1.04-144.el6      base                                33 k
+ perl-Pod-Simple          x86_64  1:3.13-144.el6      base                               213 k
+ perl-Test-Harness        x86_64  3.17-144.el6        base                               232 k
+ perl-Test-Simple         x86_64  0.92-144.el6        base                               113 k
+ perl-devel               x86_64  4:5.10.1-144.el6    base                               424 k
+ perl-libs                x86_64  4:5.10.1-144.el6    base                               579 k
+ perl-version             x86_64  3:0.77-144.el6      base                                52 k
+
+Transaction Summary
+===============================================================================================
+Install      13 Package(s)
+Upgrade      19 Package(s)
+
+Total size: 142 M
+Total download size: 18 M
+Downloading Packages:
+(1/29): e2fsprogs-1.41.12-24.el6.x86_64.rpm                             | 554 kB     00:00
+(2/29): e2fsprogs-libs-1.41.12-24.el6.x86_64.rpm                        | 121 kB     00:00
+(3/29): keyutils-libs-devel-1.4-5.el6.x86_64.rpm                        |  29 kB     00:00
+(4/29): krb5-devel-1.10.3-65.el6.x86_64.rpm                             | 504 kB     00:00
+(5/29): krb5-libs-1.10.3-65.el6.x86_64.rpm                              | 675 kB     00:00
+(6/29): krb5-workstation-1.10.3-65.el6.x86_64.rpm                       | 814 kB     00:00
+(7/29): libcom_err-1.41.12-24.el6.x86_64.rpm                            |  38 kB     00:00
+(8/29): libcom_err-devel-1.41.12-24.el6.x86_64.rpm                      |  33 kB     00:00
+(9/29): libkadm5-1.10.3-65.el6.x86_64.rpm                               | 143 kB     00:00
+(10/29): libselinux-devel-2.0.94-7.el6.x86_64.rpm                       | 137 kB     00:00
+(11/29): libsepol-devel-2.0.41-4.el6.x86_64.rpm                         |  64 kB     00:00
+(12/29): libss-1.41.12-24.el6.x86_64.rpm                                |  42 kB     00:00
+(13/29): openssl-1.0.1e-57.el6.x86_64.rpm                               | 1.5 MB     00:00
+(14/29): openssl-devel-1.0.1e-57.el6.x86_64.rpm                         | 1.2 MB     00:00
+(15/29): perl-5.10.1-144.el6.x86_64.rpm                                 |  10 MB     00:01
+(16/29): perl-CGI-3.51-144.el6.x86_64.rpm                               | 210 kB     00:00
+(17/29): perl-DBD-MySQL-4.013-3.el6.x86_64.rpm                          | 134 kB     00:00
+(18/29): perl-ExtUtils-MakeMaker-6.55-144.el6.x86_64.rpm                | 294 kB     00:00
+(19/29): perl-ExtUtils-ParseXS-2.2003.0-144.el6.x86_64.rpm              |  46 kB     00:00
+(20/29): perl-Module-Pluggable-3.90-144.el6.x86_64.rpm                  |  41 kB     00:00
+(21/29): perl-Pod-Escapes-1.04-144.el6.x86_64.rpm                       |  33 kB     00:00
+(22/29): perl-Pod-Simple-3.13-144.el6.x86_64.rpm                        | 213 kB     00:00
+(23/29): perl-Test-Harness-3.17-144.el6.x86_64.rpm                      | 232 kB     00:00
+(24/29): perl-Test-Simple-0.92-144.el6.x86_64.rpm                       | 113 kB     00:00
+(25/29): perl-Time-HiRes-1.9721-144.el6.x86_64.rpm                      |  49 kB     00:00
+(26/29): perl-devel-5.10.1-144.el6.x86_64.rpm                           | 424 kB     00:00
+(27/29): perl-libs-5.10.1-144.el6.x86_64.rpm                            | 579 kB     00:00
+(28/29): perl-version-0.77-144.el6.x86_64.rpm                           |  52 kB     00:00
+(29/29): zlib-devel-1.2.3-29.el6.x86_64.rpm                             |  44 kB     00:00
+-----------------------------------------------------------------------------------------------
+Total                                                          3.2 MB/s |  18 MB     00:05
+경고: rpmts_HdrFromFdno: Header V3 RSA/SHA1 Signature, key ID c105b9de: NOKEY
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
+Importing GPG key 0xC105B9DE:
+ Userid : CentOS-6 Key (CentOS 6 Official Signing Key) <centos-6-key@centos.org>
+ Package: centos-release-6-8.el6.centos.12.3.x86_64 (@anaconda-CentOS-201605220104.x86_64/6.8)
+ From   : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
+Running rpm_check_debug
+Running Transaction Test
+Transaction Test Succeeded
+Running Transaction
+Warning: RPMDB altered outside of yum.
+** Found 1 pre-existing rpmdb problem(s), 'yum check' output follows:
+1:mysql-connector-java-5.1.17-6.el6.noarch has missing requires of jta >= ('0', '1.0', None)
+  Updating   : libcom_err-1.41.12-24.el6.x86_64                                           1/51
+  Updating   : krb5-libs-1.10.3-65.el6.x86_64                                             2/51
+  Updating   : openssl-1.0.1e-57.el6.x86_64                                               3/51
+  Installing : libkadm5-1.10.3-65.el6.x86_64                                              4/51
+  Updating   : libss-1.41.12-24.el6.x86_64                                                5/51
+  Updating   : e2fsprogs-libs-1.41.12-24.el6.x86_64                                       6/51
+  Installing : libcom_err-devel-1.41.12-24.el6.x86_64                                     7/51
+  Updating   : 1:perl-Pod-Escapes-1.04-144.el6.x86_64                                     8/51
+  Updating   : 4:perl-libs-5.10.1-144.el6.x86_64                                          9/51
+  Updating   : 1:perl-Module-Pluggable-3.90-144.el6.x86_64                               10/51
+  Updating   : 1:perl-Pod-Simple-3.13-144.el6.x86_64                                     11/51
+  Updating   : 3:perl-version-0.77-144.el6.x86_64                                        12/51
+  Updating   : 4:perl-5.10.1-144.el6.x86_64                                              13/51
+  Installing : perl-DBD-MySQL-4.013-3.el6.x86_64                                         14/51
+  Installing : mysql-server-5.1.73-7.el6.x86_64                                          15/51
+  Updating   : perl-ExtUtils-MakeMaker-6.55-144.el6.x86_64                               16/51
+  Updating   : perl-Test-Harness-3.17-144.el6.x86_64                                     17/51
+  Updating   : 1:perl-ExtUtils-ParseXS-2.2003.0-144.el6.x86_64                           18/51
+  Updating   : 4:perl-devel-5.10.1-144.el6.x86_64                                        19/51
+  Installing : 4:perl-Time-HiRes-1.9721-144.el6.x86_64                                   20/51
+  Installing : libsepol-devel-2.0.41-4.el6.x86_64                                        21/51
+  Installing : libselinux-devel-2.0.94-7.el6.x86_64                                      22/51
+  Installing : zlib-devel-1.2.3-29.el6.x86_64                                            23/51
+  Installing : keyutils-libs-devel-1.4-5.el6.x86_64                                      24/51
+  Installing : krb5-devel-1.10.3-65.el6.x86_64                                           25/51
+  Installing : openssl-devel-1.0.1e-57.el6.x86_64                                        26/51
+  Installing : mysql-devel-5.1.73-7.el6.x86_64                                           27/51
+  Installing : mysql-test-5.1.73-7.el6.x86_64                                            28/51
+  Updating   : perl-Test-Simple-0.92-144.el6.x86_64                                      29/51
+  Updating   : perl-CGI-3.51-144.el6.x86_64                                              30/51
+  Updating   : e2fsprogs-1.41.12-24.el6.x86_64                                           31/51
+  Updating   : krb5-workstation-1.10.3-65.el6.x86_64                                     32/51
+  Cleanup    : e2fsprogs-1.41.12-22.el6.x86_64                                           33/51
+  Cleanup    : krb5-workstation-1.10.3-57.el6.x86_64                                     34/51
+  Cleanup    : perl-Test-Simple-0.92-141.el6_7.1.x86_64                                  35/51
+  Cleanup    : perl-Test-Harness-3.17-141.el6_7.1.x86_64                                 36/51
+  Cleanup    : 1:perl-ExtUtils-ParseXS-2.2003.0-141.el6_7.1.x86_64                       37/51
+  Cleanup    : 4:perl-devel-5.10.1-141.el6_7.1.x86_64                                    38/51
+  Cleanup    : perl-ExtUtils-MakeMaker-6.55-141.el6_7.1.x86_64                           39/51
+  Cleanup    : perl-CGI-3.51-141.el6_7.1.x86_64                                          40/51
+  Cleanup    : 1:perl-Module-Pluggable-3.90-141.el6_7.1.x86_64                           41/51
+  Cleanup    : 1:perl-Pod-Escapes-1.04-141.el6_7.1.x86_64                                42/51
+  Cleanup    : 1:perl-Pod-Simple-3.13-141.el6_7.1.x86_64                                 43/51
+  Cleanup    : 4:perl-libs-5.10.1-141.el6_7.1.x86_64                                     44/51
+  Cleanup    : 4:perl-5.10.1-141.el6_7.1.x86_64                                          45/51
+  Cleanup    : 3:perl-version-0.77-141.el6_7.1.x86_64                                    46/51
+  Cleanup    : openssl-1.0.1e-48.el6.x86_64                                              47/51
+  Cleanup    : krb5-libs-1.10.3-57.el6.x86_64                                            48/51
+  Cleanup    : libss-1.41.12-22.el6.x86_64                                               49/51
+  Cleanup    : e2fsprogs-libs-1.41.12-22.el6.x86_64                                      50/51
+  Cleanup    : libcom_err-1.41.12-22.el6.x86_64                                          51/51
+  Verifying  : 3:perl-version-0.77-144.el6.x86_64                                         1/51
+  Verifying  : e2fsprogs-libs-1.41.12-24.el6.x86_64                                       2/51
+  Verifying  : 4:perl-5.10.1-144.el6.x86_64                                               3/51
+  Verifying  : perl-DBD-MySQL-4.013-3.el6.x86_64                                          4/51
+  Verifying  : perl-ExtUtils-MakeMaker-6.55-144.el6.x86_64                                5/51
+  Verifying  : krb5-devel-1.10.3-65.el6.x86_64                                            6/51
+  Verifying  : 4:perl-Time-HiRes-1.9721-144.el6.x86_64                                    7/51
+  Verifying  : perl-Test-Harness-3.17-144.el6.x86_64                                      8/51
+  Verifying  : krb5-libs-1.10.3-65.el6.x86_64                                             9/51
+  Verifying  : krb5-workstation-1.10.3-65.el6.x86_64                                     10/51
+  Verifying  : libcom_err-devel-1.41.12-24.el6.x86_64                                    11/51
+  Verifying  : mysql-server-5.1.73-7.el6.x86_64                                          12/51
+  Verifying  : keyutils-libs-devel-1.4-5.el6.x86_64                                      13/51
+  Verifying  : perl-CGI-3.51-144.el6.x86_64                                              14/51
+  Verifying  : 4:perl-libs-5.10.1-144.el6.x86_64                                         15/51
+  Verifying  : libss-1.41.12-24.el6.x86_64                                               16/51
+  Verifying  : zlib-devel-1.2.3-29.el6.x86_64                                            17/51
+  Verifying  : 1:perl-Pod-Simple-3.13-144.el6.x86_64                                     18/51
+  Verifying  : 1:perl-ExtUtils-ParseXS-2.2003.0-144.el6.x86_64                           19/51
+  Verifying  : openssl-devel-1.0.1e-57.el6.x86_64                                        20/51
+  Verifying  : 4:perl-devel-5.10.1-144.el6.x86_64                                        21/51
+  Verifying  : libcom_err-1.41.12-24.el6.x86_64                                          22/51
+  Verifying  : 1:perl-Module-Pluggable-3.90-144.el6.x86_64                               23/51
+  Verifying  : mysql-test-5.1.73-7.el6.x86_64                                            24/51
+  Verifying  : libsepol-devel-2.0.41-4.el6.x86_64                                        25/51
+  Verifying  : 1:perl-Pod-Escapes-1.04-144.el6.x86_64                                    26/51
+  Verifying  : perl-Test-Simple-0.92-144.el6.x86_64                                      27/51
+  Verifying  : openssl-1.0.1e-57.el6.x86_64                                              28/51
+  Verifying  : libkadm5-1.10.3-65.el6.x86_64                                             29/51
+  Verifying  : libselinux-devel-2.0.94-7.el6.x86_64                                      30/51
+  Verifying  : mysql-devel-5.1.73-7.el6.x86_64                                           31/51
+  Verifying  : e2fsprogs-1.41.12-24.el6.x86_64                                           32/51
+  Verifying  : openssl-1.0.1e-48.el6.x86_64                                              33/51
+  Verifying  : 4:perl-devel-5.10.1-141.el6_7.1.x86_64                                    34/51
+  Verifying  : 1:perl-Module-Pluggable-3.90-141.el6_7.1.x86_64                           35/51
+  Verifying  : krb5-workstation-1.10.3-57.el6.x86_64                                     36/51
+  Verifying  : 1:perl-Pod-Escapes-1.04-141.el6_7.1.x86_64                                37/51
+  Verifying  : 4:perl-5.10.1-141.el6_7.1.x86_64                                          38/51
+  Verifying  : 4:perl-libs-5.10.1-141.el6_7.1.x86_64                                     39/51
+  Verifying  : perl-Test-Simple-0.92-141.el6_7.1.x86_64                                  40/51
+  Verifying  : 1:perl-ExtUtils-ParseXS-2.2003.0-141.el6_7.1.x86_64                       41/51
+  Verifying  : 1:perl-Pod-Simple-3.13-141.el6_7.1.x86_64                                 42/51
+  Verifying  : libss-1.41.12-22.el6.x86_64                                               43/51
+  Verifying  : e2fsprogs-1.41.12-22.el6.x86_64                                           44/51
+  Verifying  : 3:perl-version-0.77-141.el6_7.1.x86_64                                    45/51
+  Verifying  : perl-CGI-3.51-141.el6_7.1.x86_64                                          46/51
+  Verifying  : perl-ExtUtils-MakeMaker-6.55-141.el6_7.1.x86_64                           47/51
+  Verifying  : perl-Test-Harness-3.17-141.el6_7.1.x86_64                                 48/51
+  Verifying  : libcom_err-1.41.12-22.el6.x86_64                                          49/51
+  Verifying  : krb5-libs-1.10.3-57.el6.x86_64                                            50/51
+  Verifying  : e2fsprogs-libs-1.41.12-22.el6.x86_64                                      51/51
+
+Installed:
+  mysql-devel.x86_64 0:5.1.73-7.el6             mysql-server.x86_64 0:5.1.73-7.el6
+  mysql-test.x86_64 0:5.1.73-7.el6
+
+Dependency Installed:
+  keyutils-libs-devel.x86_64 0:1.4-5.el6           krb5-devel.x86_64 0:1.10.3-65.el6
+  libcom_err-devel.x86_64 0:1.41.12-24.el6         libkadm5.x86_64 0:1.10.3-65.el6
+  libselinux-devel.x86_64 0:2.0.94-7.el6           libsepol-devel.x86_64 0:2.0.41-4.el6
+  openssl-devel.x86_64 0:1.0.1e-57.el6             perl-DBD-MySQL.x86_64 0:4.013-3.el6
+  perl-Time-HiRes.x86_64 4:1.9721-144.el6          zlib-devel.x86_64 0:1.2.3-29.el6
+
+Dependency Updated:
+  e2fsprogs.x86_64 0:1.41.12-24.el6
+  e2fsprogs-libs.x86_64 0:1.41.12-24.el6
+  krb5-libs.x86_64 0:1.10.3-65.el6
+  krb5-workstation.x86_64 0:1.10.3-65.el6
+  libcom_err.x86_64 0:1.41.12-24.el6
+  libss.x86_64 0:1.41.12-24.el6
+  openssl.x86_64 0:1.0.1e-57.el6
+  perl.x86_64 4:5.10.1-144.el6
+  perl-CGI.x86_64 0:3.51-144.el6
+  perl-ExtUtils-MakeMaker.x86_64 0:6.55-144.el6
+  perl-ExtUtils-ParseXS.x86_64 1:2.2003.0-144.el6
+  perl-Module-Pluggable.x86_64 1:3.90-144.el6
+  perl-Pod-Escapes.x86_64 1:1.04-144.el6
+  perl-Pod-Simple.x86_64 1:3.13-144.el6
+  perl-Test-Harness.x86_64 0:3.17-144.el6
+  perl-Test-Simple.x86_64 0:0.92-144.el6
+  perl-devel.x86_64 4:5.10.1-144.el6
+  perl-libs.x86_64 4:5.10.1-144.el6
+  perl-version.x86_64 3:0.77-144.el6
+
+Complete!
+[root@yunji Packages]# rpm -qa |grep mysql -wc
+8
+[root@yunji Packages]#

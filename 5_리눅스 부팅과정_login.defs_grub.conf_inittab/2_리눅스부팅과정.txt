@@ -1,0 +1,63 @@
+리눅스 부팅과정
+
+1.파워
+
+2.bios 진입 (start-up 루틴 :초기화작업)
+
+3.부트섹터=> 부트로더 grub(LILO:리눅스 표준 부트로더)
+
+4.swapper 프로세스 실행 (잠이든 프로세스를 동작)
+ 
+5.init실행
+
+***init 스크립트실행순서*** ★★★
+리눅스 마스터 2급 매년출제 ~~
+/etc/inittab => /etc/rc.d/rc.sysinit=> /etc/rc.d/rc* =>/etc/rc.local
+
+6. 계정 프로세스 실행
+
+/etc/inittab 설정파일들 
+
+ /etc/rc.d/rc.sysinit		init스크립트에서 제일 먼저 실행되는 것
+
+ /etc/rc.d/init.d/*    		원본 데몬 스크립트
+
+ /etc/rc.d/rc[0-6].d/* 		각 런레벨에 데몬 실행시키기 위한 것 실제 내용은  = link 파일
+				/etc/rc.d/init.d의 스크립트로의 링크
+
+ /etc/rc.d/rc.local		init스크립트 제일 마지막 작업 (일반 스크립트,추가 스크립트)
+
+ /var/lock/subsys/* 		현재 실행되고 있는 데몬들의 lock파일들
+
+ /var/run/*.pid     		현재 실행되고 있는 데몬들의 PID가 적힌 파일들
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

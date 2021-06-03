@@ -1,0 +1,85 @@
+[root@yunji ~]# rm -rf /export/
+[root@yunji ~]# mkdir /export
+[root@yunji ~]# cd /export
+[root@yunji export]# pwd
+/export
+[root@yunji export]# mkdir mb1 mb2 mb5 mb6 mb7
+[root@yunji export]# ll
+합계 20
+drwxr-xr-x 2 root root 4096 2019-08-04 12:37 mb1
+drwxr-xr-x 2 root root 4096 2019-08-04 12:37 mb2
+drwxr-xr-x 2 root root 4096 2019-08-04 12:37 mb5
+drwxr-xr-x 2 root root 4096 2019-08-04 12:37 mb6
+drwxr-xr-x 2 root root 4096 2019-08-04 12:37 mb7
+[root@yunji export]# cd ~
+[root@yunji ~]# mount -t exit4 /dev/sdb1 /export/mb1
+mount: unknown filesystem type 'exit4'
+[root@yunji ~]# mount -t ext4 /dev/sdb1 /export/mb1
+[root@yunji ~]# df -Th
+Filesystem     Type     Size  Used Avail Use% Mounted on
+/dev/sda7      ext4      22G  357M   20G   2% /
+tmpfs          tmpfs    931M  224K  931M   1% /dev/shm
+/dev/sda1      ext4     190M   39M  142M  22% /boot
+/dev/sda6      ext4     190M  1.6M  179M   1% /home
+/dev/sda2      ext4      12G  3.1G  7.9G  28% /usr
+/dev/sda3      ext4     3.9G  241M  3.4G   7% /var
+/dev/sr0       iso9660  3.7G  3.7G     0 100% /media/CentOS_6.8_Final
+/dev/sdb1      ext4     194M  1.8M  182M   1% /export/mb1
+[root@yunji ~]# clear
+[root@yunji ~]# ls -l /export/mb1
+합계 12
+drwx------ 2 root root 12288 2019-08-04 12:31 lost+found
+[root@yunji ~]# ls -l /export/mb1/lost+found/
+합계 0
+[root@yunji ~]# cat -n /export/mb1/lost+found/
+cat: /export/mb1/lost+found/: 디렉터리입니다
+[root@yunji ~]# ls -l /e
+etc/    export/
+[root@yunji ~]# umount /export/mb1
+[root@yunji ~]# df -Th
+Filesystem     Type     Size  Used Avail Use% Mounted on
+/dev/sda7      ext4      22G  357M   20G   2% /
+tmpfs          tmpfs    931M  224K  931M   1% /dev/shm
+/dev/sda1      ext4     190M   39M  142M  22% /boot
+/dev/sda6      ext4     190M  1.6M  179M   1% /home
+/dev/sda2      ext4      12G  3.1G  7.9G  28% /usr
+/dev/sda3      ext4     3.9G  241M  3.4G   7% /var
+/dev/sr0       iso9660  3.7G  3.7G     0 100% /media/CentOS_6.8_Final
+[root@yunji ~]# ls -l /export/mb1
+합계 0
+[root@yunji ~]# clear
+[root@yunji ~]# touch /export/mb1/1
+[root@yunji ~]# ls -l /export/mb1
+합계 0
+-rw-r--r-- 1 root root 0 2019-08-04 12:41 1
+[root@yunji ~]# mount /dev/sdb1 /export/mb1
+[root@yunji ~]# df -Th
+Filesystem     Type     Size  Used Avail Use% Mounted on
+/dev/sda7      ext4      22G  357M   20G   2% /
+tmpfs          tmpfs    931M  224K  931M   1% /dev/shm
+/dev/sda1      ext4     190M   39M  142M  22% /boot
+/dev/sda6      ext4     190M  1.6M  179M   1% /home
+/dev/sda2      ext4      12G  3.1G  7.9G  28% /usr
+/dev/sda3      ext4     3.9G  241M  3.4G   7% /var
+/dev/sr0       iso9660  3.7G  3.7G     0 100% /media/CentOS_6.8_Final
+/dev/sdb1      ext4     194M  1.8M  182M   1% /export/mb1
+[root@yunji ~]# ls -l /export/mb1
+합계 12
+drwx------ 2 root root 12288 2019-08-04 12:31 lost+found
+[root@yunji ~]# unmount /export/mb1
+-bash: unmount: command not found
+[root@yunji ~]# umount /export/mb1
+[root@yunji ~]# ls -l /export/mb1
+합계 0
+-rw-r--r-- 1 root root 0 2019-08-04 12:41 1
+[root@yunji ~]# mount /dev/sdb1 /export/mb1
+[root@yunji ~]# touch /export/mb1/2
+[root@yunji ~]# ls -l /export/mb1
+합계 12
+-rw-r--r-- 1 root root     0 2019-08-04 12:43 2
+drwx------ 2 root root 12288 2019-08-04 12:31 lost+found
+[root@yunji ~]# umount /export/mb1
+[root@yunji ~]# ls -l /export/mb1
+합계 0
+-rw-r--r-- 1 root root 0 2019-08-04 12:41 1
+[root@yunji ~]#

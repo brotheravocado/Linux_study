@@ -1,0 +1,32 @@
+/etc/inittab (System RunLevel)
+
+# Default runlevel. The runlevels used are:
+#   0 - halt (Do NOT set initdefault to this) 	종료
+#   1 - Single user mode			싱글모드(안전모드) single boot / root만
+#   2 - Multiuser, without NFS 			텍스트모드 NFS미지원 (TUI)
+#   3 - Full multiuser mode			텍스트모드 NFS지원 (TUI)
+#   4 - unused					사용안함 (사용자지정모드)
+						사용별로 권한을 준게 X = 그냥 막아논것		
+#   5 - X11					그래픽모드 (GUI)
+#   6 - reboot (Do NOT set initdefault to this)	재시작
+#
+id:5:initdefault:				기본값
+
+====================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

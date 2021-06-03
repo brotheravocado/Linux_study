@@ -1,0 +1,77 @@
+Edit -> Virtual Network Editor 
+Nat이 192.168.1.0이 아니면 change settings Nat의 IP를 192.168.1.0로 변경(윈도우10에서 IP-랜덤사용)
+192.168.1.0 3번째 옥택까지는 같음 4번재는 랜덤 IP라서 다름
+ping이 안되는 이유는 윈도우가 막혀있어서
+wf.msc 인바운드 규칙에서 에코요청 ICMPV4 -In 규칙사용(2개다)
+숨기는것은 .file directory
+-R recursive
+명령어의 옵션은 순서가 상관없다
+l -디렉토리 안의 내용 / ld -디렉토리의 존재자체를 물음
+tab누르면 /home/ 자동완성으로 왜 제일뒤에 /붙는가
+1. 최상위 -젤위
+2. 구분자(하위) -중간
+3. /home/kgitbank/ -젤뒤(/)는 디렉토리임을 말하는 것
+띄어쓰기하면 새로운 옵션또는경로를 말함
+ex) ls -ld /home/kgitbank/ /root/ 두개의 경로를 말해줌
+ls -hhl -> hh는 잘못되었지만 실행됨
+touch는 파일을 새로 만듬
+ex) touch 1/2 하면 1이라는 파일 밑에 2라는 파일을 만들 수 없다
+mkdir - 디렉토리 만드는 명령어 / rmdir 삭제하는 디렉토리 명령어
+디렉토리나 파일 생성할때 띄어쓰기하면 두개로 인식
+shift \ -> | (파이프)
+파일이나 디렉토리 파일이름에서 #,$ 이 안되었지만 이제 허용 
+파일이름 같으면 폴더 생성 X
+--------------------------------------
+4_기본 파일 시스템 및 계층구조 및 디렉토리 구조
+bin - 명령어가 들어가있는 파일보는 명령어
+sbin - 시스템 명령어
+etc - 설정파일 집합소
+* - 모든것
+ls -l /dev/sda? -> 문자 한개짜리 무엇이 있는가
+mnt -> 블루투스같은 장치 연결
+var 제일 많이 변경사항이 생기는 곳 
+lost+found 삭제 후 복구
+mv A B - A에서 B로
+mv /optimus/prime/ /optimus/A -> prime을 A로 이름을 바꾸러ㅏ
+
+mv /optimus/suzi /iu/suzi/ 이름이 같으면 suzi밑으로 들어감
+이름 원본 그대로 원하면 적시 X 바꾸길원하면 적시 O
+
+rmdir은 안에 아무것도 없어야만 삭제가능
+ls -lR /a - a밑 모든것
+rm -> 파일삭제 
+---------------------------------------------
+파일 생성 삭제
+모두 삭제 rm -rf*
+cat > 입력 / cat < 출력 (부등호 생략가능)
+만약에 같은 파일이 있다면 덮어쓰기, 없으면 생성
+
+cat 1 2 3 > 4 / 왼쪽은 재료 오른쪽은 결과 -> 병합 !! 순서 중요!!
+추가는 cat >> 4 (재료값이 없으면 직접친다) / cat 1 >> 4 (4의 뒤에 1의 내용을 넣는다)
+cat -n(n =number) ex) cat -n 1 2
+
+vi/vim ->에디터(문서편집기)
+<vi>
+이동모드- hjkl / yy(복사하기) / p(아래 붙여넣기) /P(위) /u(이전키) /dd(삭제) - 모션키
+입력모드 - a (띄어쓰기) / esc(나가기)
+실행모드 - shift ;(저장) / wq(나가기) / q!(강제로나가기)
+<vim>
+ctrl + w + n 화면 2분할
+
+<find>
+find / 범위
+find / -name (필터종류)
+	-type
+		grub.conf(필터값)
+ls -l /boot.grub.grub.conf /etc/grub.conf
+- -> 파일
+l -> 원본이 아니라 링크 파일
+
+find / -name grub.conf -type d -> 타입이 디렉토리이면서 이름이 grub.conf인걸 찾아라 -> x
+find / -name grub.conf -type f -> o
+필터종류가 같으면 항상 -o를 붙인다 ex) find / -name grub.conf -o name inittab -o -name login.defs
+
+<cp> 파일 복사
+							/etc/passwd (계정)
+|연산자(파이프)
+cat - n /etc/passwd | grep(추출) root(루트라는거)

@@ -1,0 +1,59 @@
+1_경로문제
+
+1번
+  	/etc/login.defs
+	/etc/inittab
+	/boot/grub/grub.conf      -> 3가지 경로 암기
+ 	
+cp /etc/login.defs /etc/inittab /boot/grub/grub.conf /backup/touch
+
+2번
+ex) cp /backup/inittab /backup/test/init
+
+3번
+
+4번
+보존복사 -p (시간도 그대로)
+mkdir -p /home/test/c/d
+cp -rp /backup/test /home/test/c/d/kgitbank
+
+date
+cal
+cal 09 2019
+
+5번
+mkdir /home/test/c/d/test
+cp -p /backup/*(전체) /home/test/c/d/test/
+
+: -> 구분자
+
+단축키 -> alias
+
+단축 
+별명= '본명'
+unalias ->삭제
+
+--------------------------------
+Answer
+alias a1='mkdir /kgitbank'
+alias a2='touch /kgitbank/test1 && mkdir /kgitbank/test2'
+alias a3='rm -rf /kgitbank'
+alisa a4='a1 && a2'
+---------------------------------
+find (시간)
+find -atime -7 (7일 전부터 현재시점) ex) 10일 4일부터 ~ 10일
+find -atime +7 (설치부터 7일전까지)  ex)  "	1일부터 ~ 3일
+find . -newer 1
+-----------------------------------
+head(상위부터 10줄) /etc/passwd | cat -n == cat -n | head 
+-----------------------------------
+cat -n /etc/passwd | tail
+-----------------------------------
+끊어서보는 more
+원하는 숫자만큼은 more -2 /etc/passwd
+more -2 /etc/passwd | cat -n -> A가 실행이 다 되고 B 반대로 해야함 cat -n /etc/passwd | more -2
+--------------------------------------
+입출력
+----------------------------
+문제 마지막문제
+find /etc -type d

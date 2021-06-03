@@ -1,0 +1,22 @@
+login as: root
+root@192.168.1.140's password:
+Last login: Sun Aug  4 12:53:23 2019 from 192.168.1.1
+[root@yunji ~]# cd test
+[root@yunji test]# ll
+합계 12
+-rw-r--r-- 1 root root 4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root 4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root 4 2019-08-04 12:57 3
+[root@yunji test]# gzip 1 2 3
+[root@yunji test]# ll
+합계 12
+-rw-r--r-- 1 root root 26 2019-08-04 12:56 1.gz
+-rw-r--r-- 1 root root 26 2019-08-04 12:57 2.gz
+-rw-r--r-- 1 root root 26 2019-08-04 12:57 3.gz
+[root@yunji test]# gunzip 1 2 3
+[root@yunji test]# ll
+합계 12
+-rw-r--r-- 1 root root 4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root 4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root 4 2019-08-04 12:57 3
+[root@yunji test]#

@@ -1,0 +1,19 @@
+cat -n /etc/shells
+
+/bin/sh 	복구쉘
+/bin/bash 	linux전용기본쉘 - default 값
+/sbin/nologin 	시스템쉘
+/bin/dash 	데비안전용쉘
+/bin/tcsh	csh확장쉘
+/bin/csh	c프로그램 전용쉘
+/bin/ksh	unix 기본쉘
+
+커널(운영체제) - shell - 사용자
+		   └> 중간 매개체 역할을 한다 
+2진수 - 문자 
+============================================
+리눅스 족보
+1. 데비안계열
+2. 슬랙웨어 계열
+3. Red Hat 계열
+

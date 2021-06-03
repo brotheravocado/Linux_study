@@ -1,0 +1,168 @@
+** 리눅스에 정답이 어딨어 !! **
+** 아래의 강사가 생각하는 답에는 '//' 라는 표시는 주석 처리=설명(명령창에 입력하시면 안됩니다) 입니다 **
+SCSI 1G
+P	P	L		device=/dev/sdb5
+200	200	etc		m.p=/export/sdb  (부팅시 자동마운트 vi /etc/fstab)
+------------------------------------------------------------------------------------------
+**강사가 생각하는 답
+fdisk /dev/sdb
+/dev/sdb1	200M
+/dev/sdb2	200M
+/dev/sdb3	extended
+/dev/sdb5	etc //나머지 전부
+fdisk -l /dev/sdb //장치 생성을 확인하시고
+mkfs.ext4 /dev/sdb5 //포맷하시고
+mkdir -p /export/sdb //M.P 생성하시고
+vi /etc/fstab
+shift + g //하시고
+소문자 o //하시고
+/dev/sdb5               /export/sdb             ext4    defaults        1 2 //라고 입력하시고
+:wq //저장하고 나오시고
+mount -a //오타 확인 하시고
+df -Th = Mount //확인 하시고
+/dev/sdb5      ext4     587M  480K  556M   1% /export/sdb //이렇게 왔는지 확인하시고
+ls -l /export/sdb/ //하셔서
+drwx------. 2 root root 16384 2019-01-11 05:01 lost+found //이렇게 복구영역 왔는지 확인하시면 됩니다
+------------------------------------------------------------------------------------------
+/export/sdb/home/main(계정)/public_html/index.html<== 자동생성(/etc/skel 내용 포함)
+		/iu(계정) <== 계정이동
+		/ftpuser(계정)/pub/1.gz  <== 자동생성(/etc/skel내용 포함)
+				   2.bz2
+				   3.tar.gz
+------------------------------------------------------------------------------------------
+**강사가 생각하는 답
+mkdir /export/sdb/home
+cp -r /etc/skel/ /etc/skel1
+cd /etc/skel1
+ls -al = /etc/skel //잘 복사해 왔는지 항상 확인하시고
+mkdir public_html && cat > public_html/index.html //애국가 1절 알아서 쓰시고
+ctrl + c
+cd ~
+useradd -d /export/sdb/home/main -mk /etc/skel1 main
+passwd main //비밀번호 1 설정하시고
+grep main /etc/passwd && ls -ld ~main //서류상의 홈 디렉토리와 실제 홈 디렉토리 둘다 같은지 확인하시고
+useradd iu //기본값으로 iu 계정 생성
+passwd iu //비밀번호 1 설정하시고
+grep iu /etc/passwd && ls -ld ~iu //서류상의 홈 디렉토리와 실제 홈 디렉토리 둘다 같은지 확인하시고 목적지에 생성할려는 디렉토리 없는지 확인
+usermod -md /export/sdb/home/iu iu //서류상의 홈 디렉토리와 실제 홈 디렉토리 둘다 같이 옮기기
+grep iu /etc/passwd && ls -ld ~iu //서류상의 홈 디렉토리와 실제 홈 디렉토리 둘다 같이 잘 옮겨 갔는지 확인하시고
+cp -r /etc/skel /etc/skel2 //스켈 복사
+cd /etc/skel2
+ls -al //잘 복사 했는지 보시고
+mkdir pub
+cd pub
+touch 1
+gzip 1
+cp 1.gz 2.gz
+gunzip 2.gz
+bzip2 2
+tar cvfz 3.tar.gz *
+cd ~
+useradd -d /export/sdb/home/ftpuser -mk /etc/skel2 ftpuser
+passwd ftpuser //비밀번호 1 설정하시고
+grep ftpuser /etc/passwd && ls -ld ~ftpuser //서류상의 홈 디렉토리와 실제 홈 디렉토리 둘다 같은지 확인하시고
+ls -alR ~ftpuser //홈디렉토리안에 숨긴 파일 그리고 하위 파일 전부 확인하세요
+------------------------------------------------------------------------------------------
+1. index.html 문서 파일 안에 애국가 1절 내용을 입력하세요
+**강사가 생각하는 답
+이미 위에서 풀이 했습니다
+------------------------------------------------------------------------------------------
+2. main 계정 홈디렉토리는	main 계정이 모든 권한을 가지고
+   			GID(linux그룹)는 읽기 권한을
+			다른사람들은 접근만 가능하도록 설정
+**강사가 생각하는 답
+ls -ld ~main
+drwx------. 5 main main 4096 2019-01-11 05:14 /export/sdb/home/main //login.defs의 58행 UMASK=077
+chmod 751 ~main
+ls -ld ~main
+drwxr-x--x. 5 main main 4096 2019-01-11 05:14 /export/sdb/home/main //변경 확인하세요
+------------------------------------------------------------------------------------------
+3. iu는 계정이동후 정상접속이 가능하도록 설정해주세요
+**강사가 생각하는 답
+이미 위에서 풀이 했습니다
+------------------------------------------------------------------------------------------
+4. ftpuser홈디렉토리에서	ftpuser계정은 모든 권한을
+			ftpuser그룹은 다운로드 권한을
+			다른 사용자는 사용할 수 없도록 설정
+**강사가 생각하는 답
+ls -ld ~ftpuser 
+drwx------. 5 ftpuser ftpuser 4096 2019-01-11 05:22 /export/sdb/home/ftpuser //이렇게 오는지 확인 하시고
+chmod 750 ~ftpuser
+ls -ld ~ftpuser
+drwxr-x---. 5 ftpuser ftpuser 4096 2019-01-11 05:22 /export/sdb/home/ftpuser //이렇게 오는지 확인 하세요
+------------------------------------------------------------------------------------------
+5. suzi 계정은 ftpuser의 그룹으로 /export/sdb/home/ftpuser/pub에 접속 할 수 있도록
+   설정해주세요 (shell 활성화 시킬것)
+**강사가 생각하는 답(천천히 잘 읽으세요)
+useradd suzi
+passwd suzi //비밀번호 1 설정하시고
+grep suzi /etc/passwd && ls -ld ~suzi //서류상의 홈 디렉토리와 실제 홈 디렉토리 둘다 같은지 확인하시고
+usermod -d /export/sdb/home/ftpuser/pub/ suzi //서류상의 홈 디렉토리와 실제 홈 디렉토리 둘다 같이 옮길 수 없으니 서류상의 홈 디렉토리만 옮깁니다
+						//왜냐면 이미 pub라는 디렉토리가 있잖아요!!
+grep suzi /etc/passwd 
+suzi:x:504:504::/export/sdb/home/ftpuser/pub/:/bin/bash //이렇게 변경되었는지 확인하시고
+ls -ld /home/suzi //여전히 실제 홈 디렉토리는 존재하는지 확인합니다
+//Putty 상단 Bar에 가셔서 우클릭 하시고 '같은 연결 하나 더'를 클릭
+login as: suzi //입력
+suzi@192.168.1.145's password: 1 //입력
+Could not chdir to home directory /export/sdb/home/ftpuser/pub/: Permission denied //홈 디렉토리로 바꿀 수 없습니다 라고 나옵니다
+-bash: /export/sdb/home/ftpuser/pub//.bash_profile: 허가 거부 //이렇게 옵니다
+-bash-4.1$ //이렇게 옵니다
+//우리는 이미 배웠습니다 
+//ftpuser계정의 홈디렉토리에 접근을 못한다는 사실을 누가? suzi계정이... 그리고 어차피 pub 하위에 .bash_profile 및 .bashrc 파일이 없다는 것을....
+//일단 접근부터 해결합니다
+ls -ld /export/sdb/home/ftpuser/
+drwxr-x---. 5 ftpuser ftpuser 4096 2019-01-11 05:22 /export/sdb/home/ftpuser/ //이렇게 OTHER 권한이 0 인것을 확인합니다
+//해결 방법은 총 3가지 
+//첫번째 OTHER 권한에 접근권한(x) 추가
+//두번째 UID 소유권을 suzi계정으로 바꾸기 = 돈 모아서 집사기 !!! = 남자들의 로망 !!
+//세번째 GID 그룹에 suzi계정을 추가=젤 좋아!!
+id suzi
+uid=504(suzi) gid=504(suzi) groups=504(suzi) //이렇게 나오는지 확인(suzi 라는 계정은 기본그룹은 1개 입니다)
+usermod -G ftpuser suzi //ftpuser 그룹에 suzi계정 추가
+-bash: /usr/sbin/usermod: 허가 거부 //일케 뜨네요 일반 계정이죠?  root로 로그인 되어있는 Putty 로 갑니다
+usermod -G ftpuser suzi //입력
+id suzi //입력
+uid=504(suzi) gid=504(suzi) groups=504(suzi),503(ftpuser) //오호~ suzi 라는 계정은 기본그룹은 1개 였는데 2개가 되었습니다
+ls -ld ~suzi //입력
+drwxr-xr-x. 2 ftpuser ftpuser 4096 2019-01-11 05:22 /export/sdb/home/ftpuser/pub/ //라고 나옵니다
+//Putty 상단 Bar에 가셔서 우클릭 하시고 '같은 연결 하나 더'를 클릭
+login as: suzi //입력
+suzi@192.168.1.145's password: 1 //입력
+Last login: Fri Jan 11 05:52:43 2019 from 192.168.1.1 //이렇게 나오네요
+-bash-4.1$ //이렇게 나오네요
+pwd //입력
+/export/sdb/home/ftpuser/pub/ //홈디렉토리로 접근은 해결했어요 ~ 그러나 계속 bash shell이 깨지네요
+//어차피 pub 하위에 .bash_profile 및 .bashrc 파일이 없죠? 그래서 복사합니다
+cp -r /home/suzi/. ~suzi
+//cp: `/export/sdb/home/ftpuser/pub/./.mozilla' 디렉토리를 만들 수 없습니다: 허가 거부
+//cp: cannot create regular file `/export/sdb/home/ftpuser/pub/./.bashrc': 허가 거부
+//cp: cannot create regular file `/export/sdb/home/ftpuser/pub/./.bash_logout': 허가 거부
+//cp: cannot create regular file `/export/sdb/home/ftpuser/pub/./.kshrc': 허가 거부
+//cp: `/export/sdb/home/ftpuser/pub/./.gnome2' 디렉토리를 만들 수 없습니다: 허가 거부
+//cp: cannot create regular file `/export/sdb/home/ftpuser/pub/./.bash_profile': 허가 거부
+//이렇게 거부 나옵니다
+ls -ld ~suzi
+drwxr-xr-x. 2 ftpuser ftpuser 4096 2019-01-11 05:22 /export/sdb/home/ftpuser/pub/ //suzi계정은 ftpuser그룹의 일원이긴하지만 그룹권한이 5이죠? 쓰기권한이 없죠?			  
+//root 계정으로 로그인 된 Putty로 갑니다
+cp -r /home/suzi/. ~suzi 
+ls -al ~suzi //확인하시고
+//Putty 상단 Bar에 가셔서 우클릭 하시고 '같은 연결 하나 더'를 클릭
+login as: suzi //입력
+suzi@192.168.1.145's password: 1 //입력
+//shell도 안깨지고 정상 접속됩니다
+mkdir iu //그러나 디렉토리 생성 안됩니다
+mkdir: `iu' 디렉토리를 만들 수 없습니다: 허가 거부 // 라고 뜨죠? 그래서 권한을 775로 바꿉니다
+chmod 775 ~suzi
+chmod: changing permissions of `/export/sdb/home/ftpuser/pub/': 명령을 허용하지 않음 // 왜냐면 지금 이 디렉토리 소유권은 ftpuser 이죠?(전세,월세)
+//root 계정으로 로그인 된 Putty로 갑니다
+chmod 775 ~suzi //그룹권한 5에서 7로 올립니다
+//suzi 계정으로 로그인 된 Putty로 갑니다
+mkdir iu //생성 완료!!
+------------------------------------------------------------------------------------------
+6 mysql은 rpm 으로 패키지 설치 하시고
+  php는 yum 으로 설치하세요
+**강사가 생각하는 답
+mysql은 배웠던거 참고하시고(공유폴더)
+php는
+yum install php* -y

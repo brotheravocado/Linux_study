@@ -1,0 +1,57 @@
+signal 신호
+
+<1>  SIGHUP  	HUP 로그아웃  (nohup : 로그아웃 해도 프로그램 실행됨)
+<2> SIGINT	ctrl+c  동작취소
+<9>  SIGKILL	kill 강제종료
+<15>  SIGTERM	응용 프로그램내부 종료 (기본값)
+		ctrl+d  명령시점부터 동작종료
+<19> SIGTSTOP	ctrl+z  동작정지
+
+kill [PID]			단수
+kill -9 [PID] [PID]......	복수
+
+killall (PPID 프로그램명) = 관련된 pid 모두다 종료 (서버 자체 완전종료 : 연결자들 모두 종료)
+
+skill -kill   사용자/터미널    사용자및 터미널 프로세스 강제종료
+      -stop   사용자/터미널    사용자및 터미널 프로세스 강제정지
+      -cont   사용자/터미널    정지된 사용자및 터미널 프로세스 시작 
+
+zombie 프로세스
+부모프로세스에게 자식프로세스 시그널이 전달되지 않는 상태
+
+nohup- 사용자 로그아웃하거나 터미널창을 닫아도 백그라운드로 실행
+nohup 명령 &
+
+
+필기할 필요없습니다 - 여기서부터는 실전 트러블 슈팅영역입니다
+
+1. SIGHUP: 연결된terminal이hangup하였을때(terminate)
+2. SIGINT: interrupt key(^C)를입력하였을때(terminate)
+3. SIGQUIT: quit key(^\)를입력하였을때(terminate+core)
+4. SIGILL: illegal instruction을수행하였을때(terminate+core)
+5. SIGTRAP: implementation defined hardware fault (terminate+core)
+6. SIGABRT: abort시스템호출을불렀을때(terminate+core)
+7. SIGBUS: implementation defined hardware fault (terminate+core)
+8. SIGFPE: arithmetic exception, /0, floating-point overflow (terminate+core)
+9. SIGKILL: process를kill하기위핚signal, catch 혹은ignore될수없는signal임(terminate)
+10. SIGUSR1: user defined signal 1 (terminate)
+11. SIGSEGV: invalid memory reference (terminate+core)
+12. SIGUSR2: user defined signal 2 (terminate)
+13. SIGPIPE: reader가terminate된pipe에write할경우발생(terminate)
+14. SIGALRM: alarm시스템호출후timer가expire된경우(terminate)
+15. SIGTERM: kill시스템호출이보내는software termination signal (terminate)
+16. SIGCHLD: child가stop or exit되었을때parent에게전달되는신호(ignore)
+17. SIGCONT: continue a stopped process (continue/ignore)
+18. SIGSTOP: sendable stop signal, cannot be caught or ignored (stop process)
+19. SIGTSTP: stop key(^Z)를입력하였을때(stop process)
+20. SIGTTIN: background process가control tty로부터read할경우(stop process)
+21. SIGTTOU: background process가control tty로write할경우(stop process)
+22. SIGURG: urgent condition on IO, socket의OOB data (ignore)
+23. SIGXCPU: exceeded CPU time limit (terminate+core/ignore)
+24. SIGXFSZ: exceeded file size limit (terminate+core/ignore)
+25. SIGVTALRM: virtual time alarm, setitimer, (terminate)
+26. SIGPROF: profiling time alarm, setitimer, (terminate)
+27. SIGWINCH: terminal window size changed, (ignore)
+28. SIGIO: 어떤fd에서asynchronous I/O event가발생하였을경우(terminate/ignore)
+29. SIGPWR: system power fail (terminate/ignore)
+30. SIGSYS: bad argument to system call (terminate+core)

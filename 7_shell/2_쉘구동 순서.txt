@@ -1,0 +1,40 @@
+** 구동순서
+	1. /etc/profile		계정에 상관없이 쉘 환경설정 파일
+	2. ~/.bash_profile	계정마다 쉘 환경설정 파일
+	3. ~/.bashrc		계정마다 쉘 구동파일
+	4. /etc/bashrc		계정에 상관없이 쉘 구동 파일
+	리눅스 마스터 2급 문제 매년마다 출제 확실히 외워주세요 !!!!!!
+
+** bashshell 구동순서
+	.bash_profil 	전역환경파일
+	.bashrc 	구동파일
+==============================================================================
+**변수
+**지역 
+	지역변수 : 쉘간 변수 공유 불가능
+	지정: itbank="kgitbank"
+	출력: echo $itbank
+	확인: set |grep itbank
+	제거: unset itbank
+
+	환경변수 : 쉘간 변수 공유가능
+	지정 export itbank="suzilove"
+	출력: echo $itbank
+	확인: export |grep itbank
+	제거: unset itbank 
+	(환경변수 지정쉘에서 사용)
+
+** 변수치환
+	[root@itbank kgitbank]# mkdir /home/kgitbank/kgitbankbin
+	[root@itbank kgitbank]# cp /bin/pwd /home/kgitbank/kgitbankbin/aaa
+	[root@itbank kgitbank]# cp /bin/ls  /home/kgitbank/kgitbankbin/bbb
+	[root@itbank kgitbank]#
+
+** 환경변수 치환
+	export PATH=$PATH:/home/kgitbank/kgitbankbin
+
+
+
+
+
+

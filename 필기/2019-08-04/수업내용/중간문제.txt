@@ -1,0 +1,415 @@
+login as: root
+root@192.168.1.140's password:
+Last login: Sat Aug  3 12:53:35 2019 from 192.168.1.1
+[root@yunji ~]# cat -n /etc/passwd
+     1  root:x:0:0:root:/root:/bin/bash
+     2  bin:x:1:1:bin:/bin:/sbin/nologin
+     3  daemon:x:2:2:daemon:/sbin:/sbin/nologin
+     4  adm:x:3:4:adm:/var/adm:/sbin/nologin
+     5  lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+     6  sync:x:5:0:sync:/sbin:/bin/sync
+     7  shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+     8  halt:x:7:0:halt:/sbin:/sbin/halt
+     9  mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+    10  uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
+    11  operator:x:11:0:operator:/root:/sbin/nologin
+    12  games:x:12:100:games:/usr/games:/sbin/nologin
+    13  gopher:x:13:30:gopher:/var/gopher:/sbin/nologin
+    14  ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+    15  nobody:x:99:99:Nobody:/:/sbin/nologin
+    16  dbus:x:81:81:System message bus:/:/sbin/nologin
+    17  usbmuxd:x:113:113:usbmuxd user:/:/sbin/nologin
+    18  rpc:x:32:32:Rpcbind Daemon:/var/cache/rpcbind:/sbin/nologin
+    19  rtkit:x:499:499:RealtimeKit:/proc:/sbin/nologin
+    20  avahi-autoipd:x:170:170:Avahi IPv4LL Stack:/var/lib/avahi-autoipd:/sbin/nologin
+    21  vcsa:x:69:69:virtual console memory owner:/dev:/sbin/nologin
+    22  abrt:x:173:173::/etc/abrt:/sbin/nologin
+    23  rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+    24  nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+    25  haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+    26  ntp:x:38:38::/etc/ntp:/sbin/nologin
+    27  apache:x:48:48:Apache:/var/www:/sbin/nologin
+    28  saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+    29  postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+    30  gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+    31  pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+    32  sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+    33  tcpdump:x:72:72::/:/sbin/nologin
+    34  kgitbank:x:500:500::/home/kgitbank:/bin/bash
+    35  iu:x:501:501::/home/iu:/bin/bash
+[root@yunji ~]# userdel -r iu
+userdel: group iu not removed because it has other members.
+userdel: iu mail spool (/var/spool/mail/iu) not found
+[root@yunji ~]# cat -n /etc/passwd
+     1  root:x:0:0:root:/root:/bin/bash
+     2  bin:x:1:1:bin:/bin:/sbin/nologin
+     3  daemon:x:2:2:daemon:/sbin:/sbin/nologin
+     4  adm:x:3:4:adm:/var/adm:/sbin/nologin
+     5  lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+     6  sync:x:5:0:sync:/sbin:/bin/sync
+     7  shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+     8  halt:x:7:0:halt:/sbin:/sbin/halt
+     9  mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+    10  uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
+    11  operator:x:11:0:operator:/root:/sbin/nologin
+    12  games:x:12:100:games:/usr/games:/sbin/nologin
+    13  gopher:x:13:30:gopher:/var/gopher:/sbin/nologin
+    14  ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+    15  nobody:x:99:99:Nobody:/:/sbin/nologin
+    16  dbus:x:81:81:System message bus:/:/sbin/nologin
+    17  usbmuxd:x:113:113:usbmuxd user:/:/sbin/nologin
+    18  rpc:x:32:32:Rpcbind Daemon:/var/cache/rpcbind:/sbin/nologin
+    19  rtkit:x:499:499:RealtimeKit:/proc:/sbin/nologin
+    20  avahi-autoipd:x:170:170:Avahi IPv4LL Stack:/var/lib/avahi-autoipd:/sbin/nologin
+    21  vcsa:x:69:69:virtual console memory owner:/dev:/sbin/nologin
+    22  abrt:x:173:173::/etc/abrt:/sbin/nologin
+    23  rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+    24  nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+    25  haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+    26  ntp:x:38:38::/etc/ntp:/sbin/nologin
+    27  apache:x:48:48:Apache:/var/www:/sbin/nologin
+    28  saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+    29  postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+    30  gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+    31  pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+    32  sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+    33  tcpdump:x:72:72::/:/sbin/nologin
+    34  kgitbank:x:500:500::/home/kgitbank:/bin/bash
+[root@yunji ~]# cat -n /etc/group
+     1  root:x:0:
+     2  bin:x:1:bin,daemon
+     3  daemon:x:2:bin,daemon
+     4  sys:x:3:bin,adm
+     5  adm:x:4:adm,daemon
+     6  tty:x:5:
+     7  disk:x:6:
+     8  lp:x:7:daemon
+     9  mem:x:8:
+    10  kmem:x:9:
+    11  wheel:x:10:
+    12  mail:x:12:mail,postfix
+    13  uucp:x:14:
+    14  man:x:15:
+    15  games:x:20:
+    16  gopher:x:30:
+    17  video:x:39:
+    18  dip:x:40:
+    19  ftp:x:50:
+    20  lock:x:54:
+    21  audio:x:63:
+    22  nobody:x:99:
+    23  users:x:100:
+    24  dbus:x:81:
+    25  usbmuxd:x:113:
+    26  rpc:x:32:
+    27  utmp:x:22:
+    28  utempter:x:35:
+    29  rtkit:x:499:
+    30  avahi-autoipd:x:170:
+    31  desktop_admin_r:x:498:
+    32  desktop_user_r:x:497:
+    33  floppy:x:19:
+    34  vcsa:x:69:
+    35  abrt:x:173:
+    36  cdrom:x:11:
+    37  tape:x:33:
+    38  dialout:x:18:
+    39  wbpriv:x:88:
+    40  rpcuser:x:29:
+    41  nfsnobody:x:65534:
+    42  haldaemon:x:68:haldaemon
+    43  ntp:x:38:
+    44  apache:x:48:
+    45  saslauth:x:76:
+    46  postdrop:x:90:
+    47  postfix:x:89:
+    48  gdm:x:42:
+    49  pulse:x:496:
+    50  pulse-access:x:495:
+    51  fuse:x:494:
+    52  sshd:x:74:
+    53  slocate:x:21:
+    54  stapusr:x:156:
+    55  stapsys:x:157:
+    56  stapdev:x:158:
+    57  tcpdump:x:72:
+    58  g1:x:506:
+    59  kgitbank:x:500:
+    60  iu:x:501:kgitbank
+[root@yunji ~]# groupedel iu
+-bash: groupedel: command not found
+[root@yunji ~]# groupdel iu
+[root@yunji ~]# cat -n /etc/shadow
+     1  root:$6$Mx0Lc4zM$g7dMNyupea/d/tGkBsRBIMOi1wkAUpvWmYjHCLp9LW64AZl1xA/No8IohBRy/wh7q6ad.qCtUGIndY5zYKx0I.:18105:0:99999:7:::
+     2  bin:*:15980:0:99999:7:::
+     3  daemon:*:15980:0:99999:7:::
+     4  adm:*:15980:0:99999:7:::
+     5  lp:*:15980:0:99999:7:::
+     6  sync:*:15980:0:99999:7:::
+     7  shutdown:*:15980:0:99999:7:::
+     8  halt:*:15980:0:99999:7:::
+     9  mail:*:15980:0:99999:7:::
+    10  uucp:*:15980:0:99999:7:::
+    11  operator:*:15980:0:99999:7:::
+    12  games:*:15980:0:99999:7:::
+    13  gopher:*:15980:0:99999:7:::
+    14  ftp:*:15980:0:99999:7:::
+    15  nobody:*:15980:0:99999:7:::
+    16  dbus:!!:18090::::::
+    17  usbmuxd:!!:18090::::::
+    18  rpc:!!:18090:0:99999:7:::
+    19  rtkit:!!:18090::::::
+    20  avahi-autoipd:!!:18090::::::
+    21  vcsa:!!:18090::::::
+    22  abrt:!!:18090::::::
+    23  rpcuser:!!:18090::::::
+    24  nfsnobody:!!:18090::::::
+    25  haldaemon:!!:18090::::::
+    26  ntp:!!:18090::::::
+    27  apache:!!:18090::::::
+    28  saslauth:!!:18090::::::
+    29  postfix:!!:18090::::::
+    30  gdm:!!:18090::::::
+    31  pulse:!!:18090::::::
+    32  sshd:!!:18090::::::
+    33  tcpdump:!!:18090::::::
+    34  kgitbank:$6$285ws6OG$uzHtLdH43PdflfYpXyTOxqFckk498Xa4rf976Z3rGGd6VfTigSV773oVFBiVURpb4j01G/qXkRgvS9Sehc7XP/:18111:0:99999:7:::
+[root@yunji ~]# ls -l /home
+합계 2
+drwx------. 5 kgitbank kgitbank 1024 2019-08-03 13:27 kgitbank
+[root@yunji ~]# ls -l /var/spool/mail/
+합계 56
+-rw-------. 1 root mail 57327 2019-07-28 10:26 root
+-rw-rw----. 1 rpc  mail     0 2019-07-13 12:09 rpc
+[root@yunji ~]# clear
+[root@yunji ~]# useradd test1
+[root@yunji ~]# mkdir -p /export/sdb/home
+[root@yunji ~]# ls -ld /export/sdb/home/
+drwxr-xr-x 2 root root 4096 2019-08-04 09:04 /export/sdb/home/
+[root@yunji ~]# grep kgitbank /etc/passwd && ls -ld ~kgitbank/
+kgitbank:x:500:500::/home/kgitbank:/bin/bash
+drwx------. 5 kgitbank kgitbank 1024 2019-08-03 13:27 /home/kgitbank/
+[root@yunji ~]# ^C
+[root@yunji ~]# usermod -md /export/sdb/home/kgitbank kgitbank
+[root@yunji ~]# useradd -d /export/sdb/home/test2 test2
+[root@yunji ~]# cat -n /etc/passwd
+     1  root:x:0:0:root:/root:/bin/bash
+     2  bin:x:1:1:bin:/bin:/sbin/nologin
+     3  daemon:x:2:2:daemon:/sbin:/sbin/nologin
+     4  adm:x:3:4:adm:/var/adm:/sbin/nologin
+     5  lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+     6  sync:x:5:0:sync:/sbin:/bin/sync
+     7  shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+     8  halt:x:7:0:halt:/sbin:/sbin/halt
+     9  mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+    10  uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
+    11  operator:x:11:0:operator:/root:/sbin/nologin
+    12  games:x:12:100:games:/usr/games:/sbin/nologin
+    13  gopher:x:13:30:gopher:/var/gopher:/sbin/nologin
+    14  ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+    15  nobody:x:99:99:Nobody:/:/sbin/nologin
+    16  dbus:x:81:81:System message bus:/:/sbin/nologin
+    17  usbmuxd:x:113:113:usbmuxd user:/:/sbin/nologin
+    18  rpc:x:32:32:Rpcbind Daemon:/var/cache/rpcbind:/sbin/nologin
+    19  rtkit:x:499:499:RealtimeKit:/proc:/sbin/nologin
+    20  avahi-autoipd:x:170:170:Avahi IPv4LL Stack:/var/lib/avahi-autoipd:/sbin/nologin
+    21  vcsa:x:69:69:virtual console memory owner:/dev:/sbin/nologin
+    22  abrt:x:173:173::/etc/abrt:/sbin/nologin
+    23  rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+    24  nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+    25  haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+    26  ntp:x:38:38::/etc/ntp:/sbin/nologin
+    27  apache:x:48:48:Apache:/var/www:/sbin/nologin
+    28  saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+    29  postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+    30  gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+    31  pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+    32  sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+    33  tcpdump:x:72:72::/:/sbin/nologin
+    34  kgitbank:x:500:500::/export/sdb/home/kgitbank:/bin/bash
+    35  test1:x:501:501::/home/test1:/bin/bash
+    36  test2:x:502:502::/export/sdb/home/test2:/bin/bash
+[root@yunji ~]# ls -al /etc/skel/
+합계 40
+drwxr-xr-x.   4 root root  4096 2019-07-13 12:11 .
+drwxr-xr-x. 119 root root 12288 2019-08-04 09:06 ..
+-rw-r--r--.   1 root root    18 2016-05-11 08:21 .bash_logout
+-rw-r--r--.   1 root root   176 2016-05-11 08:21 .bash_profile
+-rw-r--r--.   1 root root   124 2016-05-11 08:21 .bashrc
+drwxr-xr-x.   2 root root  4096 2010-11-12 10:04 .gnome2
+-rw-r--r--.   1 root root   171 2016-05-11 08:36 .kshrc
+drwxr-xr-x.   4 root root  4096 2019-07-13 12:08 .mozilla
+[root@yunji ~]# mkdir /etc/skel1
+[root@yunji ~]# cp -r /etc/skel/. /etc/skel1
+[root@yunji ~]# cd /etc/skel1
+[root@yunji skel1]# ls
+[root@yunji skel1]# ls -al
+합계 40
+drwxr-xr-x    4 root root  4096 2019-08-04 09:08 .
+drwxr-xr-x. 120 root root 12288 2019-08-04 09:07 ..
+-rw-r--r--    1 root root    18 2019-08-04 09:08 .bash_logout
+-rw-r--r--    1 root root   176 2019-08-04 09:08 .bash_profile
+-rw-r--r--    1 root root   124 2019-08-04 09:08 .bashrc
+drwxr-xr-x    2 root root  4096 2019-08-04 09:08 .gnome2
+-rw-r--r--    1 root root   171 2019-08-04 09:08 .kshrc
+drwxr-xr-x    4 root root  4096 2019-08-04 09:08 .mozilla
+[root@yunji skel1]# mkdir /pub
+[root@yunji skel1]# cd ~
+[root@yunji ~]# useradd -d /export/sdb/home/ -mk /etc/skel1
+Usage: useradd [options] LOGIN
+       useradd -D
+       useradd -D [options]
+
+Options:
+  -b, --base-dir BASE_DIR       base directory for the home directory of the
+                                new account
+  -c, --comment COMMENT         GECOS field of the new account
+  -d, --home-dir HOME_DIR       home directory of the new account
+  -D, --defaults                print or change default useradd configuration
+  -e, --expiredate EXPIRE_DATE  expiration date of the new account
+  -f, --inactive INACTIVE       password inactivity period of the new account
+  -g, --gid GROUP               name or ID of the primary group of the new
+                                account
+  -G, --groups GROUPS           list of supplementary groups of the new
+                                account
+  -h, --help                    display this help message and exit
+  -k, --skel SKEL_DIR           use this alternative skeleton directory
+  -K, --key KEY=VALUE           override /etc/login.defs defaults
+  -l, --no-log-init             do not add the user to the lastlog and
+                                faillog databases
+  -m, --create-home             create the user's home directory
+  -M, --no-create-home          do not create the user's home directory
+  -N, --no-user-group           do not create a group with the same name as
+                                the user
+  -o, --non-unique              allow to create users with duplicate
+                                (non-unique) UID
+  -p, --password PASSWORD       encrypted password of the new account
+  -r, --system                  create a system account
+  -R, --root CHROOT_DIR         directory to chroot into
+  -s, --shell SHELL             login shell of the new account
+  -u, --uid UID                 user ID of the new account
+  -U, --user-group              create a group with the same name as the user
+  -Z, --selinux-user SEUSER     use a specific SEUSER for the SELinux user mapping
+
+[root@yunji ~]# useradd -d /export/sdb/home/ftpuser -mk /etc/skel1 ftpuser
+[root@yunji ~]# cat -n /etc/passwd
+     1  root:x:0:0:root:/root:/bin/bash
+     2  bin:x:1:1:bin:/bin:/sbin/nologin
+     3  daemon:x:2:2:daemon:/sbin:/sbin/nologin
+     4  adm:x:3:4:adm:/var/adm:/sbin/nologin
+     5  lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+     6  sync:x:5:0:sync:/sbin:/bin/sync
+     7  shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+     8  halt:x:7:0:halt:/sbin:/sbin/halt
+     9  mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+    10  uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
+    11  operator:x:11:0:operator:/root:/sbin/nologin
+    12  games:x:12:100:games:/usr/games:/sbin/nologin
+    13  gopher:x:13:30:gopher:/var/gopher:/sbin/nologin
+    14  ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+    15  nobody:x:99:99:Nobody:/:/sbin/nologin
+    16  dbus:x:81:81:System message bus:/:/sbin/nologin
+    17  usbmuxd:x:113:113:usbmuxd user:/:/sbin/nologin
+    18  rpc:x:32:32:Rpcbind Daemon:/var/cache/rpcbind:/sbin/nologin
+    19  rtkit:x:499:499:RealtimeKit:/proc:/sbin/nologin
+    20  avahi-autoipd:x:170:170:Avahi IPv4LL Stack:/var/lib/avahi-autoipd:/sbin/nologin
+    21  vcsa:x:69:69:virtual console memory owner:/dev:/sbin/nologin
+    22  abrt:x:173:173::/etc/abrt:/sbin/nologin
+    23  rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+    24  nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+    25  haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+    26  ntp:x:38:38::/etc/ntp:/sbin/nologin
+    27  apache:x:48:48:Apache:/var/www:/sbin/nologin
+    28  saslauth:x:498:76:Saslauthd user:/var/empty/saslauth:/sbin/nologin
+    29  postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+    30  gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+    31  pulse:x:497:496:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+    32  sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+    33  tcpdump:x:72:72::/:/sbin/nologin
+    34  kgitbank:x:500:500::/export/sdb/home/kgitbank:/bin/bash
+    35  test1:x:501:501::/home/test1:/bin/bash
+    36  test2:x:502:502::/export/sdb/home/test2:/bin/bash
+    37  ftpuser:x:503:503::/export/sdb/home/ftpuser:/bin/bash
+[root@yunji ~]# chmod 750 ftpuser
+chmod: cannot access `ftpuser': 그런 파일이나 디렉터리가 없습니다
+[root@yunji ~]# chmod 750 ~ ftpuser
+chmod: cannot access `ftpuser': 그런 파일이나 디렉터리가 없습니다
+[root@yunji ~]# chmod 750 ~ftpuser
+[root@yunji ~]# tail -3 /etc/passwd
+test1:x:501:501::/home/test1:/bin/bash
+test2:x:502:502::/export/sdb/home/test2:/bin/bash
+ftpuser:x:503:503::/export/sdb/home/ftpuser:/bin/bash
+[root@yunji ~]# usermod -d /export/sdb/home/ftpuser/pub/ test1
+[root@yunji ~]# grep test1 /etc/passwd
+test1:x:501:501::/export/sdb/home/ftpuser/pub/:/bin/bash
+[root@yunji ~]# ls -al /export/sdb/home/ftpuser/pub
+ls: cannot access /export/sdb/home/ftpuser/pub: 그런 파일이나 디렉터리가 없습니다
+[root@yunji ~]# ls -al /export/sdb/home/ftpuser/pub/
+ls: cannot access /export/sdb/home/ftpuser/pub/: 그런 파일이나 디렉터리가 없습니다
+[root@yunji ~]# ls -al /export/sdb/home/ftpuser/
+합계 32
+drwxr-x--- 4 ftpuser ftpuser 4096 2019-08-04 09:11 .
+drwxr-xr-x 5 root    root    4096 2019-08-04 09:11 ..
+-rw-r--r-- 1 ftpuser ftpuser   18 2019-08-04 09:08 .bash_logout
+-rw-r--r-- 1 ftpuser ftpuser  176 2019-08-04 09:08 .bash_profile
+-rw-r--r-- 1 ftpuser ftpuser  124 2019-08-04 09:08 .bashrc
+drwxr-xr-x 2 ftpuser ftpuser 4096 2019-08-04 09:08 .gnome2
+-rw-r--r-- 1 ftpuser ftpuser  171 2019-08-04 09:08 .kshrc
+drwxr-xr-x 4 ftpuser ftpuser 4096 2019-08-04 09:08 .mozilla
+[root@yunji ~]# vi /etc/skel1
+[root@yunji ~]# cat -n /etc/skel1
+cat: /etc/skel1: 디렉터리입니다
+[root@yunji ~]# ls -al /etc/skel1
+합계 40
+drwxr-xr-x    4 root root  4096 2019-08-04 09:08 .
+drwxr-xr-x. 120 root root 12288 2019-08-04 09:15 ..
+-rw-r--r--    1 root root    18 2019-08-04 09:08 .bash_logout
+-rw-r--r--    1 root root   176 2019-08-04 09:08 .bash_profile
+-rw-r--r--    1 root root   124 2019-08-04 09:08 .bashrc
+drwxr-xr-x    2 root root  4096 2019-08-04 09:08 .gnome2
+-rw-r--r--    1 root root   171 2019-08-04 09:08 .kshrc
+drwxr-xr-x    4 root root  4096 2019-08-04 09:08 .mozilla
+[root@yunji ~]# cd /etc/skel1
+[root@yunji skel1]# mkdir pub
+[root@yunji skel1]# ls
+pub
+[root@yunji skel1]# cd ..
+[root@yunji etc]# ls -ld /export/sdb/home/ftpuser/
+drwxr-x--- 4 ftpuser ftpuser 4096 2019-08-04 09:11 /export/sdb/home/ftpuser/
+[root@yunji etc]# usermod -d /export/sdb/home/ftpuser/pub test1
+[root@yunji etc]# passwd test1
+test1 사용자의 비밀 번호 변경 중
+새  암호:
+잘못된 암호: 너무 짧습니다
+잘못된 암호: 앞뒤 어느쪽에서 읽어도 같은 문맥임
+새  암호 재입력:
+passwd: 모든 인증 토큰이 성공적으로 업데이트 되었습니다.
+[root@yunji etc]# cd
+[root@yunji ~]# id test1
+uid=501(test1) gid=501(test1) groups=501(test1)
+[root@yunji ~]# usermod -G ftpuser test1
+[root@yunji ~]# id test1
+uid=501(test1) gid=501(test1) groups=501(test1),503(ftpuser)
+[root@yunji ~]# ls -ld
+drwxr-x---. 27 root root 4096 2019-08-04 09:02 .
+[root@yunji ~]# ls -al /etc/skel
+합계 40
+drwxr-xr-x.   4 root root  4096 2019-07-13 12:11 .
+drwxr-xr-x. 120 root root 12288 2019-08-04 09:24 ..
+-rw-r--r--.   1 root root    18 2016-05-11 08:21 .bash_logout
+-rw-r--r--.   1 root root   176 2016-05-11 08:21 .bash_profile
+-rw-r--r--.   1 root root   124 2016-05-11 08:21 .bashrc
+drwxr-xr-x.   2 root root  4096 2010-11-12 10:04 .gnome2
+-rw-r--r--.   1 root root   171 2016-05-11 08:36 .kshrc
+drwxr-xr-x.   4 root root  4096 2019-07-13 12:08 .mozilla
+[root@yunji ~]# cp -r /etc/skel/. ~test1
+[root@yunji ~]# ls -ld ~test1
+drwxr-xr-x 4 root root 4096 2019-08-04 09:31 /export/sdb/home/ftpuser/pub
+[root@yunji ~]# chmod 775 ~test1
+[root@yunji ~]# ls -ld ~test1
+drwxrwxr-x 4 root root 4096 2019-08-04 09:31 /export/sdb/home/ftpuser/pub
+[root@yunji ~]# vi /etc/passwd
+[root@yunji ~]# chwon te^C3. ~test3 ~test3/.*
+[root@yunji ~]# vi /etc/shadow
+[root@yunji ~]# clear
+[root@yunji ~]#

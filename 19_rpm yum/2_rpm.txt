@@ -1,0 +1,95 @@
+<패키지 설치 명령어> = rpm ,yum
+** rpm
+옵션
+-i 설치
+-v 설치내용보기
+-h ##### hash 보기
+-e 삭제
+-U update (버전업)
+-F fresh (비교후 버전업)	
+-q 질의
+-a 모두
+--force 덮어쓰기
+--nodeps 의존성 무시 (의존성오류)
+A
+	B
+		C
+			D
+D C B A
+
+패키지설치  
+rpm -ivh 풀패키지명 
+
+패키지 삭제
+rpm -e 패키지명  
+※주의 사항  : 지우실때는 항상 버젼명을 쓰지 않는다 = 대표 패키지 명만 쓴다 
+	ex) abc-1.0~~~~~  rpm -ivh abc-1.0~~~
+			  rpm -e abc-1.0~	(X)
+			  rpm -e abc		(O)
+
+패키지 확인
+rpm -qa |grep 대표패키지명
+rpm -qf 파일명  파일이 속한 패키지 확인
+rpm -ql 패키지명   패키지에 속한 파일명 출력
+rpm -Vv 패키지명  패키지에 속한 파일 속성들 출력
+
+***패키지 설치시 주의 할 점****
+1. 대표패키지부터 작업한다.
+2. 작업시 (설치,삭제) 의존성 오류 (Failed dependencies)는 절대 무시하지 않는다.
+3. 의존성 오류 발생시 제시한 패키지 가장 아래부터 작업한다.
+4. 패키지의 버전은 반드시 일치 해야한다.
+5. 순서대로 진행한다.
+6. 가급적 의존성을 무시하는 --nodeps 옵션을 사용하지 않는다 (삭제시에는 사용)
+7. lib.so,/dir 등은 패키지가 아닐 가능성이 많으므로 일단 무시한다.
+8. 모든 패키지를 다 가지고있을경우에는 --force로 강제 설치가 가능하다(다운그레이드)
+9. 삭제는 설치의 역순
+========================================================================================================
+
+패키지 설치해볼것     (TAB키를 지배하는자가 콘솔을 지배한다!!!!) 탭키 연습 많이 해주세요~
+설치 다되신분은 삭제도 해보세요~
+
+1. mysql-5.1.73-3.el6_5.x86_64
+2. mysql-bench-5.1.73-3.el6_5.x86_64<========perl(DBI)  (DBI는 보조패키지 이므로 perl-DBI로 검색) 
+	rpm -ivh perl-DBI-1.609-4.el6.i686.rpm
+3. mysql-connector-java-5.1.17-6.el6.noarch <=======    --nodeps 설치
+	rpm -ivh mysql-connector-java-5.1.17-6.el6.noarch --nodeps
+4. mysql-connector-odbc-5.1.5r1144-7.el6.x86_64 <==========(unixODBC-2.2.14-14.el6.x86_64.rpm)
+	rpm -ivh unixODBC-2.2.14-14.el6.x86_64.rpm
+	rpm -ivh mysql-connector-odbc-5.1.5r1144-7.el6.x86_64
+5. mysql-devel-5.1.73-3.el6_5.x86_64
+	rpm -ivh openssl-devel-1.0.1e-30.el6.i686.rpm
+		rpm -ivh krb5-devel-1.10.3-33.el6.i686.rpm
+			keyutils-libs-devel is needed by krb5-devel-1.10.3-33.el6.i686
+       			libcom_err-devel is needed by krb5-devel-1.10.3-33.el6.i686
+   			libselinux-devel is needed by krb5-devel-1.10.3-33.el6.i686
+				libsepol-devel >= 2.0.32-1 is needed by libselinux-devel-2.0.94-5.8.el6.i686
+			        pkgconfig(libsepol) is needed by libselinux-devel-2.0.94-5.8.el6.i686
+		rpm -ivh zlib-devel-1.2.3-29.el6.i686.rpm			
+6. mysql-libs-5.1.73-3.el6_5.x86_64 <======force 설치 (깔려있음)
+	rpm -ivh mysql-libs-5.1.73-3.el6_5.x86_64 --force
+7. mysql-server-5.1.73-3.el6_5.x86_64 
+	rpm -ivh perl-DBD-MySQL-4.013-3.el6.i686.rpm
+8. mysql-test-5.1.73-3.el6_5.x86_64 <========== perl-Time-HiRes~~~
+	 rpm -ivh perl-Time-HiRes-1.9721-136.el6.i686.rpm
+
+rpm -qa |grep mysql
+rpm -qa |grep mysql -wc // -wc 는 몇개를 깔았냐 라고 숫자 대답
+8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

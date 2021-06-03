@@ -1,0 +1,42 @@
+FTP(File Transfer Protocol) 설정
+
+1.방화벽설정
+
+    ㄱ.selinux(기본보안모듈) = vi /etc/selinux/config (vi 로 수정) // 둘중에 아무거나
+			       vi /etc/sysconfig/selinux
+                               enforcing을 disabled 로 변경한뒤에 **반드시** 재부팅
+				getsebool  // 확인 명령어
+   ㄴ.firewall(방화벽) = system-config-firewall (명령어)
+                                 FTP,SSH 체크 확인한뒤에 저장
+
+2. 데몬실행(서비스 실행)
+/etc/rc.d/init.d/vsftpd restart (FTP 파일서버 실행)
+
+** 윈도우 설정 
+내컴퓨터 => alt => 도구 => 폴더옵션 => 보기 =>알려진파일형식 확장자명 숨기기 체크해제
+
+** FTP 사용
+
+1.윈도우키 + r 
+2.cmd
+3.ping 192.168.1.134  // 리눅스랑 통신 확인 
+  => 당연히 리눅스에서도 ping 192.168.1.1(Windows)로 통신확인
+4.ftp 리눅스IP (ex: ftp 192.168.1.134)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

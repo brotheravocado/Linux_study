@@ -1,0 +1,49 @@
+1. 상단 탭 우클릭 - install vmtools ... 클릭
+2. 리눅스 바탕화면에 vmtools라는 바로 가기 아이콘과 탐색기(디렉토리내용)가 같이 떠야 한다
+	만약에, 상위 2개가 같이 안떴을때 3~4번 정도만 반복한다
+3. putty로 가셔서 df -Th 로 CD-ROM 마운트를 확인
+	/dev/sr0       iso9660   55M   55M     0 100% /media/VMware Tools  <~~ 요렇게 와야한다
+4. ls -l /media/VMware Tools  입력 후 원본압축파일을 확인한다
+	원본압축파일 = VMwareTools-10.3.2-9925305.tar.gz
+5. CD-ROM 은 읽기 전용이니 압축해제 불가라서 HDD로 복사해야 한다 
+	mkdir /vm
+	cp //media/VMware Tools/VMwareTools-10.3.2-9925305.tar.gz /vm
+6. HDD로 안에 있는 /vm 으로 이동한다
+	cd /vm
+7. 잘 복사받아 왔는지를 확인한다 = 시뻘건 압축파일 하나 있는지 확인
+	ls -l
+8. 압축을 해제한다
+	tar xvf VMwareTools-10.3.2-9925305.tar.gz
+9. 압푹해제 결과 확인
+	[root@Optimus vm]# ll
+	합계 54196
+	-r--r--r-- 1 root root 55491492 2019-07-05 16:52 VMwareTools-10.3.2-9925305.tar.gz
+	drwxr-xr-x 9 root root     4096 2018-09-04 18:23 vmware-tools-distrib  <--- 요 디렉토리가 보여야 한다
+
+10. vmware-tools-distrib 라는 새로 생긴 하위 디렉토리로 입장
+	cd vmware-tools-distrib
+
+11. 하위 디렉토리 확인
+[root@Optimus vmware-tools-distrib]# ll
+합계 392
+-rw-r--r--  1 root root 142493 2018-09-04 18:23 FILES
+-rw-r--r--  1 root root   2538 2018-09-04 18:23 INSTALL
+drwxr-xr-x  2 root root   4096 2018-09-04 18:23 bin
+drwxr-xr-x  5 root root   4096 2018-09-04 18:23 caf
+drwxr-xr-x  2 root root   4096 2018-09-04 18:23 doc
+drwxr-xr-x  5 root root   4096 2018-09-04 18:23 etc
+drwxr-xr-x  2 root root   4096 2018-09-04 18:23 installer
+drwxr-xr-x 14 root root   4096 2018-09-04 18:23 lib
+drwxr-xr-x  3 root root   4096 2018-09-04 18:23 vgauth
+-rwxr-xr-x  1 root root 223540 2018-09-04 18:23 vmware-install.pl  <--- x권한이 있는 파일 = 실행파일 
+
+12. 인스톨 파일 실행
+	./vmware-install.pl
+
+13. 인스톨 경로는 기본값으로 설치해도 되니 그냥 엔터 20번만 눌르세요~ 그리고 설치 끝나면 재부팅 하세요 끝~
+
+14. vmware 왼쪽 상단 3번째 탭 = view 로 가셔서 Autosize 를 클릭 - Autofit Guest 클릭  진짜 끝~
+
+
+
+

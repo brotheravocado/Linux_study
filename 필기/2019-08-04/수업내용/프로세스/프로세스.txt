@@ -1,0 +1,470 @@
+login as: root
+root@192.168.1.140's password:
+Last login: Sun Aug  4 09:02:53 2019 from 192.168.1.1
+[root@yunji ~]# whoami
+root
+[root@yunji ~]# passwd
+root 사용자의 비밀 번호 변경 중
+새  암호:
+잘못된 암호: 너무 짧습니다
+잘못된 암호: 앞뒤 어느쪽에서 읽어도 같은 문맥임
+새  암호 재입력:
+passwd: 모든 인증 토큰이 성공적으로 업데이트 되었습니다.
+[root@yunji ~]# clear
+[root@yunji ~]# pwd
+/root
+[root@yunji ~]# ps -A
+   PID TTY          TIME CMD
+     1 ?        00:00:01 init
+     2 ?        00:00:00 kthreadd
+     3 ?        00:00:00 migration/0
+     4 ?        00:00:00 ksoftirqd/0
+     5 ?        00:00:00 stopper/0
+     6 ?        00:00:00 watchdog/0
+     7 ?        00:00:01 events/0
+     8 ?        00:00:00 events/0
+     9 ?        00:00:00 events_long/0
+    10 ?        00:00:00 events_power_ef
+    11 ?        00:00:00 cgroup
+    12 ?        00:00:00 khelper
+    13 ?        00:00:00 netns
+    14 ?        00:00:00 async/mgr
+    15 ?        00:00:00 pm
+    16 ?        00:00:00 sync_supers
+    17 ?        00:00:00 bdi-default
+    18 ?        00:00:00 kintegrityd/0
+    19 ?        00:00:00 kblockd/0
+    20 ?        00:00:00 kacpid
+    21 ?        00:00:00 kacpi_notify
+    22 ?        00:00:00 kacpi_hotplug
+    23 ?        00:00:00 ata_aux
+    24 ?        00:00:00 ata_sff/0
+    25 ?        00:00:00 ksuspend_usbd
+    26 ?        00:00:00 khubd
+    27 ?        00:00:00 kseriod
+    28 ?        00:00:00 md/0
+    29 ?        00:00:00 md_misc/0
+    30 ?        00:00:00 linkwatch
+    33 ?        00:00:00 khungtaskd
+    34 ?        00:00:00 kswapd0
+    35 ?        00:00:00 ksmd
+    36 ?        00:00:00 khugepaged
+    37 ?        00:00:00 aio/0
+    38 ?        00:00:00 crypto/0
+    45 ?        00:00:00 kthrotld/0
+    46 ?        00:00:00 pciehpd
+    48 ?        00:00:00 kpsmoused
+    49 ?        00:00:00 usbhid_resumer
+    50 ?        00:00:00 deferwq
+    82 ?        00:00:00 kdmremove
+    83 ?        00:00:00 kstriped
+   110 ?        00:00:00 ttm_swap
+   242 ?        00:00:00 scsi_eh_0
+   243 ?        00:00:00 scsi_eh_1
+   248 ?        00:00:00 mpt_poll_0
+   249 ?        00:00:00 mpt/0
+   250 ?        00:00:00 scsi_eh_2
+   398 ?        00:00:00 jbd2/sda7-8
+   399 ?        00:00:00 ext4-dio-unwrit
+   491 ?        00:00:00 udevd
+   648 ?        00:00:00 vmmemctl
+   815 ?        00:00:00 flush-8:0
+  1045 ?        00:00:00 jbd2/sda1-8
+  1046 ?        00:00:00 ext4-dio-unwrit
+  1047 ?        00:00:00 jbd2/sda6-8
+  1048 ?        00:00:00 ext4-dio-unwrit
+  1049 ?        00:00:00 jbd2/sda2-8
+  1050 ?        00:00:00 ext4-dio-unwrit
+  1051 ?        00:00:00 jbd2/sda3-8
+  1052 ?        00:00:00 ext4-dio-unwrit
+  1148 ?        00:00:00 kauditd
+  1341 ?        00:00:00 auditd
+  1375 ?        00:00:00 rsyslogd
+  1426 ?        00:00:00 rpcbind
+  1446 ?        00:00:00 dbus-daemon
+  1459 ?        00:00:00 NetworkManager
+  1464 ?        00:00:00 modem-manager
+  1482 ?        00:00:00 rpc.statd
+  1520 ?        00:00:00 cupsd
+  1530 ?        00:00:00 wpa_supplicant
+  1555 ?        00:00:00 acpid
+  1567 ?        00:00:00 hald
+  1568 ?        00:00:00 hald-runner
+  1612 ?        00:00:00 hald-addon-inpu
+  1613 ?        00:00:00 hald-addon-acpi
+  1646 ?        00:00:00 automount
+  1767 ?        00:00:00 sshd
+  1778 ?        00:00:00 xinetd
+  1864 ?        00:00:00 master
+  1875 ?        00:00:00 pickup
+  1876 ?        00:00:00 qmgr
+  1893 ?        00:00:00 abrtd
+  1905 ?        00:00:00 crond
+  1920 ?        00:00:00 atd
+  1937 ?        00:00:00 certmonger
+  1945 ?        00:00:00 gdm-binary
+  1955 tty2     00:00:00 mingetty
+  1957 tty3     00:00:00 mingetty
+  1959 tty4     00:00:00 mingetty
+  1961 tty5     00:00:00 mingetty
+  1963 tty6     00:00:00 mingetty
+  1966 ?        00:00:00 udevd
+  1967 ?        00:00:00 udevd
+  2009 ?        00:00:00 gdm-simple-slav
+  2012 tty1     00:00:01 Xorg
+  2026 ?        00:00:00 console-kit-dae
+  2096 ?        00:00:00 dbus-launch
+  2101 ?        00:00:00 devkit-power-da
+  2143 ?        00:00:00 polkitd
+  2154 ?        00:00:00 rtkit-daemon
+  2160 ?        00:00:00 gdm-session-wor
+  2167 ?        00:00:00 gnome-keyring-d
+  2177 ?        00:00:00 gnome-session
+  2185 ?        00:00:00 dbus-launch
+  2186 ?        00:00:00 dbus-daemon
+  2219 ?        00:00:00 gconfd-2
+  2226 ?        00:00:00 gnome-settings-
+  2233 ?        00:00:00 gvfsd
+  2238 ?        00:00:00 seahorse-daemon
+  2240 ?        00:00:00 gvfs-fuse-daemo
+  2245 ?        00:00:00 metacity
+  2247 ?        00:00:00 gnome-panel
+  2259 ?        00:00:00 nautilus
+  2261 ?        00:00:00 bonobo-activati
+  2271 ?        00:00:00 gvfs-gdu-volume
+  2273 ?        00:00:00 wnck-applet
+  2274 ?        00:00:00 trashapplet
+  2276 ?        00:00:00 udisks-daemon
+  2278 ?        00:00:00 gvfsd-trash
+  2279 ?        00:00:00 udisks-daemon
+  2282 ?        00:00:00 bluetooth-apple
+  2284 ?        00:00:00 pulseaudio
+  2286 ?        00:00:00 gvfs-afc-volume
+  2288 ?        00:00:00 nm-applet
+  2290 ?        00:00:00 evolution-alarm
+  2298 ?        00:00:00 gvfs-gphoto2-vo
+  2299 ?        00:00:00 gdu-notificatio
+  2309 ?        00:00:00 gnome-volume-co
+  2310 ?        00:00:00 gconf-helper
+  2311 ?        00:00:00 gpk-update-icon
+  2313 ?        00:00:00 im-settings-dae
+  2314 ?        00:00:00 abrt-applet
+  2315 ?        00:00:00 gnome-power-man
+  2320 ?        00:00:00 python
+  2360 ?        00:00:00 polkit-gnome-au
+  2364 ?        00:00:00 gnome-screensav
+  2480 ?        00:00:00 gdm-user-switch
+  2482 ?        00:00:00 clock-applet
+  2483 ?        00:00:00 gnote
+  2491 ?        00:00:00 notification-ar
+  2508 ?        00:00:00 ibus-daemon
+  2515 ?        00:00:00 gconf-im-settin
+  2516 ?        00:00:00 ibus-gconf
+  2518 ?        00:00:00 python
+  2520 ?        00:00:00 ibus-x11
+  2521 ?        00:00:00 ibus-engine-han
+  2524 ?        00:00:00 gvfsd-burn
+  2545 ?        00:00:00 gnome-terminal
+  2546 ?        00:00:00 gnome-pty-helpe
+  2547 pts/0    00:00:00 bash
+  2568 ?        00:00:00 dhclient
+  3103 ?        00:00:00 anacron
+  3180 ?        00:00:00 sshd
+  3184 pts/1    00:00:00 bash
+  3208 pts/1    00:00:00 ps
+[root@yunji ~]# ping 192.168.1.1
+PING 192.168.1.1 (192.168.1.1) 56(84) bytes of data.
+64 bytes from 192.168.1.1: icmp_seq=1 ttl=128 time=0.093 ms
+64 bytes from 192.168.1.1: icmp_seq=2 ttl=128 time=0.098 ms
+64 bytes from 192.168.1.1: icmp_seq=3 ttl=128 time=0.127 ms
+64 bytes from 192.168.1.1: icmp_seq=4 ttl=128 time=0.137 ms
+64 bytes from 192.168.1.1: icmp_seq=5 ttl=128 time=0.117 ms
+64 bytes from 192.168.1.1: icmp_seq=6 ttl=128 time=0.138 ms
+64 bytes from 192.168.1.1: icmp_seq=7 ttl=128 time=0.121 ms
+64 bytes from 192.168.1.1: icmp_seq=8 ttl=128 time=0.132 ms
+64 bytes from 192.168.1.1: icmp_seq=9 ttl=128 time=0.117 ms
+64 bytes from 192.168.1.1: icmp_seq=10 ttl=128 time=0.141 ms
+64 bytes from 192.168.1.1: icmp_seq=11 ttl=128 time=0.133 ms
+64 bytes from 192.168.1.1: icmp_seq=12 ttl=128 time=0.107 ms
+64 bytes from 192.168.1.1: icmp_seq=13 ttl=128 time=0.129 ms
+64 bytes from 192.168.1.1: icmp_seq=14 ttl=128 time=0.170 ms
+64 bytes from 192.168.1.1: icmp_seq=15 ttl=128 time=0.124 ms
+64 bytes from 192.168.1.1: icmp_seq=16 ttl=128 time=0.122 ms
+pwd
+64 bytes from 192.168.1.1: icmp_seq=17 ttl=128 time=0.096 ms
+64 bytes from 192.168.1.1: icmp_seq=18 ttl=128 time=0.129 ms
+64 bytes from 192.168.1.1: icmp_seq=19 ttl=128 time=0.120 ms
+64 bytes from 192.168.1.1: icmp_seq=20 ttl=128 time=0.107 ms
+64 bytes from 192.168.1.1: icmp_seq=21 ttl=128 time=0.091 ms
+64 bytes from 192.168.1.1: icmp_seq=22 ttl=128 time=0.127 ms
+64 bytes from 192.168.1.1: icmp_seq=23 ttl=128 time=0.119 ms
+64 bytes from 192.168.1.1: icmp_seq=24 ttl=128 time=0.117 ms
+64 bytes from 192.168.1.1: icmp_seq=25 ttl=128 time=0.159 ms
+64 bytes from 192.168.1.1: icmp_seq=26 ttl=128 time=0.142 ms
+64 bytes from 192.168.1.1: icmp_seq=27 ttl=128 time=0.296 ms
+64 bytes from 192.168.1.1: icmp_seq=28 ttl=128 time=0.236 ms
+64 bytes from 192.168.1.1: icmp_seq=29 ttl=128 time=0.232 ms
+64 bytes from 192.168.1.1: icmp_seq=30 ttl=128 time=0.262 ms
+64 bytes from 192.168.1.1: icmp_seq=31 ttl=128 time=0.253 ms
+64 bytes from 192.168.1.1: icmp_seq=32 ttl=128 time=0.239 ms
+64 bytes from 192.168.1.1: icmp_seq=33 ttl=128 time=0.230 ms
+64 bytes from 192.168.1.1: icmp_seq=34 ttl=128 time=0.267 ms
+64 bytes from 192.168.1.1: icmp_seq=35 ttl=128 time=0.240 ms
+64 bytes from 192.168.1.1: icmp_seq=36 ttl=128 time=0.237 ms
+64 bytes from 192.168.1.1: icmp_seq=37 ttl=128 time=0.141 ms
+64 bytes from 192.168.1.1: icmp_seq=38 ttl=128 time=0.126 ms
+64 bytes from 192.168.1.1: icmp_seq=39 ttl=128 time=0.120 ms
+64 bytes from 192.168.1.1: icmp_seq=40 ttl=128 time=0.093 ms
+64 bytes from 192.168.1.1: icmp_seq=41 ttl=128 time=0.151 ms
+64 bytes from 192.168.1.1: icmp_seq=42 ttl=128 time=0.092 ms
+64 bytes from 192.168.1.1: icmp_seq=43 ttl=128 time=0.128 ms
+64 bytes from 192.168.1.1: icmp_seq=44 ttl=128 time=0.127 ms
+64 bytes from 192.168.1.1: icmp_seq=45 ttl=128 time=0.123 ms
+64 bytes from 192.168.1.1: icmp_seq=46 ttl=128 time=0.122 ms
+64 bytes from 192.168.1.1: icmp_seq=47 ttl=128 time=0.123 ms
+64 bytes from 192.168.1.1: icmp_seq=48 ttl=128 time=0.123 ms
+64 bytes from 192.168.1.1: icmp_seq=49 ttl=128 time=0.120 ms
+64 bytes from 192.168.1.1: icmp_seq=50 ttl=128 time=0.122 ms
+64 bytes from 192.168.1.1: icmp_seq=51 ttl=128 time=0.130 ms
+64 bytes from 192.168.1.1: icmp_seq=52 ttl=128 time=0.121 ms
+64 bytes from 192.168.1.1: icmp_seq=53 ttl=128 time=0.116 ms
+64 bytes from 192.168.1.1: icmp_seq=54 ttl=128 time=0.088 ms
+64 bytes from 192.168.1.1: icmp_seq=55 ttl=128 time=0.221 ms
+64 bytes from 192.168.1.1: icmp_seq=56 ttl=128 time=0.139 ms
+64 bytes from 192.168.1.1: icmp_seq=57 ttl=128 time=0.142 ms
+64 bytes from 192.168.1.1: icmp_seq=58 ttl=128 time=0.140 ms
+64 bytes from 192.168.1.1: icmp_seq=59 ttl=128 time=0.124 ms
+64 bytes from 192.168.1.1: icmp_seq=60 ttl=128 time=0.112 ms
+64 bytes from 192.168.1.1: icmp_seq=61 ttl=128 time=0.126 ms
+64 bytes from 192.168.1.1: icmp_seq=62 ttl=128 time=0.138 ms
+64 bytes from 192.168.1.1: icmp_seq=63 ttl=128 time=0.109 ms
+64 bytes from 192.168.1.1: icmp_seq=64 ttl=128 time=0.139 ms
+64 bytes from 192.168.1.1: icmp_seq=65 ttl=128 time=0.122 ms
+64 bytes from 192.168.1.1: icmp_seq=66 ttl=128 time=0.136 ms
+64 bytes from 192.168.1.1: icmp_seq=67 ttl=128 time=0.109 ms
+64 bytes from 192.168.1.1: icmp_seq=68 ttl=128 time=0.137 ms
+64 bytes from 192.168.1.1: icmp_seq=69 ttl=128 time=0.127 ms
+64 bytes from 192.168.1.1: icmp_seq=70 ttl=128 time=0.130 ms
+64 bytes from 192.168.1.1: icmp_seq=71 ttl=128 time=0.125 ms
+64 bytes from 192.168.1.1: icmp_seq=72 ttl=128 time=0.124 ms
+64 bytes from 192.168.1.1: icmp_seq=73 ttl=128 time=0.134 ms
+64 bytes from 192.168.1.1: icmp_seq=74 ttl=128 time=0.139 ms
+64 bytes from 192.168.1.1: icmp_seq=75 ttl=128 time=0.130 ms
+64 bytes from 192.168.1.1: icmp_seq=76 ttl=128 time=0.109 ms
+64 bytes from 192.168.1.1: icmp_seq=77 ttl=128 time=0.187 ms
+64 bytes from 192.168.1.1: icmp_seq=78 ttl=128 time=0.141 ms
+64 bytes from 192.168.1.1: icmp_seq=79 ttl=128 time=0.126 ms
+64 bytes from 192.168.1.1: icmp_seq=80 ttl=128 time=0.104 ms
+64 bytes from 192.168.1.1: icmp_seq=81 ttl=128 time=0.139 ms
+64 bytes from 192.168.1.1: icmp_seq=82 ttl=128 time=0.156 ms
+64 bytes from 192.168.1.1: icmp_seq=83 ttl=128 time=0.112 ms
+64 bytes from 192.168.1.1: icmp_seq=84 ttl=128 time=0.107 ms
+64 bytes from 192.168.1.1: icmp_seq=85 ttl=128 time=0.091 ms
+64 bytes from 192.168.1.1: icmp_seq=86 ttl=128 time=0.118 ms
+64 bytes from 192.168.1.1: icmp_seq=87 ttl=128 time=0.094 ms
+64 bytes from 192.168.1.1: icmp_seq=88 ttl=128 time=0.544 ms
+64 bytes from 192.168.1.1: icmp_seq=89 ttl=128 time=0.531 ms
+64 bytes from 192.168.1.1: icmp_seq=90 ttl=128 time=0.464 ms
+64 bytes from 192.168.1.1: icmp_seq=91 ttl=128 time=0.544 ms
+64 bytes from 192.168.1.1: icmp_seq=92 ttl=128 time=0.454 ms
+64 bytes from 192.168.1.1: icmp_seq=93 ttl=128 time=0.509 ms
+64 bytes from 192.168.1.1: icmp_seq=94 ttl=128 time=0.426 ms
+64 bytes from 192.168.1.1: icmp_seq=95 ttl=128 time=0.116 ms
+^Z
+[1]+  Stopped                 ping 192.168.1.1
+[root@yunji ~]# jobs
+[1]+  Stopped                 ping 192.168.1.1
+[root@yunji ~]# bg 1
+[1]+ ping 192.168.1.1 &
+[root@yunji ~]# 64 bytes from 192.168.1.1: icmp_seq=96 ttl=128 time=0.095 ms
+64 bytes from 192.168.1.1: icmp_seq=97 ttl=128 time=0.096 ms
+64 bytes from 192.168.1.1: icmp_seq=98 ttl=128 time=0.105 ms
+64 bytes from 192.168.1.1: icmp_seq=99 ttl=128 time=0.101 ms
+64 bytes from 192.168.1.1: icmp_seq=100 ttl=128 time=0.091 ms
+64 bytes from 192.168.1.1: icmp_seq=101 ttl=128 time=0.128 ms
+64 bytes from 192.168.1.1: icmp_seq=102 ttl=128 time=0.187 ms
+64 bytes from 192.168.1.1: icmp_seq=103 ttl=128 time=0.131 ms
+64 bytes from 192.168.1.1: icmp_seq=104 ttl=128 time=0.152 ms
+64 bytes from 192.168.1.1: icmp_seq=105 ttl=128 time=0.105 ms
+64 bytes from 192.168.1.1: icmp_seq=106 ttl=128 time=0.132 ms
+64 bytes from 192.168.1.1: icmp_seq=107 ttl=128 time=0.178 ms
+64 bytes from 192.168.1.1: icmp_seq=108 ttl=128 time=0.115 ms
+64 bytes from 192.168.1.1: icmp_seq=109 ttl=128 time=0.112 ms
+64 bytes from 192.168.1.1: icmp_seq=110 ttl=128 time=0.116 ms
+64 bytes from 192.168.1.1: icmp_seq=111 ttl=128 time=0.102 ms
+64 bytes from 192.168.1.1: icmp_seq=112 ttl=128 time=0.091 ms
+64 bytes from 192.168.1.1: icmp_seq=113 ttl=128 time=0.220 ms
+64 bytes from 192.168.1.1: icmp_seq=114 ttl=128 time=0.249 ms
+b64 bytes from 192.168.1.1: icmp_seq=115 ttl=128 time=0.245 ms
+64 bytes from 192.168.1.1: icmp_seq=116 ttl=128 time=0.214 ms
+g64 bytes from 192.168.1.1: icmp_seq=117 ttl=128 time=0.223 ms
+64 bytes from 192.168.1.1: icmp_seq=118 ttl=128 time=0.255 ms                  64 bytes from 192.168.1.1: icmp_seq=119 ttl=128 time=0.800 ms
+64 bytes from 192.168.1.1: icmp_seq=120 ttl=128 time=0.273 ms
+64 bytes from 192.168.1.1: icmp_seq=121 ttl=128 time=0.225 ms
+64 bytes from 192.168.1.1: icmp_seq=122 ttl=128 time=0.251 ms
+64 bytes from 192.168.1.1: icmp_seq=123 ttl=128 time=0.112 ms
+64 bytes from 192.168.1.1: icmp_seq=124 ttl=128 time=0.140 ms
+64 bytes from 192.168.1.1: icmp_seq=125 ttl=128 time=0.110 ms
+64 bytes from 192.168.1.1: icmp_seq=126 ttl=128 time=0.131 ms
+64 bytes from 192.168.1.1: icmp_seq=127 ttl=128 time=0.105 ms
+pw64 bytes from 192.168.1.1: icmp_seq=128 ttl=128 time=0.113 ms
+d
+-bash: bpwd: command not found
+[root@yunji ~]# 64 bytes from 192.168.1.1: icmp_seq=129 ttl=128 time=0.128 ms
+64 bytes from 192.168.1.1: icmp_seq=130 ttl=128 time=0.116 ms
+pwd
+/root
+[root@yunji ~]# 64 bytes from 192.168.1.1: icmp_seq=131 ttl=128 time=0.169 ms
+64 bytes from 192.168.1.1: icmp_seq=132 ttl=128 time=0.121 ms
+64 bytes from 192.168.1.1: icmp_seq=133 ttl=128 time=0.119 ms
+64 bytes from 192.168.1.1: icmp_seq=134 ttl=128 time=0.131 ms
+64 bytes from 192.168.1.1: icmp_seq=135 ttl=128 time=0.123 ms
+64 bytes from 192.168.1.1: icmp_seq=136 ttl=128 time=0.126 ms
+64 bytes from 192.168.1.1: icmp_seq=137 ttl=128 time=0.112 ms
+64 bytes from 192.168.1.1: icmp_seq=138 ttl=128 time=0.121 ms
+64 bytes from 192.168.1.1: icmp_seq=139 ttl=128 time=0.123 ms
+64 bytes from 192.168.1.1: icmp_seq=140 ttl=128 time=0.125 ms
+64 bytes from 192.168.1.1: icmp_seq=141 ttl=128 time=0.120 ms
+64 bytes from 192.168.1.1: icmp_seq=142 ttl=128 time=0.125 ms
+64 bytes from 192.168.1.1: icmp_seq=143 ttl=128 time=0.139 ms
+64 bytes from 192.168.1.1: icmp_seq=144 ttl=128 time=0.126 ms
+64 bytes from 192.168.1.1: icmp_seq=145 ttl=128 time=0.117 ms
+64 bytes from 192.168.1.1: icmp_seq=146 ttl=128 time=0.090 ms
+64 bytes from 192.168.1.1: icmp_seq=147 ttl=128 time=0.157 ms
+64 bytes from 192.168.1.1: icmp_seq=148 ttl=128 time=0.123 ms
+64 bytes from 192.168.1.1: icmp_seq=149 ttl=128 time=0.120 ms
+64 bytes from 192.168.1.1: icmp_seq=150 ttl=128 time=0.111 ms
+64 bytes from 192.168.1.1: icmp_seq=151 ttl=128 time=0.111 ms
+64 bytes from 192.168.1.1: icmp_seq=152 ttl=128 time=0.509 ms
+64 bytes from 192.168.1.1: icmp_seq=153 ttl=128 time=0.523 ms
+64 bytes from 192.168.1.1: icmp_seq=154 ttl=128 time=0.521 ms
+64 bytes from 192.168.1.1: icmp_seq=155 ttl=128 time=0.542 ms
+64 bytes from 192.168.1.1: icmp_seq=156 ttl=128 time=0.118 ms
+64 bytes from 192.168.1.1: icmp_seq=157 ttl=128 time=0.103 ms
+64 bytes from 192.168.1.1: icmp_seq=158 ttl=128 time=0.120 ms
+64 bytes from 192.168.1.1: icmp_seq=159 ttl=128 time=0.584 ms
+64 bytes from 192.168.1.1: icmp_seq=160 ttl=128 time=0.429 ms
+64 bytes from 192.168.1.1: icmp_seq=161 ttl=128 time=0.550 ms
+64 bytes from 192.168.1.1: icmp_seq=162 ttl=128 time=0.448 ms
+64 bytes from 192.168.1.1: icmp_seq=163 ttl=128 time=0.534 ms
+64 bytes from 192.168.1.1: icmp_seq=164 ttl=128 time=0.493 ms
+64 bytes from 192.168.1.1: icmp_seq=165 ttl=128 time=0.122 ms
+64 bytes from 192.168.1.1: icmp_seq=166 ttl=128 time=0.517 ms
+64 bytes from 192.168.1.1: icmp_seq=167 ttl=128 time=0.123 ms
+64 bytes from 192.168.1.1: icmp_seq=168 ttl=128 time=0.423 ms
+64 bytes from 192.168.1.1: icmp_seq=169 ttl=128 time=0.100 ms
+64 bytes from 192.168.1.1: icmp_seq=170 ttl=128 time=0.107 ms
+64 bytes from 192.168.1.1: icmp_seq=171 ttl=128 time=0.096 ms
+64 bytes from 192.168.1.1: icmp_seq=172 ttl=128 time=0.558 ms
+64 bytes from 192.168.1.1: icmp_seq=173 ttl=128 time=0.100 ms
+64 bytes from 192.168.1.1: icmp_seq=174 ttl=128 time=0.577 ms
+64 bytes from 192.168.1.1: icmp_seq=175 ttl=128 time=0.101 ms
+64 bytes from 192.168.1.1: icmp_seq=176 ttl=128 time=0.456 ms
+64 bytes from 192.168.1.1: icmp_seq=177 ttl=128 time=0.098 ms
+64 bytes from 192.168.1.1: icmp_seq=178 ttl=128 time=0.482 ms
+64 bytes from 192.168.1.1: icmp_seq=179 ttl=128 time=0.110 ms
+64 bytes from 192.168.1.1: icmp_seq=180 ttl=128 time=0.582 ms
+64 bytes from 192.168.1.1: icmp_seq=181 ttl=128 time=0.114 ms
+64 bytes from 192.168.1.1: icmp_seq=182 ttl=128 time=0.631 ms
+64 bytes from 192.168.1.1: icmp_seq=183 ttl=128 time=0.133 ms
+64 bytes from 192.168.1.1: icmp_seq=184 ttl=128 time=0.202 ms
+64 bytes from 192.168.1.1: icmp_seq=185 ttl=128 time=0.483 ms
+64 bytes from 192.168.1.1: icmp_seq=186 ttl=128 time=0.532 ms
+64 bytes from 192.168.1.1: icmp_seq=187 ttl=128 time=0.513 ms
+64 bytes from 192.168.1.1: icmp_seq=188 ttl=128 time=0.542 ms
+64 bytes from 192.168.1.1: icmp_seq=189 ttl=128 time=0.559 ms
+64 bytes from 192.168.1.1: icmp_seq=190 ttl=128 time=0.120 ms
+64 bytes from 192.168.1.1: icmp_seq=191 ttl=128 time=0.498 ms
+64 bytes from 192.168.1.1: icmp_seq=192 ttl=128 time=0.473 ms
+64 bytes from 192.168.1.1: icmp_seq=193 ttl=128 time=0.521 ms
+64 bytes from 192.168.1.1: icmp_seq=194 ttl=128 time=0.126 ms
+64 bytes from 192.168.1.1: icmp_seq=195 ttl=128 time=0.494 ms
+64 bytes from 192.168.1.1: icmp_seq=196 ttl=128 time=0.460 ms
+64 bytes from 192.168.1.1: icmp_seq=197 ttl=128 time=0.476 ms
+64 bytes from 192.168.1.1: icmp_seq=198 ttl=128 time=0.459 ms
+64 bytes from 192.168.1.1: icmp_seq=199 ttl=128 time=0.424 ms
+64 bytes from 192.168.1.1: icmp_seq=200 ttl=128 time=0.106 ms
+64 bytes from 192.168.1.1: icmp_seq=201 ttl=128 time=0.504 ms
+64 bytes from 192.168.1.1: icmp_seq=202 ttl=128 time=0.507 ms
+64 bytes from 192.168.1.1: icmp_seq=203 ttl=128 time=0.507 ms
+64 bytes from 192.168.1.1: icmp_seq=204 ttl=128 time=0.110 ms
+64 bytes from 192.168.1.1: icmp_seq=205 ttl=128 time=0.107 ms
+64 bytes from 192.168.1.1: icmp_seq=206 ttl=128 time=0.123 ms
+64 bytes from 192.168.1.1: icmp_seq=207 ttl=128 time=0.549 ms
+64 bytes from 192.168.1.1: icmp_seq=208 ttl=128 time=0.158 ms
+64 bytes from 192.168.1.1: icmp_seq=209 ttl=128 time=0.108 ms
+64 bytes from 192.168.1.1: icmp_seq=210 ttl=128 time=0.122 ms
+64 bytes from 192.168.1.1: icmp_seq=211 ttl=128 time=0.538 ms
+64 bytes from 192.168.1.1: icmp_seq=212 ttl=128 time=0.709 ms
+64 bytes from 192.168.1.1: icmp_seq=213 ttl=128 time=5.33 ms
+64 bytes from 192.168.1.1: icmp_seq=214 ttl=128 time=0.682 ms
+64 bytes from 192.168.1.1: icmp_seq=215 ttl=128 time=0.613 ms
+64 bytes from 192.168.1.1: icmp_seq=216 ttl=128 time=0.607 ms
+64 bytes from 192.168.1.1: icmp_seq=217 ttl=128 time=0.646 ms
+64 bytes from 192.168.1.1: icmp_seq=218 ttl=128 time=0.240 ms
+64 bytes from 192.168.1.1: icmp_seq=219 ttl=128 time=0.197 ms
+64 bytes from 192.168.1.1: icmp_seq=220 ttl=128 time=0.242 ms
+64 bytes from 192.168.1.1: icmp_seq=221 ttl=128 time=0.614 ms
+64 bytes from 192.168.1.1: icmp_seq=222 ttl=128 time=0.144 ms
+64 bytes from 192.168.1.1: icmp_seq=223 ttl=128 time=0.504 ms
+64 bytes from 192.168.1.1: icmp_seq=224 ttl=128 time=0.533 ms
+64 bytes from 192.168.1.1: icmp_seq=225 ttl=128 time=0.537 ms
+64 bytes from 192.168.1.1: icmp_seq=226 ttl=128 time=0.429 ms
+64 bytes from 192.168.1.1: icmp_seq=227 ttl=128 time=0.466 ms
+64 bytes from 192.168.1.1: icmp_seq=228 ttl=128 time=0.496 ms
+64 bytes from 192.168.1.1: icmp_seq=229 ttl=128 time=0.100 ms
+^C
+[root@yunji ~]# 64 bytes from 192.168.1.1: icmp_seq=230 ttl=128 time=0.471 ms
+64 bytes from 192.168.1.1: icmp_seq=231 ttl=128 time=0.442 ms
+64 bytes from 192.168.1.1: icmp_seq=232 ttl=128 time=0.473 ms
+64 bytes from 192.168.1.1: icmp_seq=233 ttl=128 time=0.105 ms
+64 bytes from 192.168.1.1: icmp_seq=234 ttl=128 time=0.126 ms
+64 bytes from 192.168.1.1: icmp_seq=235 ttl=128 time=0.122 ms
+64 bytes from 192.168.1.1: icmp_seq=236 ttl=128 time=0.449 ms
+64 bytes from 192.168.1.1: icmp_seq=237 ttl=128 time=0.140 ms
+64 bytes from 192.168.1.1: icmp_seq=238 ttl=128 time=0.508 ms
+64 bytes from 192.168.1.1: icmp_seq=239 ttl=128 time=0.550 ms
+64 bytes from 192.168.1.1: icmp_seq=240 ttl=128 time=0.474 ms
+64 bytes from 192.168.1.1: icmp_seq=241 ttl=128 time=0.586 ms
+64 bytes from 192.168.1.1: icmp_seq=242 ttl=128 time=0.127 ms
+64 bytes from 192.168.1.1: icmp_seq=243 ttl=128 time=0.141 ms
+64 bytes from 192.168.1.1: icmp_seq=244 ttl=128 time=0.125 ms
+64 bytes from 192.168.1.1: icmp_seq=245 ttl=128 time=0.129 ms
+64 bytes from 192.168.1.1: icmp_seq=246 ttl=128 time=0.546 ms
+64 bytes from 192.168.1.1: icmp_seq=247 ttl=128 time=0.114 ms
+64 bytes from 192.168.1.1: icmp_seq=248 ttl=128 time=0.107 ms
+64 bytes from 192.168.1.1: icmp_seq=249 ttl=128 time=0.522 ms
+64 bytes from 192.168.1.1: icmp_seq=250 ttl=128 time=0.099 ms
+64 bytes from 192.168.1.1: icmp_seq=251 ttl=128 time=0.437 ms
+64 bytes from 192.168.1.1: icmp_seq=252 ttl=128 time=0.470 ms
+64 bytes from 192.168.1.1: icmp_seq=253 ttl=128 time=0.122 ms
+64 bytes from 192.168.1.1: icmp_seq=254 ttl=128 time=0.129 ms
+64 bytes from 192.168.1.1: icmp_seq=255 ttl=128 time=0.103 ms
+64 bytes from 192.168.1.1: icmp_seq=256 ttl=128 time=0.458 ms
+64 bytes from 192.168.1.1: icmp_seq=257 ttl=128 time=0.123 ms
+64 bytes from 192.168.1.1: icmp_seq=258 ttl=128 time=0.548 ms
+64 bytes from 192.168.1.1: icmp_seq=259 ttl=128 time=0.437 ms
+64 bytes from 192.168.1.1: icmp_seq=260 ttl=128 time=0.467 ms
+64 bytes from 192.168.1.1: icmp_seq=261 ttl=128 time=0.121 ms
+64 bytes from 192.168.1.1: icmp_seq=262 ttl=128 time=0.486 ms
+64 bytes from 192.168.1.1: icmp_seq=263 ttl=128 time=0.554 ms
+fg 1
+ping 192.168.1.1
+64 bytes from 192.168.1.1: icmp_seq=264 ttl=128 time=0.524 ms
+64 bytes from 192.168.1.1: icmp_seq=265 ttl=128 time=0.501 ms
+64 bytes from 192.168.1.1: icmp_seq=266 ttl=128 time=0.448 ms
+64 bytes from 192.168.1.1: icmp_seq=267 ttl=128 time=0.494 ms
+64 bytes from 192.168.1.1: icmp_seq=268 ttl=128 time=0.123 ms
+64 bytes from 192.168.1.1: icmp_seq=269 ttl=128 time=0.493 ms
+64 bytes from 192.168.1.1: icmp_seq=270 ttl=128 time=0.501 ms
+64 bytes from 192.168.1.1: icmp_seq=271 ttl=128 time=0.461 ms
+64 bytes from 192.168.1.1: icmp_seq=272 ttl=128 time=0.125 ms
+64 bytes from 192.168.1.1: icmp_seq=273 ttl=128 time=0.484 ms
+64 bytes from 192.168.1.1: icmp_seq=274 ttl=128 time=0.513 ms
+64 bytes from 192.168.1.1: icmp_seq=275 ttl=128 time=0.419 ms
+64 bytes from 192.168.1.1: icmp_seq=276 ttl=128 time=0.465 ms
+^C
+--- 192.168.1.1 ping statistics ---
+276 packets transmitted, 276 received, 0% packet loss, time 291100ms
+rtt min/avg/max/mdev = 0.088/0.271/5.333/0.355 ms
+[root@yunji ~]#

@@ -1,0 +1,708 @@
+login as: root
+root@192.168.1.140's password:
+Last login: Sun Aug  4 10:36:08 2019 from 192.168.1.1
+[root@yunji ~]# pstree -p |grep bash
+        |-sshd(2592)---bash(2594)
+        |-sshd(2669)---sshd(2675)---bash(2677)-+-grep(2697)
+[root@yunji ~]# kill 2592
+[root@yunji ~]#
+[root@yunji ~]# pstree -p |grep bash
+        |-sshd(2669)---sshd(2675)---bash(2677)-+-grep(2708)
+[root@yunji ~]# pstree -p |grep bash
+        |-gnome-terminal(2712)-+-bash(2714)
+        |-sshd(2669)---sshd(2675)---bash(2677)-+-grep(2725)
+[root@yunji ~]# kill 2712
+[root@yunji ~]# top
+top - 10:45:46 up 19 min,  2 users,  load average: 0.02, 0.02, 0.05
+Tasks: 153 total,   1 running, 152 sleeping,   0 stopped,   0 zombie
+Cpu(s):  0.0%us,  0.0%sy,  0.0%ni,100.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:   1906280k total,   483900k used,  1422380k free,    24296k buffers
+Swap:  2097148k total,        0k used,  2097148k free,   193588k cached
+
+   PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND
+  2730 root      20   0 15032 1252  936 R  0.3  0.1   0:00.02 top
+     1 root      20   0 19352 1548 1228 S  0.0  0.1   0:00.61 init
+     2 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kthreadd
+     3 root      RT   0     0    0    0 S  0.0  0.0   0:00.00 migration/0
+     4 root      20   0     0    0    0 S  0.0  0.0   0:00.00 ksoftirqd/0
+     5 root      RT   0     0    0    0 S  0.0  0.0   0:00.00 stopper/0
+     6 root      RT   0     0    0    0 S  0.0  0.0   0:00.00 watchdog/0
+     7 root      20   0     0    0    0 S  0.0  0.0   0:00.40 events/0
+     8 root      20   0     0    0    0 S  0.0  0.0   0:00.00 events/0
+     9 root      20   0     0    0    0 S  0.0  0.0   0:00.00 events_long/0
+    10 root      20   0     0    0    0 S  0.0  0.0   0:00.00 events_power_ef
+    11 root      20   0     0    0    0 S  0.0  0.0   0:00.00 cgroup
+    12 root      20   0     0    0    0 S  0.0  0.0   0:00.00 khelper
+    13 root      20   0     0    0    0 S  0.0  0.0   0:00.00 netns
+    14 root      20   0     0    0    0 S  0.0  0.0   0:00.00 async/mgr
+    15 root      20   0     0    0    0 S  0.0  0.0   0:00.00 pm
+    16 root      20   0     0    0    0 S  0.0  0.0   0:00.00 sync_supers
+[root@yunji ~]# clear
+[root@yunji ~]# df -Th
+Filesystem     Type     Size  Used Avail Use% Mounted on
+/dev/sda7      ext4      22G  357M   20G   2% /
+tmpfs          tmpfs    931M   76K  931M   1% /dev/shm
+/dev/sda1      ext4     190M   39M  142M  22% /boot
+/dev/sda6      ext4     190M  1.6M  179M   1% /home
+/dev/sda2      ext4      12G  3.1G  7.9G  28% /usr
+/dev/sda3      ext4     3.9G  241M  3.4G   7% /var
+/dev/sr0       iso9660  3.7G  3.7G     0 100% /media/CentOS_6.8_Final
+[root@yunji ~]# ls -l /dev/sda*
+brw-rw---- 1 root disk 8, 0 2019-08-04 10:26 /dev/sda
+brw-rw---- 1 root disk 8, 1 2019-08-04 10:26 /dev/sda1
+brw-rw---- 1 root disk 8, 2 2019-08-04 10:26 /dev/sda2
+brw-rw---- 1 root disk 8, 3 2019-08-04 10:26 /dev/sda3
+brw-rw---- 1 root disk 8, 4 2019-08-04 10:26 /dev/sda4
+brw-rw---- 1 root disk 8, 5 2019-08-04 10:26 /dev/sda5
+brw-rw---- 1 root disk 8, 6 2019-08-04 10:26 /dev/sda6
+brw-rw---- 1 root disk 8, 7 2019-08-04 10:26 /dev/sda7
+[root@yunji ~]# df -Th
+Filesystem     Type     Size  Used Avail Use% Mounted on
+/dev/sda7      ext4      22G  357M   20G   2% /
+tmpfs          tmpfs    931M   76K  931M   1% /dev/shm
+/dev/sda1      ext4     190M   39M  142M  22% /boot
+/dev/sda6      ext4     190M  1.6M  179M   1% /home
+/dev/sda2      ext4      12G  3.1G  7.9G  28% /usr
+/dev/sda3      ext4     3.9G  241M  3.4G   7% /var
+/dev/sr0       iso9660  3.7G  3.7G     0 100% /media/CentOS_6.8_Final
+[root@yunji ~]# clear
+[root@yunji ~]# ls -l /dev/sda*
+brw-rw---- 1 root disk 8, 0 2019-08-04 10:26 /dev/sda
+brw-rw---- 1 root disk 8, 1 2019-08-04 10:26 /dev/sda1
+brw-rw---- 1 root disk 8, 2 2019-08-04 10:26 /dev/sda2
+brw-rw---- 1 root disk 8, 3 2019-08-04 10:26 /dev/sda3
+brw-rw---- 1 root disk 8, 4 2019-08-04 10:26 /dev/sda4
+brw-rw---- 1 root disk 8, 5 2019-08-04 10:26 /dev/sda5
+brw-rw---- 1 root disk 8, 6 2019-08-04 10:26 /dev/sda6
+brw-rw---- 1 root disk 8, 7 2019-08-04 10:26 /dev/sda7
+[root@yunji ~]# init 0
+[root@yunji ~]#
+login as: root
+root@192.168.1.140's password:
+Last login: Sun Aug  4 10:39:43 2019 from 192.168.1.1
+[root@yunji ~]# clear
+[root@yunji ~]# ls -ld /dev/sd*
+brw-rw---- 1 root disk 8,  0 2019-08-04 12:00 /dev/sda
+brw-rw---- 1 root disk 8,  1 2019-08-04 12:00 /dev/sda1
+brw-rw---- 1 root disk 8,  2 2019-08-04 12:00 /dev/sda2
+brw-rw---- 1 root disk 8,  3 2019-08-04 12:00 /dev/sda3
+brw-rw---- 1 root disk 8,  4 2019-08-04 12:00 /dev/sda4
+brw-rw---- 1 root disk 8,  5 2019-08-04 12:00 /dev/sda5
+brw-rw---- 1 root disk 8,  6 2019-08-04 12:00 /dev/sda6
+brw-rw---- 1 root disk 8,  7 2019-08-04 12:00 /dev/sda7
+brw-rw---- 1 root disk 8, 16 2019-08-04 12:00 /dev/sdb
+[root@yunji ~]# fdish -l /dev/sdb
+-bash: fdish: command not found
+[root@yunji ~]# fdisk -l /dev/sdb
+
+Disk /dev/sdb: 1073 MB, 1073741824 bytes
+255 heads, 63 sectors/track, 130 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000
+
+[root@yunji ~]# fdish /dev/sdb
+-bash: fdish: command not found
+[root@yunji ~]# fdisk /dev/sdb
+Device contains neither a valid DOS partition table, nor Sun, SGI or OSF disklabel
+Building a new DOS disklabel with disk identifier 0x633062ac.
+Changes will remain in memory only, until you decide to write them.
+After that, of course, the previous content won't be recoverable.
+
+Warning: invalid flag 0x0000 of partition table 4 will be corrected by w(rite)
+
+WARNING: DOS-compatible mode is deprecated. It's strongly recommended to
+         switch off the mode (command 'c') and change display units to
+         sectors (command 'u').
+
+Command (m for help): m
+Command action
+   a   toggle a bootable flag
+   b   edit bsd disklabel
+   c   toggle the dos compatibility flag
+   d   delete a partition
+   l   list known partition types
+   m   print this menu
+   n   add a new partition
+   o   create a new empty DOS partition table
+   p   print the partition table
+   q   quit without saving changes
+   s   create a new empty Sun disklabel
+   t   change a partition's system id
+   u   change display/entry units
+   v   verify the partition table
+   w   write table to disk and exit
+   x   extra functionality (experts only)
+
+Command (m for help): p
+
+Disk /dev/sdb: 1073 MB, 1073741824 bytes
+255 heads, 63 sectors/track, 130 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x633062ac
+
+   Device Boot      Start         End      Blocks   Id  System
+
+Command (m for help): n
+Command action
+   e   extended
+   p   primary partition (1-4)
+p
+Partition number (1-4): 1
+First cylinder (1-130, default 1):
+Using default value 1
+Last cylinder, +cylinders or +size{K,M,G} (1-130, default 130): +100M
+
+Command (m for help): p
+
+Disk /dev/sdb: 1073 MB, 1073741824 bytes
+255 heads, 63 sectors/track, 130 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x633062ac
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1               1          14      112423+  83  Linux
+
+Command (m for help): n
+Command action
+   e   extended
+   p   primary partition (1-4)
+o
+Invalid partition number for type `o'
+Command action
+   e   extended
+   p   primary partition (1-4)
+p
+Partition number (1-4): 2
+First cylinder (15-130, default 15):
+Using default value 15
+Last cylinder, +cylinders or +size{K,M,G} (15-130, default 130): 28
+
+Command (m for help): p
+
+Disk /dev/sdb: 1073 MB, 1073741824 bytes
+255 heads, 63 sectors/track, 130 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x633062ac
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1               1          14      112423+  83  Linux
+/dev/sdb2              15          28      112455   83  Linux
+
+Command (m for help): n
+Command action
+   e   extended
+   p   primary partition (1-4)
+p
+Partition number (1-4): 3
+First cylinder (29-130, default 29):
+Using default value 29
+Last cylinder, +cylinders or +size{K,M,G} (29-130, default 130): +200M
+
+Command (m for help): p
+
+Disk /dev/sdb: 1073 MB, 1073741824 bytes
+255 heads, 63 sectors/track, 130 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x633062ac
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1               1          14      112423+  83  Linux
+/dev/sdb2              15          28      112455   83  Linux
+/dev/sdb3              29          54      208845   83  Linux
+
+Command (m for help): n
+Command action
+   e   extended
+   p   primary partition (1-4)
+p
+Selected partition 4
+First cylinder (55-130, default 55):
+Using default value 55
+Last cylinder, +cylinders or +size{K,M,G} (55-130, default 130):
+Using default value 130
+
+Command (m for help): p
+
+Disk /dev/sdb: 1073 MB, 1073741824 bytes
+255 heads, 63 sectors/track, 130 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x633062ac
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1               1          14      112423+  83  Linux
+/dev/sdb2              15          28      112455   83  Linux
+/dev/sdb3              29          54      208845   83  Linux
+/dev/sdb4              55         130      610470   83  Linux
+
+Command (m for help): w
+The partition table has been altered!
+
+Calling ioctl() to re-read partition table.
+Syncing disks.
+[root@yunji ~]# clear
+[root@yunji ~]# ls -l /dev/sdb*
+brw-rw---- 1 root disk 8, 16 2019-08-04 12:11 /dev/sdb
+brw-rw---- 1 root disk 8, 17 2019-08-04 12:11 /dev/sdb1
+brw-rw---- 1 root disk 8, 18 2019-08-04 12:11 /dev/sdb2
+brw-rw---- 1 root disk 8, 19 2019-08-04 12:11 /dev/sdb3
+brw-rw---- 1 root disk 8, 20 2019-08-04 12:11 /dev/sdb4
+[root@yunji ~]# fdisk -l /dev/sdb*
+
+Disk /dev/sdb: 1073 MB, 1073741824 bytes
+255 heads, 63 sectors/track, 130 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x633062ac
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1               1          14      112423+  83  Linux
+/dev/sdb2              15          28      112455   83  Linux
+/dev/sdb3              29          54      208845   83  Linux
+/dev/sdb4              55         130      610470   83  Linux
+
+Disk /dev/sdb1: 115 MB, 115121664 bytes
+255 heads, 63 sectors/track, 13 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000
+
+
+Disk /dev/sdb2: 115 MB, 115153920 bytes
+255 heads, 63 sectors/track, 14 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000
+
+
+Disk /dev/sdb3: 213 MB, 213857280 bytes
+255 heads, 63 sectors/track, 26 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000
+
+
+Disk /dev/sdb4: 625 MB, 625121280 bytes
+255 heads, 63 sectors/track, 76 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000
+
+[root@yunji ~]# fdisk -d /dev/sdb
+fdisk: 何利例茄 可记 -- 'd'
+
+Usage:
+ fdisk [options] <disk>    change partition table
+ fdisk [options] -l <disk> list partition table(s)
+ fdisk -s <partition>      give partition size(s) in blocks
+
+Options:
+ -b <size>                 sector size (512, 1024, 2048 or 4096)
+ -c                        switch off DOS-compatible mode
+ -h                        print help
+ -u <size>                 give sizes in sectors instead of cylinders
+ -v                        print version
+ -C <number>               specify the number of cylinders
+ -H <number>               specify the number of heads
+ -S <number>               specify the number of sectors per track
+
+[root@yunji ~]# fdisk -d /dev/sdb*
+fdisk: 何利例茄 可记 -- 'd'
+
+Usage:
+ fdisk [options] <disk>    change partition table
+ fdisk [options] -l <disk> list partition table(s)
+ fdisk -s <partition>      give partition size(s) in blocks
+
+Options:
+ -b <size>                 sector size (512, 1024, 2048 or 4096)
+ -c                        switch off DOS-compatible mode
+ -h                        print help
+ -u <size>                 give sizes in sectors instead of cylinders
+ -v                        print version
+ -C <number>               specify the number of cylinders
+ -H <number>               specify the number of heads
+ -S <number>               specify the number of sectors per track
+
+[root@yunji ~]# fdisk -d
+fdisk: 何利例茄 可记 -- 'd'
+
+Usage:
+ fdisk [options] <disk>    change partition table
+ fdisk [options] -l <disk> list partition table(s)
+ fdisk -s <partition>      give partition size(s) in blocks
+
+Options:
+ -b <size>                 sector size (512, 1024, 2048 or 4096)
+ -c                        switch off DOS-compatible mode
+ -h                        print help
+ -u <size>                 give sizes in sectors instead of cylinders
+ -v                        print version
+ -C <number>               specify the number of cylinders
+ -H <number>               specify the number of heads
+ -S <number>               specify the number of sectors per track
+
+[root@yunji ~]# fdisk -d /dev/sdb/*
+fdisk: 何利例茄 可记 -- 'd'
+
+Usage:
+ fdisk [options] <disk>    change partition table
+ fdisk [options] -l <disk> list partition table(s)
+ fdisk -s <partition>      give partition size(s) in blocks
+
+Options:
+ -b <size>                 sector size (512, 1024, 2048 or 4096)
+ -c                        switch off DOS-compatible mode
+ -h                        print help
+ -u <size>                 give sizes in sectors instead of cylinders
+ -v                        print version
+ -C <number>               specify the number of cylinders
+ -H <number>               specify the number of heads
+ -S <number>               specify the number of sectors per track
+
+[root@yunji ~]# fdisk /dev/sdb
+
+WARNING: DOS-compatible mode is deprecated. It's strongly recommended to
+         switch off the mode (command 'c') and change display units to
+         sectors (command 'u').
+
+Command (m for help): d
+Partition number (1-4): 1
+
+Command (m for help): d
+Partition number (1-4): 2
+
+Command (m for help): d
+Partition number (1-4): 3
+
+Command (m for help): d
+Selected partition 4
+
+Command (m for help): 4
+4: unknown command
+Command action
+   a   toggle a bootable flag
+   b   edit bsd disklabel
+   c   toggle the dos compatibility flag
+   d   delete a partition
+   l   list known partition types
+   m   print this menu
+   n   add a new partition
+   o   create a new empty DOS partition table
+   p   print the partition table
+   q   quit without saving changes
+   s   create a new empty Sun disklabel
+   t   change a partition's system id
+   u   change display/entry units
+   v   verify the partition table
+   w   write table to disk and exit
+   x   extra functionality (experts only)
+
+Command (m for help): w
+The partition table has been altered!
+
+Calling ioctl() to re-read partition table.
+Syncing disks.
+[root@yunji ~]# fdisk -d
+fdisk: 何利例茄 可记 -- 'd'
+
+Usage:
+ fdisk [options] <disk>    change partition table
+ fdisk [options] -l <disk> list partition table(s)
+ fdisk -s <partition>      give partition size(s) in blocks
+
+Options:
+ -b <size>                 sector size (512, 1024, 2048 or 4096)
+ -c                        switch off DOS-compatible mode
+ -h                        print help
+ -u <size>                 give sizes in sectors instead of cylinders
+ -v                        print version
+ -C <number>               specify the number of cylinders
+ -H <number>               specify the number of heads
+ -S <number>               specify the number of sectors per track
+
+[root@yunji ~]# fdisk /dev/sdb
+
+WARNING: DOS-compatible mode is deprecated. It's strongly recommended to
+         switch off the mode (command 'c') and change display units to
+         sectors (command 'u').
+
+Command (m for help): n
+Command action
+   e   extended
+   p   primary partition (1-4)
+p
+Partition number (1-4): 1
+First cylinder (1-130, default 1):
+Using default value 1
+Last cylinder, +cylinders or +size{K,M,G} (1-130, default 130): +100M
+
+Command (m for help): n
+Command action
+   e   extended
+   p   primary partition (1-4)
+p
+Partition number (1-4): 2
+First cylinder (15-130, default 15):
+Using default value 15
+Last cylinder, +cylinders or +size{K,M,G} (15-130, default 130): +200M
+
+Command (m for help): n
+Command action
+   e   extended
+   p   primary partition (1-4)
+p
+Partition number (1-4): 3
+First cylinder (41-130, default 41):
+Using default value 41
+Last cylinder, +cylinders or +size{K,M,G} (41-130, default 130): +300M
+
+Command (m for help): n
+Command action
+   e   extended
+   p   primary partition (1-4)
+p
+Selected partition 4
+First cylinder (80-130, default 80):
+Using default value 80
+Last cylinder, +cylinders or +size{K,M,G} (80-130, default 130):
+Using default value 130
+
+Command (m for help): p
+
+Disk /dev/sdb: 1073 MB, 1073741824 bytes
+255 heads, 63 sectors/track, 130 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x633062ac
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1               1          14      112423+  83  Linux
+/dev/sdb2              15          40      208845   83  Linux
+/dev/sdb3              41          79      313267+  83  Linux
+/dev/sdb4              80         130      409657+  83  Linux
+
+Command (m for help): d
+Partition number (1-4): 4
+
+Command (m for help): n
+Command action
+   e   extended
+   p   primary partition (1-4)
+e
+Selected partition 4
+First cylinder (80-130, default 80):
+Using default value 80
+Last cylinder, +cylinders or +size{K,M,G} (80-130, default 130):
+Using default value 130
+
+Command (m for help): p
+
+Disk /dev/sdb: 1073 MB, 1073741824 bytes
+255 heads, 63 sectors/track, 130 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x633062ac
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1               1          14      112423+  83  Linux
+/dev/sdb2              15          40      208845   83  Linux
+/dev/sdb3              41          79      313267+  83  Linux
+/dev/sdb4              80         130      409657+   5  Extended
+
+Command (m for help): n
+First cylinder (80-130, default 80):
+Using default value 80
+Last cylinder, +cylinders or +size{K,M,G} (80-130, default 130):
+Using default value 130
+
+Command (m for help): p
+
+Disk /dev/sdb: 1073 MB, 1073741824 bytes
+255 heads, 63 sectors/track, 130 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x633062ac
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1               1          14      112423+  83  Linux
+/dev/sdb2              15          40      208845   83  Linux
+/dev/sdb3              41          79      313267+  83  Linux
+/dev/sdb4              80         130      409657+   5  Extended
+/dev/sdb5              80         130      409626   83  Linux
+
+Command (m for help): q
+
+[root@yunji ~]# fdisk /dev/sdb
+
+WARNING: DOS-compatible mode is deprecated. It's strongly recommended to
+         switch off the mode (command 'c') and change display units to
+         sectors (command 'u').
+
+Command (m for help): p
+
+Disk /dev/sdb: 1073 MB, 1073741824 bytes
+255 heads, 63 sectors/track, 130 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x633062ac
+
+   Device Boot      Start         End      Blocks   Id  System
+
+Command (m for help): n
+Command action
+   e   extended
+   p   primary partition (1-4)
+p
+Partition number (1-4): +200M
+Value out of range.
+Partition number (1-4): 1
+First cylinder (1-130, default 1):
+Using default value 1
+Last cylinder, +cylinders or +size{K,M,G} (1-130, default 130): +200M
+
+Command (m for help): n
+Command action
+   e   extended
+   p   primary partition (1-4)
+p
+Partition number (1-4): 2
+First cylinder (27-130, default 27):
+Using default value 27
+Last cylinder, +cylinders or +size{K,M,G} (27-130, default 130): +300M
+
+Command (m for help): n
+Command action
+   e   extended
+   p   primary partition (1-4)
+e
+Partition number (1-4): 4
+First cylinder (66-130, default 66):
+Using default value 66
+Last cylinder, +cylinders or +size{K,M,G} (66-130, default 130):
+Using default value 130
+
+Command (m for help): p
+
+Disk /dev/sdb: 1073 MB, 1073741824 bytes
+255 heads, 63 sectors/track, 130 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x633062ac
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1               1          26      208813+  83  Linux
+/dev/sdb2              27          65      313267+  83  Linux
+/dev/sdb4              66         130      522112+   5  Extended
+
+Command (m for help): n
+Command action
+   l   logical (5 or over)
+   p   primary partition (1-4)
+p
+Selected partition 3
+No free sectors available
+
+Command (m for help): n
+Command action
+   l   logical (5 or over)
+   p   primary partition (1-4)
+l
+First cylinder (66-130, default 66):
+Using default value 66
+Last cylinder, +cylinders or +size{K,M,G} (66-130, default 130): +100M
+
+Command (m for help): p
+
+Disk /dev/sdb: 1073 MB, 1073741824 bytes
+255 heads, 63 sectors/track, 130 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x633062ac
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1               1          26      208813+  83  Linux
+/dev/sdb2              27          65      313267+  83  Linux
+/dev/sdb4              66         130      522112+   5  Extended
+/dev/sdb5              66          79      112423+  83  Linux
+
+Command (m for help): n
+Command action
+   l   logical (5 or over)
+   p   primary partition (1-4)
+l
+First cylinder (80-130, default 80):
+Using default value 80
+Last cylinder, +cylinders or +size{K,M,G} (80-130, default 130): +100M
+
+Command (m for help): p
+
+Disk /dev/sdb: 1073 MB, 1073741824 bytes
+255 heads, 63 sectors/track, 130 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x633062ac
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1               1          26      208813+  83  Linux
+/dev/sdb2              27          65      313267+  83  Linux
+/dev/sdb4              66         130      522112+   5  Extended
+/dev/sdb5              66          79      112423+  83  Linux
+/dev/sdb6              80          93      112423+  83  Linux
+
+Command (m for help): n
+Command action
+   l   logical (5 or over)
+   p   primary partition (1-4)
+l
+First cylinder (94-130, default 94):
+Using default value 94
+Last cylinder, +cylinders or +size{K,M,G} (94-130, default 130):
+Using default value 130
+
+Command (m for help): p
+
+Disk /dev/sdb: 1073 MB, 1073741824 bytes
+255 heads, 63 sectors/track, 130 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x633062ac
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1               1          26      208813+  83  Linux
+/dev/sdb2              27          65      313267+  83  Linux
+/dev/sdb4              66         130      522112+   5  Extended
+/dev/sdb5              66          79      112423+  83  Linux
+/dev/sdb6              80          93      112423+  83  Linux
+/dev/sdb7              94         130      297171   83  Linux
+
+Command (m for help): w
+The partition table has been altered!
+
+Calling ioctl() to re-read partition table.
+Syncing disks.
+[root@yunji ~]#

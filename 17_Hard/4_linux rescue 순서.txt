@@ -1,0 +1,30 @@
+--------------------->  부팅 순서
+1sys		2 rc.d 		3 local
+----------------------------------------------------------
+리눅스 6.8  복구 순서
+vm 에서 일단 재부팅 
+----------------------------------------------------------
+1 부팅 후 F2 => BIOS 진입 (HP 는 F10)
+2 boot => cd rom 우선 부팅 (+, - key 이용)
+3 cdrom 활성화
+4 exit saving changes
+5 rescue installed system
+6 korean------
+  English ----	us
+7 Network -- no 
+8 rescue - continue
+9 Rescue -ok -- ok
+10 shell ---  start    shell - ok
+11 bash 쉘이 나온다
+12 chroot /mnt/sysimage
+	df -h  보면
+        tail -3 /etc/fstab
+13 vi /etc/fstab (수정)
+14 강제부팅 (명령어 안먹음)
+15 BIOS 진입 하드 우선 부팅
+
+----------------------------------------------------------
+마운트만 단순 잘못 했을때
+mount -o remount,rw /
+재부팅 안될때, vi /etc/fstab
+원래 수정 X => 수정 되게끔 해준다

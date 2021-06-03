@@ -1,0 +1,341 @@
+login as: root
+root@192.168.1.140's password:
+Last login: Sun Aug  4 13:03:25 2019 from 192.168.1.1
+[root@yunji ~]# cd test
+[root@yunji test]# ll
+합계 12
+-rw-r--r-- 1 root root 4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root 4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root 4 2019-08-04 12:57 3
+[root@yunji test]# tar cvf iu.tar 1
+1
+[root@yunji test]# ll
+합계 24
+-rw-r--r-- 1 root root     4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 3
+-rw-r--r-- 1 root root 10240 2019-08-04 13:05 iu.tar
+[root@yunji test]# tar tvf iu.tar
+-rw-r--r-- root/root         4 2019-08-04 12:56 1
+[root@yunji test]# ㅣㅣ
+-bash: ㅣㅣ: command not found
+[root@yunji test]# ll
+합계 24
+-rw-r--r-- 1 root root     4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 3
+-rw-r--r-- 1 root root 10240 2019-08-04 13:05 iu.tar
+[root@yunji test]# rm -f 1
+[root@yunji test]# ll
+합계 20
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 3
+-rw-r--r-- 1 root root 10240 2019-08-04 13:05 iu.tar
+[root@yunji test]# tar xvf iu.tar
+1
+[root@yunji test]# ll
+합계 24
+-rw-r--r-- 1 root root     4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 3
+-rw-r--r-- 1 root root 10240 2019-08-04 13:05 iu.tar
+[root@yunji test]# tar cvf
+tar: 오래된 옵션 `f'는 인수가 필요합니다.
+Try `tar --help' or `tar --usage' for more information.
+[root@yunji test]# suzi.tar.tar iu.tar
+-bash: suzi.tar.tar: command not found
+[root@yunji test]# tar cvf suzi.tar.tar iu.tar
+iu.tar
+[root@yunji test]# ll
+합계 44
+-rw-r--r-- 1 root root     4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 3
+-rw-r--r-- 1 root root 10240 2019-08-04 13:05 iu.tar
+-rw-r--r-- 1 root root 20480 2019-08-04 13:07 suzi.tar.tar
+[root@yunji test]# ls -ld /etc/xinetd.d/
+drwxr-xr-x. 2 root root 4096 2019-07-13 12:11 /etc/xinetd.d/
+[root@yunji test]# ls -l /etc/xinetd.d/
+합계 48
+-rw-------. 1 root root 1157 2016-05-11 03:36 chargen-dgram
+-rw-------. 1 root root 1159 2016-05-11 03:36 chargen-stream
+-rw-------. 1 root root 1157 2016-05-11 03:36 daytime-dgram
+-rw-------. 1 root root 1159 2016-05-11 03:36 daytime-stream
+-rw-------. 1 root root 1157 2016-05-11 03:36 discard-dgram
+-rw-------. 1 root root 1159 2016-05-11 03:36 discard-stream
+-rw-------. 1 root root 1148 2016-05-11 03:36 echo-dgram
+-rw-------. 1 root root 1150 2016-05-11 03:36 echo-stream
+-rw-r--r--. 1 root root  332 2014-03-28 19:54 rsync
+-rw-------. 1 root root 1212 2016-05-11 03:36 tcpmux-server
+-rw-------. 1 root root 1149 2016-05-11 03:36 time-dgram
+-rw-------. 1 root root 1150 2016-05-11 03:36 time-stream
+[root@yunji test]# tar cvf xinetd.tart /etc/xinetd/d
+tar: Removing leading `/' from member names
+tar: /etc/xinetd/d: Cannot stat: 그런 파일이나 디렉터리가 없습니다
+tar: Exiting with failure status due to previous errors
+[root@yunji test]# tar cvf xinetd.tart /etc/xinetd.d
+tar: Removing leading `/' from member names
+/etc/xinetd.d/
+/etc/xinetd.d/time-stream
+/etc/xinetd.d/chargen-stream
+/etc/xinetd.d/discard-stream
+/etc/xinetd.d/discard-dgram
+/etc/xinetd.d/daytime-stream
+/etc/xinetd.d/echo-dgram
+/etc/xinetd.d/daytime-dgram
+/etc/xinetd.d/tcpmux-server
+/etc/xinetd.d/echo-stream
+/etc/xinetd.d/time-dgram
+/etc/xinetd.d/rsync
+/etc/xinetd.d/chargen-dgram
+[root@yunji test]# ll
+합계 76
+-rw-r--r-- 1 root root     4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 3
+-rw-r--r-- 1 root root 10240 2019-08-04 13:05 iu.tar
+-rw-r--r-- 1 root root 20480 2019-08-04 13:07 suzi.tar.tar
+-rw-r--r-- 1 root root 30720 2019-08-04 13:10 xinetd.tart
+[root@yunji test]# tar cvf xinetd.tar /etc/xinetd.d
+tar: Removing leading `/' from member names
+/etc/xinetd.d/
+/etc/xinetd.d/time-stream
+/etc/xinetd.d/chargen-stream
+/etc/xinetd.d/discard-stream
+/etc/xinetd.d/discard-dgram
+/etc/xinetd.d/daytime-stream
+/etc/xinetd.d/echo-dgram
+/etc/xinetd.d/daytime-dgram
+/etc/xinetd.d/tcpmux-server
+/etc/xinetd.d/echo-stream
+/etc/xinetd.d/time-dgram
+/etc/xinetd.d/rsync
+/etc/xinetd.d/chargen-dgram
+[root@yunji test]# ll
+합계 108
+-rw-r--r-- 1 root root     4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 3
+-rw-r--r-- 1 root root 10240 2019-08-04 13:05 iu.tar
+-rw-r--r-- 1 root root 20480 2019-08-04 13:07 suzi.tar.tar
+-rw-r--r-- 1 root root 30720 2019-08-04 13:10 xinetd.tar
+-rw-r--r-- 1 root root 30720 2019-08-04 13:10 xinetd.tart
+[root@yunji test]# rm -f xinetd.tart
+[root@yunji test]# ll
+합계 76
+-rw-r--r-- 1 root root     4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 3
+-rw-r--r-- 1 root root 10240 2019-08-04 13:05 iu.tar
+-rw-r--r-- 1 root root 20480 2019-08-04 13:07 suzi.tar.tar
+-rw-r--r-- 1 root root 30720 2019-08-04 13:10 xinetd.tar
+[root@yunji test]# tar tvf xinetd.tar
+drwxr-xr-x root/root         0 2019-07-13 12:11 etc/xinetd.d/
+-rw------- root/root      1150 2016-05-11 03:36 etc/xinetd.d/time-stream
+-rw------- root/root      1159 2016-05-11 03:36 etc/xinetd.d/chargen-stream
+-rw------- root/root      1159 2016-05-11 03:36 etc/xinetd.d/discard-stream
+-rw------- root/root      1157 2016-05-11 03:36 etc/xinetd.d/discard-dgram
+-rw------- root/root      1159 2016-05-11 03:36 etc/xinetd.d/daytime-stream
+-rw------- root/root      1148 2016-05-11 03:36 etc/xinetd.d/echo-dgram
+-rw------- root/root      1157 2016-05-11 03:36 etc/xinetd.d/daytime-dgram
+-rw------- root/root      1212 2016-05-11 03:36 etc/xinetd.d/tcpmux-server
+-rw------- root/root      1150 2016-05-11 03:36 etc/xinetd.d/echo-stream
+-rw------- root/root      1149 2016-05-11 03:36 etc/xinetd.d/time-dgram
+-rw-r--r-- root/root       332 2014-03-28 19:54 etc/xinetd.d/rsync
+-rw------- root/root      1157 2016-05-11 03:36 etc/xinetd.d/chargen-dgram
+[root@yunji test]# tar xvf xinetd.tar
+etc/xinetd.d/
+etc/xinetd.d/time-stream
+etc/xinetd.d/chargen-stream
+etc/xinetd.d/discard-stream
+etc/xinetd.d/discard-dgram
+etc/xinetd.d/daytime-stream
+etc/xinetd.d/echo-dgram
+etc/xinetd.d/daytime-dgram
+etc/xinetd.d/tcpmux-server
+etc/xinetd.d/echo-stream
+etc/xinetd.d/time-dgram
+etc/xinetd.d/rsync
+etc/xinetd.d/chargen-dgram
+[root@yunji test]# ll
+합계 80
+-rw-r--r-- 1 root root     4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 3
+drwxr-xr-x 3 root root  4096 2019-08-04 13:11 etc
+-rw-r--r-- 1 root root 10240 2019-08-04 13:05 iu.tar
+-rw-r--r-- 1 root root 20480 2019-08-04 13:07 suzi.tar.tar
+-rw-r--r-- 1 root root 30720 2019-08-04 13:10 xinetd.tar
+[root@yunji test]# cd etc
+[root@yunji etc]# ll
+합계 4
+drwxr-xr-x 2 root root 4096 2019-07-13 12:11 xinetd.d
+[root@yunji etc]# cd xinetd.d/
+[root@yunji xinetd.d]# ll
+합계 48
+-rw------- 1 root root 1157 2016-05-11 03:36 chargen-dgram
+-rw------- 1 root root 1159 2016-05-11 03:36 chargen-stream
+-rw------- 1 root root 1157 2016-05-11 03:36 daytime-dgram
+-rw------- 1 root root 1159 2016-05-11 03:36 daytime-stream
+-rw------- 1 root root 1157 2016-05-11 03:36 discard-dgram
+-rw------- 1 root root 1159 2016-05-11 03:36 discard-stream
+-rw------- 1 root root 1148 2016-05-11 03:36 echo-dgram
+-rw------- 1 root root 1150 2016-05-11 03:36 echo-stream
+-rw-r--r-- 1 root root  332 2014-03-28 19:54 rsync
+-rw------- 1 root root 1212 2016-05-11 03:36 tcpmux-server
+-rw------- 1 root root 1149 2016-05-11 03:36 time-dgram
+-rw------- 1 root root 1150 2016-05-11 03:36 time-stream
+[root@yunji xinetd.d]# cd ../..
+[root@yunji test]# pwd
+/root/test
+[root@yunji test]# ll
+합계 80
+-rw-r--r-- 1 root root     4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 3
+drwxr-xr-x 3 root root  4096 2019-08-04 13:11 etc
+-rw-r--r-- 1 root root 10240 2019-08-04 13:05 iu.tar
+-rw-r--r-- 1 root root 20480 2019-08-04 13:07 suzi.tar.tar
+-rw-r--r-- 1 root root 30720 2019-08-04 13:10 xinetd.tar
+[root@yunji test]# tar cvf all.tar 1 2 3
+1
+2
+3
+[root@yunji test]# ll
+합계 92
+-rw-r--r-- 1 root root     4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 3
+-rw-r--r-- 1 root root 10240 2019-08-04 13:12 all.tar
+drwxr-xr-x 3 root root  4096 2019-08-04 13:11 etc
+-rw-r--r-- 1 root root 10240 2019-08-04 13:05 iu.tar
+-rw-r--r-- 1 root root 20480 2019-08-04 13:07 suzi.tar.tar
+-rw-r--r-- 1 root root 30720 2019-08-04 13:10 xinetd.tar
+[root@yunji test]# tar tvf all.tar
+-rw-r--r-- root/root         4 2019-08-04 12:56 1
+-rw-r--r-- root/root         4 2019-08-04 12:57 2
+-rw-r--r-- root/root         4 2019-08-04 12:57 3
+[root@yunji test]# ll
+합계 92
+-rw-r--r-- 1 root root     4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 3
+-rw-r--r-- 1 root root 10240 2019-08-04 13:12 all.tar
+drwxr-xr-x 3 root root  4096 2019-08-04 13:11 etc
+-rw-r--r-- 1 root root 10240 2019-08-04 13:05 iu.tar
+-rw-r--r-- 1 root root 20480 2019-08-04 13:07 suzi.tar.tar
+-rw-r--r-- 1 root root 30720 2019-08-04 13:10 xinetd.tar
+[root@yunji test]# rm -f ?
+[root@yunji test]# ll
+합계 80
+-rw-r--r-- 1 root root 10240 2019-08-04 13:12 all.tar
+drwxr-xr-x 3 root root  4096 2019-08-04 13:11 etc
+-rw-r--r-- 1 root root 10240 2019-08-04 13:05 iu.tar
+-rw-r--r-- 1 root root 20480 2019-08-04 13:07 suzi.tar.tar
+-rw-r--r-- 1 root root 30720 2019-08-04 13:10 xinetd.tar
+[root@yunji test]# tar xvf all.tar
+1
+2
+3
+[root@yunji test]# ll
+합계 92
+-rw-r--r-- 1 root root     4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root     4 2019-08-04 12:57 3
+-rw-r--r-- 1 root root 10240 2019-08-04 13:12 all.tar
+drwxr-xr-x 3 root root  4096 2019-08-04 13:11 etc
+-rw-r--r-- 1 root root 10240 2019-08-04 13:05 iu.tar
+-rw-r--r-- 1 root root 20480 2019-08-04 13:07 suzi.tar.tar
+-rw-r--r-- 1 root root 30720 2019-08-04 13:10 xinetd.tar
+[root@yunji test]# rm -rf *.tar etc
+[root@yunji test]# ll
+합계 12
+-rw-r--r-- 1 root root 4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root 4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root 4 2019-08-04 12:57 3
+[root@yunji test]# tar cvf all.tar*
+tar: Cowardly refusing to create an empty archive
+Try `tar --help' or `tar --usage' for more information.
+[root@yunji test]# ll
+합계 12
+-rw-r--r-- 1 root root 4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root 4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root 4 2019-08-04 12:57 3
+[root@yunji test]# tar tvf all.tar
+tar: all.tar: Cannot open: 그런 파일이나 디렉터리가 없습니다
+tar: Error is not recoverable: exiting now
+[root@yunji test]# tar cvf all.tar*
+tar: Cowardly refusing to create an empty archive
+Try `tar --help' or `tar --usage' for more information.
+[root@yunji test]# ll
+합계 12
+-rw-r--r-- 1 root root 4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root 4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root 4 2019-08-04 12:57 3
+[root@yunji test]# tar cvf all.tar
+tar: Cowardly refusing to create an empty archive
+Try `tar --help' or `tar --usage' for more information.
+[root@yunji test]# tar cvfz iu.tar.gz 1 2 3
+1
+2
+3
+[root@yunji test]# ll
+합계 16
+-rw-r--r-- 1 root root   4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root   4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root   4 2019-08-04 12:57 3
+-rw-r--r-- 1 root root 144 2019-08-04 13:15 iu.tar.gz
+[root@yunji test]# tar cvfj suzi.tar.bz2 1 2 3
+1
+2
+3
+[root@yunji test]# ll
+합계 20
+-rw-r--r-- 1 root root   4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root   4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root   4 2019-08-04 12:57 3
+-rw-r--r-- 1 root root 144 2019-08-04 13:15 iu.tar.gz
+-rw-r--r-- 1 root root 145 2019-08-04 13:16 suzi.tar.bz2
+[root@yunji test]# clear
+[root@yunji test]# ll
+합계 20
+-rw-r--r-- 1 root root   4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root   4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root   4 2019-08-04 12:57 3
+-rw-r--r-- 1 root root 144 2019-08-04 13:15 iu.tar.gz
+-rw-r--r-- 1 root root 145 2019-08-04 13:16 suzi.tar.bz2
+[root@yunji test]# rm -f ?
+[root@yunji test]# ll
+합계 8
+-rw-r--r-- 1 root root 144 2019-08-04 13:15 iu.tar.gz
+-rw-r--r-- 1 root root 145 2019-08-04 13:16 suzi.tar.bz2
+[root@yunji test]# tar xvfz iu.tar.gz
+1
+2
+3
+[root@yunji test]# ll
+합계 20
+-rw-r--r-- 1 root root   4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root   4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root   4 2019-08-04 12:57 3
+-rw-r--r-- 1 root root 144 2019-08-04 13:15 iu.tar.gz
+-rw-r--r-- 1 root root 145 2019-08-04 13:16 suzi.tar.bz2
+[root@yunji test]# rm -f 1 2 3
+[root@yunji test]# ll
+합계 8
+-rw-r--r-- 1 root root 144 2019-08-04 13:15 iu.tar.gz
+-rw-r--r-- 1 root root 145 2019-08-04 13:16 suzi.tar.bz2
+[root@yunji test]# tar xvfj suzi.tar.bz2
+1
+2
+3
+[root@yunji test]# lll
+-bash: lll: command not found
+[root@yunji test]# ll
+합계 20
+-rw-r--r-- 1 root root   4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root   4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root   4 2019-08-04 12:57 3
+-rw-r--r-- 1 root root 144 2019-08-04 13:15 iu.tar.gz
+-rw-r--r-- 1 root root 145 2019-08-04 13:16 suzi.tar.bz2
+[root@yunji test]#

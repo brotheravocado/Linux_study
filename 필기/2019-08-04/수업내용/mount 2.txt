@@ -1,0 +1,77 @@
+login as: root
+root@192.168.1.140's password:
+Last login: Sun Aug  4 13:04:38 2019 from 192.168.1.1
+[root@yunji ~]# pwd
+/root
+[root@yunji ~]# rm -rf test
+[root@yunji ~]# ls -ld test
+ls: cannot access test: 그런 파일이나 디렉터리가 없습니다
+[root@yunji ~]# df -Th
+Filesystem     Type     Size  Used Avail Use% Mounted on
+/dev/sda7      ext4      22G  357M   20G   2% /
+tmpfs          tmpfs    931M  224K  931M   1% /dev/shm
+/dev/sda1      ext4     190M   39M  142M  22% /boot
+/dev/sda6      ext4     190M  1.6M  179M   1% /home
+/dev/sda2      ext4      12G  3.1G  7.9G  28% /usr
+/dev/sda3      ext4     3.9G  241M  3.4G   7% /var
+/dev/sr0       iso9660  3.7G  3.7G     0 100% /media/CentOS_6.8_Final
+[root@yunji ~]# cd /media/CentOS_6.8_Final/
+[root@yunji CentOS_6.8_Final]# ll
+합계 558
+-r--r--r-- 2 root root     14 2016-05-22 14:52 CentOS_BuildTag
+dr-xr-xr-x 3 root root   2048 2016-05-22 15:06 EFI
+-r--r--r-- 2 root root    212 2013-11-27 18:36 EULA
+-r--r--r-- 2 root root  18009 2013-11-27 18:36 GPL
+dr-xr-xr-x 2 root root 528384 2016-05-23 08:50 Packages
+-r--r--r-- 2 root root   1359 2016-05-22 06:04 RELEASE-NOTES-en-US.html
+-r--r--r-- 2 root root   1706 2013-11-27 18:36 RPM-GPG-KEY-CentOS-6
+-r--r--r-- 2 root root   1730 2013-11-27 18:36 RPM-GPG-KEY-CentOS-Debug-6
+-r--r--r-- 2 root root   1730 2013-11-27 18:36 RPM-GPG-KEY-CentOS-Security-6
+-r--r--r-- 2 root root   1734 2013-11-27 18:36 RPM-GPG-KEY-CentOS-Testing-6
+-r--r--r-- 1 root root   3380 2016-05-23 08:51 TRANS.TBL
+dr-xr-xr-x 3 root root   2048 2016-05-23 08:51 images
+dr-xr-xr-x 2 root root   2048 2016-05-22 15:06 isolinux
+dr-xr-xr-x 2 root root   4096 2016-05-23 08:51 repodata
+[root@yunji CentOS_6.8_Final]# df -Th
+Filesystem     Type     Size  Used Avail Use% Mounted on
+/dev/sda7      ext4      22G  358M   20G   2% /
+tmpfs          tmpfs    931M  224K  931M   1% /dev/shm
+/dev/sda1      ext4     190M   39M  142M  22% /boot
+/dev/sda6      ext4     190M  1.6M  179M   1% /home
+/dev/sda2      ext4      12G  3.1G  7.9G  28% /usr
+/dev/sda3      ext4     3.9G  241M  3.4G   7% /var
+/dev/sr0       iso9660  3.7G  3.7G     0 100% /media/CentOS_6.8_Final
+[root@yunji CentOS_6.8_Final]# cd ~
+[root@yunji ~]# pwd
+/root
+[root@yunji ~]# mkdir /cdrom
+[root@yunji ~]# mount /dev/sr0 /cdrom
+mount: block device /dev/sr0 is write-protected, mounting read-only
+[root@yunji ~]# df -Th
+Filesystem     Type     Size  Used Avail Use% Mounted on
+/dev/sda7      ext4      22G  358M   20G   2% /
+tmpfs          tmpfs    931M  224K  931M   1% /dev/shm
+/dev/sda1      ext4     190M   39M  142M  22% /boot
+/dev/sda6      ext4     190M  1.6M  179M   1% /home
+/dev/sda2      ext4      12G  3.1G  7.9G  28% /usr
+/dev/sda3      ext4     3.9G  241M  3.4G   7% /var
+/dev/sr0       iso9660  3.7G  3.7G     0 100% /media/CentOS_6.8_Final
+/dev/sr0       iso9660  3.7G  3.7G     0 100% /cdrom
+[root@yunji ~]# cd /cdrom
+[root@yunji cdrom]# ll
+합계 558
+-r--r--r-- 2 root root     14 2016-05-22 14:52 CentOS_BuildTag
+dr-xr-xr-x 3 root root   2048 2016-05-22 15:06 EFI
+-r--r--r-- 2 root root    212 2013-11-27 18:36 EULA
+-r--r--r-- 2 root root  18009 2013-11-27 18:36 GPL
+dr-xr-xr-x 2 root root 528384 2016-05-23 08:50 Packages
+-r--r--r-- 2 root root   1359 2016-05-22 06:04 RELEASE-NOTES-en-US.html
+-r--r--r-- 2 root root   1706 2013-11-27 18:36 RPM-GPG-KEY-CentOS-6
+-r--r--r-- 2 root root   1730 2013-11-27 18:36 RPM-GPG-KEY-CentOS-Debug-6
+-r--r--r-- 2 root root   1730 2013-11-27 18:36 RPM-GPG-KEY-CentOS-Security-6
+-r--r--r-- 2 root root   1734 2013-11-27 18:36 RPM-GPG-KEY-CentOS-Testing-6
+-r--r--r-- 1 root root   3380 2016-05-23 08:51 TRANS.TBL
+dr-xr-xr-x 3 root root   2048 2016-05-23 08:51 images
+dr-xr-xr-x 2 root root   2048 2016-05-22 15:06 isolinux
+dr-xr-xr-x 2 root root   4096 2016-05-23 08:51 repodata
+[root@yunji cdrom]#

@@ -1,0 +1,14 @@
+1. find / -name login.defs -o -name inittab -o -name grub.conf
+ 
+mkdir /backup && cp /etc/login.defs /etc/inittab /etc/grub.conf /backup
+
+2.mkdir /backup/test && cp /backup/inittab /backup/test/init && cp /backup/grub.conf  /backup/test/grub && cp /backup/login.defs /backup/test/login
+
+3. touch /backup/test1 /backup/test/test2
+   ls -l /backup /backup/test
+
+4. mkdir -p /home/test/c/d && cp -rp /backup/test /home/test/c/d/kgitbank
+
+5. mkdir /home/test/c/d/test && cp -p /backup/* /home/test/c/d/test
+
+

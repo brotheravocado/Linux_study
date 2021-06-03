@@ -1,0 +1,22 @@
+** 싱글유저부트 설정 = Runlevel 1
+
+재부팅 => ctrl+alt+insert
+single boot process
+
+1. power on 
+2. 부팅로드 5초안에
+   화면 마우스 좌클릭 후 e(아무버튼상관 없음)
+3. 커널선택 => e
+4. kernel이동 후(제일 긴거선택하시고) => e
+5. queit => single 변경 후 엔터
+6. b(boot)
+7. passwd 비번 설정
+8. reboot 재부팅
+==========================================================
+netstat -lntup 	내 컴퓨터에 열린 모든 포트를 봐요
+ifdown eth0=ifconfig eth0 down	인터페이스 사용 안함
+ifup  eth0=ifconfig eth0 up	인터페이스 사용
+service sshd start		SSH 보안원격통신을 위한 서비스 시작
+service sshd stop		SSH 보안원격통신을 위한 서비스 중지
+service shhd restart		SSH 보안원격통신을 위한 서비스 재시작
+---------------------------------------------------------------------

@@ -1,0 +1,133 @@
+login as: root
+root@192.168.1.140's password:
+Last login: Sun Aug  4 12:23:00 2019 from 192.168.1.1
+[root@yunji ~]# clear
+[root@yunji ~]# ifconfig eth0
+eth0      Link encap:Ethernet  HWaddr 00:0C:29:B3:78:C5
+          inet addr:192.168.1.140  Bcast:192.168.1.255  Mask:255.255.255.0
+          inet6 addr: fe80::20c:29ff:feb3:78c5/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:3645 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:2087 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:314215 (306.8 KiB)  TX bytes:280357 (273.7 KiB)
+
+[root@yunji ~]# clear
+[root@yunji ~]# nestat -lntup |grep dhclient
+-bash: nestat: command not found
+[root@yunji ~]# netstat -lntup |grep dhclient
+udp        0      0 0.0.0.0:68                  0.0.0.0:*                               2566/dhclient
+[root@yunji ~]# netstat -lntup |grep sshd
+tcp        0      0 0.0.0.0:22                  0.0.0.0:*                   LISTEN      1778/sshd
+tcp        0      0 :::22                       :::*                        LISTEN      1778/sshd
+[root@yunji ~]# df -Th
+Filesystem     Type     Size  Used Avail Use% Mounted on
+/dev/sda7      ext4      22G  357M   20G   2% /
+tmpfs          tmpfs    931M  224K  931M   1% /dev/shm
+/dev/sda1      ext4     190M   39M  142M  22% /boot
+/dev/sda6      ext4     190M  1.6M  179M   1% /home
+/dev/sda2      ext4      12G  3.1G  7.9G  28% /usr
+/dev/sda3      ext4     3.9G  241M  3.4G   7% /var
+/dev/sr0       iso9660  3.7G  3.7G     0 100% /media/CentOS_6.8_Final
+[root@yunji ~]# cd test
+-bash: cd: test: 그런 파일이나 디렉터리가 없습니다
+[root@yunji ~]# cd test
+-bash: cd: test: 그런 파일이나 디렉터리가 없습니다
+[root@yunji ~]# ls
+1                install.log         yunji  다운로드  바탕화면  사진  템플릿
+anaconda-ks.cfg  install.log.syslog  공개   문서      비디오    음악
+[root@yunji ~]# mkdir test
+[root@yunji ~]# cd test
+[root@yunji test]# cat > 1
+aaa
+^C
+[root@yunji test]# cat > 2
+bbb
+^C
+[root@yunji test]# cat > 3
+ccc
+^C
+[root@yunji test]# ll
+합계 12
+-rw-r--r-- 1 root root 4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root 4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root 4 2019-08-04 12:57 3
+[root@yunji test]# gzip 1
+[root@yunji test]# ll
+합계 12
+-rw-r--r-- 1 root root 26 2019-08-04 12:56 1.gz
+-rw-r--r-- 1 root root  4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root  4 2019-08-04 12:57 3
+[root@yunji test]# gunzip 1.gz
+[root@yunji test]# ll
+합계 12
+-rw-r--r-- 1 root root 4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root 4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root 4 2019-08-04 12:57 3
+[root@yunji test]# clear
+[root@yunji test]# ll
+합계 12
+-rw-r--r-- 1 root root 4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root 4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root 4 2019-08-04 12:57 3
+[root@yunji test]# bzip2 2
+[root@yunji test]# ll
+합계 12
+-rw-r--r-- 1 root root  4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root 39 2019-08-04 12:57 2.bz2
+-rw-r--r-- 1 root root  4 2019-08-04 12:57 3
+[root@yunji test]# bunzip2 2.bz2
+[root@yunji test]# ll
+합계 12
+-rw-r--r-- 1 root root 4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root 4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root 4 2019-08-04 12:57 3
+[root@yunji test]# gzip 1
+[root@yunji test]# bzip2 2
+[root@yunji test]# ll
+합계 12
+-rw-r--r-- 1 root root 26 2019-08-04 12:56 1.gz
+-rw-r--r-- 1 root root 39 2019-08-04 12:57 2.bz2
+-rw-r--r-- 1 root root  4 2019-08-04 12:57 3
+[root@yunji test]# gzip 1.gz
+gzip: 1.gz already has .gz suffix -- unchanged
+[root@yunji test]# bzip2 2.bz2
+bzip2: Input file 2.bz2 already has .bz2 suffix.
+[root@yunji test]# bzip2 1.gz
+[root@yunji test]# gzip 2.bz2
+[root@yunji test]# ll
+합계 12
+-rw-r--r-- 1 root root 77 2019-08-04 12:56 1.gz.bz2
+-rw-r--r-- 1 root root 65 2019-08-04 12:57 2.bz2.gz
+-rw-r--r-- 1 root root  4 2019-08-04 12:57 3
+[root@yunji test]# bunzip2 1.gz.bz2
+[root@yunji test]# ll
+합계 12
+-rw-r--r-- 1 root root 26 2019-08-04 12:56 1.gz
+-rw-r--r-- 1 root root 65 2019-08-04 12:57 2.bz2.gz
+-rw-r--r-- 1 root root  4 2019-08-04 12:57 3
+[root@yunji test]# gunzip 1.gz
+[root@yunji test]# ll
+합계 12
+-rw-r--r-- 1 root root  4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root 65 2019-08-04 12:57 2.bz2.gz
+-rw-r--r-- 1 root root  4 2019-08-04 12:57 3
+[root@yunji test]# gunzip *
+gzip: 1: unknown suffix -- ignored
+gzip: 3: unknown suffix -- ignored
+[root@yunji test]# ll
+합계 12
+-rw-r--r-- 1 root root  4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root 39 2019-08-04 12:57 2.bz2
+-rw-r--r-- 1 root root  4 2019-08-04 12:57 3
+[root@yunji test]# bunzip2 *
+bunzip2: Can't guess original name for 1 -- using 1.out
+bunzip2: 1 is not a bzip2 file.
+bunzip2: Can't guess original name for 3 -- using 3.out
+bunzip2: 3 is not a bzip2 file.
+[root@yunji test]# ll
+합계 12
+-rw-r--r-- 1 root root 4 2019-08-04 12:56 1
+-rw-r--r-- 1 root root 4 2019-08-04 12:57 2
+-rw-r--r-- 1 root root 4 2019-08-04 12:57 3
+[root@yunji test]#

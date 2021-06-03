@@ -1,0 +1,14 @@
+	Windows					linux
+--------------------------------------------------------------------------------
+	TUI = servercore 버젼			TUI = runlevel 1/2/3
+	GUI = 일반모드				GUI = runlevel 5 = X11	
+	확장자 기본값되어있음			확장자 = 주석 (확장자 개념없음)
+	대소문자 구분 X				대소문자 구분 O
+	IP확인=ipconfig /all			#ifconfig
+	Host name 확인 =whoami=hostname		hostname
+	Acount name 확인 =whoami	 		id
+================================================================================
+windows 기본값					Linux 기본값
+UNC (Universal Name Convention)	-2000년 이전	UPN (User Principal Naming) - 2000년 이후 
+컴퓨터 이름 \ 사용자 이름 				사용자 이름 @ 컴퓨터 이름 
+ex) naver\abcd					ex) abcd@naver.com

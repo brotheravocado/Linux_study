@@ -1,0 +1,14 @@
+Link - 바탕화면의 바로가기 아이콘과 비슷한 개념이다=> 쉽게 받아들이세요~
+mkdir /a && cat > /a/b
+bbb
+ctrl + c
+까지 하시고 대기해주세요
+
+			File				Dir
+1. Hard Link		ln /a/b	/11			ln /a /22
+			링크삭제시 원본유지			ln: `/a': 디렉토리는 하드링크할 수 없습니다
+			원본삭제시 링크유지		
+	
+2. Soft Link		ln -s /a/b /33			ln -s /a /44
+   =Symbolic Link	링크삭제시 원본유지			링크삭제시 원본유지
+			원본삭제시 링크유지 X		원본삭제시 링크유지 X

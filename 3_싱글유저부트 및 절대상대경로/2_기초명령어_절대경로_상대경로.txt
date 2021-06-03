@@ -1,0 +1,90 @@
+** 기초 명령어 
+
+netstat -antup  : 어떤 포트 열렸는지 보는 명령어 = 데몬 돌린 후 항상 포트 확인
+=netstat -lntup	: 포트 번호 추가
+ifdown eth0 	: 인터페이스 사용안함 = ifconfig eth0 down
+ifup eth0	: 인터페이스 사용함 = ifconfig eth0 up
+ifconfig	: ip 설정 보는 명령어
+service sshd restart  : 22번 포트를 사용해서 접속하는 ssh 연결을 허용하겠다 
+= service sshd stop + start
+pwd		: 현재 경로를 확인하는 명령어
+/		: 최상위
+/root		: root (슈퍼 유저)의 홈디렉토리
+/home/사용자이름 	: 일반 유저의 홈디렉토리
+ls 		: Dir/File 의 리스트보기
+ls -l		: 자세히 보기
+ls -a		: 숨긴것 까지 보기
+ls -R		: 하위 디렉토리에 끝까지 있는 파일까지 보기
+
+**tab 의미**
+1. 자동완성기능
+2. 검증 = 해당 dir/file 있는지 없는지 여부를 판단
+3. 만약에 있으면 나열 기능 = ls
+=================================================================
+리눅스 종료 	shutdown -h now = halt = poweroff = init 0
+리눅스 재부팅 	shutdown -r now = reboot =init 6
+윈도우 종료 	shutdown -s = 기본값(60초)후에 종료
+		shutdown -s -t 0 = 0초 후에 종료
+윈도우 재부팅	shutdown -r = 기본값(60초)후에 재부팅
+		shutdown -r -t 0 = 0초 후에 재부팅
+		shutdown -a = 명령 취소
+====================================================================
+모를때 자체적으로 해결하는 방법,인터넷 연결이 안되어 있을때
+Windows		GUI 환경	F1 
+		CUI 환경=cmd	/?  help
+Network 			?
+LInux / Unix			man
+=========================================================================
+ls -l 했을때 각 필드별 설명
+drwxr-xr-x. 2 root root  4096 2016-07-03 17:14 공개 
+
+d		directory // - : file
+rwxr-xr-x	허가권 = 권한 = dir/file 에 대한 읽기,쓰기,접근,실행,수정 권한들을 의미	
+.		Selinux 를 한번이라도 받은 흔적
+2		link 개수 = 바탕화면 바로가기 아이콘 만든 개수
+root		UID= 사용자 소유권(Ownership)
+root		GID= 그룹   소유권(Ownership)
+4096		dir/file 크기
+2016-07-03	date = 날짜
+17:14		time = 시간
+공개		dir/file 이름
+=========================================================================
+※경로 상태
+1. 절대 경로 / 가 있는거 = pwd 와 상관없음
+2. 상대 경로 / 가 없는거 = pwd 안에서만 쓸수 있음
+-------------------------------------------------------------------------
+문제1) 	pwd=/root 일때, / 로 갈려면?(절대 경로/상대 경로)
+	
+	cd /	cd ..	cd ~
+
+문제2)	pwd=/root 일때, /home/kgitbank 로 갈려면?(절대 경로/상대 경로)
+
+	cd /home/kgitbank	cd ../home/kgitbank	cd ~kgitbank
+
+문제3)	pwd=/root 일때, /media/CentOS_6.8_Final/Packages/ 로 갈려면?(절대 경로/상대 경로)
+
+	cd /media/CentOS_6.8_Final/Packages	cd ../media/CentOS_6.8_Final/Packages
+=========================================================================
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

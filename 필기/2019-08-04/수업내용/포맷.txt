@@ -1,0 +1,135 @@
+[root@yunji ~]# ls -l /dev/sdb*
+brw-rw---- 1 root disk 8, 16 2019-08-04 12:21 /dev/sdb
+brw-rw---- 1 root disk 8, 17 2019-08-04 12:21 /dev/sdb1
+brw-rw---- 1 root disk 8, 18 2019-08-04 12:21 /dev/sdb2
+brw-rw---- 1 root disk 8, 20 2019-08-04 12:21 /dev/sdb4
+brw-rw---- 1 root disk 8, 21 2019-08-04 12:21 /dev/sdb5
+brw-rw---- 1 root disk 8, 22 2019-08-04 12:21 /dev/sdb6
+brw-rw---- 1 root disk 8, 23 2019-08-04 12:21 /dev/sdb7
+[root@yunji ~]# mkfs -t ext4 /dev/sdb1
+mke2fs 1.41.12 (17-May-2010)
+Filesystem label=
+OS type: Linux
+Block size=1024 (log=0)
+Fragment size=1024 (log=0)
+Stride=0 blocks, Stripe width=0 blocks
+52208 inodes, 208812 blocks
+10440 blocks (5.00%) reserved for the super user
+First data block=1
+Maximum filesystem blocks=67371008
+26 block groups
+8192 blocks per group, 8192 fragments per group
+2008 inodes per group
+Superblock backups stored on blocks:
+        8193, 24577, 40961, 57345, 73729, 204801
+
+Writing inode tables: done
+Creating journal (4096 blocks): done
+Writing superblocks and filesystem accounting information: done
+
+This filesystem will be automatically checked every 34 mounts or
+180 days, whichever comes first.  Use tune2fs -c or -i to override.
+[root@yunji ~]# mkfs -t ext4 /dev/sdb2
+mke2fs 1.41.12 (17-May-2010)
+Filesystem label=
+OS type: Linux
+Block size=1024 (log=0)
+Fragment size=1024 (log=0)
+Stride=0 blocks, Stripe width=0 blocks
+78624 inodes, 313264 blocks
+15663 blocks (5.00%) reserved for the super user
+First data block=1
+Maximum filesystem blocks=67633152
+39 block groups
+8192 blocks per group, 8192 fragments per group
+2016 inodes per group
+Superblock backups stored on blocks:
+        8193, 24577, 40961, 57345, 73729, 204801, 221185
+
+Writing inode tables: done
+Creating journal (8192 blocks): done
+Writing superblocks and filesystem accounting information: done
+
+This filesystem will be automatically checked every 25 mounts or
+180 days, whichever comes first.  Use tune2fs -c or -i to override.
+[root@yunji ~]# mkfs -t ext4 /dev/sdb3
+mke2fs 1.41.12 (17-May-2010)
+Could not stat /dev/sdb3 --- 그런 파일이나 디렉터리가 없습니다
+
+The device apparently does not exist; did you specify it correctly?
+[root@yunji ~]# mkfs -t ext4 /dev/sdb4
+mke2fs 1.41.12 (17-May-2010)
+mkfs.ext4: inode_size (128) * inodes_count (0) too big for a
+        filesystem with 0 blocks, specify higher inode_ratio (-i)
+        or lower inode count (-N).
+
+[root@yunji ~]# mkfs -t ext4 /dev/sdb5
+mke2fs 1.41.12 (17-May-2010)
+Filesystem label=
+OS type: Linux
+Block size=1024 (log=0)
+Fragment size=1024 (log=0)
+Stride=0 blocks, Stripe width=0 blocks
+28112 inodes, 112420 blocks
+5621 blocks (5.00%) reserved for the super user
+First data block=1
+Maximum filesystem blocks=67371008
+14 block groups
+8192 blocks per group, 8192 fragments per group
+2008 inodes per group
+Superblock backups stored on blocks:
+        8193, 24577, 40961, 57345, 73729
+
+Writing inode tables: done
+Creating journal (4096 blocks): done
+Writing superblocks and filesystem accounting information: done
+
+This filesystem will be automatically checked every 31 mounts or
+180 days, whichever comes first.  Use tune2fs -c or -i to override.
+[root@yunji ~]# mkfs -t ext4 /dev/sdb6
+mke2fs 1.41.12 (17-May-2010)
+Filesystem label=
+OS type: Linux
+Block size=1024 (log=0)
+Fragment size=1024 (log=0)
+Stride=0 blocks, Stripe width=0 blocks
+28112 inodes, 112420 blocks
+5621 blocks (5.00%) reserved for the super user
+First data block=1
+Maximum filesystem blocks=67371008
+14 block groups
+8192 blocks per group, 8192 fragments per group
+2008 inodes per group
+Superblock backups stored on blocks:
+        8193, 24577, 40961, 57345, 73729
+
+Writing inode tables: done
+Creating journal (4096 blocks): done
+Writing superblocks and filesystem accounting information: done
+
+This filesystem will be automatically checked every 26 mounts or
+180 days, whichever comes first.  Use tune2fs -c or -i to override.
+[root@yunji ~]# mkfs -t ext4 /dev/sdb7
+mke2fs 1.41.12 (17-May-2010)
+Filesystem label=
+OS type: Linux
+Block size=1024 (log=0)
+Fragment size=1024 (log=0)
+Stride=0 blocks, Stripe width=0 blocks
+74296 inodes, 297168 blocks
+14858 blocks (5.00%) reserved for the super user
+First data block=1
+Maximum filesystem blocks=67633152
+37 block groups
+8192 blocks per group, 8192 fragments per group
+2008 inodes per group
+Superblock backups stored on blocks:
+        8193, 24577, 40961, 57345, 73729, 204801, 221185
+
+Writing inode tables: done
+Creating journal (8192 blocks): done
+Writing superblocks and filesystem accounting information: done
+
+This filesystem will be automatically checked every 39 mounts or
+180 days, whichever comes first.  Use tune2fs -c or -i to override.
+[root@yunji ~]#

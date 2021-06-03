@@ -1,0 +1,15 @@
+
+부팅설정 수동으로 하기 
+(**작업하기전에 /boot/grub/grub.conf을 /backup 디렉토리에 복사 해두기)
+
+실습 
+0. rm -f /boot/grub/grub.conf
+1. reboot
+
+----grub consol 작업----
+2. root (hd0,0) 하드디스크 선택
+3. kernel /vm (tab키 누르세요) root=/dev/sda7  (커널 동작 실행 최상위(/) 지정)
+4. initrd /initra (tab키 누르세요) (프로세스동작 실행)
+5. boot
+==============================================================================
+

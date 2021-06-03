@@ -1,0 +1,23 @@
+계정 만들기 
+1 /xeneration/spur/home/user1 이라는 홈디렉토리가 생성하도록 user1 계정을 만드시오
+2 /xeneration/spur/home/user2 이라는 홈디렉토리와 ksh 쉘을 쓰는 user2 계정을 만드시오.
+3 아래와 같이 user3 를 만드시오
+  홈디렉토리 /test/home/user3 :	
+  쉘 /bin/ksh : 			
+  설명 genius :		
+  UID 510 :			
+4 index.html 이라는 파일이 홈디렉토리에 생성되면서 user4 를 만드시오.
+  index.html  내용에는 애국가 1절의 내용을 입력해주세요
+5 /home/user5 홈디렉토리를 가지는 user5 를 생성한 후,
+  /xeneration/spur/home/user5 로 홈디렉토리를 옮기시오..
+6. user6 를 만드신 다음 홈디렉토리와 실제 홈디렉토리를 같이 옮기세요 
+   경로 : /backup/home/user6
+7. aaa aa a 1 11 111 1231 1321 파일들을 포함 하는 디렉토리 test 를 생성하면서
+   사용자 user7 을 만드세요
+8. user1~user5 까지  사용자 영구 삭제를 하세요
+9. user8~user10 까지 아래와 같은 내용으로 사용자를 생성하세요
+   홈디렉토리 : /backup/home
+   쉘 : /bin/bash
+   홈 디렉토리 안 내용 : index.html
+   스켈 : /test/skel1
+---------------------------------------------------------

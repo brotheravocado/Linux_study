@@ -1,0 +1,186 @@
+fdisk 명령어
+
+fdisk -l   =>>하드 전체 리스트보기
+fdisk -l /dev/sdb -> 특정 하드 리스트만 보기
+fdisk /dev/하드장치명   ===>하드 파티션 구성하기
+
+(ex: fdisk /dev/sdb)
+
+fdisk 내부 명령어
+n 파티션 생성
+d 파티션 삭제
+p 파티션 상태보기
+m 메뉴얼
+q 파티션 저장하지 않고 종료
+w 파티션 저장후 종료cd 
+t 파티션 속성변경
+===============================================================
+/dev/sdb  1G
+/dev/sdc  3G (하드 추가 2개)
+
+/dev/sdb1 = 100MB	P
+/dev/sdb2 = 200MB 	P
+/dev/sdb3 = 300MB	P
+/dev/sdb4 = etc		E
+/dev/sdb5 = etc		L		
+------------------------------
+/dev/sdc1 = 300MB	P
+/dev/sdc2 = 300MB 	P
+/dev/sdc3 = 300MB	P
+/dev/sdc4 = etc		E
+/dev/sdc5 = 500MB	L		
+/dev/sdc6 = 500MB	L
+/dev/sdc7 = etc		L
+----------------------------------------------------------------------------
+파일 시스템 = 방 정리 하는거 = 성격에 따라 방 정리가 다르다 = OS마다 Filesystem 이 다르다			     
+UFS (Unix File System)		
+	유닉스의 대표적인 File System
+	대부분의 유닉스들(BSD계열,HP-UX,Apple OS X,Sun Solaris)이 UFS를 
+	각각의 OS에 맞게 변형해서 사용
+NTFS (New  Technology File System)
+	윈도우의 대표적인 File System
+	FAT,FAT32,VFAT,REFS 등등 이 있다 
+	클러스트의 크기와 하드 크기 그리고 지원되는 OS에 따라 달리 구분한다
+----------------------------------------------------------------------------
+EXT2	UFS에서 불필요한 구조들은 제거
+	UFS 수준의 속도와 안정성을 가지고 있음
+EXT3	EXT2에서 저널링 기능을 추가한 File System / 1024
+	리눅스의 기본 File System
+EXT4	속도 ↑ / 저널링 ↑  4098
+XFS	대형 / 16TB 이상
+============================================================================
+파일 시스템 포멧
+mkfs	원하는 파일 시스템을 포맷한다.
+
+mkfs 를 이용하여 ext4 파일 시스템
+mkfs -t ext4 /dev/sdb1	 // -t 옵션생략가능 (리눅스 전용명령어)
+mkfs.ext4 /dev/sdb1
+했을때,
+write~~~ 어쪄구 저쩌구~ in table  : done // 자료구조에 대한것
+c	~~~~~~~~~~~~~~~~~~~~~~~~  : done // 형식에 관한것
+w	~~~~~~~~~~~~~~~~~~~~~~~~  : done // 파일시스템에 대한 정보
+※ 포맷할때 extend는 포맷 X
+  왜냐면, extend 는 그냥 logical 을 만들기 위한 그릇에 불과할 뿐
+  extend 는 가지고 있는 값도 없고 아무것도 없기 때문에 삭제 X
+====================================================================
+mkfs -t ext4 /dev/sdb1
+mkfs -t ext4 /dev/sdb2
+mkfs -t ext4 /dev/sdb3
+mkfs -t ext4 /dev/sdb4  ==? 되나요?
+mkfs -t ext4 /dev/sdb5
+====================================================================
+Mount 
+ 파일 시스템 구조 내에 있는 일련의 파일들을 사용자나 사용자 그룹들이
+ 이용할 수 있도록 만드는것
+ = 리눅스 환경에서 "mount"라는 명령은 논리적으로 
+   디스크와 디렉토리를 붙이는 것~!!!
+--------------------------------------------------------------------------
+mount 3대 조건
+1. 장치를 마련 = 파티션 생성 = fdisk 쪼개기 
+2. 장치를 포맷 = mkfs
+3. 디렉토리 생성 = mkdir = Mount Point
+--------------------------------------------------------------------------
+mount 의 방법
+1. mount 라는 명령어를 통해 수동으로 연결하는 방법
+2. /etc/fstab 파일 내에 마운트할 항목을 추가하여 부팅시에 자동으로 마운트하는 방법  = 부팅시 자동 마운트
+3. 파일 시스템의 사용을 중지할 때는 umount 명령어를 사용
+---------------------------------------------------------------------------------
+Mount 의 명령어 및 옵션
+
+Syntax : mount [Option] [Device] [Directoy]
+Option 
+-a	/etc/fstab 에 기술되어 있는 모든 파일시스템을 마운트
+-t	파일시스템의 형식을 지정한다 = 생략가능
+-n	/etc/mtab 파일에 정보를 남기지 않고 마운트
+-o	-o [Option] 뒤에 콜론(",")으로 다음 옵션을 사용
+	defaults	rw,suid,dev,exec,auto,nouser,async 를 
+			기본 옵션으로 사용
+	remount		이미 마운트된 파일시스템을 재마운트
+			= 여유 공간을 확인하는 명령어
+--------------------------------------------------------------------------------------
+mount -t ext4 /dev/sdb1 /mp
+	  	└ 장치    └ 디렉토리
+---------------------------------------------------------------------------------------------
+1. 파티션을 생성 = 장치 생성
+fdisk /dev/sdb
+p 현재 보기
+n 파티션 만들기
+
+2. 장치를 포맷
+mkfs -t ext4 /dev/sdb1 // done/done/done 3가지 떠야함
+=mkfs.ext4 /dev/sdb1
+
+3. mount 할 디렉토리 생성
+mkdir /mp1
+
+4. mount
+mount -t ext4 /dev/sdb1 /mp1
+=mount /dev/sdb1 /mp1
+
+5. mount 확인
+df -h
+df -Th 
+cat /etc/mtab = 부팅상태에서만 mount // 현재상태만 //재부팅시 X=휘발성
+= /etc/fstab  = 부팅시 읽어오는 즉, 재부팅해도 존재하는 mount = 비휘발성
+= /etc/fstab 한뒤에는 항상 mount -a 해줘야 한다.
+=============================================================
+mount 해주세요~
+Device	    Size	Partition	Mount Point
+/dev/sdb1 = 100MB	P		/export/mb1
+/dev/sdb2 = 200MB 	P		/export/mb2
+/dev/sdb3 = 300MB	P		/export/mb3
+/dev/sdb4 = etc		E		
+/dev/sdb5 = etc		L		/export/mb5
+------------------------------
+/dev/sdc1 = 300MB	P		/export/mc1
+/dev/sdc2 = 300MB 	P		/export/mc2
+/dev/sdc3 = 300MB	P		/export/mc3
+/dev/sdc4 = etc		E		
+/dev/sdc5 = 500MB	L		/export/mc5
+/dev/sdc6 = 500MB	L		/export/mc6
+/dev/sdc7 = etc		L		/export/mc7
+===========================================================
+6.umount 장치 연결 해제
+Syntax : umount [Option] [Device] or [Directory]
+Option 
+-a	/etc/fstab 에 기술되어있는 모든 파일시스템의 마운트를 해제
+	정상적인 상황에서 실행해서는 안된다
+-f	강제로 연결해제 할때 사용// NFS 서비스에 연결되어있는 
+	파일시스템을 연결해제할 때 이용할 수 있다
+ex)
+umount /dev/sdb1 = umount /mp1
+=================================================================
+
+7. /etc/fstab 필드 설명 
+/dev/sdb1        /mp1        ext4    	defaults       		1 2
+   └ 장치	  └ M.P		└ F.S	 └ 자동마운트 옵션	A B
+
+A: dump 기록여부 // 0=기록 X, 1=>기록 O
+B: fsck = 파일 시스템 체크 // 0=체크 X , 1=우선 체크, 2=차선 체크
+---------------------------------------------------------------------
+/etc/fstab 에서 마운트 실수 / 오타 가 일어 났을때
+ 어차피 mount -a  라는 명령어로 오류가 밝혀진다 
+그럼에도 불구하고 부팅이 안될때
+
+mount -o remount,rw /
+요 명령어를 입력 해야만 vi /etc/fstab 내용수정이 이루어 진다 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

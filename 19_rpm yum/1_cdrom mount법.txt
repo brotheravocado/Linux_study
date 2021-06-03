@@ -1,0 +1,19 @@
+** cdrom mount 하는법
+
+	1 vm웨어 하단에 cd아이콘 클릭
+
+	2 device status
+	  체크 2개 다 할것
+
+	3 use iso image 클릭후
+
+	4 CentOS-6.8-x86_64-bin-DVD1.iso 파일 지정
+
+	5 확인
+
+	6 vm웨어 하단에 cd아이콘 초록불 확인
+===============================================
+	mkdir /cdrom
+	mount /dev/sr0 /cdrom
+	cd /cdrom/Packages 
+	rpm작업

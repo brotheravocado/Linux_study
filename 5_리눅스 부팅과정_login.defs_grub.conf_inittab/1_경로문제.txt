@@ -1,0 +1,16 @@
+문제 푸시면 됩니다 
+1. 	/etc/login.defs
+	/etc/inittab
+	/boot/grub/grub.conf
+	상위 파일을 찾고 3개의 파일 을 /backup 디렉토리에 복사
+2. 	/backup 에 있는 3개 파일을
+	/backup/test 디렉토리에 각각 login init grub 라는 이름변경 복사
+3. 	/backup/test1 이라는 파일
+	/backup/test/test2 이라는 파일 한줄 명령어로 생성
+4.	/backup/test 디렉토리를 
+	/home/test/c/d/kgitbank 라는 이름이 되도록 이름변경 보존 복사 -p
+5.	/home 으로 이동하여
+	경로를 변경하지 않고 
+	/backup 안에 있는 파일들 4개를 
+	/home/test/c/d/test 디렉토리에 한줄 명령으로 보존복사(이름 변경 및 디렉토리 복사 금지)
+6.	이때까지 생성한 모든 경로 삭제해주세요

@@ -1,0 +1,29 @@
+실습해주세요(이미 추가된 하드는 삭제후 다시 추가 해주시고 실습해주세요)
+SCSI 10G
+종류	P	P	P	L		
+size	500	400	200	etc
+MP	sdb1	sdb2	sdb3	sdb5  => /dev/sdb5 = /export/sdb (부팅시 자동마운트 하세요)
+
+/export/sdb/home/main(계정)/public_html/index.html(file입니다) <== 자동생성(/etc/skel 내용 포함)
+		/iu(계정) <== 계정이동
+		/ftpuser(계정)/pub/1.gz  <== 자동생성(/etc/skel내용 포함)
+				  2.bz2
+				  3.tar.gz
+1. mgr.kgitbank.co.kr 이라는 내용을 가지는 /export/sdb/home/main/public_html/a 파일을 생성
+   www.googlecom = 8.8.8.8 이라는 내용을 가지는 /export/sdb/home/main/public_html/b 파일을 생성
+   두개의 파일을 병합하는 /export/sdb/home/main/public_html/index.html 파일을 생성하세요
+2. main 계정 홈디렉토리는 main 계정이	모든 권한을 가지고
+   				GID는 읽기 권한을
+				다른사람들은 접근만 가능하도록 설정
+3. iu는 계정이동후 정상접속이 가능하도록 설정해주세요
+4. ftpuser홈디렉토리에서	ftpuser계정은 모든 권한을
+			ftpuser그룹은 다운로드 권한을
+			다른 사용자는 사용할 수 없도록 설정
+5. suzi 계정은 ftpuser의 그룹으로 /export/sdb/home/ftpuser/pub에 접속 할 수 있도록
+   설정해주세요 (shell 활성화 시킬것)
+6. 모든 계정은 wheel 그룹에 포함시켜 주세요 
+7. 각 계정으로 접속할때 자동 alias가 되도록 해주세요
+   alias c='clear'
+8. 환경 변수를 이용하여 자신만의 명령어를 만들어주세요 (계정 = kgitbank)
+   cp /bin/ls /home/kgitbank/kgitbankbin/aaa
+   export PATH=$PATH:/home/kgitbank/kgitbankbin

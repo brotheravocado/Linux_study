@@ -1,0 +1,105 @@
+utorrent 다운로드 및 설치 방법
+==============================================================
+www.utorrent.com/
+utorrent for windows 용 다운로드 
+
+1. please choose your language
+	korean
+2. Welcome to the uTorrent Setup Wizard
+	Next
+3. Warning
+	Next
+4. License Agreement
+	I Agree
+5. Choose Install Options
+	Create Start menu entry - X
+	시작 메뉴에 추가 여부
+	Create Desktop icon - X
+	바탕 화면 바로가기 아이콘 추가 여부
+6. Configuration
+	Add an exception for uTorrent in Windows Firewall - O
+	방화벽 예외 리스트 추가 여부
+	Start uTorrent when Windows start up - X
+	부팅시 자동시작 여부
+7. Finish 
+=============================================================
+Centos 6.8 64비트 다운로드 방법
+www.centos.org
+
+1. Get CentOS Now <-- 노란색 클릭
+2. alternative downloads 클릭
+3. Base Distribution
+	CentOS Linux Version	Minor release	CD and DVD ISO Images 
+	6			6.8 		x86_64 <-- 클릭
+4. http://ftp.kaist.ac.kr/CentOS/6.8/isos/x86_64/  <-- 클릭
+5. CentOS-6.8-x86_64-bin-DVD1to2.torrent <-- 클릭
+6. ftp.kaist.ac.kr의 CentOS-6.8-x86_64-bin-DVD1to2.torrent(229KB)을(를) 열거나 저장하시겠습니까?
+	저장 클릭
+7. 저장 클릭 후 다른 이름으로 저장 클릭
+   D:\0월평일_리눅스1_0000_김덕현\util 폴더에 저장
+8. 저장된 파일을 더블 클릭 후 
+   저장된 경로  D:\0월평일_리눅스1_0000_김덕현\os 폴더에 저장
+9. CentOS-6.8-x86_64-bin-DVD2.iso 파일은 다운로드 해제 
+==================================================================
+Linux VM 구성 순서
+1. VMware에서  파일 - New Virtual Machine - custom - next
+2. VMware 버젼 선택 - 기본값 workstation 12.0 - next
+3. Image file 여부 - I Will install ~ - next
+4. OS 선택 - linux - CentOS64bit - next
+5. VM 저장 이름 - kgitbank_server 
+   VM 저장 경로 - Browse - D:\0월 어쩌구저쩌구\vmos\kgitbank_server 에 저장 - next
+6. 프로세스 구성 - next
+7. VM memory 구성 - 1024 - next
+8. 네트워크 타입 - NAT - next
+9. I/O 타입 - LSI Logic - next
+10. Disk 타입 - SCSI - next
+11. Disk 선택 - Create a new virtual disk - next
+12. Disk 용량 입력 - 40G - split virtual disk into multiple files - next
+13. VM Disk 저장 경로 - Browse - D:\0월 어쩌구저쩌구\vmos\kgitbank_server 에 저장 - next
+14. Image file 삽입 - customize Hardware... 클릭-  New CD/DVD(... 
+    - Use ISO image file - Browse - D:\0월평일_리눅스1_1230_김덕현\os\CentOS-6.8-x86_64-bin-DVD1to2\CentOS-6.8-x86_64-bin-DVD1.iso 선택 - close - finishied
+==========================================================================================
+Linux 6.8 설치 순서
+1. vmware - start
+2. Install or upgrade an existing system
+3. 마우스가 갑자기 사라지더라도 당황하지말고 살포시 ctrl + alt 눌러주면 끝~
+							└>마우스 제어권
+4. Disc Found - skip
+5. CentOS 6 - 다음
+6. 언어 선택 - Korean(한국어) - 다음
+7. 키보드 선택 - 한국어 - 다음
+8. 기본 저장 장치 - 다음
+9. 예,모든 데이터를 삭제합니다(Y)
+10. 컴퓨터 이름 - suzi - 다음
+11. 시스템의 시간을 UTC에 맞춤(C) <- 클릭 해제 - 다음
+12. root 암호 - qwe@123 - 다음
+13. 사용자 레이아웃 만들기 - 다음
+14. 만들기
+	/	200MB  
+	/home	200MB
+	/boot	200MB
+	/var	4096MB
+	/usr	12000MB
+	swap	2048MB
+	(6개만든다음 22211MB 남는다 /로 가서 편집 클릭 후 
+	가능한 최대 용량으로 채움클릭 후 확인 - 다음)
+15. 포맷 - 디스크에 변경된 사항 기록 - 다음
+16. 소프트웨어 설치 - 지금 선택 - 다음
+17. 기반 시스템 - 레거시 유닉스 호환성 - 선택적 패키지 - ksh~선택
+    서버 - FTP 서버 선택 - 다음
+18. 설치~~
+19. 재부팅
+20. 앞으로
+21. 라이센스 조항에 동의 - 앞으로
+22.	사용자이름(User Name)	kgitbank
+	성명(Account)		kgitbank
+	암호			1
+	암호확인			1
+	앞으로 <-- 클릭
+23. 암호가 사용하기에 취약합니다 그래도 사용?  yes 
+24. 시스템 사용 날짜 및 시간 설정 - 앞으로
+25. kdump - 커널 패닉 이벤트시 커널 충돌 덤핑 기술임
+	yes - 완료
+
+
+		

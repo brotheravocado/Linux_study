@@ -1,0 +1,217 @@
+Microsoft Windows [Version 10.0.17134.915]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\user>ftp 192.168.1.140
+192.168.1.140에 연결되었습니다.
+220 (vsFTPd 2.2.2)
+200 Always in UTF8 mode.
+사용자(192.168.1.140:(none)): root
+530 Permission denied.
+로그인하지 못했습니다.
+ftp> by
+221 Goodbye.
+
+C:\Users\user>ftp 192.168.1.140
+192.168.1.140에 연결되었습니다.
+220 (vsFTPd 2.2.2)
+200 Always in UTF8 mode.
+사용자(192.168.1.140:(none)): kgitbank
+331 Please specify the password.
+암호:
+230 Login successful.
+ftp> pwd
+257 "/home/kgitbank"
+ftp> ls -l
+200 PORT command successful. Consider using PASV.
+425 Failed to establish connection.
+ftp> ftp>
+ftp> by
+221 Goodbye.
+
+C:\Users\user>ftp 192.168.1.140
+192.168.1.140에 연결되었습니다.
+220 (vsFTPd 2.2.2)
+200 Always in UTF8 mode.
+사용자(192.168.1.140:(none)): kgitbank
+331 Please specify the password.
+암호:
+230 Login successful.
+ftp> ls -l
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+drwxr-xr-x    2 501      0            1024 Aug 03 02:40 test
+226 Directory send OK.
+ftp: 0.00초 65000.00KB/초
+ftp> pwd
+257 "/home/kgitbank"
+ftp> cd /home
+250 Directory successfully changed.
+ftp> pwd
+257 "/home"
+ftp> cd /
+250 Directory successfully changed.
+ftp> cd /home/kgitbank
+250 Directory successfully changed.
+ftp> pwd
+257 "/home/kgitbank"
+ftp> ls -l
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+drwxr-xr-x    2 501      0            1024 Aug 03 02:40 test
+226 Directory send OK.
+ftp: 0.00초 65000.00KB/초
+ftp> ls -l
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+-rw-r--r--    1 0        0              14 Aug 03 04:22 index.html
+drwxr-xr-x    2 501      0            1024 Aug 03 02:40 test
+226 Directory send OK.
+ftp: 0.00초 133000.00KB/초
+ftp> by
+221 Goodbye.
+
+C:\Users\user>cd c:\
+
+c:\>cd c:\Users\user
+
+c:\Users\user>ftp 192.168.1.140
+192.168.1.140에 연결되었습니다.
+220 (vsFTPd 2.2.2)
+200 Always in UTF8 mode.
+사용자(192.168.1.140:(none)): kgitbank
+331 Please specify the password.
+암호:
+230 Login successful.
+ftp> pwd
+257 "/home/kgitbank"
+ftp> lcd
+현재 로컬 디렉터리 c:\Users\user.
+ftp> get index.html
+200 PORT command successful. Consider using PASV.
+150 Opening BINARY mode data connection for index.html (14 bytes).
+226 Transfer complete.
+ftp: 0.00초 14000.00KB/초
+ftp> put test.html
+200 PORT command successful. Consider using PASV.
+150 Ok to send data.
+226 Transfer complete.
+ftp: 0.00초 14000.00KB/초
+ftp> ls -l
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+-rw-r--r--    1 0        0              14 Aug 03 04:22 index.html
+drwxr-xr-x    2 501      0            1024 Aug 03 02:40 test
+-rw-r--r--    1 500      500            14 Aug 03 04:26 test.html
+226 Directory send OK.
+ftp: 0.02초 12.50KB/초
+ftp> by
+500 OOPS: vsf_sysutil_recv_peek: no data
+
+c:\Users\user>ftp 192.168.1.140
+192.168.1.140에 연결되었습니다.
+220 (vsFTPd 2.2.2)
+200 Always in UTF8 mode.
+사용자(192.168.1.140:(none)): kgitbank
+331 Please specify the password.
+암호:
+230 Login successful.
+ftp> pwd
+257 "/home/kgitbank"
+ftp> ls -l
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+drwxr-xr-x    2 0        0            1024 Aug 03 04:27 html
+226 Directory send OK.
+ftp: 0.00초 65000.00KB/초
+ftp> cd html
+250 Directory successfully changed.
+ftp> pwd
+257 "/home/kgitbank/html"
+ftp> ls -l
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+-rw-r--r--    1 0        0               0 Aug 03 04:27 test
+226 Directory send OK.
+ftp: 0.00초 65000.00KB/초
+ftp> put index.html
+200 PORT command successful. Consider using PASV.
+553 Could not create file.
+ftp> by
+221 Goodbye.
+
+c:\Users\user>ftp 192.168.1.140
+192.168.1.140에 연결되었습니다.
+220 (vsFTPd 2.2.2)
+200 Always in UTF8 mode.
+사용자(192.168.1.140:(none)): kgitbank
+331 Please specify the password.
+암호:
+230 Login successful.
+ftp> chmod 742 ~kgitbank/html
+올바르지 않은 명령입니다.
+ftp> by
+221 Goodbye.
+
+c:\Users\user>ftp 192.168.1.140
+192.168.1.140에 연결되었습니다.
+220 (vsFTPd 2.2.2)
+200 Always in UTF8 mode.
+사용자(192.168.1.140:(none)): kgitbank
+331 Please specify the password.
+암호:
+230 Login successful.
+ftp> chmod 742 ~kgitbank/html
+올바르지 않은 명령입니다.
+ftp> ls -l
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+drwxr---w-    2 0        0            1024 Aug 03 04:27 html
+226 Directory send OK.
+ftp: 0.00초 65000.00KB/초
+ftp> ls -ld /home/kgitbank/html
+200 PORT command successful. Consider using PASV.
+로컬 파일 여는 동안 오류가 발생했습니다. /home/kgitbank/html
+> /:해당 파일 또는 디렉터리가 없습니다.
+ftp> ls -l /home
+200 PORT command successful. Consider using PASV.
+로컬 파일 여는 동안 오류가 발생했습니다. /home
+> /:사용 권한이 거부되었습니다.
+ftp> by
+221 Goodbye.
+
+c:\Users\user>ftp 192.168.1.140
+192.168.1.140에 연결되었습니다.
+220 (vsFTPd 2.2.2)
+200 Always in UTF8 mode.
+사용자(192.168.1.140:(none)): kgitbank
+331 Please specify the password.
+암호:
+230 Login successful.
+ftp> ls -l /home/kgitbank/html
+200 PORT command successful. Consider using PASV.
+로컬 파일 여는 동안 오류가 발생했습니다. /home/kgitbank/html
+> /:해당 파일 또는 디렉터리가 없습니다.
+ftp> ls -l /home/kgitbank/
+200 PORT command successful. Consider using PASV.
+로컬 파일 여는 동안 오류가 발생했습니다. /home/kgitbank/
+> /:해당 파일 또는 디렉터리가 없습니다.
+ftp> ls -l /hoem
+200 PORT command successful. Consider using PASV.
+로컬 파일 여는 동안 오류가 발생했습니다. /hoem
+> /:사용 권한이 거부되었습니다.
+ftp> ls -l /home
+200 PORT command successful. Consider using PASV.
+로컬 파일 여는 동안 오류가 발생했습니다. /home
+> /:사용 권한이 거부되었습니다.
+ftp> ls -l /home/kgitbank
+200 PORT command successful. Consider using PASV.
+로컬 파일 여는 동안 오류가 발생했습니다. /home/kgitbank
+> /:해당 파일 또는 디렉터리가 없습니다.
+ftp> clear
+올바르지 않은 명령입니다.
+ftp> cls
+올바르지 않은 명령입니다.
+ftp> by
+221 Goodbye.
+
+c:\Users\user>

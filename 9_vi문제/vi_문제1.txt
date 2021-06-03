@@ -1,0 +1,57 @@
+1. /etc/inittab 파일을 /backup으로 복사한뒤
+   다음과 똑같은 내용으로 편집해보세요~ (vi /backup/inittab 실행한 상태에서 절대 !!! 나가지 말것)
+
+      1 # Default runlevel. The runlevels used are:
+      2 #   0 - halt (Do NOT set initdefault to this)
+      3    0 - halt (Do NOT set initdefault to this)
+      4 #   1 - Single user mode (Do NOT set initdefault to this)
+      5    1 - Single user mode
+      6 #   2 - Multiuser, without NFS (The same as 3, if you do not have networking)
+      7    2 - Multiuser(TUI)
+      8 #   3 - Full multiuser mode
+      9 #   3 - Full mode
+     10 #   4 - unused
+     11 #   4 - un
+     12    4 - unused
+     13 #   5 - X11
+     14 #   5 - X11=Xwindows,GUI
+     15 #   6 - reboot (Do NOT set initdefault to this)
+     16    6 - reboot (Do NOT set initdefault to this)
+     17 #id:5:initdefault:
+     18 #id:0:default:
+     19 id:3:initdefault:
+
+2. /vi 디렉토리를 생성하고 안에 1 2 3 4 파일 4개와 a1 a2 a3 a4 디렉토리 4개를 생성
+
+3. /vi 디렉토리 안에 파일목록만 문서 가장위에 삽입
+
+4. /backup 의 내용을 ls -l 로 문서 가장 아래 삽입한 다음 다음과 같은 내용으로 편집
+----------. 1 kgitbank kgitbank 100 2010-10-10 10:10 grub.conf(kgitbank)
+-rw-rw-rw-. 2 kgitbank kgitbank 200 2011-11-11 11:11 inittab(kgitbank)
+-r--r--r--. 3     root root     300 2012-12-12 12:12 login.defs(itbank)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

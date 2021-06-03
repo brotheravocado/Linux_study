@@ -1,0 +1,53 @@
+rpm 기반의 자동업데이터겸 패키지 설치/제거도구
+
+계열	로컬설치		네트워크 설치
+redhat=> rpm		yum
+debian=> dpkg		atp-get
+
+yum update <===업데이트
+yum update 친뒤 n로 선택
+
+yum remove 대표패키지명* <===패키지삭제
+yum remove mysql*
+yum install 대표패키지명* <===패키지설치
+yum install mysql*
+yum list => yum설치 리스트확인
+
+-y 옵션은 y/n옵션을 스킵
+
+yum install mysql* -y
+
+rpm =오프라인
+        수동의존성 오류처리
+        필요한 패키지만 설치가능
+        패키지를 몰라도 검색하면서 찾을수있음
+
+yum= 온라인
+        자동의존성 처리
+        필요없는 패키지들까지 모두 설치 
+        패키지명을 정확히 알고 있어야한다.
+
+*** yum 이 안될경우 조치사항 ***
+1. 패키지명이 들어가있는 file/dir 이 없는 곳에서 실행
+2. 시간정보가 계속 뜰경우 /var/run/yum.pid 삭제후 실행(중복실행)
+3. 캐쉬 정보 초기화 yum clean all 처리후 실행
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

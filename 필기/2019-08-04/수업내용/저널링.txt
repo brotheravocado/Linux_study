@@ -1,0 +1,18 @@
+login as: root
+root@192.168.1.140's password:
+Last login: Sun Aug  4 12:02:14 2019 from 192.168.1.1
+[root@yunji ~]# whoami
+root
+[root@yunji ~]# pwd
+/root
+[root@yunji ~]# ls -l ?
+-rw-r--r-- 1 root root 26 2019-08-04 12:22 1
+[root@yunji ~]# vi 1
+[root@yunji ~]# vi 1
+[root@yunji ~]# vi 1.swp
+[root@yunji ~]# vi 1.
+[root@yunji ~]# vi .1
+[root@yunji ~]# vim -r 1
+[root@yunji ~]# rm -f .1.swp
+[root@yunji ~]# vi 1
+[root@yunji ~]#

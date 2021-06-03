@@ -1,0 +1,129 @@
+1. 다음을 만족하는 user1을 만드세요
+주석(설명)=testuser	-c
+shell=/bin/ksh		-s
+	useradd -c testuser -s /bin/ksh user1
+
+2. user2 계정을 만들때 kgitbank(file)이 자동생성되도록 만드세요(skel참조는 /etc/skel2)
+	cp -r /etc/skel /etc/skel2
+	cd /etc/skel2
+	touch kgitbank
+	cd ~
+	useradd -mk /etc/skel2 user2
+
+3. /etc/skel3 디렉토리를 먼저 생성한뒤 /etc/skel 내부의 내용을 모두 복사해보세요.
+	(생성된 /etc/skel3 디렉토리를 삭제하지 않고 복사 할것)
+   만들어진 /etc/skel3 를 스켈참조하여 user3를 만드세요
+	cp -r /etc/skel/.??* /etc/skel3	=> 둘다 가능
+	cp -r /etc/skel/. /etc/skel3	=> 둘다 가능
+	useradd -mk /etc/skel3 user3
+	ls -l ~user3 => 확인명령어
+
+4. user4 계정을 만들때 기존의 /etc/skel 의 내용을 그대로 가지면서 public_html(dir) 이 자동 생성되도록 하세요
+	(skel참조는 /etc/skel4)
+	mkdir /etc/skel4
+	cp -r /etc/skel/. /etc/skel4
+	mkdir /etc/skel4/public_html
+	useradd -mk /etc/skel4 user4
+	ls -l ~user4 => 확인명령어
+
+5. 계정기본 생성 경로를 /export/home 으로 해서 옵션없이 user5 계정을 생성하세요
+	vi /etc/default/useradd 가셔서
+	3 #HOME=/home
+	4 HOME=/export/home => 요렇게 수정하시면 됩니다
+
+	mkdir -p /export/home
+	useradd user5
+	grep user5 /etc/passwd => 확인명령어 
+
+6. 다음 내용을 가지는 user6를 생성하세요
+	shell=/bin/ksh 		(vi 로 변경)
+	home=/local_host/home 	(명령어로 변경)
+	skel=/etc/skel4		(vi 로 기본값 변경) 
+
+	mkdir -p /local_host/home
+	vi /etc/default/useradd 로 가셔서 수정합니다
+	7 #SHELL=/bin/bash (원본)
+	8 SHELL=/bin/ksh (수정후)
+	9 #SKEL=/etc/skel (원본)
+	10 SKEL=/etc/skel4 (수정후)
+
+	useradd -d /local_host/home/user6 user6
+	grep user6 /etc/passwd	=> 확인하세요
+	ls -al /etc/skel4 ~user6 => 확인하세요
+
+7. 계정기본 생성 파일을 다음과 같이 vi 로 편집하세요 => 정답은 원본으로 돌리세요
+# useradd defaults file
+GROUP=100
+HOME=/home
+INACTIVE=-1
+EXPIRE=
+SHELL=/bin/bash
+SKEL=/etc/skel
+CREATE_MAIL_SPOOL=yes
+
+8. 계정 user7을 useradd로 만드세요 (usermod 사용금지)
+	UID		 700(실패시 701,702,703...)	-u
+	g1 		(공유그룹)			-g
+	별칭 		김덕현천재				-c
+	홈디렉토리	/local_host/home			-d
+	shell		/bin/ksh			-s
+	skel경로	/etc/skel5				-mk
+	자동 dir생성	~/public_html				
+	자동 file생성	~/public_html/index.html(파일안에 mgr.kgitbank.co.kr 내용 삽입)	
+
+	groupadd g1
+	cp -r /etc/skel /etc/skel5
+	cd /etc/skel5
+	mkdir public_html && cat > public_html/index.html
+	mgr.kgitbank.co.kr (내용입력)
+	^C
+	useradd -u 700 -g g1 -c 김덕현천재 -d /local_host/home/user7 -s /bin/ksh -mk /etc/skel5 user7
+	grep user7 /etc/passwd => 확인하세요
+	ls -lR ~user7 => 확인하세요
+	cat ~user7/public_html/index.html => 확인하세요
+
+9. 모든 사용자 계정들을 /home/사용자로 로그인 될 수 있도록 사용자계정을 설정하세요
+	usermod -md /home/user5 user5
+	usermod -md /home/user6 user6
+	usermod -md /home/user7 user7
+	
+	tail -10 /etc/passwd => 확인하세요
+	ls -l /home => 확인하세요
+
+10. user7 계정을 userdel 로 지운 후 나머지 를 수동으로 정리하세요
+    (계정 생성시 5가지 일을 하죠?  userdel user7 하면 어떤 것만 지워지죠?? 기억나시죠?)
+	userdel user7
+	grep user7 /etc/passwd /etc/shadow /etc/group  => 확인하세요
+	rm -rf /home/user7 /var/spool/mail/user7
+	ls -ld /home/user7 /var/spool/mail/user7 => 확인하세요
+
+11. user6 계정을 영구 삭제 하세요
+	userdel -r user6
+	grep user6 /etc/passwd /etc/shadow /etc/group && ls -l /home/ /var/spool/mail/ |grep user6
+	=> 확인하세요
+
+12. 시스템 계정과 kgitbank 와 rpc 를 남기고 모두 계정을 영구삭제 하세요 ~
+	userdel -r 영구삭제하세요 이때까지 만든 계정들요 1번문제부터요~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
